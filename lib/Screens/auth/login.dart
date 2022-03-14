@@ -9,8 +9,8 @@ class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Constants.ligtbluecolor , 
-        // backgroundColor: Color.fromARGB(255, 232, 239, 245),
+        backgroundColor: Constants.mainColorWhite, 
+       
         appBar: AppBar(
           title: Center(child: Text('Medical App')),
         ),
