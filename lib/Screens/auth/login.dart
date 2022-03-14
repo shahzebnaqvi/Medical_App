@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:medical_app/Constants/constants.dart';
 import 'package:medical_app/Screens/auth/signup.dart';
+import 'package:medical_app/Screens/home.dart';
 
 class Login extends StatelessWidget {
   @override
@@ -11,8 +12,7 @@ class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Constants.mainColorWhite, 
-       
+        backgroundColor: Constants.mainColorWhite,
         appBar: AppBar(
           title: Center(child: Text('Medical App')),
         ),
@@ -26,7 +26,7 @@ class Login extends StatelessWidget {
                   child: Card(
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(25),
-                    ),  
+                    ),
                     //  shadowColor: Color.fromARGB(255, 97, 66, 0),
                     child: Image.asset(
                       'assets/D1.jpg',
@@ -46,7 +46,6 @@ class Login extends StatelessWidget {
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
                 ),
               ),
-
               Container(
                 padding: EdgeInsets.all(10),
                 child: TextField(
@@ -55,20 +54,18 @@ class Login extends StatelessWidget {
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(25),
                       ),
-                     labelText: 'UserName',
-                      labelStyle: TextStyle(fontSize: 10)
-                      
-                      ),
+                      labelText: 'UserName',
+                      labelStyle: TextStyle(fontSize: 10)),
                 ),
               ),
-
               Container(
                 padding: EdgeInsets.all(10),
                 child: TextFormField(
                   controller: password,
                   obscureText: true,
                   decoration: InputDecoration(
-                      border: OutlineInputBorder(borderRadius: BorderRadius.circular(25)),
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(25)),
                       labelText: 'Passowrd',
                       labelStyle: TextStyle(fontSize: 12)),
                 ),
@@ -77,7 +74,10 @@ class Login extends StatelessWidget {
               Container(
                 padding: EdgeInsets.all(10),
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Home()));
+                  },
                   child: Text(
                     "Login",
                     style: TextStyle(fontSize: 15),
@@ -95,12 +95,13 @@ class Login extends StatelessWidget {
                           new TextSpan(
                             text: 'Sign in',
                             recognizer: new TapGestureRecognizer()
-                              ..onTap = (){
-                                Navigator.push(context, MaterialPageRoute(builder: (context)=>Signup()));
+                              ..onTap = () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Signup()));
                               },
-                              
                           ),
-                      
                         ])),
               ),
             ])));
