@@ -2,7 +2,6 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 class Login extends StatelessWidget {
-  //  const Login({ Key? key }) : super(key: key);
   @override
   TextEditingController username = TextEditingController();
   TextEditingController password = TextEditingController();
@@ -94,14 +93,6 @@ class Login extends StatelessWidget {
                       
                         ])),
               ),
-              // child: Row(
-              //   mainAxisAlignment: MainAxisAlignment.center,
-              //   children: [
-              //   Text("Does not have account?"),
-              //    TextButton(onPressed: (){},
-              //    child: Text('Sign in',style: TextStyle(fontSize: 20),)),
-              //   ],
-              // ),
             ])));
   }
 }
