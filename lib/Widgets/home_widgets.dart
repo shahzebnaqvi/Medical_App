@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:medical_app/Constants/constants.dart';
 
 Widget containericon(context, iconname, icontext, backgroundcolor) {
   return Container(
@@ -14,12 +15,12 @@ Widget containericon(context, iconname, icontext, backgroundcolor) {
             Radius.circular(MediaQuery.of(context).size.width * 0.03))),
     width: MediaQuery.of(context).size.width * 0.45,
     child: Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Icon(
           iconname,
           size: MediaQuery.of(context).size.width * 0.1,
-          color: Colors.white,
+          color: Constants.mainColor,
         ),
         Padding(
           padding: EdgeInsets.only(
@@ -28,7 +29,7 @@ Widget containericon(context, iconname, icontext, backgroundcolor) {
           child: Text(
             icontext,
             style: TextStyle(
-                color: Colors.white,
+                color: Constants.mainColor,
                 fontSize: MediaQuery.of(context).size.width * 0.03),
           ),
         )
