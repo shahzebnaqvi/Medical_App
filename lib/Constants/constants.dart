@@ -9,6 +9,5 @@ class Constants {
   static const Color mediumColor = Colors.grey;
   static const Color ligtbluecolor =  Color.fromARGB(255, 232, 239, 245);
   static const Color mainColorWhite =Color.fromARGB(255, 253, 253, 253);
-  
-  
+
 }

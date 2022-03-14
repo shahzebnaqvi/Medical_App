@@ -1,6 +1,8 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:medical_app/Constants/constants.dart';
+import 'package:medical_app/Screens/auth/signup.dart';
 
 class Login extends StatelessWidget {
   @override
@@ -24,8 +26,8 @@ class Login extends StatelessWidget {
                   child: Card(
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(25),
-                    ),
-                    shadowColor: Color.fromARGB(255, 97, 66, 0),
+                    ),  
+                    //  shadowColor: Color.fromARGB(255, 97, 66, 0),
                     child: Image.asset(
                       'assets/D1.jpg',
                       fit: BoxFit.scaleDown,
@@ -93,7 +95,9 @@ class Login extends StatelessWidget {
                           new TextSpan(
                             text: 'Sign in',
                             recognizer: new TapGestureRecognizer()
-                              ..onTap = () => print('Tap Here onTap'),
+                              ..onTap = (){
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=>Signup()));
+                              },
                               
                           ),
                       
