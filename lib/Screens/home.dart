@@ -38,6 +38,7 @@ class Home extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Home'),
+        backgroundColor: Constants.mainColor,
       ),
       body: Center(
           child: Container(
@@ -45,6 +46,40 @@ class Home extends StatelessWidget {
         // color: Color(0xFF2196F3),
         child: ListView(
           children: [
+            Container(
+              child: TextField(
+                autofocus: false,
+                style: TextStyle(fontSize: 15.0, color: Color(0xFFbdc6cf)),
+                decoration: InputDecoration(
+                  filled: true,
+                  suffixIcon: Icon(Icons.search),
+                  fillColor: Colors.white,
+                  hintText: 'Search',
+                  contentPadding:
+                      const EdgeInsets.only(left: 14.0, bottom: 12.0, top: 0.0),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.white),
+                    borderRadius: BorderRadius.circular(25.7),
+                  ),
+                  enabledBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: Colors.white),
+                    borderRadius: BorderRadius.circular(25.7),
+                  ),
+                ),
+              ),
+              decoration: new BoxDecoration(
+                  borderRadius: new BorderRadius.all(new Radius.circular(30.0)),
+                  color: Colors.white),
+              width: 250,
+              height: 50,
+              margin: EdgeInsets.fromLTRB(
+                  MediaQuery.of(context).size.width * 0.02,
+                  MediaQuery.of(context).size.height * 0.03,
+                  MediaQuery.of(context).size.width * 0.02,
+                  MediaQuery.of(context).size.height * 0.03),
+              padding:
+                  EdgeInsets.all(MediaQuery.of(context).size.width * 0.005),
+            ),
             GridView.builder(
                 physics: NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
@@ -66,17 +101,22 @@ class Home extends StatelessWidget {
                             "${Hometitle[index]}", Colors.white)),
                   );
                 }),
-            Text("Other Additional Tools",
-                style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: Constants.mainColor)),
+            Container(
+              margin: EdgeInsets.only(
+                  top: MediaQuery.of(context).size.height * 0.05,
+                  bottom: MediaQuery.of(context).size.height * 0.02),
+              child: Text("Other Additional Tools",
+                  style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: Constants.mainColor)),
+            ),
             GridView.builder(
                 physics: NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
                 itemCount: Additionaltitle.length,
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    mainAxisExtent: MediaQuery.of(context).size.width * 0.4,
+                    mainAxisExtent: MediaQuery.of(context).size.width * 0.3,
                     crossAxisCount: 4),
                 itemBuilder: (context, index) {
                   return InkWell(
@@ -89,8 +129,11 @@ class Home extends StatelessWidget {
                     },
                     child: Container(
                         margin: EdgeInsets.all(2),
-                        child: containericon(context, Additionalicon[index],
-                            Additionaltitle[index], Colors.white)),
+                        child: containericonsmall(
+                            context,
+                            Additionalicon[index],
+                            Additionaltitle[index],
+                            Colors.white)),
                   );
                 }),
           ],
