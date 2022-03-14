@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:medical_app/Constants/constants.dart';
 
 class Login extends StatelessWidget {
   @override
@@ -8,7 +9,8 @@ class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color.fromARGB(255, 232, 239, 245),
+        backgroundColor: Colors.lightBlue, 
+        // backgroundColor: Color.fromARGB(255, 232, 239, 245),
         appBar: AppBar(
           title: Center(child: Text('Medical App')),
         ),
