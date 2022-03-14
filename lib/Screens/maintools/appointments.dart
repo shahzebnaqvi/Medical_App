@@ -5,6 +5,13 @@ class Appointments extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      body: Container(
+        width: MediaQuery.of(context).size.width * 0.95,
+        child: Column(
+          children: [],
+        ),
+      ),
+    );
   }
 }
