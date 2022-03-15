@@ -1,21 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:medical_app/Constants/constants.dart';
+import 'package:medical_app/Controllers/bmi_controller.dart';
+import 'package:medical_app/Screens/additionaltools/additionalsubscreens/bmi_result.dart';
 
-void increment1() {
-  counter1++;
-}
-
-void increment2() {
-  counter2++;
-}
-
-void decrement1() {
-  counter1--;
-}
-
-void decrement2() {
-  counter2--;
-}
+import '../../Widgets/bmi_widget.dart';
 
 class Bmi extends StatefulWidget {
   const Bmi({Key? key}) : super(key: key);
@@ -24,31 +13,50 @@ class Bmi extends StatefulWidget {
   _BmiState createState() => _BmiState();
 }
 
-int counter1 = 0;
-int counter2 = 0;
 double heightcm1 = 0;
 String heightcm = "";
 Color backcolor = Colors.black;
 Color backcolorcon = Colors.white;
 
-// Color backbut = Colors.pink.shade900;
-Color backbut21 = Colors.pink.shade50;
-
-Color coloricon = Color.fromRGBO(6, 78, 187, 1);
+Color coloricon = Constants.mainColor;
 Color fontcolor = Constants.mainColor;
 double _currentSliderValue = 20;
+final genderController = TextEditingController();
+final heightController = TextEditingController();
+final weightController = TextEditingController();
+final ageController = TextEditingController();
+final bmiController = Get.put(BmiController());
 
 class _BmiState extends State<Bmi> {
   height() {
     setState(() {
       heightcm1 = _currentSliderValue;
       heightcm = num.parse(heightcm1.toString()).toStringAsFixed(1);
+      // bmiController.height = heightcm.runtimeType;
+      bmiController.height.value = heightcm;
+      // print(bmiController.height.value);
+      // print(heightcm.runtimeType);
+      // print(bmiController.height.value.runtimeType);
     });
+  }
+
+  void initState() {
+    super.initState();
+    bmiController.gender.value = 0;
+    bmiController.height.value = "";
+    bmiController.weight.value = 0;
+    bmiController.age.value = 0;
+    heightcm = "";
+    _currentSliderValue = 20;
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('BMI Calculator'),
+        backgroundColor: Constants.mainColor,
+      ),
       body: Column(
         children: [
           Padding(
@@ -56,14 +64,49 @@ class _BmiState extends State<Bmi> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                containerhalf(context, Icons.male_rounded, "Male"),
-                containerhalf(context, Icons.female_rounded, "Female"),
+                InkWell(
+                  onTap: () {
+                    setState(() {});
+                    bmiController.gender.value = 1;
+                    print(bmiController.gender.value);
+                  },
+                  child: bmiController.gender.value == 1
+                      ? containerhalf(context, Icons.male_rounded, "Male",
+                          Constants.lightColor, Constants.mainColor)
+                      : containerhalf(context, Icons.male_rounded, "Male",
+                          Constants.mainColor, Constants.lightColor),
+                ),
+                InkWell(
+                  onTap: () {
+                    setState(() {
+                      bmiController.gender.value = 2;
+                    });
+                    print(bmiController.gender.value);
+                  },
+                  child: bmiController.gender.value == 2
+                      ? containerhalf(context, Icons.female_rounded, "Female",
+                          Constants.lightColor, Constants.mainColor)
+                      : containerhalf(context, Icons.female_rounded, "Female",
+                          Constants.mainColor, Constants.lightColor),
+                ),
               ],
             ),
           ),
           Container(
+            decoration: BoxDecoration(
+              color: backcolorcon,
+              borderRadius: BorderRadius.all(
+                  Radius.circular(MediaQuery.of(context).size.width * 0.03)),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey.withOpacity(0.2),
+                  spreadRadius: 1,
+                  blurRadius: 2,
+                  offset: Offset(0, 3), // changes position of shadow
+                ),
+              ],
+            ),
             width: MediaQuery.of(context).size.width * 0.9,
-            color: backcolorcon,
             child: Column(
               children: [
                 Container(
@@ -84,7 +127,7 @@ class _BmiState extends State<Bmi> {
                   value: _currentSliderValue,
                   min: 10,
                   max: 1000,
-                  activeColor: Colors.white,
+                  activeColor: Constants.mainColor,
                   thumbColor: Constants.mainColor,
                   divisions: 1000,
                   label: _currentSliderValue.round().toString(),
@@ -103,16 +146,155 @@ class _BmiState extends State<Bmi> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Containerhalf1(
-                    heading1: "Weight",
-                    counter: counter1,
-                    indexnum: "1",
-                    Onincrement: () => increment1()),
-                Containerhalf1(
-                    heading1: "Age",
-                    counter: counter2,
-                    indexnum: "2",
-                    Onincrement: () => increment1()),
+                Container(
+                  decoration: BoxDecoration(
+                    color: backcolorcon,
+                    borderRadius: BorderRadius.all(Radius.circular(
+                        MediaQuery.of(context).size.width * 0.03)),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.2),
+                        spreadRadius: 1,
+                        blurRadius: 2,
+                        offset: Offset(0, 3), // changes position of shadow
+                      ),
+                    ],
+                  ),
+                  padding: EdgeInsets.all(
+                    MediaQuery.of(context).size.width * 0.04,
+                  ),
+                  width: MediaQuery.of(context).size.width * 0.45,
+                  child: Column(
+                    children: [
+                      Text(
+                        "Weight",
+                        style: TextStyle(
+                            fontSize: MediaQuery.of(context).size.width * 0.05,
+                            color: fontcolor),
+                      ),
+                      Obx(() => Text(
+                            '${bmiController.weight.value}',
+                            style: TextStyle(
+                                fontSize:
+                                    MediaQuery.of(context).size.width * 0.12,
+                                color: fontcolor),
+                          )),
+                      // Text(
+                      //   "${widget.counter}",
+                      //   style: TextStyle(
+                      //       fontSize: MediaQuery.of(context).size.width * 0.12,
+                      //       color: fontcolor),
+                      // ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          InkWell(
+                            onTap: () {
+                              bmiController.decrement("1");
+                            },
+                            child: Icon(
+                              Icons.remove_circle,
+                              color: fontcolor,
+                              size: MediaQuery.of(context).size.width * 0.09,
+                            ),
+                          ),
+                          InkWell(
+                            onTap: () {
+                              bmiController.increment("1");
+                            },
+                            child: Icon(
+                              Icons.add_circle,
+                              color: fontcolor,
+                              size: MediaQuery.of(context).size.width * 0.09,
+                            ),
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                    color: backcolorcon,
+                    borderRadius: BorderRadius.all(Radius.circular(
+                        MediaQuery.of(context).size.width * 0.03)),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.2),
+                        spreadRadius: 1,
+                        blurRadius: 2,
+                        offset: Offset(0, 3), // changes position of shadow
+                      ),
+                    ],
+                  ),
+                  padding: EdgeInsets.all(
+                    MediaQuery.of(context).size.width * 0.04,
+                  ),
+                  width: MediaQuery.of(context).size.width * 0.45,
+                  child: Column(
+                    children: [
+                      Text(
+                        "Age",
+                        style: TextStyle(
+                            fontSize: MediaQuery.of(context).size.width * 0.05,
+                            color: fontcolor),
+                      ),
+                      Obx(() => Text(
+                            '${bmiController.age.value}',
+                            style: TextStyle(
+                                fontSize:
+                                    MediaQuery.of(context).size.width * 0.12,
+                                color: fontcolor),
+                          )),
+                      //         GetX<BmiController>(
+                      //           init: BmiController(),
+                      //           builder: (_c) =>
+                      //               Text('GetX: ${bmiController.weight.value}'),
+                      //         ),
+                      // Text(
+                      //   "${widget.counter}",
+                      //   style: TextStyle(
+                      //       fontSize: MediaQuery.of(context).size.width * 0.12,
+                      //       color: fontcolor),
+                      // ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          InkWell(
+                            onTap: () {
+                              bmiController.decrement("2");
+                            },
+                            child: Icon(
+                              Icons.remove_circle,
+                              color: fontcolor,
+                              size: MediaQuery.of(context).size.width * 0.09,
+                            ),
+                          ),
+                          InkWell(
+                            onTap: () {
+                              bmiController.increment("2");
+                            },
+                            child: Icon(
+                              Icons.add_circle,
+                              color: fontcolor,
+                              size: MediaQuery.of(context).size.width * 0.09,
+                            ),
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+                // Containerhalf1(
+                //     heading1: "Weight",
+                //     counter: bmiController.weight.value,
+                //     indexnum: "1",
+                //     Onincrement: () => {}),
+                // Containerhalf1(
+                //     heading1: "Age",
+                //     counter: bmiController.weight.value,
+                //     indexnum: "2",
+                //     Onincrement: () {}),
               ],
             ),
           ),
@@ -126,125 +308,15 @@ class _BmiState extends State<Bmi> {
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(primary: Constants.mainColor),
                   child: Text("Calculate Your BMI"),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Bmi_Result()),
+                    );
+                  },
                 ),
               ),
             ),
-          )
-        ],
-      ),
-    );
-  }
-}
-
-Widget containerhalf(context, iconcont, name) {
-  return Container(
-    padding: EdgeInsets.all(
-      MediaQuery.of(context).size.width * 0.04,
-    ),
-    width: MediaQuery.of(context).size.width * 0.45,
-    color: backcolorcon,
-    child: Column(
-      children: [
-        Icon(iconcont,
-            color: coloricon, size: MediaQuery.of(context).size.width * 0.3),
-        Text(
-          name,
-          style: TextStyle(
-              fontSize: MediaQuery.of(context).size.width * 0.06,
-              color: fontcolor),
-        )
-      ],
-    ),
-  );
-}
-
-class Containerhalf1 extends StatefulWidget {
-  const Containerhalf1(
-      {Key? key,
-      required this.heading1,
-      required this.counter,
-      required this.indexnum,
-      required this.Onincrement})
-      : super(key: key);
-  final String heading1;
-  final int counter;
-  final String indexnum;
-  final Function Onincrement;
-
-  @override
-  _Containerhalf1State createState() => _Containerhalf1State();
-}
-
-int counteraa = 0;
-// var heading1 = "Weight";
-
-class _Containerhalf1State extends State<Containerhalf1> {
-  void _incrementCounter() {
-    setState(() {
-      widget.Onincrement;
-      print(widget.Onincrement);
-      print(widget.counter);
-    });
-  }
-
-  void _decrementCounter() {
-    setState(() {
-      counteraa--;
-      print(counteraa);
-      print(counteraa);
-
-      print(counter1);
-      print(counter2);
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.all(
-        MediaQuery.of(context).size.width * 0.04,
-      ),
-      width: MediaQuery.of(context).size.width * 0.45,
-      color: backcolorcon,
-      child: Column(
-        children: [
-          Text(
-            "${widget.heading1}",
-            style: TextStyle(
-                fontSize: MediaQuery.of(context).size.width * 0.05,
-                color: fontcolor),
-          ),
-          Text(
-            "${widget.counter}",
-            style: TextStyle(
-                fontSize: MediaQuery.of(context).size.width * 0.12,
-                color: fontcolor),
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              InkWell(
-                onTap: () {
-                  _decrementCounter();
-                },
-                child: Icon(
-                  Icons.remove_circle,
-                  color: fontcolor,
-                  size: MediaQuery.of(context).size.width * 0.09,
-                ),
-              ),
-              InkWell(
-                onTap: () {
-                  _incrementCounter();
-                },
-                child: Icon(
-                  Icons.add_circle,
-                  color: fontcolor,
-                  size: MediaQuery.of(context).size.width * 0.09,
-                ),
-              ),
-            ],
           )
         ],
       ),
