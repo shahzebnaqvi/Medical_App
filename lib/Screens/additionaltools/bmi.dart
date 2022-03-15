@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:medical_app/Constants/constants.dart';
 import 'package:medical_app/Controllers/bmi_controller.dart';
+import 'package:medical_app/Screens/additionaltools/additionalsubscreens/bmi_result.dart';
 
 import '../../Widgets/bmi_widget.dart';
 
@@ -32,17 +33,28 @@ class _BmiState extends State<Bmi> {
       heightcm1 = _currentSliderValue;
       heightcm = num.parse(heightcm1.toString()).toStringAsFixed(1);
       // bmiController.height = heightcm.runtimeType;
-      // bmiController.height.value = heightcm;
-      print(heightcm1.runtimeType);
-      print(bmiController.height.value.runtimeType);
+      bmiController.height.value = heightcm;
+      // print(bmiController.height.value);
+      // print(heightcm.runtimeType);
+      // print(bmiController.height.value.runtimeType);
     });
+  }
+
+  void initState() {
+    super.initState();
+    bmiController.gender.value = 0;
+    bmiController.height.value = "";
+    bmiController.weight.value = 0;
+    bmiController.age.value = 0;
+    heightcm = "";
+    _currentSliderValue = 20;
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Home'),
+        title: const Text('BMI Calculator'),
         backgroundColor: Constants.mainColor,
       ),
       body: Column(
@@ -52,14 +64,49 @@ class _BmiState extends State<Bmi> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                containerhalf(context, Icons.male_rounded, "Male"),
-                containerhalf(context, Icons.female_rounded, "Female"),
+                InkWell(
+                  onTap: () {
+                    setState(() {});
+                    bmiController.gender.value = 1;
+                    print(bmiController.gender.value);
+                  },
+                  child: bmiController.gender.value == 1
+                      ? containerhalf(context, Icons.male_rounded, "Male",
+                          Constants.lightColor, Constants.mainColor)
+                      : containerhalf(context, Icons.male_rounded, "Male",
+                          Constants.mainColor, Constants.lightColor),
+                ),
+                InkWell(
+                  onTap: () {
+                    setState(() {
+                      bmiController.gender.value = 2;
+                    });
+                    print(bmiController.gender.value);
+                  },
+                  child: bmiController.gender.value == 2
+                      ? containerhalf(context, Icons.female_rounded, "Female",
+                          Constants.lightColor, Constants.mainColor)
+                      : containerhalf(context, Icons.female_rounded, "Female",
+                          Constants.mainColor, Constants.lightColor),
+                ),
               ],
             ),
           ),
           Container(
+            decoration: BoxDecoration(
+              color: backcolorcon,
+              borderRadius: BorderRadius.all(
+                  Radius.circular(MediaQuery.of(context).size.width * 0.03)),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey.withOpacity(0.2),
+                  spreadRadius: 1,
+                  blurRadius: 2,
+                  offset: Offset(0, 3), // changes position of shadow
+                ),
+              ],
+            ),
             width: MediaQuery.of(context).size.width * 0.9,
-            color: backcolorcon,
             child: Column(
               children: [
                 Container(
@@ -100,11 +147,23 @@ class _BmiState extends State<Bmi> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Container(
+                  decoration: BoxDecoration(
+                    color: backcolorcon,
+                    borderRadius: BorderRadius.all(Radius.circular(
+                        MediaQuery.of(context).size.width * 0.03)),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.2),
+                        spreadRadius: 1,
+                        blurRadius: 2,
+                        offset: Offset(0, 3), // changes position of shadow
+                      ),
+                    ],
+                  ),
                   padding: EdgeInsets.all(
                     MediaQuery.of(context).size.width * 0.04,
                   ),
                   width: MediaQuery.of(context).size.width * 0.45,
-                  color: backcolorcon,
                   child: Column(
                     children: [
                       Text(
@@ -155,11 +214,23 @@ class _BmiState extends State<Bmi> {
                   ),
                 ),
                 Container(
+                  decoration: BoxDecoration(
+                    color: backcolorcon,
+                    borderRadius: BorderRadius.all(Radius.circular(
+                        MediaQuery.of(context).size.width * 0.03)),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.2),
+                        spreadRadius: 1,
+                        blurRadius: 2,
+                        offset: Offset(0, 3), // changes position of shadow
+                      ),
+                    ],
+                  ),
                   padding: EdgeInsets.all(
                     MediaQuery.of(context).size.width * 0.04,
                   ),
                   width: MediaQuery.of(context).size.width * 0.45,
-                  color: backcolorcon,
                   child: Column(
                     children: [
                       Text(
@@ -237,7 +308,12 @@ class _BmiState extends State<Bmi> {
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(primary: Constants.mainColor),
                   child: Text("Calculate Your BMI"),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Bmi_Result()),
+                    );
+                  },
                 ),
               ),
             ),

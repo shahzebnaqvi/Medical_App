@@ -2,7 +2,7 @@ import 'package:get/get.dart';
 
 class BmiController extends GetxController {
   var gender = 0.obs;
-  final height = 0.obs;
+  var height = "".obs;
   var weight = 0.obs;
   var age = 0.obs;
   increment(var index) {
@@ -33,4 +33,6 @@ class BmiController extends GetxController {
       update();
     }
   }
+
+  bmiresult() {}
 }
