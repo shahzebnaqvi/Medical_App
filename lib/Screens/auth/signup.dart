@@ -10,32 +10,30 @@ class Signup extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-       margin: EdgeInsets.all(10),
+        margin: EdgeInsets.all(10),
+        padding: EdgeInsets.all(10),
         child: ListView(
             children: [
               Container(
-                child: Card(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                   child: Image.network('assets/login.jpg'),
-                ),
+              child: Image.network('assets/Sign_up.jpg'),
               ),
+               Divider(
+                height: MediaQuery.of(context).size.height * 0,
+                thickness: 1,
+                ), 
                 Container(
                   alignment: Alignment.center,
                   padding: EdgeInsets.all(10),
                 child: Text("Sign Up",style:TextStyle(fontSize: 25,fontWeight: FontWeight.bold,decorationColor: Constants.ligtbluecolor)),
                 ),
-                Divider(
-                height: MediaQuery.of(context).size.height * 0,
-                thickness: 1,
-                ), 
+               
                 Container(  
                  padding: EdgeInsets.all(10),
                  child: TextField(
                    decoration: InputDecoration(
                      border: OutlineInputBorder(borderRadius: BorderRadius.circular(25)),
-                     labelText: 'Username'
+                     labelText: 'Username',
+                      labelStyle: TextStyle(fontSize: 12)
                    ),
                  ),
                 ),
@@ -44,7 +42,8 @@ class Signup extends StatelessWidget {
                  child: TextField(
                    decoration: InputDecoration(
                      border: OutlineInputBorder(borderRadius: BorderRadius.circular(25)),
-                     labelText: 'Email'
+                     labelText: 'Email',
+                     labelStyle: TextStyle(fontSize: 12)
                    ),
                  ),
                 ), 
@@ -53,16 +52,17 @@ class Signup extends StatelessWidget {
                  child: TextField(
                    decoration: InputDecoration(
                      border: OutlineInputBorder(borderRadius: BorderRadius.circular(25)),
-                     labelText: 'Password '
+                     labelText: 'Password ',
+                     labelStyle: TextStyle(fontSize: 12)
                    ),
                  ),
                 ),
                 Container(
-                  padding: EdgeInsets.all(20),
+                  padding: EdgeInsets.all(10),
                   child: ElevatedButton(
                     onPressed: (){},
                   style: ElevatedButton.styleFrom(shape:StadiumBorder()),
-                  child: Text('Submit',style: TextStyle(fontSize:18,),
+                  child: Text('Submit',style: TextStyle(fontSize:15,),
                   ),
                    )   )
             ]
@@ -73,4 +73,3 @@ class Signup extends StatelessWidget {
     );
   }
 }
-  // Text("Sign Up",style:TextStyle(fontSize: 25,fontWeight: FontWeight.bold,decorationColor: Constants.ligtbluecolor))
