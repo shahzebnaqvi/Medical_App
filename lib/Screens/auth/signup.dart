@@ -99,8 +99,23 @@ class Signup extends StatelessWidget {
                             ]
                     )
                     ),
-                )
+                ),
+               Container(
+                 margin: EdgeInsets.all(25.0),
+                 child: Row(
+                   mainAxisAlignment: MainAxisAlignment.center,
+                 children: [
+                       ElevatedButton(onPressed:(){}, child: Text("Google")
+                       ),
+                       Spacer(),
+                       ElevatedButton(onPressed:(){}, child: Text("Facebook")),
+                        Spacer(),
+                       ElevatedButton(onPressed:(){}, child: Text("Gmail"))
+                       
 
+                   ],
+                 ),
+               )
           ]
           )
           ),
