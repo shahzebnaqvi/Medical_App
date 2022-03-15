@@ -108,19 +108,22 @@ class Login extends StatelessWidget {
               ),
                Container(
               margin: EdgeInsets.all(25.0),
-              child: Row(
+              child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  ElevatedButton(onPressed: () {}, child: Text("Google"),
-                  
+                 ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(shape: StadiumBorder()),
+                  child: Text("Google",style: TextStyle(fontSize: 15,
+                    ),
                   ),
-                  Spacer(),
-                  ElevatedButton(onPressed: () {}, child: Text("Facebook")),
-                  Spacer(),
-                  ElevatedButton(onPressed: () {}, child: Text("Gmail"))
+                ),
+                
+                 
                 ],
               ),
             )
             ])));
+  
   }
 }
