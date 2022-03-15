@@ -143,13 +143,15 @@ class Login extends StatelessWidget {
                   child: Row(
                     children: [
                       CircleAvatar(
-                        radius: 30,
-                        backgroundColor: Colors.transparent,
-                        backgroundImage:AssetImage('assets/google.jpg'),
+                        radius: 16,
+                        backgroundColor: Colors.red,
+                        child: ImageIcon(
+                          AssetImage('assets/google.jpg'),
+                          color: Colors.white,
+                          size: 16,
                         ),
-                      
+                      ),
                       Spacer(),
-                      
                       Text('Sigin in with Google',
                           style: TextStyle(
                               color: Colors.black,
