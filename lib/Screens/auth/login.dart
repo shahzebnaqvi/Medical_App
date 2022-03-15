@@ -106,38 +106,82 @@ class Login extends StatelessWidget {
                           ),
                         ])),
               ),
-              //    Container(
-              //   margin: EdgeInsets.all(25.0),
-              //   child: Column(
-              //     mainAxisAlignment: MainAxisAlignment.center,
-              //     children: [
-              //      ElevatedButton(
-              //       onPressed: () {},
-              //       style: ElevatedButton.styleFrom(shape: StadiumBorder()),
-              //       child: Text("Google",style: TextStyle(fontSize: 15,
-              //         ),
-              //       ),
-              //     ),
-
-              //     ],
-              //   ),
-              // )
               Container(
-                margin: EdgeInsets.all(25.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    ElevatedButton(
-                      onPressed: () {},
-                      child: Text("Google"),
+                  padding: EdgeInsets.all(15),
+                  child: ElevatedButton.icon(
+                    onPressed: () {},
+                    style: ElevatedButton.styleFrom(shape: StadiumBorder()),
+                    icon: Icon(Icons.mail),
+                    label: Text(
+                      "Sigin in with Google",
+                      style: TextStyle(
+                        fontSize: 15,
+                      ),
                     ),
-                    Spacer(),
-                    ElevatedButton(onPressed: () {}, child: Text("Facebook")),
-                    Spacer(),
-                    ElevatedButton(onPressed: () {}, child: Text("Gmail"))
-                  ],
+                  )),
+              Container(
+                padding: EdgeInsets.all(12),
+                child: ElevatedButton.icon(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(shape: StadiumBorder()),
+                  icon: Icon(Icons.face),
+                  label: Text(
+                    "Sigin in with Facebook",
+                    style: TextStyle(
+                      fontSize: 15,
+                    ),
+                  ),
                 ),
-              )
+              ),
+            Container(
+                  padding: EdgeInsetsDirectional.only(start: 10),
+                  height: 55,
+                  decoration: BoxDecoration(
+                      border: Border.all(color: Colors.grey[300]!, width: 1),
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(30)),
+                  child: Row(
+                    children: [
+                      CircleAvatar(
+                        radius: 30,
+                        backgroundColor: Colors.transparent,
+                        backgroundImage:AssetImage('assets/google.jpg'),
+                        ),
+                      
+                      Spacer(),
+                      
+                      Text('Sigin in with Google',
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 15,
+                              fontWeight: FontWeight.w500)
+                              ),
+                      Spacer(flex: 2),
+                    ],
+                  ),
+                ),
+              
             ])));
   }
 }
+
+
+
+                 // Container(          
+                  // padding: EdgeInsets.all(10),
+                // child: ElevatedButton(
+                //   onPressed: () {},
+                    
+                //   style: ElevatedButton.styleFrom(shape: StadiumBorder()),
+                //   child: Text(
+                //     "Sigin in with Google",
+                //    style: ElevatedButton.styleFrom(
+                    //   shape: new RoundedRectangleBorder(
+                    //     borderRadius: new BorderRadius.circular(20.0),
+                    //   ),
+                //     ),
+                //   ),
+                // ),
+                    
+            //  ),
+     
