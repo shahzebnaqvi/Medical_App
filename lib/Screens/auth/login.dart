@@ -66,7 +66,7 @@ class Login extends StatelessWidget {
                   decoration: InputDecoration(
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(25)),
-                      labelText: 'Passowrd',
+                      labelText: 'Password',
                       labelStyle: TextStyle(fontSize: 12)),
                 ),
               ),
