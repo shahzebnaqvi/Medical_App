@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'dart:convert';
 
 class BmiController extends GetxController {
   var gender = 0.obs;
@@ -39,7 +40,7 @@ class BmiController extends GetxController {
   // print(BmiController.age.value);
   var a;
   bmiresult() {
-    var a = age.value / age.value;
+    var a = (weight.value / double.parse(height.value)).toStringAsFixed(1);
     print(a);
     return a;
   }

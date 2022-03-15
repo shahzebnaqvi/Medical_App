@@ -35,7 +35,7 @@ class _Bmi_ResultState extends State<Bmi_Result> {
             padding: EdgeInsets.only(
                 bottom: MediaQuery.of(context).size.width * 0.08),
             child: Text(
-              "Your Result ${bmiController.bmiresult()}",
+              "Your Result",
               style: TextStyle(
                   fontSize: MediaQuery.of(context).size.width * 0.08,
                   color: Constants.mainColor,
@@ -74,7 +74,7 @@ class _Bmi_ResultState extends State<Bmi_Result> {
                   padding:
                       EdgeInsets.all(MediaQuery.of(context).size.width * 0.021),
                   child: Text(
-                    "22.3",
+                    "${bmiController.bmiresult()}",
                     style: TextStyle(
                         fontSize: MediaQuery.of(context).size.width * 0.121,
                         fontWeight: FontWeight.bold,
