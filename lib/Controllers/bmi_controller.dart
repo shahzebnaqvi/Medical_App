@@ -34,5 +34,8 @@ class BmiController extends GetxController {
     }
   }
 
+  var bmilottiefile1 = 'assets/lottiefile/running-men.json';
+  // var result = age.value / weight.value;
+  // print(BmiController.age.value);
   bmiresult() {}
 }
