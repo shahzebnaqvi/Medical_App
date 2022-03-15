@@ -8,13 +8,20 @@ class Signup extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        padding: EdgeInsets.all(15),
        margin: EdgeInsets.all(10),
         child: ListView(
             children: [
+              Container(
+                child: Card(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                   child: Image.network('assets/login.jpg'),
+                ),
+              ),
                 Container(
+                  alignment: Alignment.center,
                   padding: EdgeInsets.all(10),
-                  // margin: EdgeInsets.all(10),
                 child: Text("Sign Up",style:TextStyle(fontSize: 25,fontWeight: FontWeight.bold,decorationColor: Constants.ligtbluecolor)),
                 ),
                 Divider(
