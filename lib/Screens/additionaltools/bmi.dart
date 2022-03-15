@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:medical_app/Constants/constants.dart';
 
-TextEditingController txt = TextEditingController();
 void increment1() {
   counter1++;
 }
@@ -30,13 +29,13 @@ int counter2 = 0;
 double heightcm1 = 0;
 String heightcm = "";
 Color backcolor = Colors.black;
-Color backcolorcon = Colors.black54;
+Color backcolorcon = Colors.white;
 
-Color backbut = Colors.pink.shade900;
+// Color backbut = Colors.pink.shade900;
 Color backbut21 = Colors.pink.shade50;
 
-Color coloricon = Colors.white;
-Color fontcolor = Colors.white;
+Color coloricon = Color.fromRGBO(6, 78, 187, 1);
+Color fontcolor = Constants.mainColor;
 double _currentSliderValue = 20;
 
 class _BmiState extends State<Bmi> {

@@ -28,7 +28,7 @@ class Login extends StatelessWidget {
                     ),
                     //  shadowColor: Color.fromARGB(255, 97, 66, 0),
                     child: Image.asset(
-                      'assets/D1.jpg',
+                      'assets/login.jpg',
                       fit: BoxFit.scaleDown,
                     ),
                     elevation: 8,
@@ -106,23 +106,40 @@ class Login extends StatelessWidget {
                           ),
                         ])),
               ),
-               Container(
-              margin: EdgeInsets.all(25.0),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                 ElevatedButton(
-                  onPressed: () {},
-                  style: ElevatedButton.styleFrom(shape: StadiumBorder()),
-                  child: Text("Google",style: TextStyle(fontSize: 15,
-                    ),
-                  ),
-                ),
+            //    Container(
+            //   margin: EdgeInsets.all(25.0),
+            //   child: Column(
+            //     mainAxisAlignment: MainAxisAlignment.center,
+            //     children: [
+            //      ElevatedButton(
+            //       onPressed: () {},
+            //       style: ElevatedButton.styleFrom(shape: StadiumBorder()),
+            //       child: Text("Google",style: TextStyle(fontSize: 15,
+            //         ),
+            //       ),
+            //     ),
                 
                  
-                ],
-              ),
-            )
+            //     ],
+            //   ),
+            // )
+              Container(
+                margin: EdgeInsets.all(25.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    ElevatedButton(
+                      onPressed: () {},
+                      child: Text("Google"),
+                    ),
+                    Spacer(),
+                    ElevatedButton(onPressed: () {}, child: Text("Facebook")),
+                    Spacer(),
+                    ElevatedButton(onPressed: () {}, child: Text("Gmail"))
+                  ],
+                ),
+              )
+
             ])));
   
   }
