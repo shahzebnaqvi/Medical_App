@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:medical_app/Constants/constants.dart';
 import 'package:medical_app/Controllers/bmi_controller.dart';
+import 'package:lottie/lottie.dart';
 
 class Bmi_Result extends StatefulWidget {
   const Bmi_Result({Key? key}) : super(key: key);
@@ -27,8 +28,12 @@ class _Bmi_ResultState extends State<Bmi_Result> {
       ),
       body: Column(
         children: [
+          Container(
+              height: MediaQuery.of(context).size.width * 0.5,
+              child: Lottie.asset(bmiController.bmilottiefile1)),
           Padding(
-            padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.08),
+            padding: EdgeInsets.only(
+                bottom: MediaQuery.of(context).size.width * 0.08),
             child: Text(
               "Your Result",
               style: TextStyle(
@@ -72,7 +77,8 @@ class _Bmi_ResultState extends State<Bmi_Result> {
                     "22.3",
                     style: TextStyle(
                         fontSize: MediaQuery.of(context).size.width * 0.121,
-                        fontWeight: FontWeight.bold),
+                        fontWeight: FontWeight.bold,
+                        color: Constants.mainColor),
                   ),
                 ),
                 Text(
