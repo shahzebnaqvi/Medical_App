@@ -106,23 +106,22 @@ class Login extends StatelessWidget {
                           ),
                         ])),
               ),
-            //    Container(
-            //   margin: EdgeInsets.all(25.0),
-            //   child: Column(
-            //     mainAxisAlignment: MainAxisAlignment.center,
-            //     children: [
-            //      ElevatedButton(
-            //       onPressed: () {},
-            //       style: ElevatedButton.styleFrom(shape: StadiumBorder()),
-            //       child: Text("Google",style: TextStyle(fontSize: 15,
-            //         ),
-            //       ),
-            //     ),
-                
-                 
-            //     ],
-            //   ),
-            // )
+              //    Container(
+              //   margin: EdgeInsets.all(25.0),
+              //   child: Column(
+              //     mainAxisAlignment: MainAxisAlignment.center,
+              //     children: [
+              //      ElevatedButton(
+              //       onPressed: () {},
+              //       style: ElevatedButton.styleFrom(shape: StadiumBorder()),
+              //       child: Text("Google",style: TextStyle(fontSize: 15,
+              //         ),
+              //       ),
+              //     ),
+
+              //     ],
+              //   ),
+              // )
               Container(
                 margin: EdgeInsets.all(25.0),
                 child: Row(
@@ -139,8 +138,6 @@ class Login extends StatelessWidget {
                   ],
                 ),
               )
-
             ])));
-  
   }
 }
