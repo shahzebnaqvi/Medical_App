@@ -77,9 +77,10 @@ class Login extends StatelessWidget {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => Home()));
                   },
+                  style: ElevatedButton.styleFrom(shape:StadiumBorder()),
                   child: Text(
                     "Login",
-                    style: TextStyle(fontSize: 15),
+                    style: TextStyle(fontSize: 15,),
                   ),
                 ),
               ),

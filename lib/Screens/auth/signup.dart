@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/material.dart';
 import 'package:medical_app/Constants/constants.dart';
@@ -32,7 +34,7 @@ class Signup extends StatelessWidget {
                  padding: EdgeInsets.all(10),
                  child: TextField(
                    decoration: InputDecoration(
-                     border: OutlineInputBorder(borderRadius: BorderRadius.circular(15)),
+                     border: OutlineInputBorder(borderRadius: BorderRadius.circular(25)),
                      labelText: 'Username'
                    ),
                  ),
@@ -41,7 +43,7 @@ class Signup extends StatelessWidget {
                  padding: EdgeInsets.all(10),
                  child: TextField(
                    decoration: InputDecoration(
-                     border: OutlineInputBorder(borderRadius: BorderRadius.circular(15)),
+                     border: OutlineInputBorder(borderRadius: BorderRadius.circular(25)),
                      labelText: 'Email'
                    ),
                  ),
@@ -50,12 +52,20 @@ class Signup extends StatelessWidget {
                  padding: EdgeInsets.all(10),
                  child: TextField(
                    decoration: InputDecoration(
-                     border: OutlineInputBorder(borderRadius: BorderRadius.circular(15)),
+                     border: OutlineInputBorder(borderRadius: BorderRadius.circular(25)),
                      labelText: 'Password '
                    ),
                  ),
                 ),
-            ],
+                Container(
+                  padding: EdgeInsets.all(20),
+                  child: ElevatedButton(
+                    onPressed: (){},
+                  style: ElevatedButton.styleFrom(shape:StadiumBorder()),
+                  child: Text('Submit',style: TextStyle(fontSize:18,),
+                  ),
+                   )   )
+            ]
           )
           
         ), 
