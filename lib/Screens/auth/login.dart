@@ -92,7 +92,7 @@ class Login extends StatelessWidget {
                     text: TextSpan(
                         text: 'Does not have account? ',
                         style: TextStyle(
-                            fontSize: 15, fontWeight: FontWeight.w200),
+                            fontSize: 14, fontWeight: FontWeight.w200),
                         children: <TextSpan>[
                           new TextSpan(
                             text: 'Sign in',

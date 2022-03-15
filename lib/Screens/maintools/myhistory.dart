@@ -5,6 +5,12 @@ class MyHistory extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(title: Center(child: Text('History')),
+      ),
+      body: Container(
+       
+      ),
+    );
   }
 }
