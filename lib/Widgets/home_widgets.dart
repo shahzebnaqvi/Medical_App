@@ -87,6 +87,7 @@ Widget containericonsmall(context, iconname, icontext, backgroundcolor) {
             style: TextStyle(
                 color: Constants.mainColor,
                 fontSize: MediaQuery.of(context).size.width * 0.03),
+            textAlign: TextAlign.center,
           ),
         )
       ],

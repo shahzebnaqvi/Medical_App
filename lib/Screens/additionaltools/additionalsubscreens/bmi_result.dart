@@ -33,7 +33,8 @@ class _Bmi_ResultState extends State<Bmi_Result> {
               "Your Result",
               style: TextStyle(
                   fontSize: MediaQuery.of(context).size.width * 0.08,
-                  color: Constants.mainColor),
+                  color: Constants.mainColor,
+                  fontWeight: FontWeight.bold),
             ),
           ),
           Container(
@@ -54,7 +55,32 @@ class _Bmi_ResultState extends State<Bmi_Result> {
                 MediaQuery.of(context).size.width * 0.04,
               ),
               width: MediaQuery.of(context).size.width * 0.95,
-              child: Column(children: [Text("ss"), Text("ss"), Text("ss")])),
+              child: Column(children: [
+                Padding(
+                  padding:
+                      EdgeInsets.all(MediaQuery.of(context).size.width * 0.021),
+                  child: Text(
+                    "Normal",
+                    style: TextStyle(
+                        fontSize: MediaQuery.of(context).size.width * 0.051),
+                  ),
+                ),
+                Padding(
+                  padding:
+                      EdgeInsets.all(MediaQuery.of(context).size.width * 0.021),
+                  child: Text(
+                    "22.3",
+                    style: TextStyle(
+                        fontSize: MediaQuery.of(context).size.width * 0.121,
+                        fontWeight: FontWeight.bold),
+                  ),
+                ),
+                Text(
+                  "sdknkasdmaksmkasmskasmkasmaskmasksamskksamaskasmkasmasksmas kasmskmask nkasksak kajaskj kajsask kakasjkj s",
+                  style: TextStyle(),
+                  textAlign: TextAlign.center,
+                ),
+              ])),
           Expanded(
             child: Align(
               alignment: Alignment.bottomCenter,
