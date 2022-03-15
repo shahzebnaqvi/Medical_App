@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:medical_app/Constants/constants.dart';
 
-TextEditingController txt = TextEditingController();
 void increment1() {
   counter1++;
 }
