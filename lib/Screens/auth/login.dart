@@ -77,10 +77,12 @@ class Login extends StatelessWidget {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => Home()));
                   },
-                  style: ElevatedButton.styleFrom(shape:StadiumBorder()),
+                  style: ElevatedButton.styleFrom(shape: StadiumBorder()),
                   child: Text(
                     "Login",
-                    style: TextStyle(fontSize: 15,),
+                    style: TextStyle(
+                      fontSize: 15,
+                    ),
                   ),
                 ),
               ),
@@ -104,6 +106,21 @@ class Login extends StatelessWidget {
                           ),
                         ])),
               ),
+               Container(
+              margin: EdgeInsets.all(25.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ElevatedButton(onPressed: () {}, child: Text("Google"),
+                  
+                  ),
+                  Spacer(),
+                  ElevatedButton(onPressed: () {}, child: Text("Facebook")),
+                  Spacer(),
+                  ElevatedButton(onPressed: () {}, child: Text("Gmail"))
+                ],
+              ),
+            )
             ])));
   }
 }

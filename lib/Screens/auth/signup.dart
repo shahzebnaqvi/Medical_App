@@ -4,6 +4,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/material.dart';
 import 'package:medical_app/Constants/constants.dart';
+import 'package:medical_app/Screens/additionaltools/bmi.dart';
 import 'package:medical_app/Screens/auth/login.dart';
 
 class Signup extends StatelessWidget {
@@ -56,7 +57,6 @@ class Signup extends StatelessWidget {
               padding: EdgeInsets.all(10),
               child: TextField(
                 obscureText: true,
-                
                 decoration: InputDecoration(
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(25)),
@@ -75,51 +75,29 @@ class Signup extends StatelessWidget {
                       fontSize: 15,
                     ),
                   ),
-                )
-                ),
-                Container(
-                  child: RichText(
-                    textAlign: TextAlign.center,
-                    text:TextSpan(
+                )),
+            Container(
+              child: RichText(
+                  textAlign: TextAlign.center,
+                  text: TextSpan(
                       text: 'Already have an account?',
-                      style: TextStyle(
-                            fontSize: 15, fontWeight: FontWeight.w200),
-                            children:<TextSpan>[
-                              new TextSpan(
-                            text: 'Login in',
-                            recognizer: new TapGestureRecognizer()
-                              ..onTap = () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => Login())
-                            );
-                              },
-                          ),
-                            ]
-                    )
-                    ),
-                ),
-               Container(
-                 margin: EdgeInsets.all(25.0),
-                 child: Row(
-                   mainAxisAlignment: MainAxisAlignment.center,
-                 children: [
-                       ElevatedButton(onPressed:(){}, child: Text("Google")
-                       ),
-                       Spacer(),
-                       ElevatedButton(onPressed:(){}, child: Text("Facebook")),
-                        Spacer(),
-                       ElevatedButton(onPressed:(){}, child: Text("Gmail"))
-                       
-
-                   ],
-                 ),
-               )
-          ]
-          )
-          ),
-        
+                      style:
+                          TextStyle(fontSize: 15, fontWeight: FontWeight.w200),
+                      children: <TextSpan>[
+                        new TextSpan(
+                          text: 'Login in',
+                          recognizer: new TapGestureRecognizer()
+                            ..onTap = () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Login()));
+                            },
+                        ),
+                      ])),
+            ),
+           
+          ])),
     );
   }
 }
