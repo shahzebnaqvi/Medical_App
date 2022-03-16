@@ -192,6 +192,9 @@ class _BmiState extends State<Bmi> {
                             onTap: () {
                               bmiController.decrement("1");
                             },
+                            onLongPress: () {
+                              bmiController.decrementlong("1");
+                            },
                             child: Icon(
                               Icons.remove_circle,
                               color: fontcolor,
@@ -201,6 +204,9 @@ class _BmiState extends State<Bmi> {
                           InkWell(
                             onTap: () {
                               bmiController.increment("1");
+                            },
+                            onLongPress: () {
+                              bmiController.incrementlong("1");
                             },
                             child: Icon(
                               Icons.add_circle,
@@ -264,6 +270,9 @@ class _BmiState extends State<Bmi> {
                             onTap: () {
                               bmiController.decrement("2");
                             },
+                            onLongPress: () {
+                              bmiController.decrementlong("2");
+                            },
                             child: Icon(
                               Icons.remove_circle,
                               color: fontcolor,
@@ -273,6 +282,9 @@ class _BmiState extends State<Bmi> {
                           InkWell(
                             onTap: () {
                               bmiController.increment("2");
+                            },
+                            onLongPress: () {
+                              bmiController.incrementlong("2");
                             },
                             child: Icon(
                               Icons.add_circle,
@@ -309,15 +321,41 @@ class _BmiState extends State<Bmi> {
                   style: ElevatedButton.styleFrom(primary: Constants.mainColor),
                   child: Text("Calculate Your BMI"),
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => Bmi_Result()),
-                    );
+                    print("dssddssdsdsdsdsdddddddddd");
+                    print("weoght");
+                    print((bmiController.weight.value).runtimeType);
+                    print("age");
+
+                    print((bmiController.age.value.runtimeType));
+                    print("gender");
+
+                    print((bmiController.gender.value).runtimeType);
+                    print("height");
+
+                    print(bmiController.height.value);
+                    if (bmiController.height.value == "" ||
+                        bmiController.weight.value == 0 ||
+                        bmiController.age.value == 0 ||
+                        bmiController.gender.value == 0) {
+                      //   bmiController.height.value = "";
+                      // bmiController.weight.value = 0;
+                      // bmiController.age.value = 0;
+
+                      print(bmiController.height.value);
+                      var snackBar =
+                          SnackBar(content: Text('Enter the values First'));
+                      ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                    } else {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Bmi_Result()),
+                      );
+                    }
                   },
                 ),
               ),
             ),
-          )
+          ),
         ],
       ),
     );

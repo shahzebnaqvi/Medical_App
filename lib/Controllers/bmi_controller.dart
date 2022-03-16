@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'dart:convert';
 
 class BmiController extends GetxController {
   var gender = 0.obs;
@@ -13,6 +14,19 @@ class BmiController extends GetxController {
       update();
     } else if (index == "2") {
       age++;
+      print(age);
+      update();
+    }
+  }
+
+  incrementlong(var index) {
+    print(index);
+    if (index == "1") {
+      weight = weight + 5;
+      print(weight);
+      update();
+    } else if (index == "2") {
+      age = age + 5;
       print(age);
       update();
     }
@@ -34,8 +48,31 @@ class BmiController extends GetxController {
     }
   }
 
+  decrementlong(var index) {
+    print(index);
+    if (index == "1") {
+      if (weight >= 5) {
+        weight = weight - 5;
+      }
+      // weight = weight - 5;
+      print(weight);
+      update();
+    } else if (index == "2") {
+      if (age >= 5) {
+        age = age - 5;
+      }
+    }
+    print(age);
+    update();
+  }
+
   var bmilottiefile1 = 'assets/lottiefile/running-men.json';
   // var result = age.value / weight.value;
   // print(BmiController.age.value);
-  bmiresult() {}
+  var a;
+  bmiresult() {
+    var a = (weight.value / double.parse(height.value)).toStringAsFixed(1);
+    print(a);
+    return a;
+  }
 }

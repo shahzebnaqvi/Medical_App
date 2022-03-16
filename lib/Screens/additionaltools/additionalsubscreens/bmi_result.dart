@@ -13,11 +13,11 @@ class Bmi_Result extends StatefulWidget {
 
 class _Bmi_ResultState extends State<Bmi_Result> {
   final bmiController = Get.put(BmiController());
-
   void initState() {
     super.initState();
     bmiController.bmiresult();
   }
+// var a =  bmiController.height.value;s
 
   @override
   Widget build(BuildContext context) {
@@ -74,7 +74,7 @@ class _Bmi_ResultState extends State<Bmi_Result> {
                   padding:
                       EdgeInsets.all(MediaQuery.of(context).size.width * 0.021),
                   child: Text(
-                    "22.3",
+                    "${bmiController.bmiresult()}",
                     style: TextStyle(
                         fontSize: MediaQuery.of(context).size.width * 0.121,
                         fontWeight: FontWeight.bold,
