@@ -5,10 +5,19 @@ import 'package:medical_app/Constants/constants.dart';
 import 'package:medical_app/Screens/auth/signup.dart';
 import 'package:medical_app/Screens/home.dart';
 
-class Login extends StatelessWidget {
+class Login extends StatefulWidget {
+  @override
+  State<Login> createState() => _LoginState();
+}
+
+class _LoginState extends State<Login> {
   @override
   TextEditingController username = TextEditingController();
+
   TextEditingController password = TextEditingController();
+
+  bool _showPassword = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,13 +29,12 @@ class Login extends StatelessWidget {
             margin: EdgeInsets.all(20),
             child: ListView(children: [
               Container(
-                  alignment: Alignment.center,
+                  // alignment: Alignment.center,
                   padding: EdgeInsets.all(10),
                   child: Card(
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(25),
                     ),
-                    //  shadowColor: Color.fromARGB(255, 97, 66, 0),
                     child: Image.asset(
                       'assets/login.jpg',
                       fit: BoxFit.scaleDown,
@@ -38,36 +46,61 @@ class Login extends StatelessWidget {
                 thickness: 1,
               ),
               Container(
-                alignment: Alignment.center,
+                alignment: Alignment.bottomLeft,
                 padding: EdgeInsets.all(10),
                 child: Text(
-                  'Login Form ',
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+                  'Hi there! ',
+                  style: TextStyle(fontSize: 30, fontWeight: FontWeight.w500),
                 ),
               ),
               Container(
                 padding: EdgeInsets.all(10),
                 child: TextField(
-                  controller: username,
-                  decoration: InputDecoration(
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(25),
-                      ),
-                      labelText: 'UserName',
-                      labelStyle: TextStyle(fontSize: 10)),
-                ),
+                    
+                    
+                    decoration: InputDecoration(
+                     border: InputBorder.none,
+                  labelText: 'UserName',
+                )),
+              
               ),
               Container(
                 padding: EdgeInsets.all(10),
-                child: TextFormField(
-                  controller: password,
-                  obscureText: true,
-                  decoration: InputDecoration(
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(25)),
+                child: TextField(
+                    obscureText: !this._showPassword,
+                    decoration: InputDecoration(
+                        border: InputBorder.none,
                       labelText: 'Password',
-                      labelStyle: TextStyle(fontSize: 12)),
-                ),
+                      suffixIcon: IconButton(
+                          icon: Icon(
+                            Icons.remove_red_eye,
+                            color:
+                                this._showPassword ? Colors.blue : Colors.grey,
+                          ),
+                          onPressed: () {
+                            setState(
+                                () => this._showPassword = !this._showPassword);
+                          }),
+                    )),
+                // TextField(
+                //   controller: password,
+                //    obscureText: !this._showPassword,
+                //    decoration: InputDecoration(
+                //       border: OutlineInputBorder(
+                //       borderRadius: BorderRadius.circular(25)),
+                //       labelText: 'Password',
+                //   suffixIcon: IconButton(
+                //   icon: Icon(
+                //  Icons.remove_red_eye,
+                //  color: this._showPassword ? Colors.blue : Colors.grey,
+                //   ),
+                //    onPressed: () {
+                //    setState(() => this._showPassword = !this._showPassword);
+
+                //    }
+                //   ),
+                //       labelStyle: TextStyle(fontSize: 12)),
+                // ),
               ),
               TextButton(onPressed: () {}, child: Text('Forgot Password')),
               Container(
@@ -79,7 +112,7 @@ class Login extends StatelessWidget {
                   },
                   style: ElevatedButton.styleFrom(shape: StadiumBorder()),
                   child: Text(
-                    "Login",
+                    "Sign in",
                     style: TextStyle(
                       fontSize: 15,
                     ),
@@ -133,57 +166,52 @@ class Login extends StatelessWidget {
                   ),
                 ),
               ),
-            Container(
-                  padding: EdgeInsetsDirectional.only(start: 10),
-                  height: 55,
-                  decoration: BoxDecoration(
-                      border: Border.all(color: Colors.grey[300]!, width: 1),
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(30)),
-                  child: Row(
-                    children: [
-                      CircleAvatar(
-                        radius: 16,
-                        backgroundColor: Colors.red,
-                        child: ImageIcon(
-                          AssetImage('assets/google.jpg'),
-                          color: Colors.white,
-                          size: 16,
-                        ),
+              Container(
+                padding: EdgeInsetsDirectional.only(start: 10),
+                height: 55,
+                decoration: BoxDecoration(
+                    border: Border.all(color: Colors.grey[300]!, width: 1),
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(30)),
+                child: Row(
+                  children: [
+                    CircleAvatar(
+                      radius: 16,
+                      backgroundColor: Colors.red,
+                      child: ImageIcon(
+                        AssetImage('assets/google.jpg'),
+                        color: Colors.white,
+                        size: 16,
                       ),
-                      Spacer(),
-                      Text('Sigin in with Google',
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 15,
-                              fontWeight: FontWeight.w500)
-                              ),
-                      Spacer(flex: 2),
-                    ],
-                  ),
+                    ),
+                    Spacer(),
+                    Text('Sigin in with Google',
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 15,
+                            fontWeight: FontWeight.w500)),
+                    Spacer(flex: 2),
+                  ],
                 ),
-              
+              ),
             ])));
   }
 }
 
+// Container(
+// padding: EdgeInsets.all(10),
+// child: ElevatedButton(
+//   onPressed: () {},
 
+//   style: ElevatedButton.styleFrom(shape: StadiumBorder()),
+//   child: Text(
+//     "Sigin in with Google",
+//    style: ElevatedButton.styleFrom(
+//   shape: new RoundedRectangleBorder(
+//     borderRadius: new BorderRadius.circular(20.0),
+//   ),
+//     ),
+//   ),
+// ),
 
-                 // Container(          
-                  // padding: EdgeInsets.all(10),
-                // child: ElevatedButton(
-                //   onPressed: () {},
-                    
-                //   style: ElevatedButton.styleFrom(shape: StadiumBorder()),
-                //   child: Text(
-                //     "Sigin in with Google",
-                //    style: ElevatedButton.styleFrom(
-                    //   shape: new RoundedRectangleBorder(
-                    //     borderRadius: new BorderRadius.circular(20.0),
-                    //   ),
-                //     ),
-                //   ),
-                // ),
-                    
-            //  ),
-     
+//  ),
