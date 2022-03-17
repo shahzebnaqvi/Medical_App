@@ -107,5 +107,8 @@ Widget Doctors(String title, String trailing, String subtitile) {
                     )
                   ],
                 )))
-      ]));
+      ]
+      )
+      )
+      ;
 }

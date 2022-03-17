@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:medical_app/Constants/constants.dart';
 import 'package:medical_app/Screens/maintools/maintoolssubscreens/formreportupload.dart';
-
+import 'dart:js';
 class MyReports extends StatelessWidget {
   const MyReports({Key? key}) : super(key: key);
 
@@ -17,10 +17,16 @@ class MyReports extends StatelessWidget {
         ),
         body: Center(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            // mainAxisAlignment: MainAxisAlignment.center,
             children: [
+               Reports(context,'Elon Musk' ,'12-03-2022',
+                'Tumors can affect bones, skin, tissue, organs and glands. Many tumors are not cancer (theyre benign).  '),
 
-              
+              Reports(context,'John ', '10-02-2022',
+                'Tumors can affect bones, skin, tissue, organs and glands.  '),
+
+                 
+
             ],
           ),
         ),
@@ -98,5 +104,58 @@ Widget buttonreport(context, buttontext) {
               color: Constants.mainColor,
               fontWeight: FontWeight.bold)),
     ),
+  );
+}
+
+
+Widget Reports(  context,title, trailing,  subtitile) {
+  return Container(
+      padding: EdgeInsets.all(10), 
+      child: Column(children: [
+
+        Card(
+            elevation: 10, 
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+            child: ListTile(
+                leading: Image.asset(
+                  'assets/Sign_up.jpg',
+                  fit: BoxFit.cover,
+                ),
+                title:Text(
+                  title,
+                   textAlign: TextAlign.start,
+                  style: TextStyle(
+                      color: Colors.grey[800], fontWeight: FontWeight.bold),
+                ),
+
+                subtitle: Text(subtitile),
+                trailing: Column(
+                  children: [
+                    Text(
+                      trailing,
+                      style: TextStyle(
+                          fontSize: MediaQuery.of(context).size.height*0.012,
+                          // fontSize: 12,
+                          color: Constants.blackcolor ,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    SizedBox(
+                      // height: 1,
+                     height: MediaQuery.of(context).size.height*0.005,
+                    ),
+                
+                    GestureDetector(
+                      child: Icon(Icons.share,color: Constants.bluecolor),
+                     onTap: () {
+                      print('Welcome Report');
+                       },
+                    )
+                    
+                   ],
+                )
+                )
+                )
+      ]
+      )
   );
 }

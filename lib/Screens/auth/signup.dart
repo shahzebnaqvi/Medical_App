@@ -25,7 +25,7 @@ class _SignupState extends State<Signup> {
           padding: EdgeInsets.all(10),
           child: ListView(children: [
             Container(
-              child: Image.network('assets/Sign_up.jpg'),
+              child: Image.asset('assets/Sign_up.jpg'),
             ),
             Divider(
               height: MediaQuery.of(context).size.height * 0,
