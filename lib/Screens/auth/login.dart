@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:get/get.dart';
 import 'package:medical_app/Constants/constants.dart';
 import 'package:medical_app/Screens/auth/signup.dart';
@@ -13,9 +14,7 @@ class Login extends StatefulWidget {
 class _LoginState extends State<Login> {
   @override
   TextEditingController username = TextEditingController();
-
   TextEditingController password = TextEditingController();
-
   bool _showPassword = false;
 
   @override
@@ -26,61 +25,64 @@ class _LoginState extends State<Login> {
           title: Center(child: Text('Medical App')),
         ),
         body: Container(
+          padding: EdgeInsets.all(50),
             child: ListView(
               children: [
               Container(
-          
-                  // child:CircleAvatar(
-                  //    child:   Image.asset('assets/login.jpg'),   
-                  //  ),
+                margin: EdgeInsets.all(15),
+                  child:CircleAvatar(
+                   child:   Image.asset('assets/login.jpg'),   
+                   ),
                  
-                  ),        
-                Divider(
-                height: MediaQuery.of(context).size.height * 0,
-                thickness: 1,
-              ),
+                  ),    
+                  Divider(
+                  height: MediaQuery.of(context).size.height * 0,
+                  thickness: 1,
+                ),
 
-              Container(
+                Container(
                 alignment: Alignment.bottomLeft,
                 padding: EdgeInsets.all(10),
                 child: Text(
-                  'Hi there! ',
-                  style: TextStyle(fontSize: 30, fontWeight: FontWeight.w500),
+                'Hi there! ',
+                style: TextStyle(fontSize: 30, fontWeight: FontWeight.w500),
                 ),
               ),
 
-              Container(
+                Container(
                 padding: EdgeInsets.all(10),
                 child: TextField(
-                    decoration: InputDecoration(
-                     border: InputBorder.none,
-                  labelText: 'UserName',
+                cursorColor:Constants.blackcolor,
+                decoration: InputDecoration(
+                border: InputBorder.none,
+                labelText: 'UserName',
                 )
                 ),
               ),
 
-              Container(
+                Container(
                 padding: EdgeInsets.all(10),
                 child:  TextField(
-                    obscureText: !this._showPassword,
-                    decoration: InputDecoration(
-                        border: InputBorder.none,
-                      labelText: 'Password',
-                      suffixIcon: IconButton(
-                          icon: Icon(
-                            Icons.remove_red_eye,
-                            color:this._showPassword ? Colors.blue : Colors.grey,
-                          ),
-                          onPressed: () {
-                            setState(
-                                () => this._showPassword = !this._showPassword);
-                          }),
-                    )
-                    ),
+                cursorColor:Constants.blackcolor,
+                obscureText: !this._showPassword,
+                decoration: InputDecoration(
+                border: InputBorder.none,
+                labelText: 'Password',
+                suffixIcon: IconButton(
+                icon: Icon(
+                Icons.remove_red_eye,
+                color:this._showPassword ? Constants.bluecolor :Constants.mediumColor,
+                ),
+                onPressed: () {
+                setState(
+                    () => this._showPassword = !this._showPassword);
+                }),
+                  )
+              ),
               ),
 
 
-              TextButton(
+                TextButton(
                 onPressed: () {}, 
                 child: Text('Forgot Password')),
                 Container(
@@ -99,52 +101,49 @@ class _LoginState extends State<Login> {
                   ),
                 ),
               ),
-              Container(
-                child: RichText(
-                    textAlign: TextAlign.center,
-                    text: TextSpan(
-                        text: 'Does not have account? ',
-                        style: TextStyle(
-                            fontSize: 14, fontWeight: FontWeight.w200),
-                        children: <TextSpan>[
-                          new TextSpan(
-                            text: 'Sign in',
-                            recognizer: new TapGestureRecognizer()
-                              ..onTap = () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => Signup()));
-                              },
-                          ),
-                        ])
-                        ),
-              ),
-                Padding(padding: EdgeInsets.all(10)),
+
+                  Container(
+                  child: RichText(
+                  textAlign: TextAlign.center,
+                  text: TextSpan(
+                  text: 'Does not have account? ',
+                  style: TextStyle(
+                  fontSize: 14, fontWeight: FontWeight.w200),
+                  children: <TextSpan>[
+                  new TextSpan(
+                  text: 'Sign in',
+                  recognizer: new TapGestureRecognizer()
+                  ..onTap = () {
+                    Navigator.push(
+                    context,MaterialPageRoute(builder: (context) => Signup()));
+                  },
+                  ),
+                  ]
+                  )
+                  ),
+                  ),
+
+                 Padding(padding: EdgeInsets.all(10)),
                  Container(
-               padding: EdgeInsetsDirectional.only(start: 10),
-                height: MediaQuery.of(context).size.height*0.05,
-                  decoration: BoxDecoration(
-                    border: Border.all(color: Colors.grey[300]!, width: 1),
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(10)),
-                     child: Row(
-                     children: [
-                    Padding(padding: EdgeInsets.all(10)),
-                    CircleAvatar(
-                      radius: 16, 
-                      backgroundColor: Colors.red,
-                      child: ImageIcon(
-                        AssetImage('assets/google.jpg'),
-                        color: Colors.white,
-                        size: 16,
-                      ),
+                 padding: EdgeInsetsDirectional.only(start: 10),
+                 height: MediaQuery.of(context).size.height*0.05,
+                 decoration: BoxDecoration(
+                 border: Border.all(color:Colors.grey[300]!, width: 1),
+                 color: Constants.mainColorWhite,
+                 borderRadius: BorderRadius.circular(10)),
+                  child: Row(
+                  children: [
+                  Padding(padding: EdgeInsets.all(10)),
+                  CircleAvatar(
+                  radius: 16, 
+                  backgroundColor: Constants.redcolor,
+                     child:   Image.asset('assets/google.jpg'),   
                     ),
-                     Padding(padding: EdgeInsets.only(left: 100)),
+                  Padding(padding: EdgeInsets.only(left: 105)),
                       GestureDetector(
                         child: Text('Sigin in with Google',
                         style: TextStyle(
-                            color: Colors.black,
+                            color: Constants.blackcolor,
                             fontSize: 15,
                             fontWeight: FontWeight.w500)
                         ),
@@ -162,25 +161,25 @@ class _LoginState extends State<Login> {
                 height: MediaQuery.of(context).size.height*0.05,
                   decoration: BoxDecoration(
                     border: Border.all(color: Colors.grey[300]!, width: 1),
-                    color: Colors.white,
+                    color: Constants.mainColorWhite,
                     borderRadius: BorderRadius.circular(10)),
                      child: Row(
                      children: [
                     Padding(padding: EdgeInsets.all(10)),
                     CircleAvatar(
                       radius: 16,
-                      backgroundColor: Colors.red,
+                      backgroundColor:Constants.redcolor,
                       child: ImageIcon(
-                        AssetImage('assets/google.jpg'),
-                        color: Colors.white,
+                        AssetImage('assets/facebook.png'),
+                        color:Constants.mainColorWhite,
                         size: 16,
                       ),
                     ),
-                     Padding(padding: EdgeInsets.only(left: 100)),
+                     Padding(padding: EdgeInsets.only(left: 105)),
                       GestureDetector(
                         child: Text('Sigin in with Facebook',
                         style: TextStyle(
-                            color: Colors.black,
+                            color:Constants.blackcolor,
                             fontSize: 15,
                             fontWeight: FontWeight.w500)
                         ),

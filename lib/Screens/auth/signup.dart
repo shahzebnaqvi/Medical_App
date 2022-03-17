@@ -84,7 +84,6 @@ class _SignupState extends State<Signup> {
                 padding: EdgeInsets.all(10),
                 child: ElevatedButton(
                   onPressed: () {},
-                  style: ElevatedButton.styleFrom(shape: StadiumBorder()),
                   child: Text(
                     'Submit',
                     style: TextStyle(
