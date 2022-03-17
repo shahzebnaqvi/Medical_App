@@ -26,22 +26,6 @@ class _SignupState extends State<Signup> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-<<<<<<< HEAD
-      body: Container(
-          margin: EdgeInsets.all(10),
-          padding: EdgeInsets.all(10),
-          child: ListView(children: [
-            Container(
-              child: Image.asset('assets/Sign_up.jpg'),
-            ),
-            Divider(
-              height: MediaQuery.of(context).size.height * 0,
-              thickness: 1,
-            ),
-            Container(
-              // padding: EdgeInsets.all(10),
-              child: Text("Sign Up",
-=======
       body: Center(
         child: Container(
             width: MediaQuery.of(context).size.width * 0.93,
@@ -64,7 +48,6 @@ class _SignupState extends State<Signup> {
                 alignment: Alignment.bottomLeft,
                 child: Text(
                   'Get Started',
->>>>>>> 0463a1bfd5a87d819e2149f2d6c9b584fa11df05
                   style: TextStyle(
                       fontSize: MediaQuery.of(context).size.width * 0.1,
                       fontWeight: FontWeight.bold),
