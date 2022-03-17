@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 
 class MyHistory extends StatelessWidget {
@@ -26,12 +24,9 @@ class MyHistory extends StatelessWidget {
         ),
         body: TabBarView(
           children: [
-         
             Doctors('Tumor Cancer', '12-03-2022',
                 'Tumors can affect bones, skin, tissue, organs and glands. Many tumors are not cancer (theyre benign).  '),
-        
 
-        
             Doctors('Tumor Cancer', '12-03-2022',
                 'Tumors can affect bones, skin, tissue, organs and glands. Many tumors are not cancer (theyre benign).  '),
 
