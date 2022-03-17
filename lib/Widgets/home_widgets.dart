@@ -28,7 +28,7 @@ Widget containericon(context, iconname, icontext, backgroundcolor) {
       children: [
         Icon(
           iconname,
-          size: MediaQuery.of(context).size.width * 0.1,
+          size: MediaQuery.of(context).size.width * 0.13,
           color: Constants.mainColor,
         ),
         Padding(
@@ -39,7 +39,7 @@ Widget containericon(context, iconname, icontext, backgroundcolor) {
             icontext,
             style: TextStyle(
                 color: Constants.mainColor,
-                fontSize: MediaQuery.of(context).size.width * 0.03),
+                fontSize: MediaQuery.of(context).size.width * 0.04),
           ),
         )
       ],

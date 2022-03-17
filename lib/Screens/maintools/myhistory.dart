@@ -26,28 +26,6 @@ class MyHistory extends StatelessWidget {
           children: [
             Doctors('Tumor Cancer', '12-03-2022',
                 'Tumors can affect bones, skin, tissue, organs and glands. Many tumors are not cancer (theyre benign).  '),
-            Padding(
-                padding: EdgeInsets.all(10),
-                child: Container(
-                  child: Card(
-                    child: ListTile(
-                      leading: Image.asset('assets/login.jpg'),
-                      title: Text(
-                        'Tumor Cancer',
-                        style: TextStyle(
-                            fontSize: 15, fontWeight: FontWeight.bold),
-                      ),
-                      trailing: Text(
-                        '8:30 PM',
-                        style: TextStyle(
-                            fontSize: 15, fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                  ),
-                )),
-
-            Doctors('Tumor Cancer', '12-03-2022',
-                'Tumors can affect bones, skin, tissue, organs and glands. Many tumors are not cancer (theyre benign).  '),
 
             Doctors('Tumor Cancer', '12-03-2022',
                 'Tumors can affect bones, skin, tissue, organs and glands. Many tumors are not cancer (theyre benign).  '),
@@ -128,9 +106,6 @@ Widget Doctors(String title, String trailing, String subtitile) {
                       },
                     )
                   ],
-                )
-
-                // Text(trailing,style: TextStyle(fontSize: 15,color: Colors.black,fontWeight: FontWeight.bold),),
-                ))
+                )))
       ]));
 }
