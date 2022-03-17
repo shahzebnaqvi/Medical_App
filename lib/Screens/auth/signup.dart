@@ -32,8 +32,7 @@ class _SignupState extends State<Signup> {
               thickness: 1,
             ),
             Container(
-              alignment: Alignment.center,
-              padding: EdgeInsets.all(10),
+              // padding: EdgeInsets.all(10),
               child: Text("Sign Up",
                   style: TextStyle(
                       fontSize: 25,
