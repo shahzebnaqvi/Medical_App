@@ -19,32 +19,27 @@ class _LoginState extends State<Login> {
   bool _showPassword = false;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) {  
     return Scaffold(
         backgroundColor: Constants.mainColorWhite,
         appBar: AppBar(
           title: Center(child: Text('Medical App')),
         ),
         body: Container(
-            margin: EdgeInsets.all(20),
-            child: ListView(children: [
+            child: ListView(
+              children: [
               Container(
-                  // alignment: Alignment.center,
-                  padding: EdgeInsets.all(10),
-                  child: Card(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(25),
-                    ),
-                    child: Image.asset(
-                      'assets/login.jpg',
-                      fit: BoxFit.scaleDown,
-                    ),
-                    elevation: 8,
-                  )),
-              Divider(
+          
+                  // child:CircleAvatar(
+                  //    child:   Image.asset('assets/login.jpg'),   
+                  //  ),
+                 
+                  ),        
+                Divider(
                 height: MediaQuery.of(context).size.height * 0,
                 thickness: 1,
               ),
+
               Container(
                 alignment: Alignment.bottomLeft,
                 padding: EdgeInsets.all(10),
@@ -53,20 +48,20 @@ class _LoginState extends State<Login> {
                   style: TextStyle(fontSize: 30, fontWeight: FontWeight.w500),
                 ),
               ),
+
               Container(
                 padding: EdgeInsets.all(10),
                 child: TextField(
-                    
-                    
                     decoration: InputDecoration(
                      border: InputBorder.none,
                   labelText: 'UserName',
-                )),
-              
+                )
+                ),
               ),
+
               Container(
                 padding: EdgeInsets.all(10),
-                child: TextField(
+                child:  TextField(
                     obscureText: !this._showPassword,
                     decoration: InputDecoration(
                         border: InputBorder.none,
@@ -74,43 +69,28 @@ class _LoginState extends State<Login> {
                       suffixIcon: IconButton(
                           icon: Icon(
                             Icons.remove_red_eye,
-                            color:
-                                this._showPassword ? Colors.blue : Colors.grey,
+                            color:this._showPassword ? Colors.blue : Colors.grey,
                           ),
                           onPressed: () {
                             setState(
                                 () => this._showPassword = !this._showPassword);
                           }),
-                    )),
-                // TextField(
-                //   controller: password,
-                //    obscureText: !this._showPassword,
-                //    decoration: InputDecoration(
-                //       border: OutlineInputBorder(
-                //       borderRadius: BorderRadius.circular(25)),
-                //       labelText: 'Password',
-                //   suffixIcon: IconButton(
-                //   icon: Icon(
-                //  Icons.remove_red_eye,
-                //  color: this._showPassword ? Colors.blue : Colors.grey,
-                //   ),
-                //    onPressed: () {
-                //    setState(() => this._showPassword = !this._showPassword);
-
-                //    }
-                //   ),
-                //       labelStyle: TextStyle(fontSize: 12)),
-                // ),
+                    )
+                    ),
               ),
-              TextButton(onPressed: () {}, child: Text('Forgot Password')),
-              Container(
+
+
+              TextButton(
+                onPressed: () {}, 
+                child: Text('Forgot Password')),
+                Container(
                 padding: EdgeInsets.all(10),
                 child: ElevatedButton(
                   onPressed: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => Home()));
                   },
-                  style: ElevatedButton.styleFrom(shape: StadiumBorder()),
+              
                   child: Text(
                     "Sign in",
                     style: TextStyle(
@@ -137,44 +117,56 @@ class _LoginState extends State<Login> {
                                         builder: (context) => Signup()));
                               },
                           ),
-                        ])),
+                        ])
+                        ),
               ),
-              Container(
-                  padding: EdgeInsets.all(15),
-                  child: ElevatedButton.icon(
-                    onPressed: () {},
-                    style: ElevatedButton.styleFrom(shape: StadiumBorder()),
-                    icon: Icon(Icons.mail),
-                    label: Text(
-                      "Sigin in with Google",
-                      style: TextStyle(
-                        fontSize: 15,
-                      ),
-                    ),
-                  )),
-              Container(
-                padding: EdgeInsets.all(12),
-                child: ElevatedButton.icon(
-                  onPressed: () {},
-                  style: ElevatedButton.styleFrom(shape: StadiumBorder()),
-                  icon: Icon(Icons.face),
-                  label: Text(
-                    "Sigin in with Facebook",
-                    style: TextStyle(
-                      fontSize: 15,
-                    ),
-                  ),
-                ),
-              ),
-              Container(
-                padding: EdgeInsetsDirectional.only(start: 10),
-                height: 55,
-                decoration: BoxDecoration(
+                Padding(padding: EdgeInsets.all(10)),
+                 Container(
+               padding: EdgeInsetsDirectional.only(start: 10),
+                height: MediaQuery.of(context).size.height*0.05,
+                  decoration: BoxDecoration(
                     border: Border.all(color: Colors.grey[300]!, width: 1),
                     color: Colors.white,
-                    borderRadius: BorderRadius.circular(30)),
-                child: Row(
-                  children: [
+                    borderRadius: BorderRadius.circular(10)),
+                     child: Row(
+                     children: [
+                    Padding(padding: EdgeInsets.all(10)),
+                    CircleAvatar(
+                      radius: 16, 
+                      backgroundColor: Colors.red,
+                      child: ImageIcon(
+                        AssetImage('assets/google.jpg'),
+                        color: Colors.white,
+                        size: 16,
+                      ),
+                    ),
+                     Padding(padding: EdgeInsets.only(left: 100)),
+                      GestureDetector(
+                        child: Text('Sigin in with Google',
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 15,
+                            fontWeight: FontWeight.w500)
+                        ),
+                        onTap: () {
+                        print('Welcome');
+                        },
+                        
+                      ),
+                  ],
+                     ),
+                 ),
+              Padding(padding: EdgeInsets.all(10)),
+              Container(
+                padding: EdgeInsetsDirectional.only(start: 10),
+                height: MediaQuery.of(context).size.height*0.05,
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Colors.grey[300]!, width: 1),
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(10)),
+                     child: Row(
+                     children: [
+                    Padding(padding: EdgeInsets.all(10)),
                     CircleAvatar(
                       radius: 16,
                       backgroundColor: Colors.red,
@@ -184,34 +176,30 @@ class _LoginState extends State<Login> {
                         size: 16,
                       ),
                     ),
-                    Spacer(),
-                    Text('Sigin in with Google',
+                     Padding(padding: EdgeInsets.only(left: 100)),
+                      GestureDetector(
+                        child: Text('Sigin in with Facebook',
                         style: TextStyle(
                             color: Colors.black,
                             fontSize: 15,
-                            fontWeight: FontWeight.w500)),
-                    Spacer(flex: 2),
+                            fontWeight: FontWeight.w500)
+                        ),
+                        onTap: () {
+                        print('Welcome');
+                        },
+                        
+                      ),
+
+                      
+                   
                   ],
                 ),
               ),
-            ])));
+            ]
+            )
+            ),
+            
+            
+            );
   }
 }
-
-// Container(
-// padding: EdgeInsets.all(10),
-// child: ElevatedButton(
-//   onPressed: () {},
-
-//   style: ElevatedButton.styleFrom(shape: StadiumBorder()),
-//   child: Text(
-//     "Sigin in with Google",
-//    style: ElevatedButton.styleFrom(
-//   shape: new RoundedRectangleBorder(
-//     borderRadius: new BorderRadius.circular(20.0),
-//   ),
-//     ),
-//   ),
-// ),
-
-//  ),
