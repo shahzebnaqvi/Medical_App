@@ -1,28 +1,68 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:medical_app/Constants/constants.dart';
+import 'package:medical_app/Screens/maintools/maintoolssubscreens/formreportupload.dart';
 
 class MyReports extends StatelessWidget {
   const MyReports({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    var isDialOpen = ValueNotifier<bool>(false);
+
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Constants.mainColor,
-        title: Text('Uploads Reports'),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            InkWell(onTap: () {}, child: buttonreport(context, "Fill a Form")),
-            InkWell(onTap: () {}, child: buttonreport(context, "Upload Image")),
-            InkWell(
-                onTap: () {}, child: buttonreport(context, "Take a Picture"))
-          ],
+        appBar: AppBar(
+          backgroundColor: Constants.mainColor,
+          title: Text('My Reports'),
         ),
-      ),
-    );
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [],
+          ),
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {},
+          child: SpeedDial(
+            openCloseDial: isDialOpen,
+
+            animatedIcon: AnimatedIcons.add_event,
+            // openCloseDial: isDialOpen,
+            backgroundColor: Constants.mainColor,
+            // overlayColor: Colors.grey,
+            // overlayOpacity: 0.5,
+            spacing: 15,
+            spaceBetweenChildren: 15,
+            closeManually: true,
+            children: [
+              SpeedDialChild(
+                  child: Icon(Icons.share_rounded),
+                  label: 'Fill a Form',
+                  backgroundColor: Colors.blue,
+                  onTap: () {
+                    isDialOpen.value = false;
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => FormReportUpload()));
+                  }),
+              SpeedDialChild(
+                  child: Icon(Icons.mail),
+                  label: 'Upload Image',
+                  onTap: () {
+                    print('Mail Tapped');
+                    isDialOpen.value = false;
+                  }),
+              SpeedDialChild(
+                  child: Icon(Icons.copy),
+                  label: 'Take a Picture',
+                  onTap: () {
+                    print('Take a Picture');
+                    isDialOpen.value = false;
+                  }),
+            ],
+          ),
+        ));
   }
 }
 
