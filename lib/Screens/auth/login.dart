@@ -12,190 +12,235 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
-  @override
   TextEditingController username = TextEditingController();
   TextEditingController password = TextEditingController();
   bool _showPassword = false;
 
   @override
-  Widget build(BuildContext context) {  
+  Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Constants.mainColorWhite,
-        appBar: AppBar(
-          title: Center(child: Text('Medical App')),
-        ),
-        body: Container(
-          padding: EdgeInsets.all(50),
-            child: ListView(
-              children: [
+      backgroundColor: Constants.mainColorWhite,
+      body: Center(
+        child: Container(
+            width: MediaQuery.of(context).size.width * 0.93,
+            child: ListView(children: [
               Container(
-                margin: EdgeInsets.all(15),
-                  child:Image.asset('assets/login.jpg'),   
-                  // CircleAvatar(
-                  //  child:   
-                  //  ),
-                 
-                  ),    
-                  Divider(
-                  height: MediaQuery.of(context).size.height * 0,
-                  thickness: 1,
-                ),
+                  padding: EdgeInsets.only(
+                    top: MediaQuery.of(context).size.height * 0.06,
+                    bottom: MediaQuery.of(context).size.height * 0.09,
+                  ),
+                  alignment: Alignment.bottomLeft,
+                  child: Image.asset(
+                    'assets/login.jpg',
+                    width: MediaQuery.of(context).size.width * 0.35,
+                  )),
+              // CircleAvatar(
+              //  child:
+              //  ),
 
-                Container(
+              Container(
                 alignment: Alignment.bottomLeft,
-                padding: EdgeInsets.all(10),
                 child: Text(
-                'Hi there! ',
-                style: TextStyle(fontSize: 30, fontWeight: FontWeight.w500),
+                  'Hi there! ',
+                  style: TextStyle(
+                      fontSize: MediaQuery.of(context).size.width * 0.1,
+                      fontWeight: FontWeight.bold),
                 ),
               ),
-
-                Container(
+              Container(
                 padding: EdgeInsets.all(10),
                 child: TextField(
-                cursorColor:Constants.blackcolor,
-                decoration: InputDecoration(
-                border: InputBorder.none,
-                labelText: 'UserName',
-                )
-                ),
+                    cursorColor: Constants.blackcolor,
+                    decoration: InputDecoration(
+                      border: InputBorder.none,
+                      labelText: 'UserName',
+                    )),
               ),
-
-                Container(
+              Container(
                 padding: EdgeInsets.all(10),
-                child:  TextField(
-                cursorColor:Constants.blackcolor,
-                obscureText: !this._showPassword,
-                decoration: InputDecoration(
-                border: InputBorder.none,
-                labelText: 'Password',
-                suffixIcon: IconButton(
-                icon: Icon(
-                Icons.remove_red_eye,
-                color:this._showPassword ? Constants.bluecolor :Constants.mediumColor,
-                ),
-                onPressed: () {
-                setState(
-                    () => this._showPassword = !this._showPassword);
-                }),
-                  )
+                child: TextField(
+                    cursorColor: Constants.blackcolor,
+                    obscureText: !this._showPassword,
+                    decoration: InputDecoration(
+                      border: InputBorder.none,
+                      labelText: 'Password',
+                      suffixIcon: IconButton(
+                          icon: Icon(
+                            Icons.remove_red_eye,
+                            color: this._showPassword
+                                ? Constants.bluecolor
+                                : Constants.mediumColor,
+                          ),
+                          onPressed: () {
+                            setState(
+                                () => this._showPassword = !this._showPassword);
+                          }),
+                    )),
               ),
-              ),
-
-
-                TextButton(
-                onPressed: () {}, 
-                child: Text('Forgot Password')),
-                Container(
-                padding: EdgeInsets.all(10),
+              Container(
+                  alignment: Alignment.topRight,
+                  child: TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        'Forgot your Credentials?',
+                        style: TextStyle(color: Constants.mainColor),
+                      ))),
+              Container(
                 child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      primary: Constants.mainColor,
+                      minimumSize: Size(
+                          20,
+                          MediaQuery.of(context).size.height *
+                              0.06) // put the width and height you want
+                      ),
                   onPressed: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => Home()));
                   },
-              
                   child: Text(
                     "Sign in",
                     style: TextStyle(
-                      fontSize: 15,
+                      fontSize: MediaQuery.of(context).size.width * 0.05,
                     ),
                   ),
                 ),
               ),
-
-                  Container(
-                  child: RichText(
-                  textAlign: TextAlign.center,
-                  text: TextSpan(
-                  text: 'Does not have account? ',
-                  style: TextStyle(
-                  fontSize: 14, fontWeight: FontWeight.w200),
-                  children: <TextSpan>[
-                  new TextSpan(
-                  text: 'Sign in',
-                  recognizer: new TapGestureRecognizer()
-                  ..onTap = () {
-                    Navigator.push(
-                    context,MaterialPageRoute(builder: (context) => Signup()));
-                  },
-                  ),
-                  ]
-                  )
-                  ),
-                  ),
-
-                 Padding(padding: EdgeInsets.all(10)),
-                 Container(
-                 padding: EdgeInsetsDirectional.only(start: 10),
-                 height: MediaQuery.of(context).size.height*0.05,
-                 decoration: BoxDecoration(
-                 border: Border.all(color:Colors.grey[300]!, width: 1),
-                 color: Constants.mainColorWhite,
-                 borderRadius: BorderRadius.circular(10)),
-                  child: Row(
-                  children: [
-                  Padding(padding: EdgeInsets.all(10)),
-                  CircleAvatar(
-                  radius: 16, 
-                  backgroundColor: Constants.redcolor,
-                     child:   Image.asset('assets/google.jpg'),   
-                    ),
-                  Padding(padding: EdgeInsets.only(left: 105)),
-                      GestureDetector(
-                        child: Text('Sigin in with Google',
-                        style: TextStyle(
-                            color: Constants.blackcolor,
-                            fontSize: 15,
-                            fontWeight: FontWeight.w500)
-                        ),
-                        onTap: () {
-                        print('Welcome');
-                        },
-                        
-                      ),
-                  ],
-                     ),
-                 ),
-              Padding(padding: EdgeInsets.all(10)),
               Container(
-                padding: EdgeInsetsDirectional.only(start: 10),
-                height: MediaQuery.of(context).size.height*0.05,
+                padding: EdgeInsets.only(
+                    top: MediaQuery.of(context).size.height * 0.014),
+                child: RichText(
+                    textAlign: TextAlign.center,
+                    text: TextSpan(
+                        text: 'Does not have account? ',
+                        style: TextStyle(color: Constants.mainColor),
+                        children: <TextSpan>[
+                          new TextSpan(
+                            text: 'Sign in',
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                            recognizer: new TapGestureRecognizer()
+                              ..onTap = () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Signup()));
+                              },
+                          ),
+                        ])),
+              ),
+              // ElevatedButton.icon(
+              //   icon: CircleAvatar(
+              //       backgroundImage: AssetImage(
+              //     'assets/google.jpg',
+              //   )),
+              //   onPressed: () {},
+              //   label: Text('Button Text',
+              //       style: TextStyle(
+              //         color: Colors.black,
+              //         fontWeight: FontWeight.bold,
+              //       )),
+              // ),
+              InkWell(
+                onTap: () {},
+                child: Container(
+                  margin:
+                      EdgeInsets.only(top: MediaQuery.of(context).size.height) *
+                          0.01,
                   decoration: BoxDecoration(
-                    border: Border.all(color: Colors.grey[300]!, width: 1),
-                    color: Constants.mainColorWhite,
-                    borderRadius: BorderRadius.circular(10)),
-                     child: Row(
-                     children: [
-                    Padding(padding: EdgeInsets.all(10)),
-                    CircleAvatar(
+                      border: Border.all(color: Colors.grey[300]!),
+                      color: Constants.mainColorWhite,
+                      borderRadius: BorderRadius.circular(10)),
+                  child: ListTile(
+                    leading: CircleAvatar(
                       radius: 16,
-                      backgroundColor:Constants.redcolor,
-                       child:   Image.asset('assets/facebook1.jpg'),   
+                      backgroundColor: Constants.redcolor,
+                      child: Image.asset('assets/google.jpg'),
                     ),
-                     Padding(padding: EdgeInsets.only(left: 105)),
-                      GestureDetector(
-                        child: Text('Sigin in with Facebook',
-                        style: TextStyle(
-                            color:Constants.blackcolor,
-                            fontSize: 15,
-                            fontWeight: FontWeight.w500)
-                        ),
-                        onTap: () {
-                        print('Welcome');
-                        },
-                        
-                      ),
-
-                      
-                   
-                  ],
+                    title: Center(child: Text("Sigin in with Google")),
+                  ),
                 ),
               ),
-            ]
-            )
-            ),
-            
-            
-            );
+              InkWell(
+                onTap: () {},
+                child: Container(
+                  margin:
+                      EdgeInsets.only(top: MediaQuery.of(context).size.height) *
+                          0.01,
+                  decoration: BoxDecoration(
+                      border: Border.all(color: Colors.grey[300]!),
+                      color: Constants.mainColorWhite,
+                      borderRadius: BorderRadius.circular(10)),
+                  child: ListTile(
+                    leading: CircleAvatar(
+                      radius: 16,
+                      backgroundColor: Constants.redcolor,
+                      child: Image.asset('assets/facebook1.jpg'),
+                    ),
+                    title: Center(child: Text("Sigin in with Facebook")),
+                  ),
+                ),
+              ),
+
+              // Container(
+              //   padding: EdgeInsets.all(10),
+              //   decoration: BoxDecoration(
+              //       border: Border.all(color: Colors.grey[300]!, width: 1),
+              //       color: Constants.mainColorWhite,
+              //       borderRadius: BorderRadius.circular(10)),
+              //   child: Row(
+              //     children: [
+              //       Padding(padding: EdgeInsets.all(10)),
+              //       CircleAvatar(
+              //         radius: 16,
+              //         backgroundColor: Constants.redcolor,
+              //         child: Image.asset('assets/google.jpg'),
+              //       ),
+              //       Padding(padding: EdgeInsets.only(left: 105)),
+              //       GestureDetector(
+              //         child: Text('Sigin in with Google',
+              //             style: TextStyle(
+              //                 color: Constants.blackcolor,
+              //                 fontSize: 15,
+              //                 fontWeight: FontWeight.w500)),
+              //         onTap: () {
+              //           print('Welcome');
+              //         },
+              //       ),
+              //     ],
+              //   ),
+              // ),
+              // Padding(padding: EdgeInsets.all(10)),
+              // Container(
+              //   padding: EdgeInsetsDirectional.only(start: 10),
+              //   height: MediaQuery.of(context).size.height * 0.05,
+              //   decoration: BoxDecoration(
+              //       border: Border.all(color: Colors.grey[300]!, width: 1),
+              //       color: Constants.mainColorWhite,
+              //       borderRadius: BorderRadius.circular(10)),
+              //   child: Row(
+              //     children: [
+              //       Padding(padding: EdgeInsets.all(10)),
+              //       CircleAvatar(
+              //         radius: 16,
+              //         backgroundColor: Constants.redcolor,
+              //         child: Image.asset('assets/facebook1.jpg'),
+              //       ),
+              //       Padding(padding: EdgeInsets.only(left: 105)),
+              //       GestureDetector(
+              //         child: Text('Sigin in with Facebook',
+              //             style: TextStyle(
+              //                 color: Constants.blackcolor,
+              //                 fontSize: 15,
+              //                 fontWeight: FontWeight.w500)),
+              //         onTap: () {
+              //           print('Welcome');
+              //         },
+              // ),
+              // ],
+              // ),
+              // ),
+            ])),
+      ),
+    );
   }
 }
