@@ -169,11 +169,7 @@ class _LoginState extends State<Login> {
                     CircleAvatar(
                       radius: 16,
                       backgroundColor:Constants.redcolor,
-                      child: ImageIcon(
-                        AssetImage('assets/facebook.png'),
-                        color:Constants.mainColorWhite,
-                        size: 16,
-                      ),
+                       child:   Image.asset('assets/facebook.jpg'),   
                     ),
                      Padding(padding: EdgeInsets.only(left: 105)),
                       GestureDetector(
