@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:medical_app/Constants/constants.dart';
 import 'package:medical_app/Screens/maintools/maintoolssubscreens/formreportupload.dart';
+import 'package:medical_app/Screens/maintools/maintoolssubscreens/takepicurereport.dart';
 
 class MyReports extends StatelessWidget {
   const MyReports({Key? key}) : super(key: key);
@@ -64,6 +65,10 @@ class MyReports extends StatelessWidget {
                   onTap: () {
                     print('Take a Picture');
                     isDialOpen.value = false;
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => TakePicureReport()));
                   }),
             ],
           ),
