@@ -154,7 +154,7 @@ class _TakePicureReportState extends State<TakePicureReport> {
     for (TextBlock block in recognisedText.blocks) {
       for (TextLine line in block.lines) {
         scannedText = scannedText + line.text + "\n";
-        print("dnsdknsdksdkmdssd");
+        print("dnsdknsdksdkmd");
         print(scannedText);
       }
     }
