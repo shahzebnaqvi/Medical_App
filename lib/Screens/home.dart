@@ -19,7 +19,7 @@ final List<String> imgList = [
 ];
 var Hometitle = ["My Report", "Appointment", "Pharmacy", "My History"];
 var Homeicon = [
-  Icons.report,
+  Icons.report_gmailerrorred_outlined,
   Icons.calendar_today,
   Icons.local_pharmacy,
   Icons.history
@@ -32,10 +32,10 @@ var Additionaltitle = [
   "Report Analysis",
 ];
 var Additionalicon = [
-  Icons.mobile_friendly,
-  Icons.home,
-  Icons.r_mobiledata,
-  Icons.r_mobiledata
+  Icons.medical_services,
+  Icons.bloodtype,
+  Icons.group_work,
+  Icons.report_gmailerrorred_outlined,
 ];
 
 var Additionalnav = [Bmi(), Appointments(), Pharmacy(), MyHistory()];
@@ -70,6 +70,7 @@ class Home extends StatelessWidget {
             // )),
 
             Container(
+              
               child: TextField(
                 autofocus: false,
                 style: TextStyle(fontSize: 15.0, color: Color(0xFFbdc6cf)),
@@ -79,7 +80,7 @@ class Home extends StatelessWidget {
                   fillColor: Colors.white,
                   hintText: 'Search',
                   contentPadding:
-                      const EdgeInsets.only(left: 14.0, bottom: 12.0, top: 0.0),
+                      const EdgeInsets.only(left: 14.0, bottom: 12.0, top: 12.0),
                   focusedBorder: OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.white),
                     borderRadius: BorderRadius.circular(25.7),
