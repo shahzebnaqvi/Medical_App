@@ -312,10 +312,17 @@ class _BmiState extends State<Bmi> {
           ),
           Expanded(
             child: Align(
+<<<<<<< HEAD
               alignment: FractionalOffset.bottomCenter,
               child: Container(
                 // padding: EdgeInsets.only(top: MediaQuery.of(context).size.height*0.15),
                 margin:
+=======
+              alignment: Alignment.bottomCenter,
+              child: Container( 
+                 // padding: EdgeInsets.only(top: MediaQuery.of(context).size.height*0.15),
+                margin: 
+>>>>>>> 7c387b171aa528b1b1e3cf40256c6d7789945d4c
                     EdgeInsets.all(MediaQuery.of(context).size.width * 0.02),
                 width: MediaQuery.of(context).size.width * 0.95,
                 child: ElevatedButton(
