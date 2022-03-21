@@ -169,7 +169,7 @@ class Home extends StatelessWidget {
       )
     
       ),
-    bottomNavigationBar: Bottombar(num: "0")  
+    bottomNavigationBar: Bottombar(num: "")  
     );
   }
 }
