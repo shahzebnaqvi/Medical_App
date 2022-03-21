@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 import 'package:medical_app/Constants/constants.dart';
 import 'package:medical_app/Screens/additionaltools/bmi.dart';
@@ -44,13 +42,12 @@ class _BottombarState extends State<Bottombar> {
               Icons.local_pharmacy,
               size: 30,
             )),
-            BottomNavigationBarItem(
+        BottomNavigationBarItem(
             label: "History",
             icon: Icon(
               Icons.history,
               size: 30,
             )),
-
       ],
       currentIndex: pageindex,
       onTap: (index1) {
@@ -69,12 +66,11 @@ class _BottombarState extends State<Bottombar> {
           Navigator.pushReplacement(
               context, MaterialPageRoute(builder: (context) => Pharmacy()));
           index1 = 0;
-         }
-         else if (index1 == 3 && widget.num != "3") {
-           Navigator.pushReplacement(
+        } else if (index1 == 3 && widget.num != "3") {
+          Navigator.pushReplacement(
               context, MaterialPageRoute(builder: (context) => MyHistory()));
           index1 = 0;
-         }
+        }
       },
       unselectedItemColor: Colors.grey,
       selectedItemColor: Colors.green,
