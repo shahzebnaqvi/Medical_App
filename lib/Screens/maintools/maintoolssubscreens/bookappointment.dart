@@ -11,6 +11,8 @@ class BookApppointment extends StatefulWidget {
 }
 
 final appointmentController = Get.put(AppointmentController());
+TextEditingController doctortype = TextEditingController();
+TextEditingController detail = TextEditingController();
 
 class _BookApppointmentState extends State<BookApppointment> {
   @override
@@ -23,7 +25,7 @@ class _BookApppointmentState extends State<BookApppointment> {
       body: Center(
           child: Container(
         width: MediaQuery.of(context).size.width * 0.95,
-        child: ListView(
+        child: Column(
           children: [
             Padding(
               padding: EdgeInsets.only(
@@ -159,6 +161,41 @@ class _BookApppointmentState extends State<BookApppointment> {
                 ),
               ),
             ),
+            TextField(
+                controller: doctortype,
+                decoration: InputDecoration(
+                  labelText: 'Doctor Type',
+                  hintText: 'Enter Doctor Type',
+                  hintStyle: TextStyle(color: Constants.mainColor),
+                  labelStyle: TextStyle(color: Constants.mainColor),
+                )),
+            TextField(
+                controller: detail,
+                decoration: InputDecoration(
+                  labelText: 'Detail',
+                  hintText: 'Enter Detail',
+                  hintStyle: TextStyle(color: Constants.mainColor),
+                  labelStyle: TextStyle(color: Constants.mainColor),
+                )),
+            Expanded(
+              child: Align(
+                alignment: Alignment.bottomCenter,
+                child: Container(
+                  // padding: EdgeInsets.only(top: MediaQuery.of(context).size.height*0.15),
+                  margin:
+                      EdgeInsets.all(MediaQuery.of(context).size.width * 0.02),
+                  width: MediaQuery.of(context).size.width * 0.95,
+                  child: ElevatedButton(
+                    style:
+                        ElevatedButton.styleFrom(primary: Constants.mainColor),
+                    child: Text(
+                      "Book",
+                    ),
+                    onPressed: () {},
+                  ),
+                ),
+              ),
+            )
           ],
         ),
       )),
