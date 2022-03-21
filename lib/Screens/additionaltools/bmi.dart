@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:medical_app/Constants/constants.dart';
@@ -75,6 +77,7 @@ class _BmiState extends State<Bmi> {
                           Constants.lightColor, Constants.mainColor)
                       : containerhalf(context, Icons.male_rounded, "Male",
                           Constants.mainColor, Constants.lightColor),
+                    
                 ),
                 InkWell(
                   onTap: () {

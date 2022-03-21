@@ -26,7 +26,7 @@ Widget containerhalf(context, iconcont, name, fontcolor1, backcolor) {
     child: Column(
       children: [
         Icon(iconcont,
-            color: fontcolor1, size: MediaQuery.of(context).size.width * 0.3),
+            color: fontcolor1, size: MediaQuery.of(context).size.width * 0.15),
         Text(
           name,
           style: TextStyle(
