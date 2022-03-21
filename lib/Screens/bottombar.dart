@@ -41,13 +41,13 @@ class _BottombarState extends State<Bottombar> {
         BottomNavigationBarItem(
             label: "Pharmacy",
             icon: Icon(
-              Icons.person,
+              Icons.local_pharmacy,
               size: 30,
             )),
             BottomNavigationBarItem(
             label: "History",
             icon: Icon(
-              Icons.person,
+              Icons.history,
               size: 30,
             )),
 
@@ -59,7 +59,7 @@ class _BottombarState extends State<Bottombar> {
         });
         if (index1 == 0 && widget.num != "0") {
           Navigator.pushReplacement(
-              context, MaterialPageRoute(builder: (context) => MyReports()));
+              context, MaterialPageRoute(builder: (context) => MyHistory()));
           print(widget.num);
         } else if (index1 == 1 && widget.num != "1") {
           Navigator.pushReplacement(
@@ -76,8 +76,8 @@ class _BottombarState extends State<Bottombar> {
           index1 = 0;
          }
       },
-      
-      selectedItemColor: Colors.grey,
+      unselectedItemColor: Colors.grey,
+      selectedItemColor: Colors.green,
     );
   }
 }
