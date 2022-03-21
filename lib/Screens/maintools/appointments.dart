@@ -42,37 +42,55 @@ class _AppointmentsState extends State<Appointments> {
                   width: MediaQuery.of(context).size.width * 0.95,
                   margin: EdgeInsets.only(
                       top: MediaQuery.of(context).size.width * 0.04),
-                  child: ListTile(
-                    leading: CircleAvatar(
-                        backgroundImage: AssetImage('assets/login.jpg')),
-                    title: Text(
-                      'Book Appointment',
-                      style: TextStyle(
-                          fontSize: MediaQuery.of(context).size.width * 0.045,
-                          fontWeight: FontWeight.bold),
-                    ),
-                    subtitle: RichText(
-                      text: TextSpan(
-                        text: 'Dentist ',
+                  child: InkWell(
+                    onTap: () {},
+                    child: ListTile(
+                      leading: CircleAvatar(
+                          backgroundImage: AssetImage('assets/login.jpg')),
+                      title: Text(
+                        'Book Appointment',
                         style: TextStyle(
-                            color: Colors.black,
-                            fontSize: MediaQuery.of(context).size.width * 0.04),
-                        children: <TextSpan>[
-                          TextSpan(
-                            text: '\n',
-                          ),
-                          TextSpan(
-                            text: 'Lorem ipsum dolor sit amet, consectetur ',
+                            fontSize: MediaQuery.of(context).size.width * 0.045,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      subtitle: RichText(
+                        text: TextSpan(
+                          text: 'Dentist ',
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontSize:
+                                  MediaQuery.of(context).size.width * 0.04),
+                          children: <TextSpan>[
+                            TextSpan(
+                              text: '\n',
+                            ),
+                            TextSpan(
+                              text: 'Lorem ipsum dolor sit amet, consectetur ',
+                              style: TextStyle(
+                                  color: Colors.grey,
+                                  fontSize:
+                                      MediaQuery.of(context).size.width * 0.03),
+                            ),
+                          ],
+                        ),
+                      ),
+                      trailing: Column(
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [
+                          Icon(Icons.mail),
+                          Text("21-3-2020",
+                              style: TextStyle(
+                                  fontSize: MediaQuery.of(context).size.width *
+                                      0.025)),
+                          Text(
+                            "7:30 pm",
                             style: TextStyle(
-                                color: Colors.grey,
                                 fontSize:
-                                    MediaQuery.of(context).size.width * 0.03),
-                          ),
+                                    MediaQuery.of(context).size.width * 0.04,
+                                fontWeight: FontWeight.bold),
+                          )
                         ],
                       ),
-                    ),
-                    trailing: Column(
-                      children: [Icon(Icons.mail), Text("data"), Text("data")],
                     ),
                   ),
                 )
