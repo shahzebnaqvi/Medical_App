@@ -170,7 +170,7 @@ class _BmiState extends State<Bmi> {
                       Text(
                         "Weight",
                         style: TextStyle(
-                            fontSize: MediaQuery.of(context).size.width * 0.05,
+                            fontSize: MediaQuery.of(context).size.width * 0.04,
                             color: fontcolor),
                       ),
                       Obx(() => Text(
@@ -243,7 +243,7 @@ class _BmiState extends State<Bmi> {
                       Text(
                         "Age",
                         style: TextStyle(
-                            fontSize: MediaQuery.of(context).size.width * 0.05,
+                            fontSize: MediaQuery.of(context).size.width * 0.04,
                             color: fontcolor),
                       ),
                       Obx(() => Text(
@@ -314,7 +314,7 @@ class _BmiState extends State<Bmi> {
           Expanded(
             child: Align(
               alignment: Alignment.bottomCenter,
-              child: Container(
+              child: Container( 
                 margin:
                     EdgeInsets.all(MediaQuery.of(context).size.width * 0.02),
                 width: MediaQuery.of(context).size.width * 0.95,
