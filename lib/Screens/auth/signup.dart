@@ -151,7 +151,7 @@ class _SignupState extends State<Signup> {
                         style: TextStyle(color: Constants.mainColor),
                         children: <TextSpan>[
                           new TextSpan(
-                            text: 'Sign uo',
+                            text: 'Sign up',
                             style: TextStyle(fontWeight: FontWeight.bold),
                             recognizer: new TapGestureRecognizer()
                               ..onTap = () {
