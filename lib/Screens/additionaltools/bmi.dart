@@ -57,7 +57,7 @@ class _BmiState extends State<Bmi> {
         title: const Text('BMI Calculator'),
         backgroundColor: Constants.mainColor,
       ),
-      body: Column(
+      body: ListView(
         children: [
           Padding(
             padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.04),
