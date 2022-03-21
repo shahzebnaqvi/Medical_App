@@ -75,6 +75,7 @@ class _BmiState extends State<Bmi> {
                           Constants.lightColor, Constants.mainColor)
                       : containerhalf(context, Icons.male_rounded, "Male",
                           Constants.mainColor, Constants.lightColor),
+                    
                 ),
                 InkWell(
                   onTap: () {
@@ -161,7 +162,7 @@ class _BmiState extends State<Bmi> {
                     ],
                   ),
                   padding: EdgeInsets.all(
-                    MediaQuery.of(context).size.width * 0.04,
+                    MediaQuery.of(context).size.width * 0.03,
                   ),
                   width: MediaQuery.of(context).size.width * 0.45,
                   child: Column(
@@ -169,7 +170,7 @@ class _BmiState extends State<Bmi> {
                       Text(
                         "Weight",
                         style: TextStyle(
-                            fontSize: MediaQuery.of(context).size.width * 0.05,
+                            fontSize: MediaQuery.of(context).size.width * 0.04,
                             color: fontcolor),
                       ),
                       Obx(() => Text(
@@ -234,7 +235,7 @@ class _BmiState extends State<Bmi> {
                     ],
                   ),
                   padding: EdgeInsets.all(
-                    MediaQuery.of(context).size.width * 0.04,
+                    MediaQuery.of(context).size.width * 0.03,
                   ),
                   width: MediaQuery.of(context).size.width * 0.45,
                   child: Column(
@@ -242,7 +243,7 @@ class _BmiState extends State<Bmi> {
                       Text(
                         "Age",
                         style: TextStyle(
-                            fontSize: MediaQuery.of(context).size.width * 0.05,
+                            fontSize: MediaQuery.of(context).size.width * 0.04,
                             color: fontcolor),
                       ),
                       Obx(() => Text(
@@ -310,16 +311,19 @@ class _BmiState extends State<Bmi> {
               ],
             ),
           ),
+            
           Expanded(
             child: Align(
+              
               alignment: Alignment.bottomCenter,
-              child: Container(
+              child: Container( 
+                 // padding: EdgeInsets.only(top: MediaQuery.of(context).size.height*0.15),
                 margin:
                     EdgeInsets.all(MediaQuery.of(context).size.width * 0.02),
                 width: MediaQuery.of(context).size.width * 0.95,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(primary: Constants.mainColor),
-                  child: Text("Calculate Your BMI"),
+                  child: Text("Calculate Your BMI",),
                   onPressed: () {
                     print("dssddssdsdsdsdsdddddddddd");
                     print("weoght");
