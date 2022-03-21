@@ -140,46 +140,108 @@ class _LoginState extends State<Login> {
               //         fontWeight: FontWeight.bold,
               //       )),
               // ),
-              InkWell(
-                onTap: () {},
-                child: Container(
-                  margin:
-                      EdgeInsets.only(top: MediaQuery.of(context).size.height) *
-                          0.01,
-                  decoration: BoxDecoration(
-                      border: Border.all(color: Colors.grey[300]!),
-                      color: Constants.mainColorWhite,
-                      borderRadius: BorderRadius.circular(10)),
-                  child: ListTile(
-                    leading: CircleAvatar(
-                      radius: 16,
-                      backgroundColor: Constants.redcolor,
-                      child: Image.asset('assets/google.jpg'),
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Expanded(
+                    child:Container(
+                       padding: EdgeInsets.only(right: MediaQuery.of(context).size.height*0.060,
+                      ),
+                      child: Divider(
+                         height: MediaQuery.of(context).size.height*0.080,
+                      ),
+                    )
+                     ),
+                 Text("OR",style: TextStyle(fontWeight: FontWeight.bold),),
+                  Expanded(
+                  child: Container(
+                    padding: EdgeInsets.only(left: MediaQuery.of(context).size.height*0.060),
+                    child: Divider(
+                      height: MediaQuery.of(context).size.height*0.090,
                     ),
-                    title: Center(child: Text("Sigin in with Google")),
-                  ),
-                ),
+                  )
+                  
+                  )
+                ],
+                
               ),
-              InkWell(
-                onTap: () {},
-                child: Container(
-                  margin:
-                      EdgeInsets.only(top: MediaQuery.of(context).size.height) *
-                          0.01,
-                  decoration: BoxDecoration(
-                      border: Border.all(color: Colors.grey[300]!),
-                      color: Constants.mainColorWhite,
-                      borderRadius: BorderRadius.circular(10)),
-                  child: ListTile(
-                    leading: CircleAvatar(
-                      radius: 16,
-                      backgroundColor: Constants.redcolor,
+              Row(
+                children: [
+                  InkWell(
+                    onTap: (){print("Welocome Goolge");},
+                    child:  Container(
+                      padding: EdgeInsets.only(left: MediaQuery.of(context).size.height*0.21  ),
+                      child: CircleAvatar(
+                        radius: MediaQuery.of(context).size.width*0.045,
+                        backgroundColor: Constants.redcolor,
+                         child: Image.asset('assets/google.jpg'),
+                      ),
+
+                    ),
+                  ),
+                    InkWell(
+                      onTap: (){print("Welocome facebook");},
+                     child:    Container(
+                      padding: EdgeInsets.only(left: MediaQuery.of(context).size.height*0.09),
+                      child: CircleAvatar(
+                        backgroundColor: Constants.redcolor,
+                      radius: MediaQuery.of(context).size.width*0.045,
                       child: Image.asset('assets/facebook1.jpg'),
+                      ),
                     ),
-                    title: Center(child: Text("Sigin in with Facebook")),
-                  ),
-                ),
+                    )
+                    
+                 
+              ],
               ),
+              
+                    
+                    
+                
+              
+            
+              // InkWell(
+              //   onTap: () {},
+              //   child: Container(
+              //     // margin:
+              //     //     EdgeInsets.only(top: MediaQuery.of(context).size.height) *
+              //     //         0.01,
+              //     // decoration: BoxDecoration(
+              //     //     border: Border.all(color: Colors.grey[300]!),
+              //     //     color: Constants.mainColorWhite,
+              //     //     borderRadius: BorderRadius.circular(25)),
+              //     child: ListTile(
+              //       leading: CircleAvatar(
+              //         radius: 25,
+              //         backgroundColor: Constants.redcolor,
+              //         child: Image.asset('assets/google.jpg'),
+              //       ),
+              //       // title: Center(child: Text("Sigin in with Google")),
+              //     ),
+              //   ),
+              // ),
+
+
+              // InkWell(
+              //   onTap: () {},
+              //   child:
+              //    Container(
+              //     margin:EdgeInsets.only(top: MediaQuery.of(context).size.height) *0.01,
+              //     decoration: BoxDecoration(
+              //         border: Border.all(color: Colors.grey[300]!),
+              //         color: Constants.mainColorWhite,
+              //         borderRadius: BorderRadius.circular(30)),
+              //     child: ListTile(
+              //       leading: CircleAvatar(
+              //         radius: 16,
+              //         backgroundColor: Constants.redcolor,
+              //         child: Image.asset('assets/facebook1.jpg'),
+              //       ),
+              //       title: Center(child: Text("Sigin in with Facebook")),
+              //     ),
+              //   ),
+              // ),
 
               // Container(
               //   padding: EdgeInsets.all(10),
@@ -239,8 +301,12 @@ class _LoginState extends State<Login> {
               // ],
               // ),
               // ),
-            ])),
+              ]
+            
+            
+            )
       ),
+      )
     );
   }
 }
