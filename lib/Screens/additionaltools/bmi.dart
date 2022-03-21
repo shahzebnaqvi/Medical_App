@@ -162,7 +162,7 @@ class _BmiState extends State<Bmi> {
                     ],
                   ),
                   padding: EdgeInsets.all(
-                    MediaQuery.of(context).size.width * 0.04,
+                    MediaQuery.of(context).size.width * 0.03,
                   ),
                   width: MediaQuery.of(context).size.width * 0.45,
                   child: Column(
@@ -235,7 +235,7 @@ class _BmiState extends State<Bmi> {
                     ],
                   ),
                   padding: EdgeInsets.all(
-                    MediaQuery.of(context).size.width * 0.04,
+                    MediaQuery.of(context).size.width * 0.03,
                   ),
                   width: MediaQuery.of(context).size.width * 0.45,
                   child: Column(
