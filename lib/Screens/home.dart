@@ -3,11 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:medical_app/Constants/constants.dart';
 import 'package:medical_app/Screens/additionaltools/bmi.dart';
+import 'package:medical_app/Screens/bottombar.dart';
 import 'package:medical_app/Screens/maintools/appointments.dart';
 import 'package:medical_app/Screens/maintools/myhistory.dart';
 import 'package:medical_app/Screens/maintools/myreports.dart';
 import 'package:medical_app/Screens/maintools/pharmacy.dart';
 import 'package:medical_app/Widgets/home_widgets.dart';
+
 
 final List<String> imgList = [
   'https://images.unsplash.com/photo-1520342868574-5fa3804e551c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6ff92caffcdd63681a35134a6770ed3b&auto=format&fit=crop&w=1951&q=80',
@@ -162,7 +164,12 @@ class Home extends StatelessWidget {
                 }),
           ],
         ),
-      )),
+          
+      
+      )
+    
+      ),
+    bottomNavigationBar: Bottombar(num: "0")  
     );
   }
 }
