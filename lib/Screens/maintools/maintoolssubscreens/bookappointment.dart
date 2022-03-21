@@ -23,7 +23,7 @@ class _BookApppointmentState extends State<BookApppointment> {
           children: [
             Padding(
               padding: EdgeInsets.only(
-                top: MediaQuery.of(context).size.height * 0.05,
+                top: MediaQuery.of(context).size.height * 0.03,
               ),
               child: Row(
                 children: [
@@ -54,10 +54,10 @@ Widget contdate(context, date, day, colorcolor, fontcolor) {
       ],
     ),
     padding: EdgeInsets.only(
-        top: MediaQuery.of(context).size.height * 0.05,
-        right: MediaQuery.of(context).size.width * 0.05,
-        left: MediaQuery.of(context).size.width * 0.05,
-        bottom: MediaQuery.of(context).size.height * 0.05),
+        top: MediaQuery.of(context).size.height * 0.04,
+        right: MediaQuery.of(context).size.width * 0.06,
+        left: MediaQuery.of(context).size.width * 0.06,
+        bottom: MediaQuery.of(context).size.height * 0.04),
     child: Column(
       children: [
         Text(
@@ -69,7 +69,7 @@ Widget contdate(context, date, day, colorcolor, fontcolor) {
         Text(date,
             style: TextStyle(
                 color: fontcolor,
-                fontSize: MediaQuery.of(context).size.width * 0.05)),
+                fontSize: MediaQuery.of(context).size.width * 0.08)),
       ],
     ),
   );
