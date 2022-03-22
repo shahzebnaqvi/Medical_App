@@ -13,7 +13,7 @@
            "type2":"Hematologists",
            "type3":"Nephrologists",
            "type4":"Pathologists",
-           "type4":"Plastic Surgeons"
+           "type5":"Plastic Surgeons"
                        
        },
 
@@ -41,7 +41,7 @@
              "type2":"Hematologists",
              "type3":"Nephrologists",
              "type4":"Pathologists",
-             "type4":"Plastic Surgeons"
+             "type5":"Plastic Surgeons"
                          
          },
   
