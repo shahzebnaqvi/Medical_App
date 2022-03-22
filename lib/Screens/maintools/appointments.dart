@@ -98,28 +98,45 @@ class _AppointmentsState extends State<Appointments> {
                               ]),
                           child: InkWell(
                             child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                ListTile(
-                                    title: Icon(Icons.document_scanner_rounded,
-                                        size:
-                                            MediaQuery.of(context).size.width *
-                                                0.1,
-                                        color: Constants.mainColor),
-                                    subtitle: Column(
-                                      children: [
-                                        Text("Dr John",
-                                            style: TextStyle(
-                                                color: Constants.mainColor,
+                                Image.asset('assets/login.jpg',
+                                width: MediaQuery.of(context).size.width*0.95 ,
+                                height: MediaQuery.of(context).size.height*0.095,
+                                // fit:BoxFit.fill  
+                                ),
+                                      Text("Dr John",
+                                        style: TextStyle(
+                                            color: Constants.mainColor,
                                                 fontSize: MediaQuery.of(context)
                                                         .size
                                                         .width *
                                                     0.03),
-                                            textAlign: TextAlign.center),
-                                        Text("Hematologists")
-                                      ],
-                                    ))
+                                            textAlign: TextAlign.center
+                                            ),
+                                     Text("Hematologists") 
+
+                                // ListTile(
+                                //     title: Icon(Icons.document_scanner_rounded,
+                                //         size:
+                                //             MediaQuery.of(context).size.width *
+                                //                 0.1,
+                                //         color: Constants.mainColor),
+                                //     subtitle: Column(
+                                //       children: [
+                                //         Text("Dr John",
+                                //             style: TextStyle(
+                                //                 color: Constants.mainColor,
+                                //                 fontSize: MediaQuery.of(context)
+                                //                         .size
+                                //                         .width *
+                                //                     0.03),
+                                //             textAlign: TextAlign.center),
+                                //         Text("Hematologists")
+                                //       ],
+                                //     )
+                                //     )
                                 // Icon(
                                 //   Icons.document_scanner_rounded,
                                 //   size: MediaQuery.of(context).size.width * 0.1,
