@@ -93,9 +93,10 @@ class _AppointmentsState extends State<Appointments> {
                     itemCount: 2,
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                         mainAxisExtent: MediaQuery.of(context).size.width * 0.3,
-                        crossAxisCount: 4),
+                        crossAxisCount: 2),
                     itemBuilder: (context, index) {
                       return InkWell(
+                        onTap: (){print("Appoinment book");},
                         child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.center,
@@ -107,13 +108,18 @@ class _AppointmentsState extends State<Appointments> {
                               ),
                               subtitle:Column(
                                 children: [
-                                 Text("Dr John",
+                                 Text("Dr.John",  
                                  style: TextStyle(
                                   color: Constants.mainColor,
                                     fontSize:MediaQuery.of(context).size.width *0.03),
                                       textAlign: TextAlign.center
                               ),
-                              Text("Hematologists")  
+                              Text("Hematolo",
+                              style: TextStyle(
+                                  color: Constants.mainColor,
+                                    fontSize:MediaQuery.of(context).size.width *0.03),
+                                      textAlign: TextAlign.center
+                              )  
                                 ],
                               ) 
                               
