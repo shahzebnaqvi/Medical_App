@@ -30,7 +30,7 @@
     {
         "id": 2,
         "dr_name": "John",
-        "dr_fees": "1500",
+        "dr_fees": "300",
         "description":"  It also known as neurologist  Checkup are licensed health professional ",
         "location_city_vise":{
           "address": "1745 T Street Southeast",
