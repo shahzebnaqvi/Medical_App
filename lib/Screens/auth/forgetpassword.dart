@@ -50,7 +50,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
               ElevatedButton(
                   style: ElevatedButton.styleFrom(primary: Constants.mainColor),
                   onPressed: () {
-                    Navigator.push(
+                    Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
                             builder: (context) => ResetAnimation()));
