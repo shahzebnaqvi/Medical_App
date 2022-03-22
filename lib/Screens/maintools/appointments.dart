@@ -98,17 +98,14 @@ class _AppointmentsState extends State<Appointments> {
                               ]),
                           child: InkWell(
                             child: Column(
-                              
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Image.asset('assets/doctor2.jpg',
-                                width: MediaQuery.of(context).size.width*0.15,
-                                height: MediaQuery.of(context).size.height*0.10,
+                                Image.asset('assets/login.jpg',
+                                width: MediaQuery.of(context).size.width*0.95 ,
+                                height: MediaQuery.of(context).size.height*0.095,
                                 // fit:BoxFit.fill  
-                                
                                 ),
-                                
                                       Text("Dr John",
                                         style: TextStyle(
                                             color: Constants.mainColor,
