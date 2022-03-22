@@ -8,21 +8,10 @@
         "address": "1745 T Street Southeast",
         "city": "Washington"
       },
-       "dr_type":{
-           "type1":"Allergists",
-           "type2":"Hematologists",
-           "type3":"Nephrologists",
-           "type4":"Pathologists",
-           "type5":"Plastic Surgeons"
-                       
-       },
+       "dr_type":"Allergists",
+    
 
-       "days":{
-           "day1" : "Monday",
-           "day2" : "Weenesday",
-           "day3" : "Friday"
-           
-       },
+       "days":[ "Monday","Weenesday","Friday"],
        "timing":"05:00 PM to 09:PM"
     },
 
@@ -36,21 +25,14 @@
           "address": "1745 T Street Southeast",
           "city": "Washington"
         },
-         "dr_type":{
-             "type1":"Allergists",
-             "type2":"Hematologists",
-             "type3":"neurologist",
-             "type4":"Pathologists",
-             "type5":"Plastic Surgeons"
-                         
-         },
+         "dr_type":"Hematologists",
+   
+            
+            
   
-         "days":{
-             "day1" : "Tuesday",
-             "day2" : "Thursday",
-             "day3" : "Saturaday"
+         "days":["Tuesday","Thursday","Saturaday"],
              
-         },
+    
          "timing":"03:00 PM to 06:PM"
       }
   ]
