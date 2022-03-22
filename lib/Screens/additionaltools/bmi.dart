@@ -314,16 +314,19 @@ class _BmiState extends State<Bmi> {
             child: Align(
               alignment: FractionalOffset.bottomCenter,
               child: Container(
-                margin:  EdgeInsets.all(MediaQuery.of(context).size.width * 0.02),
-                  
+                margin:
+                    EdgeInsets.all(MediaQuery.of(context).size.width * 0.02),
                 width: MediaQuery.of(context).size.width * 0.95,
                 child: ElevatedButton(
-
-                  style: ElevatedButton.styleFrom(primary: Constants.mainColor,minimumSize:
-                  Size(MediaQuery.of(context).size.width*0.95,
-                   MediaQuery.of(context).size.height*0.08)),
+                  style: ElevatedButton.styleFrom(
+                      primary: Constants.mainColor,
+                      minimumSize: Size(
+                          MediaQuery.of(context).size.width * 0.95,
+                          MediaQuery.of(context).size.height * 0.08)),
                   child: Text(
-                    "Calculate Your BMI",style: TextStyle(fontSize: MediaQuery.of(context).size.height*0.02),
+                    "Calculate Your BMI",
+                    style: TextStyle(
+                        fontSize: MediaQuery.of(context).size.height * 0.02),
                   ),
                   onPressed: () {
                     print("dssddssdsdsdsdsdddddddddd");
