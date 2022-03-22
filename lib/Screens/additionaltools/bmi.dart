@@ -342,7 +342,7 @@ class _BmiState extends State<Bmi> {
                         bmiController.weight.value == 0 ||
                         bmiController.age.value == 0 ||
                         bmiController.gender.value == 0) {
-                      //   bmiController.height.value = "";
+                      // bmiController.height.value = "";
                       // bmiController.weight.value = 0;
                       // bmiController.age.value = 0;
 
