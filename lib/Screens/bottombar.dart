@@ -73,7 +73,8 @@ class _BottombarState extends State<Bottombar> {
         }
       },
       unselectedItemColor: Colors.grey,
-      selectedItemColor: Colors.green,
+      showUnselectedLabels: true,
+      selectedItemColor: Constants.mainColor,
     );
   }
 }
