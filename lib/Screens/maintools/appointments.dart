@@ -102,7 +102,12 @@ class _AppointmentsState extends State<Appointments> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
-                                Image.asset('assets/Doctor.jpg'),
+                                Image.asset('assets/Doctor1.jpg',
+                                width: 100,
+                                height: 50,
+                               fit:BoxFit.fill  
+                                
+                                ),
                                 
                                       Text("Dr John",
                                         style: TextStyle(
