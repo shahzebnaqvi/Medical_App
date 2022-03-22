@@ -187,9 +187,9 @@ class _BookApppointmentState extends State<BookApppointment> {
                   width: MediaQuery.of(context).size.width * 0.95,
                   child: ElevatedButton(
                     style:
-                        ElevatedButton.styleFrom(primary: Constants.mainColor),
+                        ElevatedButton.styleFrom(primary: Constants.mainColor,minimumSize:Size(100, 70)),
                     child: Text(
-                      "Book",
+                      "Book",style: TextStyle(fontSize: MediaQuery.of(context).size.height*0.02),
                     ),
                     onPressed: () {},
                   ),
