@@ -102,10 +102,10 @@ class _AppointmentsState extends State<Appointments> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
-                                Image.asset('assets/Doctor1.jpg',
-                                width: 100,
-                                height: 50,
-                               fit:BoxFit.fill  
+                                Image.asset('assets/Sign_up.jpg',
+                                width: MediaQuery.of(context).size.width*0.15,
+                                height: MediaQuery.of(context).size.height*0.10,
+                                // fit:BoxFit.fill  
                                 
                                 ),
                                 
