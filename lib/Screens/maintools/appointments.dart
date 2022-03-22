@@ -90,11 +90,11 @@ class _AppointmentsState extends State<Appointments> {
                     child:  GridView.builder(
                     physics: NeverScrollableScrollPhysics(),
                      shrinkWrap: true,
-                    itemCount: 2,
-                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                        mainAxisExtent: MediaQuery.of(context).size.width * 0.3,
-                        crossAxisCount: 2),
-                    itemBuilder: (context, index) {
+                      itemCount: 2,
+                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      mainAxisExtent: MediaQuery.of(context).size.width * 0.3,
+                      crossAxisCount: 2),
+                      itemBuilder: (context, index) {
                       return InkWell(
                         onTap: (){print("Appoinment book");},
                         child: Column(
