@@ -3,7 +3,7 @@
       "id": 1,
       "dr_name": "Smith",
       "dr_fees": "1500",
-      "description":"Psychologist Checkup",
+      "description":" It also known as physicians, Psychologist Checkup are licensed health professional",
       "location_city_vise":{
         "address": "1745 T Street Southeast",
         "city": "Washington"
@@ -31,7 +31,7 @@
         "id": 2,
         "dr_name": "John",
         "dr_fees": "1500",
-        "description":"neurologist Checkup",
+        "description":"  It also known as neurologist  Checkup are licensed health professional ",
         "location_city_vise":{
           "address": "1745 T Street Southeast",
           "city": "Washington"
@@ -39,7 +39,7 @@
          "dr_type":{
              "type1":"Allergists",
              "type2":"Hematologists",
-             "type3":"Nephrologists",
+             "type3":"neurologist",
              "type4":"Pathologists",
              "type5":"Plastic Surgeons"
                          
