@@ -44,57 +44,156 @@ class _AppointmentsState extends State<Appointments> {
                       top: MediaQuery.of(context).size.width * 0.04),
                   child: InkWell(
                     onTap: () {},
-                    child: ListTile(
-                      leading: CircleAvatar(
-                          backgroundImage: AssetImage('assets/login.jpg')),
-                      title: Text(
-                        'Book Appointment',
-                        style: TextStyle(
-                            fontSize: MediaQuery.of(context).size.width * 0.045,
-                            fontWeight: FontWeight.bold),
-                      ),
-                      subtitle: RichText(
-                        text: TextSpan(
-                          text: 'Dentist ',
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontSize:
-                                  MediaQuery.of(context).size.width * 0.04),
-                          children: <TextSpan>[
-                            TextSpan(
-                              text: '\n',
-                            ),
-                            TextSpan(
-                              text: 'Lorem ipsum dolor sit amet, consectetur ',
-                              style: TextStyle(
-                                  color: Colors.grey,
-                                  fontSize:
-                                      MediaQuery.of(context).size.width * 0.03),
-                            ),
-                          ],
+                    child: TextField(
+                      autofocus: false,
+                      style:
+                          TextStyle(fontSize: 15.0, color: Color(0xFFbdc6cf)),
+                      decoration: InputDecoration(
+                        filled: true,
+                        suffixIcon: Icon(Icons.search),
+                        fillColor: Colors.white,
+                        hintText: 'Search',
+                        contentPadding: const EdgeInsets.only(
+                            left: 14.0, bottom: 12.0, top: 12.0),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.white),
+                          borderRadius: BorderRadius.circular(25.7),
                         ),
-                      ),
-                      trailing: Column(
-                        crossAxisAlignment: CrossAxisAlignment.end,
-                        children: [
-                          Icon(Icons.mail),
-                          Text("21-3-2020",
-                              style: TextStyle(
-                                  fontSize: MediaQuery.of(context).size.width *
-                                      0.025)),
-                          Text(
-                            "7:30 pm",
-                            style: TextStyle(
-                                fontSize:
-                                    MediaQuery.of(context).size.width * 0.04,
-                                fontWeight: FontWeight.bold),
-                          )
-                        ],
+                        enabledBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(color: Colors.white),
+                          borderRadius: BorderRadius.circular(25.7),
+                        ),
                       ),
                     ),
                   ),
+                ),
+                Container( 
+          padding: EdgeInsets.only(
+        top: MediaQuery.of(context).size.width * 0.04,
+        left: MediaQuery.of(context).size.width * 0.03,
+        bottom: MediaQuery.of(context).size.width * 0.01,
+        right: MediaQuery.of(context).size.width * 0.03),
+         margin: EdgeInsets.all(MediaQuery.of(context).size.width * 0.005),
+         decoration: BoxDecoration(
+           color: Colors.white,
+            borderRadius: BorderRadius.all(
+          Radius.circular(MediaQuery.of(context).size.width * 0.03)),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey.withOpacity(0.2),
+          spreadRadius: 1,
+          blurRadius: 2,
+          offset: Offset(0, 3),
+            )]
+         ),
+          
+                    child:  GridView.builder(
+                    physics: NeverScrollableScrollPhysics(),
+                     shrinkWrap: true,
+                    itemCount: 2,
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                        mainAxisExtent: MediaQuery.of(context).size.width * 0.3,
+                        crossAxisCount: 4),
+                    itemBuilder: (context, index) {
+                      return InkWell(
+                        child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            ListTile(
+                              title: Icon(Icons.document_scanner_rounded,
+                              size: MediaQuery.of(context).size.width * 0.1,
+                              color: Constants.mainColor
+                              ),
+                              subtitle:Column(
+                                children: [
+                                 Text("Dr John",
+                                 style: TextStyle(
+                                  color: Constants.mainColor,
+                                    fontSize:MediaQuery.of(context).size.width *0.03),
+                                      textAlign: TextAlign.center
+                              ),
+                              Text("Hematologists")  
+                                ],
+                              ) 
+                              
+                              
+                            )
+                            // Icon(
+                            //   Icons.document_scanner_rounded,
+                            //   size: MediaQuery.of(context).size.width * 0.1,
+                            //   color: Constants.mainColor,
+                            // ),
+                            // Padding(
+                            //   padding: EdgeInsets.only(
+                            //     top: MediaQuery.of(context).size.width * 0.04,
+                            //   ),
+                            //   child: Text(
+                            //     'Dr Smith',
+                            //     style: TextStyle(
+                            //         color: Constants.mainColor,
+                            //         fontSize:
+                            //             MediaQuery.of(context).size.width *
+                            //                 0.03),
+                            //           textAlign: TextAlign.center,
+                            //   ),
+                            // )
+                          ],
+                        ),
+                      );
+                
+                    }
                 )
-              ],
+                      // child: ListTile(
+                      //   leading: CircleAvatar(
+                      //       backgroundImage: AssetImage('assets/login.jpg')),
+                      //   title: Text(
+                      //     'Book Appointment',
+                      //     style: TextStyle(
+                      //         fontSize: MediaQuery.of(context).size.width * 0.045,
+                      //         fontWeight: FontWeight.bold),
+                      //   ),
+                      //   subtitle: RichText(
+                      //     text: TextSpan(
+                      //       text: 'Dentist ',
+                      //       style: TextStyle(
+                      //           color: Colors.black,
+                      //           fontSize:
+                      //               MediaQuery.of(context).size.width * 0.04),
+                      //       children: <TextSpan>[
+                      //         TextSpan(
+                      //           text: '\n',
+                      //         ),
+                      //         TextSpan(
+                      //           text: 'Lorem ipsum dolor sit amet, consectetur ',
+                      //           style: TextStyle(
+                      //               color: Colors.grey,
+                      //               fontSize:
+                      //                   MediaQuery.of(context).size.width * 0.03),
+                      //         ),
+                      //       ],
+                      //     ),
+                      //   ),
+                      //   trailing: Column(
+                      //     crossAxisAlignment: CrossAxisAlignment.end,
+                      //     children: [
+                      //       Icon(Icons.mail),
+                      //       Text("21-3-2020",
+                      //           style: TextStyle(
+                      //               fontSize: MediaQuery.of(context).size.width *
+                      //                   0.025)),
+                      //       Text(
+                      //         "7:30 pm",
+                      //         style: TextStyle(
+                      //             fontSize:
+                      //                 MediaQuery.of(context).size.width * 0.04,
+                      //             fontWeight: FontWeight.bold),
+                      //       )
+                      //     ],
+                      //   ),
+                      // ),
+                    
+                )],
             ),
           ),
         ),

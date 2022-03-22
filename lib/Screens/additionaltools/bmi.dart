@@ -312,57 +312,58 @@ class _BmiState extends State<Bmi> {
           ),
           Expanded(
             child: Align(
+              alignment: FractionalOffset.bottomCenter,
               child: Container(
-                // padding: EdgeInsets.only(top: MediaQuery.of(context).size.height*0.15),
-                alignment: Alignment.bottomCenter,
-                child: Container(
-                  // padding: EdgeInsets.only(top: MediaQuery.of(context).size.height*0.15),
-                  margin:
-                      EdgeInsets.all(MediaQuery.of(context).size.width * 0.02),
-                  width: MediaQuery.of(context).size.width * 0.95,
-                  child: ElevatedButton(
-                    style:
-                        ElevatedButton.styleFrom(primary: Constants.mainColor),
-                    child: Text(
-                      "Calculate Your BMI",
-                    ),
-                    onPressed: () {
-                      print("dssddssdsdsdsdsdddddddddd");
-                      print("weoght");
-                      print((bmiController.weight.value).runtimeType);
-                      print("age");
+                margin:
+                    EdgeInsets.all(MediaQuery.of(context).size.width * 0.02),
+                width: MediaQuery.of(context).size.width * 0.95,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      primary: Constants.mainColor,
+                      minimumSize: Size(
+                          MediaQuery.of(context).size.width * 0.95,
+                          MediaQuery.of(context).size.height * 0.08)),
+                  child: Text(
+                    "Calculate Your BMI",
+                    style: TextStyle(
+                        fontSize: MediaQuery.of(context).size.height * 0.02),
+                  ),
+                  onPressed: () {
+                    print("dssddssdsdsdsdsdddddddddd");
+                    print("weoght");
+                    print((bmiController.weight.value).runtimeType);
+                    print("age");
 
-                      print((bmiController.age.value.runtimeType));
-                      print("gender");
+                    print((bmiController.age.value.runtimeType));
+                    print("gender");
 
-                      print((bmiController.gender.value).runtimeType);
-                      print("height");
+                    print((bmiController.gender.value).runtimeType);
+                    print("height");
+
+                    print(bmiController.height.value);
+                    if (bmiController.height.value == "" ||
+                        bmiController.weight.value == 0 ||
+                        bmiController.age.value == 0 ||
+                        bmiController.gender.value == 0) {
+                      // bmiController.height.value = "";
+                      // bmiController.weight.value = 0;
+                      // bmiController.age.value = 0;
 
                       print(bmiController.height.value);
-                      if (bmiController.height.value == "" ||
-                          bmiController.weight.value == 0 ||
-                          bmiController.age.value == 0 ||
-                          bmiController.gender.value == 0) {
-                        //   bmiController.height.value = "";
-                        // bmiController.weight.value = 0;
-                        // bmiController.age.value = 0;
-
-                        print(bmiController.height.value);
-                        var snackBar =
-                            SnackBar(content: Text('Enter the values First'));
-                        ScaffoldMessenger.of(context).showSnackBar(snackBar);
-                      } else {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => Bmi_Result()),
-                        );
-                      }
-                    },
-                  ),
+                      var snackBar =
+                          SnackBar(content: Text('Enter the values First'));
+                      ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                    } else {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Bmi_Result()),
+                      );
+                    }
+                  },
                 ),
               ),
             ),
-          )
+          ),
         ],
       ),
     );
