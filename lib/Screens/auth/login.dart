@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:get/get.dart';
 import 'package:medical_app/Constants/constants.dart';
+import 'package:medical_app/Screens/auth/forgetpassword.dart';
 import 'package:medical_app/Screens/auth/signup.dart';
 import 'package:medical_app/Screens/home.dart';
 
@@ -53,7 +54,7 @@ class _LoginState extends State<Login> {
                       cursorColor: Constants.blackcolor,
                       decoration: InputDecoration(
                         border: InputBorder.none,
-                        labelText: 'UserName',
+                        labelText: 'Email',
                       )),
                 ),
                 Container(
@@ -80,7 +81,12 @@ class _LoginState extends State<Login> {
                 Container(
                     alignment: Alignment.topRight,
                     child: TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => ForgetPassword()));
+                        },
                         child: Text(
                           'Forgot your Credentials?',
                           style: TextStyle(color: Constants.mainColor),
