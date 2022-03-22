@@ -102,12 +102,12 @@ class _AppointmentsState extends State<Appointments> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Image.asset('assets/login.jpg',
-                                width: MediaQuery.of(context).size.width*0.95 ,
-                                height: MediaQuery.of(context).size.height*0.095,
-                                // fit:BoxFit.fill  
+                                width: MediaQuery.of(context).size.width*35 ,
+                                height: MediaQuery.of(context).size.height*0.10,
+                                 fit:BoxFit.fill  
                                 ),
-                                      Text("Dr John",
-                                        style: TextStyle(
+                                      Text("Dr John", 
+                                        style: TextStyle( 
                                             color: Constants.mainColor,
                                                 fontSize: MediaQuery.of(context)
                                                         .size
