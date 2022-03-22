@@ -51,7 +51,7 @@ Widget containericonsmall(context, iconname, icontext, backgroundcolor) {
   return Container(
     padding: EdgeInsets.only(
         top: MediaQuery.of(context).size.width * 0.04,
-        left: MediaQuery.of(context).size.width * 0.03,
+        left: MediaQuery.of(context).size.width * 0.03, 
         bottom: MediaQuery.of(context).size.width * 0.01,
         right: MediaQuery.of(context).size.width * 0.03),
     margin: EdgeInsets.all(MediaQuery.of(context).size.width * 0.005),
