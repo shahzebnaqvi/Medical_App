@@ -1,0 +1,56 @@
+[
+    {
+      "id": 1,
+      "dr_name": "Smith",
+      "dr_fees": "1500",
+      "description":"Psychologist Checkup",
+      "location_city_vise":{
+        "address": "1745 T Street Southeast",
+        "city": "Washington"
+      },
+       "dr_type":{
+           "type1":"Allergists",
+           "type2":"Hematologists",
+           "type3":"Nephrologists",
+           "type4":"Pathologists",
+           "type4":"Plastic Surgeons"
+                       
+       },
+
+       "days":{
+           "day1" : "Monday",
+           "day2" : "Weenesday",
+           "day3" : "Friday"
+           
+       },
+       "timing":"05:00 PM to 09:PM"
+    },
+
+
+    {
+        "id": 2,
+        "dr_name": "John",
+        "dr_fees": "1500",
+        "description":"neurologist Checkup",
+        "location_city_vise":{
+          "address": "1745 T Street Southeast",
+          "city": "Washington"
+        },
+         "dr_type":{
+             "type1":"Allergists",
+             "type2":"Hematologists",
+             "type3":"Nephrologists",
+             "type4":"Pathologists",
+             "type4":"Plastic Surgeons"
+                         
+         },
+  
+         "days":{
+             "day1" : "Tuesday",
+             "day2" : "Thursday",
+             "day3" : "Saturaday"
+             
+         },
+         "timing":"03:00 PM to 06:PM"
+      }
+  ]
