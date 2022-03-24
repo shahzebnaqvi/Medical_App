@@ -23,7 +23,7 @@ class _TestingState extends State<Testing> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('MlKit ocr example app'),
+          title: Text('MlKit ocr example app $recognitions '),
         ),
         body: ListView(
           physics: const ClampingScrollPhysics(),
@@ -72,23 +72,26 @@ class _TestingState extends State<Testing> {
                         )
                       : ElevatedButton(
                           onPressed: () async {
-                            recognitions = '';
+                            recognitions = 'dd';
                             final ocr = MlKitOcr();
-                            final stopwatch = Stopwatch()..start();
-                            isProcessing = true;
+                            // isProcessing = true;
                             setState(() {});
+                            print(recognitions);
                             final result = await ocr.processImage(
                                 InputImage.fromFilePath(image!.path));
-                            timeElapsed =
-                                stopwatch.elapsedMilliseconds.toString();
-                            isProcessing = false;
-                            stopwatch.reset();
-                            stopwatch.stop();
+
+                            recognitions = '';
+                            print(result.blocks);
+// Iterate over TextBlocks
                             for (var blocks in result.blocks) {
+                              print(blocks);
                               for (var lines in blocks.lines) {
-                                recognitions += '\n';
+                                print(lines);
+
                                 for (var words in lines.elements) {
-                                  recognitions += words.text + ' ';
+                                  print(recognitions);
+
+                                  recognitions += words.text;
                                 }
                               }
                             }
