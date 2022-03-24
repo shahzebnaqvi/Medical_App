@@ -13,15 +13,14 @@ class BP extends StatelessWidget {
         title: Text("Blood Pressure"),
         backgroundColor: Constants.mainColor,
       ),
-        // body: Card(
-        //   elevation: 5  ,
-        //   color: Color.fromARGB(255, 156, 181, 218),
-        //   shape: RoundedRectangleBorder(
-        //     side: BorderSide(color: Colors.blue, width: 8),
-        //     borderRadius: BorderRadius.circular(10),
-        //   ),
-          // margin: EdgeInsets.all(20.0),
           body: Container(
+          //    decoration: BoxDecoration(  
+          //   // border: Border.all(color: Colors.black, width: 2),  
+          //   // borderRadius: BorderRadius.circular(8),  
+          //   boxShadow: [  
+          //     new BoxShadow(color: Colors.green, offset: new Offset(6.0, 6.0),),  
+          //   ],  
+          // ),  
             padding: EdgeInsets.only(
             left: MediaQuery.of(context).size.height * 0.05),
             child: Column(
@@ -31,37 +30,47 @@ class BP extends StatelessWidget {
                   height: 10,
                 ),
                 Center(
-                    child: Text(
+                    child: Center(
+                      child: Text(
                   'Grade 3 hypertension',
                   style: TextStyle(
-                      color: Colors.red,
-                      fontSize: MediaQuery.of(context).size.width * 0.05),
-                )),
+                        color: Color.fromARGB(255, 150, 31, 23),
+                        fontSize: MediaQuery.of(context).size.width * 0.08),
+                ),
+                    )),
                 SizedBox(height: 15),
-                Text(
-                  "Systollic : 181 mmHg",
-                  style: TextStyle(
-                      fontSize: MediaQuery.of(context).size.height * 0.02),
+                Center(
+                  child: Text(
+                    "Systollic: 181 mmHg",
+                    style: TextStyle(
+                        fontSize: MediaQuery.of(context).size.height * 0.02,fontWeight: FontWeight.w500),
+                  ),
                 ),
                 SizedBox(
                   height: 10,
                 ),
-                Text("Diastoolic: 99 mmHg",
-                    style: TextStyle(
-                        fontSize: MediaQuery.of(context).size.height * 0.02)),
+                Center(
+                  child: Text("Diastoolic: 99 mmHg",
+                      style: TextStyle(
+                          fontSize: MediaQuery.of(context).size.height * 0.02,fontWeight: FontWeight.w500)),
+                ),
                 SizedBox(
                   height: 10,
                 ),
-                Text("Pulse :82 mmHg",
-                    style: TextStyle(
-                        fontSize: MediaQuery.of(context).size.height * 0.02)),
+                Center(
+                  child: Text("Pulse: 82 mmHg",
+                      style: TextStyle(
+                          fontSize: MediaQuery.of(context).size.height * 0.02,fontWeight: FontWeight.w500)),
+                ),
                 SizedBox(
                   height: 10,
                 ),
-                Text("Mean :126.33Hg",
-                    style: TextStyle(
-                        fontSize: MediaQuery.of(context).size.height * 0.02)
-                        ),
+                Center(
+                  child: Text("Mean: 126.33Hg",
+                      style: TextStyle(
+                          fontSize: MediaQuery.of(context).size.height * 0.02,fontWeight: FontWeight.w500)
+                          ),
+                ),
                 Container(
                   padding: EdgeInsets.only(
                       right: MediaQuery.of(context).size.width * 0.1,
@@ -84,6 +93,19 @@ class BP extends StatelessWidget {
                     ),
                   ),
                 ),
+
+                Container(
+                  padding: EdgeInsets.only(
+                      right: MediaQuery.of(context).size.width * 0.1),
+                  child: TextField(
+                    cursorColor: Constants.blackcolor,
+                    decoration: InputDecoration(
+                      labelText: 'Pulse',
+                    ),
+                  ),
+                ),
+                
+
 
                 Container(
                   padding: EdgeInsets.only(
