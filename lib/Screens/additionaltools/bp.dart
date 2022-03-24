@@ -13,15 +13,15 @@ class BP extends StatelessWidget {
         title: Text("Blood Pressure"),
         backgroundColor: Constants.mainColor,
       ),
-        body: Card(
-          elevation: 5  ,
-          color: Color.fromARGB(255, 156, 181, 218),
-          shape: RoundedRectangleBorder(
-            side: BorderSide(color: Colors.blue, width: 8),
-            borderRadius: BorderRadius.circular(10),
-          ),
-          margin: EdgeInsets.all(20.0),
-          child: Container(
+        // body: Card(
+        //   elevation: 5  ,
+        //   color: Color.fromARGB(255, 156, 181, 218),
+        //   shape: RoundedRectangleBorder(
+        //     side: BorderSide(color: Colors.blue, width: 8),
+        //     borderRadius: BorderRadius.circular(10),
+        //   ),
+          // margin: EdgeInsets.all(20.0),
+          body: Container(
             padding: EdgeInsets.only(
             left: MediaQuery.of(context).size.height * 0.05),
             child: Column(
@@ -105,7 +105,7 @@ class BP extends StatelessWidget {
                 )
               ],
             ),
-          )),
+          )
     );
   }
 }
