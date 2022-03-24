@@ -67,7 +67,7 @@ class _AppointmentsState extends State<Appointments> {
                   ),
                       
                   Padding(padding: EdgeInsets.only(top:MediaQuery.of(context).size.width*0.04)),
-                GridView.builder(
+                  GridView.builder(
                     physics: NeverScrollableScrollPhysics(),  
                     shrinkWrap: true,
                     itemCount: 16,
