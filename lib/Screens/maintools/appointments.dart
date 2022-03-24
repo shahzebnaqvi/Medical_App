@@ -22,33 +22,32 @@ class _AppointmentsState extends State<Appointments> {
         ),
         body: Center(
           child: Container(
-            width: MediaQuery.of(context).size.width * 0.95,
+           width: MediaQuery.of(context).size.width * 0.95,
             child: ListView(
               children: [
                 Container(
-                  decoration: BoxDecoration(
-                    color: Constants.lightColor,
-                    borderRadius: BorderRadius.all(Radius.circular(
-                        MediaQuery.of(context).size.width * 0.03)),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.2),
-                        spreadRadius: 1,
-                        blurRadius: 2,
-                        offset: Offset(0, 3), // changes position of shadow
-                      ),
-                    ],
-                  ),
-                  width: MediaQuery.of(context).size.width * 0.95,
-                  margin: EdgeInsets.only(
-                      top: MediaQuery.of(context).size.width * 0.04),
-                  child: InkWell(
-                    onTap: () {},
+                  // decoration: BoxDecoration(
+                  //   color: Constants.lightColor,
+                  //   borderRadius: BorderRadius.all(Radius.circular(
+                  //       MediaQuery.of(context).size.width * 0.04)
+                  //       ),
+                  //   boxShadow: [
+                  //     BoxShadow(
+                  //       color: Colors.grey.withOpacity(0.2),
+                  //       spreadRadius: 1,
+                  //       blurRadius: 2,
+                  //       offset: Offset(0, 3), // changes position of shadow
+                  //     ),
+                  //   ],
+                  // ),
+                  // width: MediaQuery.of(context).size.width * 0.95,
+                   margin: EdgeInsets.only(top: MediaQuery.of(context).size.width * 0.04),
+                    // child: InkWell(
+                    // onTap: () {},
                     child: TextField(
                       autofocus: false,
-                      style:
-                          TextStyle(fontSize: 15.0, color: Color(0xFFbdc6cf)),
-                      decoration: InputDecoration(
+                      style:TextStyle(fontSize: 15.0, color: Color(0xFFbdc6cf)),
+                        decoration: InputDecoration(
                         filled: true,
                         suffixIcon: Icon(Icons.search),
                         fillColor: Colors.white,
@@ -66,7 +65,7 @@ class _AppointmentsState extends State<Appointments> {
                       ),
                     ),
                   ),
-                ),
+                // ),
                   Padding(padding: EdgeInsets.only(top:MediaQuery.of(context).size.width*0.04)),
                 GridView.builder(
                     physics: NeverScrollableScrollPhysics(),  
