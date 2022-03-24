@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:io';
 
 import 'package:image_picker/image_picker.dart';
+import 'package:medical_app/Screens/auth/login.dart';
 
 import 'package:ml_kit_ocr/ml_kit_ocr.dart';
 
@@ -14,9 +15,24 @@ class Testing extends StatefulWidget {
 
 class _TestingState extends State<Testing> {
   XFile? image;
+  late File _image;
   String recognitions = '';
-  String timeElapsed = '';
   bool isProcessing = false;
+  Future getImagefromcamera() async {
+    image = await ImagePicker().pickImage(source: ImageSource.camera);
+
+    setState(() {
+      image = image;
+    });
+  }
+
+  Future getImagefromGallery() async {
+    image = await ImagePicker().pickImage(source: ImageSource.gallery);
+
+    setState(() {
+      image = image;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -46,24 +62,24 @@ class _TestingState extends State<Testing> {
                 padding: const EdgeInsets.all(8.0),
                 child: SelectableText('Recognized Text: $recognitions'),
               ),
-            if (timeElapsed.isNotEmpty)
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text('Time elapsed: $timeElapsed ms'),
-              ),
             const SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 ElevatedButton(
                   onPressed: () async {
-                    image = await ImagePicker()
-                        .pickImage(source: ImageSource.gallery);
+                    getImagefromGallery();
                     recognitions = '';
-                    timeElapsed = '';
                     setState(() {});
                   },
                   child: const Text('Pick Image'),
+                ),
+                FloatingActionButton(
+                  onPressed: () {
+                    getImagefromcamera();
+                  },
+                  tooltip: "Pick Image form gallery",
+                  child: Icon(Icons.add_a_photo),
                 ),
                 if (image != null)
                   isProcessing
@@ -99,6 +115,15 @@ class _TestingState extends State<Testing> {
                           },
                           child: const Text('Predict from Image'),
                         ),
+                FloatingActionButton(
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Login()));
+                    ;
+                  },
+                  tooltip: "Login",
+                  child: Icon(Icons.add_a_photo),
+                ),
               ],
             ),
           ],
