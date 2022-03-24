@@ -119,7 +119,6 @@ class _TestingState extends State<Testing> {
                   onPressed: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => Login()));
-                    ;
                   },
                   tooltip: "Login",
                   child: Icon(Icons.add_a_photo),
