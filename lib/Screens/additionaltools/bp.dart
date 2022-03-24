@@ -31,13 +31,14 @@ class _BPState extends State<BP> {
         backgroundColor: Constants.mainColor,
       ),
           body: Container(
+          alignment: FractionalOffset(0.5, 0.5),
           padding: EdgeInsets.only(
                               top: MediaQuery.of(context).size.width * 0.04,
                               left: MediaQuery.of(context).size.width * 0.05,
                               bottom: MediaQuery.of(context).size.width * 0.01,
                               right: MediaQuery.of(context).size.width * 0.03),
     
-            child: Column(
+             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
                 SizedBox(
@@ -55,7 +56,7 @@ class _BPState extends State<BP> {
                 SizedBox(height: 15),
                 Center(
                   child: Text(
-                    "Systollic: ${Systollic} mmHg",textAlign: TextAlign.start,
+                    "Systollic: ${Systollic} mmHg",
                     style: TextStyle(
                         fontSize: MediaQuery.of(context).size.height * 0.02,fontWeight: FontWeight.w500),
                   ),
@@ -64,7 +65,7 @@ class _BPState extends State<BP> {
                   height: 10,
                 ),
                 Center(
-                  child: Text("Diastoolic:${Diastoolic}mmHg",textAlign: TextAlign.start,
+                  child: Text("Diastoolic:${Diastoolic}mmHg",
                       style: TextStyle(
                           fontSize: MediaQuery.of(context).size.height * 0.02,fontWeight: FontWeight.w500)),
                 ),
@@ -72,7 +73,7 @@ class _BPState extends State<BP> {
                   height: 10,
                 ),
                 Center(
-                  child: Text("Pulse: ${Pulse} mmHg",textAlign: TextAlign.start,
+                  child: Text("Pulse: ${Pulse} mmHg",
                       style: TextStyle(
                           fontSize: MediaQuery.of(context).size.height * 0.02,fontWeight: FontWeight.w500)),
                 ),
@@ -80,7 +81,7 @@ class _BPState extends State<BP> {
                   height: 10,
                 ),
                 Center(
-                  child: Text("Mean: 126.33Hg",textAlign: TextAlign.start,
+                  child: Text("Mean: 126.33Hg",
                       style: TextStyle(
                           fontSize: MediaQuery.of(context).size.height * 0.02,fontWeight: FontWeight.w500)
                           ),
