@@ -11,19 +11,11 @@ class BP extends StatefulWidget {
 }
 
 class _BPState extends State<BP> {
-  // String Systollic="";
-  // String Diastoolic="";
-  // String Pulse="";
-  TextEditingController Systollic =TextEditingController();
-  TextEditingController Diastoolic =TextEditingController();
-  TextEditingController Pulse =TextEditingController();
+  String Systollic="";
+  String Diastoolic="";
+  String Pulse="";
   @override
-
-  void test(){
-    setState(() {
-     
-    });
-  }
+  
 
   Widget build(BuildContext context) {
     return Scaffold(
@@ -52,7 +44,7 @@ class _BPState extends State<BP> {
                 SizedBox(height: 15),
                 Center(
                   child: Text(
-                    "Systollic: ${Systollic} mmHg",textAlign: TextAlign.start,
+                    "Systollic: 181 mmHg",textAlign: TextAlign.start,
                     style: TextStyle(
                         fontSize: MediaQuery.of(context).size.height * 0.02,fontWeight: FontWeight.w500),
                   ),
@@ -61,7 +53,7 @@ class _BPState extends State<BP> {
                   height: 10,
                 ),
                 Center(
-                  child: Text("Diastoolic: ${Diastoolic} mmHg",textAlign: TextAlign.start,
+                  child: Text("Diastoolic: 99 mmHg",textAlign: TextAlign.start,
                       style: TextStyle(
                           fontSize: MediaQuery.of(context).size.height * 0.02,fontWeight: FontWeight.w500)),
                 ),
@@ -69,7 +61,7 @@ class _BPState extends State<BP> {
                   height: 10,
                 ),
                 Center(
-                  child: Text("Pulse: ${Pulse} mmHg",textAlign: TextAlign.start,
+                  child: Text("Pulse: 82 mmHg",textAlign: TextAlign.start,
                       style: TextStyle(
                           fontSize: MediaQuery.of(context).size.height * 0.02,fontWeight: FontWeight.w500)),
                 ),
@@ -127,7 +119,7 @@ class _BPState extends State<BP> {
                         primary: Constants.mainColor,
                         minimumSize: Size(
                             20, MediaQuery.of(context).size.height * 0.06)),
-                    onPressed: () =>test(),
+                    onPressed: () {},
                     child: Text(
                       "Check",
                       style: TextStyle(
