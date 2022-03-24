@@ -66,7 +66,7 @@ class _BPState extends State<BP> {
                   height:  MediaQuery.of(context).size.height*0.03,
                 ),
                 Center(
-                  child: Text("Diastoolic:${Diastoolic}mmHg",
+                  child: Text("Diastoolic: ${Diastoolic}mmHg",
                       style: TextStyle(
                           fontSize: MediaQuery.of(context).size.height * 0.02,fontWeight: FontWeight.bold)),
                 ),
