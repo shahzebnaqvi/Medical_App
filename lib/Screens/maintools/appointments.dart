@@ -56,7 +56,7 @@ class _AppointmentsState extends State<Appointments> {
                             left: 14.0, bottom: 12.0, top: 12.0),
                         focusedBorder: OutlineInputBorder(
                           borderSide: BorderSide(color: Colors.white),
-                          borderRadius: BorderRadius.circular(25.7),
+                          borderRadius: BorderRadius.circular(29),
                         ),
                            enabledBorder: UnderlineInputBorder(
                           borderSide: BorderSide(color: Colors.white),
@@ -65,7 +65,7 @@ class _AppointmentsState extends State<Appointments> {
                       ),
                     ),
                   ),
-                // ),
+                      
                   Padding(padding: EdgeInsets.only(top:MediaQuery.of(context).size.width*0.04)),
                 GridView.builder(
                     physics: NeverScrollableScrollPhysics(),  
