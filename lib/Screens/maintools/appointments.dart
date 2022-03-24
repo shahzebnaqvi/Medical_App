@@ -22,33 +22,32 @@ class _AppointmentsState extends State<Appointments> {
         ),
         body: Center(
           child: Container(
-            width: MediaQuery.of(context).size.width * 0.95,
+           width: MediaQuery.of(context).size.width * 0.95,
             child: ListView(
               children: [
                 Container(
-                  decoration: BoxDecoration(
-                    color: Constants.lightColor,
-                    borderRadius: BorderRadius.all(Radius.circular(
-                        MediaQuery.of(context).size.width * 0.03)),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.2),
-                        spreadRadius: 1,
-                        blurRadius: 2,
-                        offset: Offset(0, 3), // changes position of shadow
-                      ),
-                    ],
-                  ),
-                  width: MediaQuery.of(context).size.width * 0.95,
-                  margin: EdgeInsets.only(
-                      top: MediaQuery.of(context).size.width * 0.04),
-                  child: InkWell(
-                    onTap: () {},
+                  // decoration: BoxDecoration(
+                  //   color: Constants.lightColor,
+                  //   borderRadius: BorderRadius.all(Radius.circular(
+                  //       MediaQuery.of(context).size.width * 0.04)
+                  //       ),
+                  //   boxShadow: [
+                  //     BoxShadow(
+                  //       color: Colors.grey.withOpacity(0.2),
+                  //       spreadRadius: 1,
+                  //       blurRadius: 2,
+                  //       offset: Offset(0, 3), // changes position of shadow
+                  //     ),
+                  //   ],
+                  // ),
+                  // width: MediaQuery.of(context).size.width * 0.95,
+                   margin: EdgeInsets.only(top: MediaQuery.of(context).size.width * 0.04),
+                    // child: InkWell(
+                    // onTap: () {},
                     child: TextField(
                       autofocus: false,
-                      style:
-                          TextStyle(fontSize: 15.0, color: Color(0xFFbdc6cf)),
-                      decoration: InputDecoration(
+                      style:TextStyle(fontSize: 15.0, color: Color(0xFFbdc6cf)),
+                        decoration: InputDecoration(
                         filled: true,
                         suffixIcon: Icon(Icons.search),
                         fillColor: Colors.white,
@@ -57,19 +56,19 @@ class _AppointmentsState extends State<Appointments> {
                             left: 14.0, bottom: 12.0, top: 12.0),
                         focusedBorder: OutlineInputBorder(
                           borderSide: BorderSide(color: Colors.white),
-                          borderRadius: BorderRadius.circular(25.7),
+                          borderRadius: BorderRadius.circular(29),
                         ),
-                        enabledBorder: UnderlineInputBorder(
+                           enabledBorder: UnderlineInputBorder(
                           borderSide: BorderSide(color: Colors.white),
                           borderRadius: BorderRadius.circular(25.7),
                         ),
                       ),
                     ),
                   ),
-                ),
-
-                GridView.builder(
-                    physics: NeverScrollableScrollPhysics(),
+                      
+                  Padding(padding: EdgeInsets.only(top:MediaQuery.of(context).size.width*0.04)),
+                  GridView.builder(
+                    physics: NeverScrollableScrollPhysics(),  
                     shrinkWrap: true,
                     itemCount: 16,
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -101,8 +100,8 @@ class _AppointmentsState extends State<Appointments> {
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Image.asset('assets/login.jpg',
-                                width: MediaQuery.of(context).size.width*30 ,
+                                Image.asset('assets/doctor2.jpg',
+                                width: MediaQuery.of(context).size.width*0.90 ,
                                 height: MediaQuery.of(context).size.height*0.10,
                                  fit:BoxFit.fill  
                                 ),
@@ -112,10 +111,10 @@ class _AppointmentsState extends State<Appointments> {
                                                 fontSize: MediaQuery.of(context)
                                                         .size
                                                         .width *
-                                                    0.03),
+                                                    0.02),
                                             textAlign: TextAlign.center
                                             ),
-                                     Text("Hematologists") 
+                                     Text("Hematologists",style: TextStyle(fontSize: MediaQuery.of(context).size.width*0.02),) 
 
                                 // ListTile(
                                 //     title: Icon(Icons.document_scanner_rounded,
