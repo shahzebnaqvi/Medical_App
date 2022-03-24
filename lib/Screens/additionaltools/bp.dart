@@ -54,7 +54,7 @@ class _BPState extends State<BP> {
                 ),
                     )),
                     Divider(thickness: 1,),
-                SizedBox(height: 15),
+                SizedBox(height: MediaQuery.of(context).size.height*0.03),
                 Center(
                   child: Text(
                     "Systollic: ${Systollic} mmHg",
@@ -63,7 +63,7 @@ class _BPState extends State<BP> {
                   ),
                 ),
                 SizedBox(
-                  height: 10,
+                  height:  MediaQuery.of(context).size.height*0.03,
                 ),
                 Center(
                   child: Text("Diastoolic:${Diastoolic}mmHg",
@@ -71,7 +71,7 @@ class _BPState extends State<BP> {
                           fontSize: MediaQuery.of(context).size.height * 0.02,fontWeight: FontWeight.bold)),
                 ),
                 SizedBox(
-                  height: 10,
+                  height:  MediaQuery.of(context).size.height*0.03,
                 ),
                 Center(
                   child: Text("Pulse: ${Pulse} mmHg",
@@ -79,7 +79,7 @@ class _BPState extends State<BP> {
                           fontSize: MediaQuery.of(context).size.height * 0.02,fontWeight: FontWeight.bold)),
                 ),
                 SizedBox(
-                  height: 10,
+                  height:  MediaQuery.of(context).size.height*0.03,
                 ),
                 Center(
                   child: Text("Mean: 126.33Hg",
