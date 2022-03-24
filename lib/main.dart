@@ -4,6 +4,7 @@ import 'package:medical_app/Screens/auth/login.dart';
 import 'package:flutter/services.dart';
 import 'package:medical_app/Screens/auth/signup.dart';
 import 'package:medical_app/Screens/home.dart';
+import 'package:medical_app/testing.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
     ]);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Login(),
+      home: Testing(),
     );
   }
 }

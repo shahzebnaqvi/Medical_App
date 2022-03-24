@@ -205,6 +205,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.7.0"
+  ml_kit_ocr:
+    dependency: "direct main"
+    description:
+      name: ml_kit_ocr
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.0.3+1"
   path:
     dependency: transitive
     description:
