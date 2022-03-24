@@ -59,7 +59,7 @@ class _AppointmentsState extends State<Appointments> {
                           borderSide: BorderSide(color: Colors.white),
                           borderRadius: BorderRadius.circular(25.7),
                         ),
-                        enabledBorder: UnderlineInputBorder(
+                           enabledBorder: UnderlineInputBorder(
                           borderSide: BorderSide(color: Colors.white),
                           borderRadius: BorderRadius.circular(25.7),
                         ),
@@ -67,9 +67,9 @@ class _AppointmentsState extends State<Appointments> {
                     ),
                   ),
                 ),
-
+                  Padding(padding: EdgeInsets.only(top:MediaQuery.of(context).size.width*0.04)),
                 GridView.builder(
-                    physics: NeverScrollableScrollPhysics(),
+                    physics: NeverScrollableScrollPhysics(),  
                     shrinkWrap: true,
                     itemCount: 16,
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -102,8 +102,8 @@ class _AppointmentsState extends State<Appointments> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Image.asset('assets/login.jpg',
-                                width: MediaQuery.of(context).size.width*30 ,
-                                height: MediaQuery.of(context).size.height*0.10,
+                                width: MediaQuery.of(context).size.width*0.27 ,
+                                // height: MediaQuery.of(context).size.height*0.10,
                                  fit:BoxFit.fill  
                                 ),
                                       Text("Dr John", 
@@ -112,10 +112,10 @@ class _AppointmentsState extends State<Appointments> {
                                                 fontSize: MediaQuery.of(context)
                                                         .size
                                                         .width *
-                                                    0.03),
+                                                    0.02),
                                             textAlign: TextAlign.center
                                             ),
-                                     Text("Hematologists") 
+                                     Text("Hematologists",style: TextStyle(fontSize: MediaQuery.of(context).size.width*0.02),) 
 
                                 // ListTile(
                                 //     title: Icon(Icons.document_scanner_rounded,
