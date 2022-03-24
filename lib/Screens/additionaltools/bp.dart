@@ -11,20 +11,19 @@ class BP extends StatefulWidget {
 }
 
 class _BPState extends State<BP> {
-  // String Systollic="";
-  // String Diastoolic="";
-  // String Pulse="";
-  TextEditingController Systollic =TextEditingController();
-  TextEditingController Diastoolic =TextEditingController();
-  TextEditingController Pulse =TextEditingController();
+  String Systollic="";
+  String Diastoolic="";
+  String Pulse="";
   @override
 
   void test(){
     setState(() {
-     
+      Systollic='121';
+      Diastoolic='81';
+        Pulse='24';
     });
   }
-
+  
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -32,9 +31,14 @@ class _BPState extends State<BP> {
         backgroundColor: Constants.mainColor,
       ),
           body: Container(
-            padding: EdgeInsets.only(
-            left: MediaQuery.of(context).size.height * 0.05),
-            child: Column(
+          alignment: FractionalOffset(0.5, 0.5),
+          padding: EdgeInsets.only(
+                              top: MediaQuery.of(context).size.width * 0.04,
+                              left: MediaQuery.of(context).size.width * 0.05,
+                              bottom: MediaQuery.of(context).size.width * 0.01,
+                              right: MediaQuery.of(context).size.width * 0.03),
+    
+             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
                 SizedBox(
@@ -45,41 +49,42 @@ class _BPState extends State<BP> {
                       child: Text(
                   'Grade 3 hypertension',
                   style: TextStyle(
-                        color: Color.fromARGB(255, 150, 31, 23),
+                        color: Constants.redcolor,
                         fontSize: MediaQuery.of(context).size.width * 0.08),
                 ),
                     )),
-                SizedBox(height: 15),
+                    Divider(thickness: 1,),
+                SizedBox(height: MediaQuery.of(context).size.height*0.03),
                 Center(
                   child: Text(
-                    "Systollic: ${Systollic} mmHg",textAlign: TextAlign.start,
+                    "Systollic: ${Systollic} mmHg",
                     style: TextStyle(
-                        fontSize: MediaQuery.of(context).size.height * 0.02,fontWeight: FontWeight.w500),
+                        fontSize: MediaQuery.of(context).size.height * 0.02,fontWeight: FontWeight.bold),
                   ),
                 ),
                 SizedBox(
-                  height: 10,
+                  height:  MediaQuery.of(context).size.height*0.03,
                 ),
                 Center(
-                  child: Text("Diastoolic: ${Diastoolic} mmHg",textAlign: TextAlign.start,
+                  child: Text("Diastoolic: ${Diastoolic}mmHg",
                       style: TextStyle(
-                          fontSize: MediaQuery.of(context).size.height * 0.02,fontWeight: FontWeight.w500)),
+                          fontSize: MediaQuery.of(context).size.height * 0.02,fontWeight: FontWeight.bold)),
                 ),
                 SizedBox(
-                  height: 10,
+                  height:  MediaQuery.of(context).size.height*0.03,
                 ),
                 Center(
-                  child: Text("Pulse: ${Pulse} mmHg",textAlign: TextAlign.start,
+                  child: Text("Pulse: ${Pulse} mmHg",
                       style: TextStyle(
-                          fontSize: MediaQuery.of(context).size.height * 0.02,fontWeight: FontWeight.w500)),
+                          fontSize: MediaQuery.of(context).size.height * 0.02,fontWeight: FontWeight.bold)),
                 ),
                 SizedBox(
-                  height: 10,
+                  height:  MediaQuery.of(context).size.height*0.03,
                 ),
                 Center(
-                  child: Text("Mean: 126.33Hg",textAlign: TextAlign.start,
+                  child: Text("Mean: 126.33Hg",
                       style: TextStyle(
-                          fontSize: MediaQuery.of(context).size.height * 0.02,fontWeight: FontWeight.w500)
+                          fontSize: MediaQuery.of(context).size.height * 0.02,fontWeight: FontWeight.bold)
                           ),
                 ),
                 Container(
@@ -97,7 +102,7 @@ class _BPState extends State<BP> {
                 Container(
                   padding: EdgeInsets.only(
                       right: MediaQuery.of(context).size.width * 0.1),
-                  child: TextField(
+                    child: TextField(
                     cursorColor: Constants.blackcolor,
                     decoration: InputDecoration(
                       labelText: 'Diatolic',
@@ -126,7 +131,7 @@ class _BPState extends State<BP> {
                     style: ElevatedButton.styleFrom(
                         primary: Constants.mainColor,
                         minimumSize: Size(
-                            20, MediaQuery.of(context).size.height * 0.06)),
+                            30, MediaQuery.of(context).size.height * 0.06)),
                     onPressed: () =>test(),
                     child: Text(
                       "Check",
