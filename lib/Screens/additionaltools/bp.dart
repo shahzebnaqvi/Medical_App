@@ -3,10 +3,16 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:medical_app/Constants/constants.dart';
 
-class BP extends StatelessWidget {
+class BP extends StatefulWidget {
   const BP({Key? key}) : super(key: key);
 
   @override
+  State<BP> createState() => _BPState();
+}
+
+class _BPState extends State<BP> {
+  @override
+
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -14,13 +20,6 @@ class BP extends StatelessWidget {
         backgroundColor: Constants.mainColor,
       ),
           body: Container(
-          //    decoration: BoxDecoration(  
-          //   // border: Border.all(color: Colors.black, width: 2),  
-          //   // borderRadius: BorderRadius.circular(8),  
-          //   boxShadow: [  
-          //     new BoxShadow(color: Colors.green, offset: new Offset(6.0, 6.0),),  
-          //   ],  
-          // ),  
             padding: EdgeInsets.only(
             left: MediaQuery.of(context).size.height * 0.05),
             child: Column(
@@ -41,7 +40,7 @@ class BP extends StatelessWidget {
                 SizedBox(height: 15),
                 Center(
                   child: Text(
-                    "Systollic: 181 mmHg",
+                    "Systollic: 181 mmHg",textAlign: TextAlign.start,
                     style: TextStyle(
                         fontSize: MediaQuery.of(context).size.height * 0.02,fontWeight: FontWeight.w500),
                   ),
@@ -50,7 +49,7 @@ class BP extends StatelessWidget {
                   height: 10,
                 ),
                 Center(
-                  child: Text("Diastoolic: 99 mmHg",
+                  child: Text("Diastoolic: 99 mmHg",textAlign: TextAlign.start,
                       style: TextStyle(
                           fontSize: MediaQuery.of(context).size.height * 0.02,fontWeight: FontWeight.w500)),
                 ),
@@ -58,7 +57,7 @@ class BP extends StatelessWidget {
                   height: 10,
                 ),
                 Center(
-                  child: Text("Pulse: 82 mmHg",
+                  child: Text("Pulse: 82 mmHg",textAlign: TextAlign.start,
                       style: TextStyle(
                           fontSize: MediaQuery.of(context).size.height * 0.02,fontWeight: FontWeight.w500)),
                 ),
@@ -66,7 +65,7 @@ class BP extends StatelessWidget {
                   height: 10,
                 ),
                 Center(
-                  child: Text("Mean: 126.33Hg",
+                  child: Text("Mean: 126.33Hg",textAlign: TextAlign.start,
                       style: TextStyle(
                           fontSize: MediaQuery.of(context).size.height * 0.02,fontWeight: FontWeight.w500)
                           ),
