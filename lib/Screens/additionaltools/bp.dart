@@ -49,7 +49,7 @@ class _BPState extends State<BP> {
                       child: Text(
                   'Grade 3 hypertension',
                   style: TextStyle(
-                        color: Constants.redcolor,
+                        color: Constants.bluecolor,
                         fontSize: MediaQuery.of(context).size.width * 0.08),
                 ),
                     )),
