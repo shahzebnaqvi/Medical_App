@@ -53,12 +53,13 @@ class _BPState extends State<BP> {
                         fontSize: MediaQuery.of(context).size.width * 0.08),
                 ),
                     )),
+                    Divider(thickness: 1,),
                 SizedBox(height: 15),
                 Center(
                   child: Text(
                     "Systollic: ${Systollic} mmHg",
                     style: TextStyle(
-                        fontSize: MediaQuery.of(context).size.height * 0.02,fontWeight: FontWeight.w500),
+                        fontSize: MediaQuery.of(context).size.height * 0.02,fontWeight: FontWeight.bold),
                   ),
                 ),
                 SizedBox(
@@ -67,7 +68,7 @@ class _BPState extends State<BP> {
                 Center(
                   child: Text("Diastoolic:${Diastoolic}mmHg",
                       style: TextStyle(
-                          fontSize: MediaQuery.of(context).size.height * 0.02,fontWeight: FontWeight.w500)),
+                          fontSize: MediaQuery.of(context).size.height * 0.02,fontWeight: FontWeight.bold)),
                 ),
                 SizedBox(
                   height: 10,
@@ -75,7 +76,7 @@ class _BPState extends State<BP> {
                 Center(
                   child: Text("Pulse: ${Pulse} mmHg",
                       style: TextStyle(
-                          fontSize: MediaQuery.of(context).size.height * 0.02,fontWeight: FontWeight.w500)),
+                          fontSize: MediaQuery.of(context).size.height * 0.02,fontWeight: FontWeight.bold)),
                 ),
                 SizedBox(
                   height: 10,
@@ -83,7 +84,7 @@ class _BPState extends State<BP> {
                 Center(
                   child: Text("Mean: 126.33Hg",
                       style: TextStyle(
-                          fontSize: MediaQuery.of(context).size.height * 0.02,fontWeight: FontWeight.w500)
+                          fontSize: MediaQuery.of(context).size.height * 0.02,fontWeight: FontWeight.bold)
                           ),
                 ),
                 Container(
