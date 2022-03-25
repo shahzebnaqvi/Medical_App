@@ -115,12 +115,11 @@ class _TestingState extends State<Testing> {
                           },
                           child: const Text('Predict from Image'),
                         ),
-                FloatingActionButton(
+                ElevatedButton(
                   onPressed: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => Login()));
                   },
-                  tooltip: "Login",
                   child: Icon(Icons.add_a_photo),
                 ),
               ],

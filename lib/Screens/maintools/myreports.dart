@@ -4,9 +4,38 @@ import 'package:medical_app/Constants/constants.dart';
 import 'package:medical_app/Screens/maintools/maintoolssubscreens/formreportupload.dart';
 import 'package:medical_app/Screens/maintools/maintoolssubscreens/takepicurereport.dart';
 import 'package:medical_app/Screens/maintools/maintoolssubscreens/uploadpicturereport.dart';
+import 'dart:io';
 
-class MyReports extends StatelessWidget {
+import 'package:image_picker/image_picker.dart';
+import 'package:ml_kit_ocr/ml_kit_ocr.dart';
+
+class MyReports extends StatefulWidget {
   const MyReports({Key? key}) : super(key: key);
+
+  @override
+  State<MyReports> createState() => _MyReportsState();
+}
+
+class _MyReportsState extends State<MyReports> {
+  XFile? image;
+  late File _image;
+  String recognitions = '';
+  bool isProcessing = false;
+  Future getImagefromcamera() async {
+    image = await ImagePicker().pickImage(source: ImageSource.camera);
+
+    setState(() {
+      image = image;
+    });
+  }
+
+  Future getImagefromGallery() async {
+    image = await ImagePicker().pickImage(source: ImageSource.gallery);
+
+    setState(() {
+      image = image;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -59,10 +88,12 @@ class MyReports extends StatelessWidget {
                   onTap: () {
                     print('Mail Tapped');
                     isDialOpen.value = false;
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => UploadPictureReport()));
+                    getImagefromGallery();
+                    recognitions = '';
+                    // Navigator.push(
+                    //     context,
+                    //     MaterialPageRoute(
+                    //         builder: (context) => UploadPictureReport()));
                   }),
               SpeedDialChild(
                   child: Icon(Icons.copy),
@@ -70,10 +101,12 @@ class MyReports extends StatelessWidget {
                   onTap: () {
                     print('Take a Picture');
                     isDialOpen.value = false;
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => TakePicureReport()));
+                    getImagefromcamera();
+                    recognitions = '';
+                    // Navigator.push(
+                    //     context,
+                    //     MaterialPageRoute(
+                    //         builder: (context) => TakePicureReport()));
                   }),
             ],
           ),

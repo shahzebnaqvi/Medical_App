@@ -186,12 +186,15 @@ class _BookApppointmentState extends State<BookApppointment> {
                       EdgeInsets.all(MediaQuery.of(context).size.width * 0.02),
                   width: MediaQuery.of(context).size.width * 0.95,
                   child: ElevatedButton(
-                    style:
-                        ElevatedButton.styleFrom(primary: Constants.mainColor,minimumSize:
-                         Size(MediaQuery.of(context).size.width*0.95,
-                   MediaQuery.of(context).size.height*0.08)),
+                    style: ElevatedButton.styleFrom(
+                        primary: Constants.mainColor,
+                        minimumSize: Size(
+                            MediaQuery.of(context).size.width * 0.95,
+                            MediaQuery.of(context).size.height * 0.08)),
                     child: Text(
-                      "Book",style: TextStyle(fontSize: MediaQuery.of(context).size.height*0.02),
+                      "Book",
+                      style: TextStyle(
+                          fontSize: MediaQuery.of(context).size.height * 0.02),
                     ),
                     onPressed: () {},
                   ),
