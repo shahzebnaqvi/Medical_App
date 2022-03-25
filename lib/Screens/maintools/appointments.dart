@@ -72,7 +72,7 @@ class _AppointmentsState extends State<Appointments> {
                     shrinkWrap: true,
                     itemCount: 16,
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                        mainAxisExtent: MediaQuery.of(context).size.width * 0.3,
+                        mainAxisExtent: MediaQuery.of(context).size.height * 0.2,
                         crossAxisCount: 2),
                     itemBuilder: (context, index) {
                       return Container(
@@ -111,10 +111,10 @@ class _AppointmentsState extends State<Appointments> {
                                                 fontSize: MediaQuery.of(context)
                                                         .size
                                                         .width *
-                                                    0.02),
+                                                    0.03),
                                             textAlign: TextAlign.center
                                             ),
-                                     Text("Hematologists",style: TextStyle(fontSize: MediaQuery.of(context).size.width*0.02),) 
+                                     Text("Hematologists",style: TextStyle(fontSize: MediaQuery.of(context).size.width*0.03),) 
 
                                 // ListTile(
                                 //     title: Icon(Icons.document_scanner_rounded,
