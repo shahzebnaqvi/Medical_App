@@ -104,11 +104,11 @@ class _AppointmentsState extends State<Appointments> {
                                 width: MediaQuery.of(context).size.width*0.90 ,
                                 height: MediaQuery.of(context).size.height*0.10,
                                  fit:BoxFit.fill  
-                                ),
+                                ),  
                                       Text("Dr John", 
                                         style: TextStyle( 
                                             color: Constants.mainColor,
-                                                fontSize: MediaQuery.of(context)
+                                                fontSize: MediaQuery.of(context)  
                                                         .size
                                                         .width *
                                                     0.03),
