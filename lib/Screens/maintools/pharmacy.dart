@@ -147,7 +147,7 @@ class _PharmacyState extends State<Pharmacy> {
                                   MediaQuery.of(context).size.width * 0.03)),
                               boxShadow: [
                                 BoxShadow(
-                                  color: Colors.grey.withOpacity(0.2),
+                                  color: Colors.grey.withOpacity(0.3),
                                   spreadRadius: 1,
                                   blurRadius: 2,
                                   offset: Offset(0, 3),
@@ -157,8 +157,19 @@ class _PharmacyState extends State<Pharmacy> {
                               crossAxisAlignment: CrossAxisAlignment.stretch,
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Text('Fast'),
-                                Text('15 %offf'),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text('Fast'),
+                                    Text(
+                                      '15 %off',
+                                      style: TextStyle(
+                                          backgroundColor: Color.fromARGB(
+                                              255, 182, 210, 232)),
+                                    ),
+                                  ],
+                                ),
                                 Image.asset('assets/Panadol.jpg',
                                     width: MediaQuery.of(context).size.width *
                                         0.90,
