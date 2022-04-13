@@ -155,7 +155,7 @@ class _PharmacyState extends State<Pharmacy> {
                               ]),
                           child: Column(
                               crossAxisAlignment: CrossAxisAlignment.stretch,
-                              // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text('Fast'),
                                 Text('15 %off'),
