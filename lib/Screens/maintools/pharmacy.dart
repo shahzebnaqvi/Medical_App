@@ -158,7 +158,7 @@ class _PharmacyState extends State<Pharmacy> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text('Fast'),
-                                Text('15 %off'),
+                                Text('15 %offf'),
                                 Image.asset('assets/Panadol.jpg',
                                     width: MediaQuery.of(context).size.width *
                                         0.90,
