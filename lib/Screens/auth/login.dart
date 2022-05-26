@@ -26,12 +26,8 @@ class _LoginState extends State<Login> {
         backgroundColor: Constants.mainColorWhite,
         body: ListView(children: [
           Container(
-              // padding: EdgeInsets.only(
-              //   top: MediaQuery.of(context).size.height * 0.06,
-              //   bottom: MediaQuery.of(context).size.height * 0.09,
-              // ),
               child: Image.asset(
-            'assets/login.jpg',
+            'assets/login_logo.jpg',
             width: MediaQuery.of(context).size.width * 0.20,
           )),
           Container(
@@ -149,7 +145,9 @@ class _LoginState extends State<Login> {
               ),
               Text(
                 "Login with social account",
-                style: TextStyle(decoration: TextDecoration.underline),
+                style: TextStyle(
+                    decoration: TextDecoration.underline,
+                    fontWeight: FontWeight.bold),
               )
             ],
           )),
@@ -158,7 +156,7 @@ class _LoginState extends State<Login> {
           ),
           Container(
             child: Row(
-              // mainAxisAlignment: MainAxisAlignment.spaceAround,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Container(
                   child: ElevatedButton(
@@ -192,6 +190,23 @@ class _LoginState extends State<Login> {
                     ),
                   ),
                 ),
+              ],
+            ),
+          ),
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.06,
+          ),
+          Container(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text("Don't have an account ?"),
+                GestureDetector(
+                    onTap: () {},
+                    child: Text(
+                      "Sign up",
+                      style: TextStyle(color: Constants.cyan),
+                    ))
               ],
             ),
           )
