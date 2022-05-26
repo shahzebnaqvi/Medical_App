@@ -161,28 +161,46 @@ class _LoginState extends State<Login> {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Container(
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10)),
-                      primary: Constants.bluecolor,
-                      minimumSize: Size(
-                          MediaQuery.of(context).size.height * 0.07,
-                          MediaQuery.of(context).size.height * 0.07),
+                  margin:
+                      EdgeInsets.only(top: MediaQuery.of(context).size.height) *
+                          0.01,
+                  decoration: BoxDecoration(
+                      border: Border.all(color: Colors.grey[300]!),
+                      color: Constants.mainColorWhite,
+                      borderRadius: BorderRadius.circular(25)),
+                  child: ListTile(
+                    leading: CircleAvatar(
+                      radius: 25,
+                      backgroundColor: Constants.redcolor,
+                      child: Image.asset('assets/facebook.png'),
                     ),
-                    onPressed: () {},
-                    child: Row(
-                      children: [
-                        CircleAvatar(
-                          radius: MediaQuery.of(context).size.width * 0.045,
-                          backgroundColor: Constants.redcolor,
-                          child: Image.asset('assets/facebook.png'),
-                        ),
-                        Text("Facebook")
-                      ],
-                    ),
+                    title: Center(child: Text("Facebook")),
                   ),
                 ),
+                //     // ),
+                // Container(
+                //   child: ElevatedButton(
+                //     style: ElevatedButton.styleFrom(
+                //       shape: RoundedRectangleBorder(
+                //           borderRadius: BorderRadius.circular(10)),
+                //       primary: Constants.bluecolor,
+                //       minimumSize: Size(
+                //           MediaQuery.of(context).size.height * 0.07,
+                //           MediaQuery.of(context).size.height * 0.07),
+                //     ),
+                //     onPressed: () {},
+                //     child: Row(
+                //       children: [
+                //         CircleAvatar(
+                //           radius: MediaQuery.of(context).size.width * 0.045,
+                //           // backgroundColor: Constants.redcolor,
+                //           child: Image.asset('assets/facebook.png'),
+                //         ),
+                //         Text("Facebook")
+                //       ],
+                //     ),
+                //   ),
+                // ),
                 Container(
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
