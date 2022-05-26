@@ -11,8 +11,6 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-
-  
   const MyApp({Key? key}) : super(key: key);
 
   @override
@@ -22,7 +20,7 @@ class MyApp extends StatelessWidget {
     ]);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Testing(),
+      home: Login(),
     );
   }
 }
