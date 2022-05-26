@@ -26,10 +26,12 @@ class _LoginState extends State<Login> {
         backgroundColor: Constants.mainColorWhite,
         body: ListView(children: [
           Container(
+              padding: EdgeInsets.only(
+                  top: MediaQuery.of(context).size.height * 0.05),
               child: Image.asset(
-            'assets/login_logo.jpg',
-            width: MediaQuery.of(context).size.width * 0.20,
-          )),
+                'assets/login_logo.jpg',
+                width: MediaQuery.of(context).size.width * 0.20,
+              )),
           Container(
             alignment: Alignment.center,
             child: Text(
@@ -170,7 +172,14 @@ class _LoginState extends State<Login> {
                     ),
                     onPressed: () {},
                     child: Row(
-                      children: [Icon(Icons.tiktok), Text("Facebook")],
+                      children: [
+                        CircleAvatar(
+                          radius: MediaQuery.of(context).size.width * 0.045,
+                          backgroundColor: Constants.redcolor,
+                          child: Image.asset('assets/facebook.png'),
+                        ),
+                        Text("Facebook")
+                      ],
                     ),
                   ),
                 ),
