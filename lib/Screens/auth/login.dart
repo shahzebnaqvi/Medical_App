@@ -1,4 +1,5 @@
 import 'dart:html';
+import 'dart:ui';
 
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -59,7 +60,7 @@ class _LoginState extends State<Login> {
             margin: EdgeInsets.only(
               left: MediaQuery.of(context).size.height * 0.001,
             ),
-            padding: EdgeInsets.all(10),
+            padding: EdgeInsets.all(20),
             child: TextField(
                 cursorColor: Constants.blackcolor,
                 obscureText: !this._showPassword,
@@ -131,15 +132,69 @@ class _LoginState extends State<Login> {
               ),
             ),
           ),
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.03,
+          ),
           Container(
               child: Column(
             children: [
-              Text("Forgot Password?"),
-              Text("Login with social account")
-            ],
-          )
-              // GestureDetector(onTap: () {}, child: Text("Forgot Password ?")),
+              GestureDetector(
+                  onTap: () {},
+                  child: Text(
+                    "Forgot Password?",
+                    style: TextStyle(color: Constants.cyan),
+                  )),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.02,
+              ),
+              Text(
+                "Login with social account",
+                style: TextStyle(decoration: TextDecoration.underline),
               )
+            ],
+          )),
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.03,
+          ),
+          Container(
+            child: Row(
+              // mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Container(
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                      primary: Constants.bluecolor,
+                      minimumSize: Size(
+                          MediaQuery.of(context).size.height * 0.07,
+                          MediaQuery.of(context).size.height * 0.07),
+                    ),
+                    onPressed: () {},
+                    child: Row(
+                      children: [Icon(Icons.tiktok), Text("Facebook")],
+                    ),
+                  ),
+                ),
+                Container(
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                      primary: Constants.cyan,
+                      minimumSize: Size(
+                          MediaQuery.of(context).size.height * 0.07,
+                          MediaQuery.of(context).size.height * 0.07),
+                    ),
+                    onPressed: () {},
+                    child: Row(
+                      children: [Icon(Icons.tiktok), Text("Twitter")],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          )
         ])
 
         //     Container(
