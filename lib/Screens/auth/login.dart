@@ -161,27 +161,29 @@ class _LoginState extends State<Login> {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Container(
+                    height: 35,
                     child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10)),
-                    primary: Constants.bluecolor,
-                    minimumSize: Size(MediaQuery.of(context).size.height * 0.07,
-                        MediaQuery.of(context).size.height * 0.07),
-                  ),
-                  onPressed: () {},
-                  child: Row(
-                    children: [
-                      CircleAvatar(
-                        radius: MediaQuery.of(context).size.width * 0.045,
-                        // backgroundColor: Constants.redcolor,
-                        child: Image.asset('assets/facebook1.jpg'),
+                      style: ElevatedButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10)),
+                        primary: Constants.bluecolor,
+                        minimumSize: Size(
+                            MediaQuery.of(context).size.height * 0.07,
+                            MediaQuery.of(context).size.width * 0.07),
                       ),
-                      Text("Facebook")
-                    ],
-                  ),
-                )),
+                      onPressed: () {},
+                      child: Row(
+                        children: [
+                          CircleAvatar(
+                            radius: 15,
+                            child: Image.asset('assets/facebook1.jpg'),
+                          ),
+                          Text("Facebook")
+                        ],
+                      ),
+                    )),
                 Container(
+                  height: 35,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
@@ -189,15 +191,13 @@ class _LoginState extends State<Login> {
                       primary: Constants.cyan,
                       minimumSize: Size(
                           MediaQuery.of(context).size.height * 0.07,
-                          MediaQuery.of(context).size.height * 0.07),
+                          MediaQuery.of(context).size.width * 0.07),
                     ),
                     onPressed: () {},
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         CircleAvatar(
                           radius: 15,
-                          backgroundColor: Colors.white,
                           child: ClipOval(
                             child: Image.asset('assets/twitter.jpg'),
                           ),
