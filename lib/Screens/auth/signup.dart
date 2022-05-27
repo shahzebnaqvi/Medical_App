@@ -111,6 +111,7 @@ class _SignupState extends State<Signup> {
                         prefixIcon: Icon(Icons.mark_email_unread_outlined)),
                   ),
                   TextField(
+                    obscureText: !this._showPassword,
                     cursorColor: Constants.blackcolor,
                     decoration: InputDecoration(
                       enabledBorder: UnderlineInputBorder(
@@ -118,7 +119,17 @@ class _SignupState extends State<Signup> {
                               color: Color.fromARGB(255, 216, 216, 216))),
                       labelText: "Password",
                       prefixIcon: Icon(Icons.lock),
-                      suffixIcon: Icon(Icons.remove_red_eye),
+                      suffixIcon: IconButton(
+                          icon: Icon(
+                            Icons.remove_red_eye,
+                            color: this._showPassword
+                                ? Constants.bluecolor
+                                : Constants.mediumColor,
+                          ),
+                          onPressed: () {
+                            setState(
+                                () => this._showPassword = !this._showPassword);
+                          }),
                     ),
                   ),
                   SizedBox(
