@@ -11,6 +11,7 @@ class Profile extends StatefulWidget {
 }
 
 class _ProfileState extends State<Profile> {
+  String _dropDownValue = "";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -63,14 +64,41 @@ class _ProfileState extends State<Profile> {
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.05,
             ),
-            TextField(
-              cursorColor: Constants.blackcolor,
-              decoration: InputDecoration(
-                border:
-                    OutlineInputBorder(borderRadius: BorderRadius.circular(25)),
-                labelText: "Gender",
+
+            Container(
+              padding: EdgeInsets.all(05),
+              decoration: BoxDecoration(
+                  border: Border.all(color: Constants.grey),
+                  borderRadius: BorderRadius.circular(25)),
+              width: MediaQuery.of(context).size.width * 0.3,
+              child: DropdownButton<String>(
+                hint: _dropDownValue == ""
+                    ? Text('Gender')
+                    : Text(
+                        _dropDownValue,
+                        style: TextStyle(color: Constants.mainColor),
+                      ), // Not necessary for Option 1
+
+                items: <String>['Male', 'Female'].map((String value) {
+                  return DropdownMenuItem<String>(
+                    value: value,
+                    child: Text(value),
+                  );
+                }).toList(),
+                onChanged: (value) {
+                  setState(() {
+                    _dropDownValue = value!;
+                  });
+                },
               ),
             ),
+            // TextField(
+            //     cursorColor: Constants.blackcolor,
+            //     decoration: InputDecoration(
+            //       border: OutlineInputBorder(
+            //           borderRadius: BorderRadius.circular(25)),
+            //       labelText: "Gender",
+            //     )),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.05,
             ),
