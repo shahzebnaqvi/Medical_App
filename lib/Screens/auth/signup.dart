@@ -7,6 +7,7 @@ import 'package:get/route_manager.dart';
 import 'package:medical_app/Constants/constants.dart';
 import 'package:medical_app/Screens/additionaltools/bmi.dart';
 import 'package:medical_app/Screens/auth/login.dart';
+import 'package:medical_app/Screens/home.dart';
 
 class Signup extends StatefulWidget {
   const Signup({Key? key}) : super(key: key);
@@ -144,7 +145,10 @@ class _SignupState extends State<Signup> {
                           primary: Constants.bluecolor,
                           minimumSize: Size(
                               20, MediaQuery.of(context).size.height * 0.06)),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => Home()));
+                      },
                       child: Text("Sign up"),
                     ),
                   ),

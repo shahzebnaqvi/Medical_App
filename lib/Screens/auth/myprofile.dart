@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:medical_app/Screens/auth/login.dart';
 
 import '../../Constants/constants.dart';
 
@@ -94,6 +95,33 @@ class _ProfileState extends State<Profile> {
             ),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.05,
+            ),
+            Container(
+              margin: EdgeInsets.only(
+                left: MediaQuery.of(context).size.height * 0.03,
+                right: MediaQuery.of(context).size.height * 0.01,
+              ),
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20)),
+                    primary: Constants.mainColor,
+                    minimumSize: Size(
+                        20,
+                        MediaQuery.of(context).size.height *
+                            0.06) // put the width and height you want
+                    ),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Login()));
+                },
+                child: Text(
+                  "SUBMIT",
+                  style: TextStyle(
+                    fontSize: MediaQuery.of(context).size.width * 0.05,
+                  ),
+                ),
+              ),
             ),
           ],
         ),
