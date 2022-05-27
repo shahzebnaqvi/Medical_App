@@ -51,7 +51,7 @@ class _SignupState extends State<Signup> {
                 alignment: Alignment.center,
                 child: Image.asset(
                   'assets/doctor2.jpg',
-                  width: MediaQuery.of(context).size.width * 0.35,
+                  width: MediaQuery.of(context).size.width * 0.38,
                 )),
             Container(
                 width: MediaQuery.of(context).size.width * 0.9,
@@ -86,7 +86,7 @@ class _SignupState extends State<Signup> {
                               color: Color.fromARGB(255, 216, 216, 216))),
                       labelText: "First Name",
                       prefixIcon: Icon(Icons.person_outline),
-                      suffixIcon: Icon(Icons.remove_red_eye),
+                      // suffixIcon: Icon(Icons.remove_red_eye),
                     ),
                   ),
                   TextField(
@@ -97,7 +97,7 @@ class _SignupState extends State<Signup> {
                               color: Color.fromARGB(255, 216, 216, 216))),
                       labelText: "Last Name",
                       prefixIcon: Icon(Icons.person_outline),
-                      suffixIcon: Icon(Icons.remove_red_eye),
+                      //  suffixIcon: Icon(Icons.remove_red_eye),
                     ),
                   ),
                   TextField(
@@ -107,7 +107,7 @@ class _SignupState extends State<Signup> {
                             borderSide: BorderSide(
                                 color: Color.fromARGB(255, 216, 216, 216))),
                         labelText: "Email",
-                        suffixIcon: Icon(Icons.remove_red_eye),
+                        //suffixIcon: Icon(Icons.remove_red_eye),
                         prefixIcon: Icon(Icons.mark_email_unread_outlined)),
                   ),
                   TextField(
