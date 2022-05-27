@@ -46,7 +46,7 @@ class _SignupState extends State<Signup> {
           children: [
             Container(
                 padding: EdgeInsets.only(
-                  bottom: MediaQuery.of(context).size.height * 0.02,
+                  top: MediaQuery.of(context).size.height * 0.02,
                 ),
                 alignment: Alignment.center,
                 child: Image.asset(
@@ -55,9 +55,8 @@ class _SignupState extends State<Signup> {
                 )),
             Container(
                 width: MediaQuery.of(context).size.width * 0.9,
-                height: MediaQuery.of(context).size.height * 0.7,
                 margin: EdgeInsets.only(
-                  top: MediaQuery.of(context).size.height * 0.01,
+                  top: MediaQuery.of(context).size.height * 0.05,
                   bottom: MediaQuery.of(context).size.height * 0.01,
                   left: MediaQuery.of(context).size.height * 0.01,
                   right: MediaQuery.of(context).size.height * 0.01,

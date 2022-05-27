@@ -26,10 +26,10 @@ class _LoginState extends State<Login> {
         body: ListView(children: [
           Container(
               padding: EdgeInsets.only(
-                  top: MediaQuery.of(context).size.height * 0.05),
+                  top: MediaQuery.of(context).size.height * 0.03),
               child: Image.asset(
                 'assets/login_logo.jpg',
-                width: MediaQuery.of(context).size.width * 0.20,
+                width: MediaQuery.of(context).size.width * 0.15,
               )),
           Container(
             alignment: Alignment.center,
@@ -218,7 +218,10 @@ class _LoginState extends State<Login> {
               children: [
                 Text("Don't have an account ?"),
                 GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Signup()));
+                    },
                     child: Text(
                       "Sign up",
                       style: TextStyle(color: Constants.cyan),
