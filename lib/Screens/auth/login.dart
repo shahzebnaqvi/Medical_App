@@ -174,9 +174,13 @@ class _LoginState extends State<Login> {
                       child: Row(
                         children: [
                           CircleAvatar(
-                            radius: 15,
-                            child: Image.asset('assets/facebook1.jpg'),
-                          ),
+                              radius: 15,
+                              child: ClipOval(
+                                child: Image.asset(
+                                  'assets/facebook1.jpg',
+                                  scale: 08,
+                                ),
+                              )),
                           Text("Facebook")
                         ],
                       ),
