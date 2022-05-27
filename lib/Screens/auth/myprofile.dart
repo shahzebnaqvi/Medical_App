@@ -46,7 +46,7 @@ class _ProfileState extends State<Profile> {
               cursorColor: Constants.blackcolor,
               decoration: InputDecoration(
                 border:
-                    OutlineInputBorder(borderRadius: BorderRadius.circular(25)),
+                    OutlineInputBorder(borderRadius: BorderRadius.circular(30)),
                 labelText: "Fullname",
               ),
             ),
@@ -57,28 +57,25 @@ class _ProfileState extends State<Profile> {
               cursorColor: Constants.blackcolor,
               decoration: InputDecoration(
                 border:
-                    OutlineInputBorder(borderRadius: BorderRadius.circular(25)),
+                    OutlineInputBorder(borderRadius: BorderRadius.circular(30)),
                 labelText: "Birthday",
               ),
             ),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.05,
             ),
-
             Container(
+              height: MediaQuery.of(context).size.height * 0.07,
               padding: EdgeInsets.all(05),
               decoration: BoxDecoration(
                   border: Border.all(color: Constants.grey),
-                  borderRadius: BorderRadius.circular(25)),
-              width: MediaQuery.of(context).size.width * 0.3,
+                  borderRadius: BorderRadius.circular(30)),
               child: DropdownButton<String>(
                 hint: _dropDownValue == ""
                     ? Text('Gender')
                     : Text(
                         _dropDownValue,
-                        style: TextStyle(color: Constants.mainColor),
-                      ), // Not necessary for Option 1
-
+                      ),
                 items: <String>['Male', 'Female'].map((String value) {
                   return DropdownMenuItem<String>(
                     value: value,
@@ -92,13 +89,6 @@ class _ProfileState extends State<Profile> {
                 },
               ),
             ),
-            // TextField(
-            //     cursorColor: Constants.blackcolor,
-            //     decoration: InputDecoration(
-            //       border: OutlineInputBorder(
-            //           borderRadius: BorderRadius.circular(25)),
-            //       labelText: "Gender",
-            //     )),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.05,
             ),
@@ -106,7 +96,7 @@ class _ProfileState extends State<Profile> {
               cursorColor: Constants.blackcolor,
               decoration: InputDecoration(
                 border:
-                    OutlineInputBorder(borderRadius: BorderRadius.circular(25)),
+                    OutlineInputBorder(borderRadius: BorderRadius.circular(30)),
                 labelText: "Weight",
               ),
             ),
@@ -117,7 +107,7 @@ class _ProfileState extends State<Profile> {
               cursorColor: Constants.blackcolor,
               decoration: InputDecoration(
                 border:
-                    OutlineInputBorder(borderRadius: BorderRadius.circular(25)),
+                    OutlineInputBorder(borderRadius: BorderRadius.circular(30)),
                 labelText: "Height",
               ),
             ),
