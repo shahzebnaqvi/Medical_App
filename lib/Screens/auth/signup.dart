@@ -1,9 +1,8 @@
-import 'dart:html';
 import 'dart:ui';
-
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:get/route_manager.dart';
 import 'package:medical_app/Constants/constants.dart';
 import 'package:medical_app/Screens/additionaltools/bmi.dart';
@@ -43,115 +42,168 @@ class _SignupState extends State<Signup> {
                 Navigator.pop(context);
               }),
         ),
-        body: ListView(children: [
-          Container(
-              padding: EdgeInsets.only(
-                top: MediaQuery.of(context).size.height * 0.06,
-                bottom: MediaQuery.of(context).size.height * 0.09,
-              ),
-              alignment: Alignment.center,
-              child: Image.asset(
-                'assets/doctor2.jpg',
-                width: MediaQuery.of(context).size.width * 0.35,
-              )),
-          Container(
-              width: MediaQuery.of(context).size.width * 0.9,
-              margin: EdgeInsets.only(
+        body: ListView(
+          children: [
+            Container(
+                padding: EdgeInsets.only(
+                  bottom: MediaQuery.of(context).size.height * 0.02,
+                ),
+                alignment: Alignment.center,
+                child: Image.asset(
+                  'assets/doctor2.jpg',
+                  width: MediaQuery.of(context).size.width * 0.35,
+                )),
+            Container(
+                width: MediaQuery.of(context).size.width * 0.9,
+                height: MediaQuery.of(context).size.height * 0.7,
+                margin: EdgeInsets.only(
                   top: MediaQuery.of(context).size.height * 0.01,
-                  bottom: MediaQuery.of(context).size.height * 0.01),
-              padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.02),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(15),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey.withOpacity(0.2),
-                    spreadRadius: 5,
-                    blurRadius: 7,
-                    offset: Offset(0, 3),
-                  ),
-                ],
-              ),
-              child: Column(
-                children: [
+                  bottom: MediaQuery.of(context).size.height * 0.01,
+                  left: MediaQuery.of(context).size.height * 0.01,
+                  right: MediaQuery.of(context).size.height * 0.01,
+                ),
+                padding: EdgeInsets.only(
+                  top: MediaQuery.of(context).size.height * 0.05,
+                  bottom: MediaQuery.of(context).size.height * 0.10,
+                ),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(25),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.2),
+                      spreadRadius: 5,
+                      blurRadius: 7,
+                      offset: Offset(0, 3),
+                    ),
+                  ],
+                ),
+                child: Column(children: [
                   TextField(
                     cursorColor: Constants.blackcolor,
                     decoration: InputDecoration(
-                        border: InputBorder.none,
-                        labelText: "First Name",
-                        prefixIcon: Icon(Icons.person_outline)
-                        //suffixIcon: Icon(Icons.remove_red_eye)),
-                        ),
-                  ),
-                  TextField(
-                    cursorColor: Constants.blackcolor,
-                    decoration: InputDecoration(
-                        border: InputBorder.none,
-                        labelText: "Last Name",
-                        prefixIcon: Icon(Icons.person_outline)
-                        //suffixIcon: Icon(Icons.remove_red_eye)),
-                        ),
+                      enabledBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(
+                              color: Color.fromARGB(255, 216, 216, 216))),
+                      labelText: "First Name",
+                      prefixIcon: Icon(Icons.person_outline),
+                      suffixIcon: Icon(Icons.remove_red_eye),
+                    ),
                   ),
                   TextField(
                     cursorColor: Constants.blackcolor,
                     decoration: InputDecoration(
-                        border: InputBorder.none,
+                      enabledBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(
+                              color: Color.fromARGB(255, 216, 216, 216))),
+                      labelText: "Last Name",
+                      prefixIcon: Icon(Icons.person_outline),
+                      suffixIcon: Icon(Icons.remove_red_eye),
+                    ),
+                  ),
+                  TextField(
+                    cursorColor: Constants.blackcolor,
+                    decoration: InputDecoration(
+                        enabledBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                                color: Color.fromARGB(255, 216, 216, 216))),
                         labelText: "Email",
-                        prefixIcon: Icon(Icons.mark_email_unread_outlined)
-                        //suffixIcon: Icon(Icons.remove_red_eye)),
-                        ),
+                        suffixIcon: Icon(Icons.remove_red_eye),
+                        prefixIcon: Icon(Icons.mark_email_unread_outlined)),
                   ),
                   TextField(
                     cursorColor: Constants.blackcolor,
                     decoration: InputDecoration(
-                        border: InputBorder.none,
-                        labelText: "Password",
-                        prefixIcon: Icon(Icons.lock)
-                        //suffixIcon: Icon(Icons.remove_red_eye)),
-                        ),
+                      enabledBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(
+                              color: Color.fromARGB(255, 216, 216, 216))),
+                      labelText: "Password",
+                      prefixIcon: Icon(Icons.lock),
+                      suffixIcon: Icon(Icons.remove_red_eye),
+                    ),
                   ),
-                ],
-              )),
-          SizedBox(
-            height: MediaQuery.of(context).size.height * 0.05,
-          ),
-          Container(
-            margin: EdgeInsets.only(
-              left: MediaQuery.of(context).size.height * 0.12,
-              right: MediaQuery.of(context).size.height * 0.12,
-            ),
-            child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20)),
-                  primary: Constants.bluecolor,
-                  minimumSize:
-                      Size(20, MediaQuery.of(context).size.height * 0.06)),
-              onPressed: () {},
-              child: Text("Sign up"),
-            ),
-          ),
-          SizedBox(
-            height: MediaQuery.of(context).size.height * 0.02,
-          ),
-          Container(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text("Already have an account?"),
-                GestureDetector(
-                    onTap: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Login()));
-                    },
-                    child: Text(
-                      "Login",
-                      style: TextStyle(color: Constants.bluecolor),
-                    ))
-              ],
-            ),
-          )
-        ])
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.05,
+                  ),
+                  Container(
+                    padding: EdgeInsets.all(05),
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20)),
+                          primary: Constants.bluecolor,
+                          minimumSize: Size(
+                              20, MediaQuery.of(context).size.height * 0.06)),
+                      onPressed: () {},
+                      child: Text("Sign up"),
+                    ),
+                  ),
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.02,
+                  ),
+                  Container(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text("Already have an account?"),
+                        GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Login()));
+                            },
+                            child: Text(
+                              "Login",
+                              style: TextStyle(color: Constants.bluecolor),
+                            ))
+                      ],
+                    ),
+                  )
+                ]))
+          ],
+        )
+
+        //   SizedBox(
+        //     height: MediaQuery.of(context).size.height * 0.05,
+        //   ),
+        //   Container(
+        //     margin: EdgeInsets.only(
+        //       left: MediaQuery.of(context).size.height * 0.12,
+        //       right: MediaQuery.of(context).size.height * 0.12,
+        //     ),
+        //     child: ElevatedButton(
+        //       style: ElevatedButton.styleFrom(
+        //           shape: RoundedRectangleBorder(
+        //               borderRadius: BorderRadius.circular(20)),
+        //           primary: Constants.bluecolor,
+        //           minimumSize:
+        //               Size(20, MediaQuery.of(context).size.height * 0.06)),
+        //       onPressed: () {},
+        //       child: Text("Sign up"),
+        //     ),
+        //   ),
+        //   SizedBox(
+        //     height: MediaQuery.of(context).size.height * 0.02,
+        //   ),
+        //   Container(
+        //     child: Row(
+        //       mainAxisAlignment: MainAxisAlignment.center,
+        //       children: [
+        //         Text("Already have an account?"),
+        //         GestureDetector(
+        //             onTap: () {
+        //               Navigator.push(context,
+        //                   MaterialPageRoute(builder: (context) => Login()));
+        //             },
+        //             child: Text(
+        //               "Login",
+        //               style: TextStyle(color: Constants.bluecolor),
+        //             ))
+        //       ],
+        //     ),
+        //   )
+        // ])
 
         //         Container(
         //           alignment: Alignment.bottomLeft,

@@ -1,4 +1,3 @@
-import 'dart:html';
 import 'dart:ui';
 
 import 'package:flutter/gestures.dart';
@@ -37,7 +36,7 @@ class _LoginState extends State<Login> {
             child: Text(
               'Welcome back! ',
               style: TextStyle(
-                  fontSize: MediaQuery.of(context).size.height * 0.03,
+                  fontSize: MediaQuery.of(context).size.height * 0.02,
                   fontWeight: FontWeight.bold),
             ),
           ),
@@ -79,7 +78,7 @@ class _LoginState extends State<Login> {
                 )),
           ),
           SizedBox(
-            height: MediaQuery.of(context).size.height * 0.01,
+            height: MediaQuery.of(context).size.height * 0.001,
           ),
           Container(
             child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
@@ -211,7 +210,7 @@ class _LoginState extends State<Login> {
             ),
           ),
           SizedBox(
-            height: MediaQuery.of(context).size.height * 0.06,
+            height: MediaQuery.of(context).size.height * 0.03,
           ),
           Container(
             child: Row(
