@@ -48,7 +48,7 @@ class _LoginState extends State<Login> {
             child: TextField(
               cursorColor: Constants.blackcolor,
               decoration: InputDecoration(
-                  border: InputBorder.none,
+                  // border: InputBorder.none,
                   labelText: "Email",
                   suffixIcon: Icon(Icons.task_alt_outlined)),
             ),
@@ -62,7 +62,7 @@ class _LoginState extends State<Login> {
                 cursorColor: Constants.blackcolor,
                 obscureText: !this._showPassword,
                 decoration: InputDecoration(
-                  border: InputBorder.none,
+                  // border: InputBorder.none,
                   labelText: 'Password',
                   suffixIcon: IconButton(
                       icon: Icon(
