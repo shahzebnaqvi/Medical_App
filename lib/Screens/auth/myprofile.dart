@@ -71,8 +71,10 @@ class _ProfileState extends State<Profile> {
                   border: Border.all(color: Constants.grey),
                   borderRadius: BorderRadius.circular(30)),
               child: DropdownButton<String>(
+                isExpanded: true,
+                underline: Container(),
                 hint: _dropDownValue == ""
-                    ? Text('Gender')
+                    ? Text('Please choose Gender')
                     : Text(
                         _dropDownValue,
                       ),
@@ -123,7 +125,7 @@ class _ProfileState extends State<Profile> {
                 style: ElevatedButton.styleFrom(
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20)),
-                    primary: Constants.mainColor,
+                    primary: Constants.ubl,
                     minimumSize: Size(
                         20,
                         MediaQuery.of(context).size.height *

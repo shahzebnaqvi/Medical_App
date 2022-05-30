@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 
 class Constants {
   //Colors
+  // color: #2962ff;
+
+  static const Color ubl = Color.fromARGB(198, 41, 98, 255);
+
   static const Color mainColor = Color.fromARGB(255, 6, 78, 187);
   static const Color mainColor1 = Colors.blueAccent;
   static const Color mainColorlight = Color.fromARGB(255, 241, 144, 160);

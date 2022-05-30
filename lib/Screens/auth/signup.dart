@@ -4,6 +4,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:medical_app/Screens/auth/login.dart';
+import 'package:medical_app/Screens/auth/myprofile.dart';
 
 import '../../Constants/constants.dart';
 
@@ -154,7 +155,7 @@ class _SignupState extends State<Signup> {
                       style: ElevatedButton.styleFrom(
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(25)),
-                          primary: Constants.mainColor,
+                          primary: Constants.ubl,
                           minimumSize: Size(
                               20, MediaQuery.of(context).size.height * 0.06)),
                       onPressed: () {
@@ -181,7 +182,7 @@ class _SignupState extends State<Signup> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => Login()));
+                                      builder: (context) => Profile()));
                             },
                             child: Text(
                               "Login",
