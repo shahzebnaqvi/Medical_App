@@ -92,12 +92,12 @@ class _LoginState extends State<Login> {
               GestureDetector(
                   onTap: () {},
                   child: Text(" Privacy Policy",
-                      style: TextStyle(color: Constants.cyan_light))),
+                      style: TextStyle(color: Constants.mainColor))),
               Text(" And "),
               GestureDetector(
                 onTap: () {},
                 child: Text(" Term & condition.",
-                    style: TextStyle(color: Constants.cyan_light)),
+                    style: TextStyle(color: Constants.mainColor)),
               )
             ]),
           ),
@@ -139,7 +139,7 @@ class _LoginState extends State<Login> {
                   onTap: () {},
                   child: Text(
                     "Forgot Password?",
-                    style: TextStyle(color: Constants.cyan_dark),
+                    style: TextStyle(color: Constants.mainColor),
                   )),
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.02,
@@ -160,7 +160,7 @@ class _LoginState extends State<Login> {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Container(
-                    height: 35,
+                    height: 45,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         shape: RoundedRectangleBorder(
@@ -178,15 +178,17 @@ class _LoginState extends State<Login> {
                               child: ClipOval(
                                 child: Image.asset(
                                   'assets/facebook1.jpg',
-                                  scale: 08,
                                 ),
                               )),
+                          SizedBox(
+                            width: 05,
+                          ),
                           Text("Facebook")
                         ],
                       ),
                     )),
                 Container(
-                  height: 35,
+                  height: 43,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
@@ -202,10 +204,18 @@ class _LoginState extends State<Login> {
                         CircleAvatar(
                           radius: 15,
                           child: ClipOval(
-                            child: Image.asset('assets/twitter.jpg'),
+                            child: Image.asset(
+                              'assets/twitter.jpg',
+                            ),
                           ),
                         ),
-                        Text("Twitter")
+                        SizedBox(
+                          width: 05,
+                        ),
+                        Text(
+                          "Twitter",
+                          style: TextStyle(fontSize: 15),
+                        )
                       ],
                     ),
                   ),
@@ -228,7 +238,7 @@ class _LoginState extends State<Login> {
                     },
                     child: Text(
                       "Sign up",
-                      style: TextStyle(color: Constants.cyan_light),
+                      style: TextStyle(color: Constants.mainColor),
                     ))
               ],
             ),
