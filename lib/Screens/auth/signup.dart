@@ -48,17 +48,17 @@ class _SignupState extends State<Signup> {
                 alignment: Alignment.center,
                 child: Image.asset(
                   'assets/doctor2.jpg',
-                     width: MediaQuery.of(context).size.width * 0.38,
+                  width: MediaQuery.of(context).size.width * 0.42,
                 )),
             Container(
                 margin: EdgeInsets.only(
-                  top: MediaQuery.of(context).size.height * 0.12,
+                  top: MediaQuery.of(context).size.height * 0.05,
                   //bottom: MediaQuery.of(context).size.height * 0.002,
                   // left: MediaQuery.of(context).size.height * 0.001,
                   // right: MediaQuery.of(context).size.height * 0.001,
                 ),
                 padding: EdgeInsets.only(
-                  top: MediaQuery.of(context).size.height * 0.05,
+                  top: MediaQuery.of(context).size.height * 0.04,
                   bottom: MediaQuery.of(context).size.height * 0.12,
                   left: MediaQuery.of(context).size.height * 0.02,
                   right: MediaQuery.of(context).size.height * 0.02,
@@ -142,13 +142,13 @@ class _SignupState extends State<Signup> {
                     height: MediaQuery.of(context).size.height * 0.05,
                   ),
                   Container(
-                    height: MediaQuery.of(context).size.width * 0.1,
+                    height: MediaQuery.of(context).size.width * 0.13,
                     width: MediaQuery.of(context).size.width * 0.50,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                           shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20)),
-                          primary: Constants.bluecolor,
+                              borderRadius: BorderRadius.circular(25)),
+                          primary: Constants.mainColor,
                           minimumSize: Size(
                               20, MediaQuery.of(context).size.height * 0.06)),
                       onPressed: () {
