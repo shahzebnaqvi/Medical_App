@@ -1,5 +1,4 @@
 import 'dart:ui';
-
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -26,7 +25,7 @@ class _LoginState extends State<Login> {
         body: ListView(children: [
           Container(
               padding: EdgeInsets.only(
-                  top: MediaQuery.of(context).size.height * 0.03),
+                  top: MediaQuery.of(context).size.height * 0.02),
               child: Image.asset(
                 'assets/login_logo.jpg',
                 width: MediaQuery.of(context).size.width * 0.15,
@@ -93,16 +92,17 @@ class _LoginState extends State<Login> {
               GestureDetector(
                   onTap: () {},
                   child: Text(" Privacy Policy",
-                      style: TextStyle(color: Constants.cyan))),
+                      style: TextStyle(color: Constants.cyan_light))),
               Text(" And "),
               GestureDetector(
                 onTap: () {},
                 child: Text(" Term & condition.",
-                    style: TextStyle(color: Constants.cyan)),
+                    style: TextStyle(color: Constants.cyan_light)),
               )
             ]),
           ),
           Container(
+            height: MediaQuery.of(context).size.height * 0.06,
             margin: EdgeInsets.only(
               left: MediaQuery.of(context).size.height * 0.03,
               right: MediaQuery.of(context).size.height * 0.01,
@@ -111,7 +111,7 @@ class _LoginState extends State<Login> {
               style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10)),
-                  primary: Constants.cyan,
+                  primary: Constants.cyan_dark,
                   minimumSize: Size(
                       20,
                       MediaQuery.of(context).size.height *
@@ -124,7 +124,7 @@ class _LoginState extends State<Login> {
               child: Text(
                 "Log In",
                 style: TextStyle(
-                  fontSize: MediaQuery.of(context).size.width * 0.05,
+                  fontSize: MediaQuery.of(context).size.width * 0.04,
                 ),
               ),
             ),
@@ -139,7 +139,7 @@ class _LoginState extends State<Login> {
                   onTap: () {},
                   child: Text(
                     "Forgot Password?",
-                    style: TextStyle(color: Constants.cyan),
+                    style: TextStyle(color: Constants.cyan_dark),
                   )),
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.02,
@@ -165,7 +165,7 @@ class _LoginState extends State<Login> {
                       style: ElevatedButton.styleFrom(
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10)),
-                        primary: Constants.bluecolor,
+                        primary: Constants.mainColor1,
                         minimumSize: Size(
                             MediaQuery.of(context).size.height * 0.07,
                             MediaQuery.of(context).size.width * 0.07),
@@ -191,7 +191,7 @@ class _LoginState extends State<Login> {
                     style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10)),
-                      primary: Constants.cyan,
+                      primary: Constants.cyan_light,
                       minimumSize: Size(
                           MediaQuery.of(context).size.height * 0.07,
                           MediaQuery.of(context).size.width * 0.07),
@@ -228,7 +228,7 @@ class _LoginState extends State<Login> {
                     },
                     child: Text(
                       "Sign up",
-                      style: TextStyle(color: Constants.cyan),
+                      style: TextStyle(color: Constants.cyan_light),
                     ))
               ],
             ),
