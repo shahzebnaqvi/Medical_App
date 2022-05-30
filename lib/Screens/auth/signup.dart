@@ -84,7 +84,10 @@ class _SignupState extends State<Signup> {
                           borderSide: BorderSide(
                               color: Color.fromARGB(255, 216, 216, 216))),
                       labelText: "First Name",
-                      prefixIcon: Icon(Icons.person_outline),
+                      prefixIcon: Icon(
+                        Icons.person_outline,
+                        color: Constants.mediumColor,
+                      ),
                       suffixIcon: Icon(Icons.remove_red_eye,
                           color: Constants.mediumColor),
                     ),
@@ -96,7 +99,8 @@ class _SignupState extends State<Signup> {
                           borderSide: BorderSide(
                               color: Color.fromARGB(255, 216, 216, 216))),
                       labelText: "Last Name",
-                      prefixIcon: Icon(Icons.person_outline),
+                      prefixIcon: Icon(Icons.person_outline,
+                          color: Constants.mediumColor),
                       suffixIcon: Icon(
                         Icons.remove_red_eye,
                         color: Constants.mediumColor,
@@ -114,7 +118,8 @@ class _SignupState extends State<Signup> {
                           Icons.remove_red_eye,
                           color: Constants.mediumColor,
                         ),
-                        prefixIcon: Icon(Icons.mark_email_unread_outlined)),
+                        prefixIcon: Icon(Icons.mark_email_unread_outlined,
+                            color: Constants.mediumColor)),
                   ),
                   TextField(
                     obscureText: !this._showPassword,
@@ -124,7 +129,8 @@ class _SignupState extends State<Signup> {
                           borderSide: BorderSide(
                               color: Color.fromARGB(255, 216, 216, 216))),
                       labelText: "Password",
-                      prefixIcon: Icon(Icons.lock),
+                      prefixIcon:
+                          Icon(Icons.lock, color: Constants.mediumColor),
                       suffixIcon: IconButton(
                           icon: Icon(
                             Icons.remove_red_eye,

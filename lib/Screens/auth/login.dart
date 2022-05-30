@@ -28,7 +28,7 @@ class _LoginState extends State<Login> {
                   top: MediaQuery.of(context).size.height * 0.02),
               child: Image.asset(
                 'assets/login_logo.jpg',
-                width: MediaQuery.of(context).size.width * 0.15,
+                width: MediaQuery.of(context).size.width * 0.12,
               )),
           Container(
             alignment: Alignment.center,
