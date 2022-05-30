@@ -48,6 +48,7 @@ class _SignupState extends State<Signup> {
                 alignment: Alignment.center,
                 child: Image.asset(
                   'assets/doctor2.jpg',
+                     width: MediaQuery.of(context).size.width * 0.38,
                 )),
             Container(
                 margin: EdgeInsets.only(
