@@ -7,6 +7,7 @@ import 'package:medical_app/Constants/constants.dart';
 import 'package:medical_app/Screens/auth/forgetpassword.dart';
 import 'package:medical_app/Screens/auth/signup.dart';
 import 'package:medical_app/Screens/home.dart';
+import 'package:medical_app/Screens/timelines.dart';
 
 class Login extends StatefulWidget {
   @override
@@ -118,8 +119,8 @@ class _LoginState extends State<Login> {
                           0.06) // put the width and height you want
                   ),
               onPressed: () {
-                Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => Home()));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => Timelines()));
               },
               child: Text(
                 "Log In",
