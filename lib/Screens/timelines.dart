@@ -111,6 +111,10 @@ Widget mytasks(context) {
         SizedBox(
           height: MediaQuery.of(context).size.height * 0.05,
         ),
+        VerticalDivider(
+          color: Constants.blackcolor,
+          thickness: 2,
+        ),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
