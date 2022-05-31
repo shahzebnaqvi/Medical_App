@@ -119,6 +119,41 @@ Widget mytasks(context) {
               "My Tasks",
               style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
             ),
+            // CircularProgressIndicator(
+            //   // key: 3,
+            //   value: 5,
+            //   semanticsLabel: "ssd",
+            //   strokeWidth: 10,
+            //   semanticsValue: "34",
+            //   valueColor: AlwaysStoppedAnimation<Color>(Colors.green),
+            // ),
+            Stack(
+              alignment: Alignment.center,
+              children: <Widget>[
+                Container(
+                  width: 100,
+                  height: 100,
+                  child: new CircularProgressIndicator(
+                    strokeWidth: 15,
+                    value: 0.7,
+                    color: Colors.purple,
+                    backgroundColor: Colors.grey[100],
+                  ),
+                ),
+                Text("70%"),
+              ],
+            ),
+            // CircularProgressIndicator(
+            //     backgroundColor: Colors.grey,
+            //     color: Colors.purple,
+            //     strokeWidth: 10,
+            //     value: 0.5),
+            // CircularProgressIndicator(
+            //   backgroundColor: Colors.grey,
+            //   color: Colors.green,
+            //   strokeWidth: 5,
+            //   value: 5,
+            // ),
             // CircularPercentIndicator(
             //   radius: 60.0,
             //   lineWidth: 5.0,
@@ -126,10 +161,10 @@ Widget mytasks(context) {
             //   center: new Text("100%"),
             //   progressColor: Colors.red,
             // ),
-            Text(
-              "Progress",
-              style: TextStyle(fontWeight: FontWeight.bold),
-            )
+            // Text(
+            //   "Progress",
+            //   style: TextStyle(fontWeight: FontWeight.bold),
+            // )
           ],
         )
       ],
