@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../Constants/constants.dart';
+import 'package:percent_indicator/percent_indicator.dart';
 
 class Timelines extends StatefulWidget {
   const Timelines({Key? key}) : super(key: key);
@@ -95,6 +96,7 @@ Widget mytasks(context) {
       ],
     ),
     child: Column(
+      textDirection: TextDirection.ltr,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Row(
@@ -111,10 +113,6 @@ Widget mytasks(context) {
         SizedBox(
           height: MediaQuery.of(context).size.height * 0.05,
         ),
-        VerticalDivider(
-          color: Constants.blackcolor,
-          thickness: 2,
-        ),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -122,10 +120,18 @@ Widget mytasks(context) {
               "My Tasks",
               style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
             ),
-            Text(
-              "Progress",
-              style: TextStyle(fontWeight: FontWeight.bold),
+
+            CircularPercentIndicator(
+              radius: 60.0,
+              lineWidth: 5.0,
+              percent: 1.0,
+              center: new Text("100%"),
+              progressColor: Colors.green,
             )
+            // Text(
+            //   "Progress",
+            //   style: TextStyle(fontWeight: FontWeight.bold),
+            // )
           ],
         )
       ],
@@ -136,71 +142,84 @@ Widget mytasks(context) {
 // Widget Workoutplan
 Widget workoutplan(context) {
   return Container(
-    width: MediaQuery.of(context).size.width * 0.9,
-    margin: EdgeInsets.only(
-      top: MediaQuery.of(context).size.height * 0.01,
-      bottom: MediaQuery.of(context).size.height * 0.01,
-      left: MediaQuery.of(context).size.height * 0.02,
-      right: MediaQuery.of(context).size.height * 0.02,
-    ),
-    padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.04),
-    decoration: BoxDecoration(
-      color: Colors.white,
-      borderRadius: BorderRadius.circular(10),
-      boxShadow: [
-        BoxShadow(
-          color: Colors.grey.withOpacity(0.2),
-          spreadRadius: 5,
-          blurRadius: 7,
-          offset: Offset(0, 3), // changes position of shadow
-        ),
-      ],
-    ),
-    child: Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text("WORKOUT PLAN", style: TextStyle(fontWeight: FontWeight.bold)),
-            InkWell(
-              onTap: () {},
-              child: Text(" +  ADD PLAN",
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold, color: Constants.redcolor)),
-            ),
-          ],
-        ),
-        Divider(),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Text(
-              "Today Tasks",
-            ),
-            Text("Chest",
-                style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold)),
-            Divider(),
-            Text(
-              "Weekly Tasks",
-            ),
-            Text("Chest, Trap, Tricep, Abs",
-                style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold)),
-            Divider(),
-            Row(
-              children: [
-                Icon(Icons.watch_later_outlined),
-                SizedBox(
-                  width: MediaQuery.of(context).size.width * 0.01,
-                ),
-                Text("60 mins")
-              ],
-            )
-          ],
-        )
-      ],
-    ),
-  );
+      width: MediaQuery.of(context).size.width * 0.9,
+      margin: EdgeInsets.only(
+        top: MediaQuery.of(context).size.height * 0.01,
+        bottom: MediaQuery.of(context).size.height * 0.01,
+        left: MediaQuery.of(context).size.height * 0.02,
+        right: MediaQuery.of(context).size.height * 0.02,
+      ),
+      padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.04),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(10),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.2),
+            spreadRadius: 5,
+            blurRadius: 7,
+            offset: Offset(0, 3), // changes position of shadow
+          ),
+        ],
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text("WORKOUT PLAN",
+                  style: TextStyle(fontWeight: FontWeight.bold)),
+              InkWell(
+                onTap: () {},
+                child: Text(" +  ADD PLAN",
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Constants.redcolor)),
+              ),
+            ],
+          ),
+          Divider(),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Row(
+                children: [
+                  Text(
+                    "Today Tasks",
+                  ),
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.03,
+                  ),
+                  Icon(Icons.watch_later_outlined),
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.01,
+                  ),
+                  Text("40 mins")
+                ],
+              )
+            ],
+          ),
+          Text("Chest",
+              style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold)),
+          Divider(),
+          Text(
+            "Weekly Tasks",
+          ),
+          Text("Chest, Trap, Tricep, Abs",
+              style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold)),
+          Divider(),
+          Row(
+            children: [
+              Icon(Icons.watch_later_outlined),
+              SizedBox(
+                width: MediaQuery.of(context).size.width * 0.01,
+              ),
+              Text("60 mins")
+            ],
+          )
+        ],
+      ));
 }
 
 // Widget My Diet Plan
