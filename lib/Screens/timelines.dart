@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../Constants/constants.dart';
-import 'package:percent_indicator/percent_indicator.dart';
+//import 'package:percent_indicator/percent_indicator.dart';
 
 class Timelines extends StatefulWidget {
   const Timelines({Key? key}) : super(key: key);
@@ -120,18 +120,17 @@ Widget mytasks(context) {
               "My Tasks",
               style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
             ),
-
-            CircularPercentIndicator(
-              radius: 60.0,
-              lineWidth: 5.0,
-              percent: 1.0,
-              center: new Text("100%"),
-              progressColor: Colors.green,
+            // CircularPercentIndicator(
+            //   radius: 60.0,
+            //   lineWidth: 5.0,
+            //   percent: 1.0,
+            //   center: new Text("100%"),
+            //   progressColor: Colors.red,
+            // ),
+            Text(
+              "Progress",
+              style: TextStyle(fontWeight: FontWeight.bold),
             )
-            // Text(
-            //   "Progress",
-            //   style: TextStyle(fontWeight: FontWeight.bold),
-            // )
           ],
         )
       ],
