@@ -48,7 +48,13 @@ class _TimelinesState extends State<Timelines> {
           SizedBox(
             height: MediaQuery.of(context).size.height * 0.01,
           ),
-          healthtracker(context)
+          healthtracker(context),
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.01,
+          ),
+          mymedicine(
+            context,
+          )
         ]));
   }
 }
@@ -162,7 +168,7 @@ Widget workoutplan(context) {
             Text(
               "Weekly Tasks",
             ),
-            Text("Chest , Trap, Tricep ,Abs",
+            Text("Chest, Trap, Tricep, Abs",
                 style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold)),
             Divider(),
             Row(
@@ -224,13 +230,13 @@ Widget dietplan(context) {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Text("LUNCH",
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+                style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
             Divider(),
             Text("BEAKFAST",
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+                style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
             Divider(),
             Text("DINNER",
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+                style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
             Divider(),
           ],
         )
@@ -282,14 +288,75 @@ Widget healthtracker(context) {
         Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Text("LUNCH",
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+            Text("BLOOD PRESURE",
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
             Divider(),
-            Text("BEAKFAST",
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+            Text("SUGAR",
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
             Divider(),
-            Text("DINNER",
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+            Text("WEIGHT",
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+            Divider(),
+          ],
+        )
+      ],
+    ),
+  );
+}
+
+// Widget My medicine
+Widget mymedicine(context) {
+  return Container(
+    width: MediaQuery.of(context).size.width * 0.9,
+    margin: EdgeInsets.only(
+      top: MediaQuery.of(context).size.height * 0.01,
+      bottom: MediaQuery.of(context).size.height * 0.01,
+      left: MediaQuery.of(context).size.height * 0.02,
+      right: MediaQuery.of(context).size.height * 0.02,
+    ),
+    padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.04),
+    decoration: BoxDecoration(
+      color: Colors.white,
+      borderRadius: BorderRadius.circular(10),
+      boxShadow: [
+        BoxShadow(
+          color: Colors.grey.withOpacity(0.2),
+          spreadRadius: 5,
+          blurRadius: 7,
+          offset: Offset(0, 3), // changes position of shadow
+        ),
+      ],
+    ),
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text("MY MEDICINE", style: TextStyle(fontWeight: FontWeight.bold)),
+            InkWell(
+              onTap: () {},
+              child: Text(" +  ADD PLAN",
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold, color: Constants.redcolor)),
+            ),
+          ],
+        ),
+        Divider(),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Text("PRESCRIPTION MEDICINE",
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+            Divider(),
+            Text("NUTRITION SUPPLEMENT",
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+            Divider(),
+            Text("MY MEDICAL RECORDS",
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+            Divider(),
+            Text("MY APPONIMENT",
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
             Divider(),
           ],
         )
