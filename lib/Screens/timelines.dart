@@ -96,7 +96,6 @@ Widget mytasks(context) {
       ],
     ),
     child: Column(
-      textDirection: TextDirection.ltr,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Row(
