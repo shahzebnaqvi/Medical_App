@@ -54,7 +54,19 @@ class _TimelinesState extends State<Timelines> {
           ),
           mymedicine(
             context,
-          )
+          ),
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.01,
+          ),
+          Challenges(context),
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.01,
+          ),
+          shopnow(context),
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.01,
+          ),
+          water(context)
         ]));
   }
 }
@@ -216,7 +228,8 @@ Widget dietplan(context) {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text("MY DIET", style: TextStyle(fontWeight: FontWeight.bold)),
+            Text("MY DIET",
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
             InkWell(
               onTap: () {},
               child: Text(" +  ADD PLAN",
@@ -275,7 +288,7 @@ Widget healthtracker(context) {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text("HEALTH TRACKER",
-                style: TextStyle(fontWeight: FontWeight.bold)),
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
             InkWell(
               onTap: () {},
               child: Text(" +  ADD PLAN",
@@ -289,13 +302,13 @@ Widget healthtracker(context) {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Text("BLOOD PRESURE",
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
             Divider(),
             Text("SUGAR",
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
             Divider(),
             Text("WEIGHT",
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
             Divider(),
           ],
         )
@@ -364,4 +377,196 @@ Widget mymedicine(context) {
       ],
     ),
   );
+}
+
+// Widget Challenges
+Widget Challenges(context) {
+  return Container(
+    width: MediaQuery.of(context).size.width * 0.9,
+    margin: EdgeInsets.only(
+      top: MediaQuery.of(context).size.height * 0.01,
+      bottom: MediaQuery.of(context).size.height * 0.01,
+      left: MediaQuery.of(context).size.height * 0.02,
+      right: MediaQuery.of(context).size.height * 0.02,
+    ),
+    padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.04),
+    decoration: BoxDecoration(
+      color: Colors.white,
+      borderRadius: BorderRadius.circular(10),
+      boxShadow: [
+        BoxShadow(
+          color: Colors.grey.withOpacity(0.2),
+          spreadRadius: 5,
+          blurRadius: 7,
+          offset: Offset(0, 3), // changes position of shadow
+        ),
+      ],
+    ),
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text("CHALLENGES",
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+            InkWell(
+              onTap: () {},
+              child: Text(" +  ADD PLAN",
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold, color: Constants.redcolor)),
+            ),
+          ],
+        ),
+        Divider(),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Text("DIET CHALLENGES",
+                style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
+            Divider(),
+            Text("FITNESS CHALLENGES",
+                style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
+            Divider(),
+            Text("CHALLENGES A FRIEND",
+                style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
+            Divider(),
+          ],
+        )
+      ],
+    ),
+  );
+}
+
+// Widget Shop now
+Widget shopnow(context) {
+  return Container(
+    width: MediaQuery.of(context).size.width * 0.9,
+    margin: EdgeInsets.only(
+      top: MediaQuery.of(context).size.height * 0.01,
+      bottom: MediaQuery.of(context).size.height * 0.01,
+      left: MediaQuery.of(context).size.height * 0.02,
+      right: MediaQuery.of(context).size.height * 0.02,
+    ),
+    padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.04),
+    decoration: BoxDecoration(
+      color: Colors.white,
+      borderRadius: BorderRadius.circular(10),
+      boxShadow: [
+        BoxShadow(
+          color: Colors.grey.withOpacity(0.2),
+          spreadRadius: 5,
+          blurRadius: 7,
+          offset: Offset(0, 3), // changes position of shadow
+        ),
+      ],
+    ),
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text("SHOP NOW",
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+            InkWell(
+              onTap: () {},
+              child: Text(" +  ADD PLAN",
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold, color: Constants.redcolor)),
+            ),
+          ],
+        ),
+        Divider(),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Text("PHARMACY",
+                style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
+            Divider(),
+            Text("HOME ESSENTIALS",
+                style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
+            Divider(),
+            Text("GYM SUPPLEMENTS",
+                style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
+            Divider(),
+          ],
+        )
+      ],
+    ),
+  );
+}
+
+// Widget Water
+Widget water(context) {
+  return Container(
+      width: MediaQuery.of(context).size.width * 0.9,
+      margin: EdgeInsets.only(
+        top: MediaQuery.of(context).size.height * 0.01,
+        bottom: MediaQuery.of(context).size.height * 0.01,
+        left: MediaQuery.of(context).size.height * 0.02,
+        right: MediaQuery.of(context).size.height * 0.02,
+      ),
+      padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.04),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(10),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.2),
+            spreadRadius: 5,
+            blurRadius: 7,
+            offset: Offset(0, 3), // changes position of shadow
+          ),
+        ],
+      ),
+      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text("WATER",
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+            // InkWell(
+            //   onTap: () {},
+            //   child: Text(" +  ADD PLAN",
+            //       style: TextStyle(
+            //           fontWeight: FontWeight.bold, color: Constants.redcolor)),
+            // ),
+          ],
+        ),
+        Divider(),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Row(
+              children: [
+                CircleAvatar(
+                    backgroundColor: Constants.mainColorWhite,
+                    child: Image.asset('assets/glass.png')),
+                CircleAvatar(
+                    radius: 22,
+                    backgroundColor: Constants.mainColorWhite,
+                    child: Image.asset('assets/glasswhite.jpg')),
+                CircleAvatar(
+                    radius: 22,
+                    backgroundColor: Constants.mainColorWhite,
+                    child: Image.asset('assets/glasswhite.jpg')),
+                CircleAvatar(
+                    radius: 22,
+                    backgroundColor: Constants.mainColorWhite,
+                    child: Image.asset('assets/glasswhite.jpg')),
+              ],
+            ),
+            Divider(),
+            Row(
+              children: [
+                Text("842 Cal",
+                    style:
+                        TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+                Divider(),
+              ],
+            )
+          ],
+        ),
+      ]));
 }
