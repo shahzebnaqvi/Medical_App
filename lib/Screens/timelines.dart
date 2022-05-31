@@ -333,7 +333,8 @@ Widget mymedicine(context) {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text("MY MEDICINE", style: TextStyle(fontWeight: FontWeight.bold)),
+            Text("MY MEDICINE",
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
             InkWell(
               onTap: () {},
               child: Text(" +  ADD PLAN",
@@ -347,16 +348,16 @@ Widget mymedicine(context) {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Text("PRESCRIPTION MEDICINE",
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
             Divider(),
             Text("NUTRITION SUPPLEMENT",
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
             Divider(),
             Text("MY MEDICAL RECORDS",
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
             Divider(),
             Text("MY APPONIMENT",
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
             Divider(),
           ],
         )
