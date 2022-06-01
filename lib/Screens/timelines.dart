@@ -684,6 +684,18 @@ class _TimelinesState extends State<Timelines> {
                   Text("842 Cal",
                       style:
                           TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+                  SizedBox(width: MediaQuery.of(context).size.width * 0.05),
+                  Icon(
+                    Icons.info,
+                    color: Constants.grey,
+                  ),
+                  SizedBox(width: MediaQuery.of(context).size.width * 0.02),
+                  Text(
+                    "Recommended 615 -820 cal",
+                    style: TextStyle(
+                      color: Constants.grey,
+                    ),
+                  ),
                   Divider(),
                 ],
               )
