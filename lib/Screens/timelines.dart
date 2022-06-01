@@ -18,7 +18,7 @@ class _TimelinesState extends State<Timelines> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        // backgroundColor: Constants.redcolor,
+        //backgroundColor: Constants.redcolor,
         // appBar: AppBar(
         //   backgroundColor: Constants.mainColorWhite,
         //   title: Text(
@@ -39,9 +39,10 @@ class _TimelinesState extends State<Timelines> {
         body: Container(
             padding:
                 EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.03),
-            // decoration: BoxDecoration(
-            //     image: DecorationImage(
-            //         image: NetworkImage(""), fit: BoxFit.cover)),
+            decoration: BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage("assets/doctor2.jpg"),
+                    fit: BoxFit.cover)),
             child: ListView(children: [
               profile(context),
               SizedBox(
