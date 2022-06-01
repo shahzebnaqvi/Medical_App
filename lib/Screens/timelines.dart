@@ -10,66 +10,96 @@ class Timelines extends StatefulWidget {
   State<Timelines> createState() => _TimelinesState();
 }
 
+bool value = false;
+
 class _TimelinesState extends State<Timelines> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Constants.mainColorWhite,
-        appBar: AppBar(
-          backgroundColor: Constants.mainColorWhite,
-          title: Text(
-            "Timelines",
-            style: TextStyle(color: Constants.blackcolor),
-          ),
-          leading: IconButton(
-              color: Colors.white,
-              icon: Icon(
-                Icons.arrow_back,
-                color: Colors.black,
-                size: 20,
+        // backgroundColor: Constants.redcolor,
+        // appBar: AppBar(
+        //   backgroundColor: Constants.mainColorWhite,
+        //   title: Text(
+        //     "Timelines",
+        //     style: TextStyle(color: Constants.blackcolor),
+        //   ),
+        //   leading: IconButton(
+        //       color: Colors.white,
+        //       icon: Icon(
+        //         Icons.arrow_back,
+        //         color: Colors.black,
+        //         size: 20,
+        //       ),
+        //       onPressed: () {
+        //         Navigator.pop(context);
+        //       }),
+        // ),
+        body: Container(
+            padding:
+                EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.03),
+            // decoration: BoxDecoration(
+            //     image: DecorationImage(
+            //         image: NetworkImage(""), fit: BoxFit.cover)),
+            child: ListView(children: [
+              profile(context),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.01,
               ),
-              onPressed: () {
-                Navigator.pop(context);
-              }),
-        ),
-        body: ListView(children: [
-          mytasks(
-            context,
-          ),
-          SizedBox(
-            height: MediaQuery.of(context).size.height * 0.01,
-          ),
-          workoutplan(
-            context,
-          ),
-          SizedBox(
-            height: MediaQuery.of(context).size.height * 0.01,
-          ),
-          dietplan(context),
-          SizedBox(
-            height: MediaQuery.of(context).size.height * 0.01,
-          ),
-          healthtracker(context),
-          SizedBox(
-            height: MediaQuery.of(context).size.height * 0.01,
-          ),
-          mymedicine(
-            context,
-          ),
-          SizedBox(
-            height: MediaQuery.of(context).size.height * 0.01,
-          ),
-          Challenges(context),
-          SizedBox(
-            height: MediaQuery.of(context).size.height * 0.01,
-          ),
-          shopnow(context),
-          SizedBox(
-            height: MediaQuery.of(context).size.height * 0.01,
-          ),
-          water(context)
-        ]));
+              mytasks(
+                context,
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.01,
+              ),
+              workoutplan(
+                context,
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.01,
+              ),
+              dietplan(context),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.01,
+              ),
+              healthtracker(context),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.01,
+              ),
+              mymedicine(
+                context,
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.01,
+              ),
+              Challenges(context),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.01,
+              ),
+              shopnow(context),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.01,
+              ),
+              water(context)
+            ])));
   }
+}
+
+// Profile
+Widget profile(context) {
+  return Container(
+      child: ListTile(
+    leading:
+        CircleAvatar(child: ClipOval(child: Image.asset('assets/doctor2.jpg'))),
+    title: Text(
+      'Hello Joseph Allison,',
+      textScaleFactor: 1,
+    ),
+    subtitle: Text(
+      'Things look allright',
+      textScaleFactor: 1,
+    ),
+    trailing: Icon(Icons.notification_add_rounded),
+  ));
 }
 
 // Widget My Tasks
@@ -131,8 +161,8 @@ Widget mytasks(context) {
               alignment: Alignment.center,
               children: <Widget>[
                 Container(
-                  width: 100,
-                  height: 100,
+                  width: 80,
+                  height: 80,
                   child: new CircularProgressIndicator(
                     strokeWidth: 15,
                     value: 0.7,
@@ -298,8 +328,13 @@ Widget dietplan(context) {
         Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Text("LUNCH",
-                style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
+            Row(
+              children: [
+                Text("LUNCH",
+                    style:
+                        TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
+              ],
+            ),
             Divider(),
             Text("BEAKFAST",
                 style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
