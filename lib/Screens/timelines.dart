@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../Constants/constants.dart';
-//import 'package:percent_indicator/percent_indicator.dart';
 
 class Timelines extends StatefulWidget {
   const Timelines({Key? key}) : super(key: key);
@@ -661,6 +660,10 @@ class _TimelinesState extends State<Timelines> {
                   CircleAvatar(
                       backgroundColor: Constants.mainColorWhite,
                       child: Image.asset('assets/glass.png')),
+                  CircleAvatar(
+                      radius: 22,
+                      backgroundColor: Constants.mainColorWhite,
+                      child: Image.asset('assets/glasswhite.jpg')),
                   CircleAvatar(
                       radius: 22,
                       backgroundColor: Constants.mainColorWhite,
