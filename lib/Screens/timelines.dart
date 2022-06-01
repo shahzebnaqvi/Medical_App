@@ -41,8 +41,7 @@ class _TimelinesState extends State<Timelines> {
                 EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.03),
             decoration: BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage("assets/doctor2.jpg"),
-                    fit: BoxFit.cover)),
+                    image: AssetImage("assets/curve1.jpg"), fit: BoxFit.cover)),
             child: ListView(children: [
               profile(context),
               SizedBox(
