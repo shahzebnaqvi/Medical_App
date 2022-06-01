@@ -38,7 +38,7 @@ class _TimelinesState extends State<Timelines> {
         // ),
         body: Container(
             padding:
-                EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.03),
+                EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.02),
             decoration: BoxDecoration(
                 image: DecorationImage(
                     image: AssetImage("assets/curve1.jpg"), fit: BoxFit.cover)),
@@ -333,7 +333,7 @@ class _TimelinesState extends State<Timelines> {
                         setState(() {
                           this.value = !value;
                         });
-                      })
+                      }),
                 ],
               ),
               Divider(),
