@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:medical_app/Screens/bottombar.dart';
-import 'package:navigation_action_bar/navigation_action_bar.dart';
 
 import '../Constants/constants.dart';
 
@@ -239,18 +238,50 @@ class _TimelinesState extends State<Timelines> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text("WORKOUT PLAN",
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: Constants.mainColorWhite,
-                        backgroundColor: Constants.bluecolor,
-                        fontSize: 18)),
-                InkWell(
-                  onTap: () {},
-                  child: Text(" + ADD PLAN",
+                Container(
+                  padding:
+                      EdgeInsets.all(MediaQuery.of(context).size.width * 0.02),
+                  decoration: BoxDecoration(
+                    color: Constants.bluecolor,
+                    borderRadius: BorderRadius.circular(18),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.2),
+                        spreadRadius: 0.5,
+                        blurRadius: 10,
+                        offset: Offset(0, 3), // changes position of shadow
+                      ),
+                    ],
+                  ),
+                  child: Text("WORKOUT PLAN",
                       style: TextStyle(
                           fontWeight: FontWeight.bold,
-                          color: Constants.redcolor)),
+                          color: Constants.mainColorWhite,
+                          backgroundColor: Constants.bluecolor,
+                          fontSize: 18)),
+                ),
+                InkWell(
+                  onTap: () {},
+                  child: Container(
+                    padding: EdgeInsets.all(
+                        MediaQuery.of(context).size.width * 0.02),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(18),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.2),
+                          spreadRadius: 0.5,
+                          blurRadius: 10,
+                          offset: Offset(0, 3), // changes position of shadow
+                        ),
+                      ],
+                    ),
+                    child: Text(" + ADD PLAN",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Constants.redcolor)),
+                  ),
                 ),
               ],
             ),
@@ -335,10 +366,26 @@ class _TimelinesState extends State<Timelines> {
                   )),
               InkWell(
                 onTap: () {},
-                child: Text(" +  ADD PLAN",
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: Constants.redcolor)),
+                child: Container(
+                  padding:
+                      EdgeInsets.all(MediaQuery.of(context).size.width * 0.02),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(18),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.2),
+                        spreadRadius: 0.5,
+                        blurRadius: 10,
+                        offset: Offset(0, 3), // changes position of shadow
+                      ),
+                    ],
+                  ),
+                  child: Text(" +  ADD PLAN",
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Constants.redcolor)),
+                ),
               ),
             ],
           ),
@@ -439,10 +486,26 @@ class _TimelinesState extends State<Timelines> {
                       backgroundColor: Constants.mainColor1)),
               InkWell(
                 onTap: () {},
-                child: Text(" +  ADD PLAN",
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: Constants.redcolor)),
+                child: Container(
+                  padding:
+                      EdgeInsets.all(MediaQuery.of(context).size.width * 0.02),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(18),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.2),
+                        spreadRadius: 0.5,
+                        blurRadius: 10,
+                        offset: Offset(0, 3), // changes position of shadow
+                      ),
+                    ],
+                  ),
+                  child: Text(" +  ADD PLAN",
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Constants.redcolor)),
+                ),
               ),
             ],
           ),
@@ -503,10 +566,26 @@ class _TimelinesState extends State<Timelines> {
                       backgroundColor: Constants.mainColor1)),
               InkWell(
                 onTap: () {},
-                child: Text(" +  ADD PLAN",
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: Constants.redcolor)),
+                child: Container(
+                  padding:
+                      EdgeInsets.all(MediaQuery.of(context).size.width * 0.02),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(18),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.2),
+                        spreadRadius: 0.5,
+                        blurRadius: 10,
+                        offset: Offset(0, 3), // changes position of shadow
+                      ),
+                    ],
+                  ),
+                  child: Text(" +  ADD PLAN",
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Constants.redcolor)),
+                ),
               ),
             ],
           ),
@@ -605,10 +684,26 @@ class _TimelinesState extends State<Timelines> {
                       backgroundColor: Constants.mainColor1)),
               InkWell(
                 onTap: () {},
-                child: Text(" +  ADD PLAN",
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: Constants.redcolor)),
+                child: Container(
+                  padding:
+                      EdgeInsets.all(MediaQuery.of(context).size.width * 0.02),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(18),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.2),
+                        spreadRadius: 0.5,
+                        blurRadius: 10,
+                        offset: Offset(0, 3), // changes position of shadow
+                      ),
+                    ],
+                  ),
+                  child: Text(" +  ADD PLAN",
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Constants.redcolor)),
+                ),
               ),
             ],
           ),
@@ -669,10 +764,26 @@ class _TimelinesState extends State<Timelines> {
                       backgroundColor: Constants.mainColor1)),
               InkWell(
                 onTap: () {},
-                child: Text(" +  ADD PLAN",
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: Constants.redcolor)),
+                child: Container(
+                  padding:
+                      EdgeInsets.all(MediaQuery.of(context).size.width * 0.02),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(18),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.2),
+                        spreadRadius: 0.5,
+                        blurRadius: 10,
+                        offset: Offset(0, 3), // changes position of shadow
+                      ),
+                    ],
+                  ),
+                  child: Text(" +  ADD PLAN",
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Constants.redcolor)),
+                ),
               ),
             ],
           ),
@@ -723,12 +834,28 @@ class _TimelinesState extends State<Timelines> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text("WATER",
-                  style: TextStyle(
+              Container(
+                padding:
+                    EdgeInsets.all(MediaQuery.of(context).size.width * 0.02),
+                decoration: BoxDecoration(
+                  color: Constants.bluecolor,
+                  borderRadius: BorderRadius.circular(18),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.2),
+                      spreadRadius: 0.5,
+                      blurRadius: 10,
+                      offset: Offset(0, 3), // changes position of shadow
+                    ),
+                  ],
+                ),
+                child: Text("WATER",
+                    style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
                       color: Constants.mainColorWhite,
-                      backgroundColor: Constants.mainColor1)),
+                    )),
+              ),
             ],
           ),
           Divider(),
@@ -775,6 +902,7 @@ class _TimelinesState extends State<Timelines> {
             ])
           ]),
 
+          // Bottombar(),
 //                                                                                                                                                                                                                                                                                  Bottombar(key: ,)
 
           // NavigationActionBar(
