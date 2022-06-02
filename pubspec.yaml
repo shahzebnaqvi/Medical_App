@@ -36,7 +36,7 @@ dependencies:
   navigation_action_bar: ^0.0.1
   flutter_speed_dial: ^5.0.0+1
   ml_kit_image_labeler: ^0.0.3+2
- # percent_indicator: ^4.0.1
+
 
 
 

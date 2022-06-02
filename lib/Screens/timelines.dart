@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:medical_app/Screens/bottombar.dart';
 
 import '../Constants/constants.dart';
 
@@ -778,7 +779,6 @@ class _TimelinesState extends State<Timelines> {
               )
             ],
           ),
-          BottomAppBar()
         ]));
   }
 }
