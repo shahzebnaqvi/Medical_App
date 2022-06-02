@@ -101,9 +101,12 @@ class _TimelinesState extends State<Timelines> {
         style: TextStyle(color: Constants.mainColorWhite),
         textScaleFactor: 1,
       ),
-      trailing: Icon(
-        Icons.notification_add_rounded,
-        color: Constants.mainColorWhite,
+      trailing: InkWell(
+        onTap: () {},
+        child: Icon(
+          Icons.notification_add_rounded,
+          color: Constants.mainColorWhite,
+        ),
       ),
     ));
   }
