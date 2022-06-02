@@ -258,7 +258,7 @@ class _TimelinesState extends State<Timelines> {
                           fontWeight: FontWeight.bold,
                           color: Constants.mainColorWhite,
                           backgroundColor: Constants.bluecolor,
-                          fontSize: 18)),
+                          fontSize: 16)),
                 ),
                 InkWell(
                   onTap: () {},
@@ -280,7 +280,8 @@ class _TimelinesState extends State<Timelines> {
                     child: Text(" + ADD PLAN",
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
-                            color: Constants.redcolor)),
+                            color: Constants.redcolor,
+                            fontSize: 16)),
                   ),
                 ),
               ],
@@ -357,13 +358,29 @@ class _TimelinesState extends State<Timelines> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text("MY  DIET",
-                  style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                    color: Constants.mainColorWhite,
-                    backgroundColor: Constants.bluecolor,
-                  )),
+              Container(
+                padding:
+                    EdgeInsets.all(MediaQuery.of(context).size.width * 0.02),
+                decoration: BoxDecoration(
+                  color: Constants.bluecolor,
+                  borderRadius: BorderRadius.circular(18),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.2),
+                      spreadRadius: 0.5,
+                      blurRadius: 10,
+                      offset: Offset(0, 3), // changes position of shadow
+                    ),
+                  ],
+                ),
+                child: Text("MY  DIET",
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      color: Constants.mainColorWhite,
+                      backgroundColor: Constants.bluecolor,
+                    )),
+              ),
               InkWell(
                 onTap: () {},
                 child: Container(
@@ -384,7 +401,8 @@ class _TimelinesState extends State<Timelines> {
                   child: Text(" +  ADD PLAN",
                       style: TextStyle(
                           fontWeight: FontWeight.bold,
-                          color: Constants.redcolor)),
+                          color: Constants.redcolor,
+                          fontSize: 16)),
                 ),
               ),
             ],
@@ -459,7 +477,7 @@ class _TimelinesState extends State<Timelines> {
         left: MediaQuery.of(context).size.height * 0.02,
         right: MediaQuery.of(context).size.height * 0.02,
       ),
-      padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.04),
+      padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.01),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(10),
@@ -475,39 +493,54 @@ class _TimelinesState extends State<Timelines> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text("HEALTH TRACKER",
-                  style: TextStyle(
+          Container(
+            padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.02),
+            decoration: BoxDecoration(
+              color: Constants.bluecolor,
+              borderRadius: BorderRadius.circular(18),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey.withOpacity(0.2),
+                  spreadRadius: 0.5,
+                  blurRadius: 10,
+                  offset: Offset(0, 3), // changes position of shadow
+                ),
+              ],
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text("HEALTH TRACKER",
+                    style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
                       color: Constants.mainColorWhite,
-                      backgroundColor: Constants.mainColor1)),
-              InkWell(
-                onTap: () {},
-                child: Container(
-                  padding:
-                      EdgeInsets.all(MediaQuery.of(context).size.width * 0.02),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(18),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.2),
-                        spreadRadius: 0.5,
-                        blurRadius: 10,
-                        offset: Offset(0, 3), // changes position of shadow
-                      ),
-                    ],
+                    )),
+                InkWell(
+                  onTap: () {},
+                  child: Container(
+                    padding: EdgeInsets.all(
+                        MediaQuery.of(context).size.width * 0.02),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(18),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.2),
+                          spreadRadius: 0.5,
+                          blurRadius: 10,
+                          offset: Offset(0, 3), // changes position of shadow
+                        ),
+                      ],
+                    ),
+                    child: Text(" +  ADD PLAN",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Constants.redcolor)),
                   ),
-                  child: Text(" +  ADD PLAN",
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: Constants.redcolor)),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
           Divider(),
           Column(
