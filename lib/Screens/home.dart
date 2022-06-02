@@ -165,7 +165,7 @@ class Home extends StatelessWidget {
                   }),
             ],
           ),
-        )),
-        bottomNavigationBar: Bottombar(num: ""));
+        )));
+    // bottomNavigationBar: Bottombar(num: ""));
   }
 }
