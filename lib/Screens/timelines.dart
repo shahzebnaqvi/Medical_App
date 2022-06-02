@@ -730,55 +730,48 @@ class _TimelinesState extends State<Timelines> {
             ],
           ),
           Divider(),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              Row(
-                children: [
-                  CircleAvatar(
-                      backgroundColor: Constants.mainColorWhite,
-                      child: Image.asset('assets/glass.png')),
-                  CircleAvatar(
-                      radius: 22,
-                      backgroundColor: Constants.mainColorWhite,
-                      child: Image.asset('assets/glasswhite.jpg')),
-                  CircleAvatar(
-                      radius: 22,
-                      backgroundColor: Constants.mainColorWhite,
-                      child: Image.asset('assets/glasswhite.jpg')),
-                  CircleAvatar(
-                      radius: 22,
-                      backgroundColor: Constants.mainColorWhite,
-                      child: Image.asset('assets/glasswhite.jpg')),
-                  CircleAvatar(
-                      radius: 22,
-                      backgroundColor: Constants.mainColorWhite,
-                      child: Image.asset('assets/glasswhite.jpg')),
-                ],
+          Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+            Row(
+              children: [
+                CircleAvatar(
+                    backgroundColor: Constants.mainColorWhite,
+                    child: Image.asset('assets/glass.png')),
+                CircleAvatar(
+                    radius: 22,
+                    backgroundColor: Constants.mainColorWhite,
+                    child: Image.asset('assets/glasswhite.jpg')),
+                CircleAvatar(
+                    radius: 22,
+                    backgroundColor: Constants.mainColorWhite,
+                    child: Image.asset('assets/glasswhite.jpg')),
+                CircleAvatar(
+                    radius: 22,
+                    backgroundColor: Constants.mainColorWhite,
+                    child: Image.asset('assets/glasswhite.jpg')),
+                CircleAvatar(
+                    radius: 22,
+                    backgroundColor: Constants.mainColorWhite,
+                    child: Image.asset('assets/glasswhite.jpg')),
+              ],
+            ),
+            Divider(),
+            Row(children: [
+              Text("842 Cal",
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+              SizedBox(width: MediaQuery.of(context).size.width * 0.05),
+              Icon(
+                Icons.info,
+                color: Constants.grey,
               ),
-              Divider(),
-              Row(
-                children: [
-                  Text("842 Cal",
-                      style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-                  SizedBox(width: MediaQuery.of(context).size.width * 0.05),
-                  Icon(
-                    Icons.info,
-                    color: Constants.grey,
-                  ),
-                  SizedBox(width: MediaQuery.of(context).size.width * 0.02),
-                  Text(
-                    "Recommended 615 -820 cal",
-                    style: TextStyle(
-                      color: Constants.grey,
-                    ),
-                  ),
-                  Divider(),
-                ],
-              )
-            ],
-          ),
+              SizedBox(width: MediaQuery.of(context).size.width * 0.02),
+              Text(
+                "Recommended 615 -820 cal",
+                style: TextStyle(
+                  color: Constants.grey,
+                ),
+              ),
+            ])
+          ])
         ]));
   }
 }
