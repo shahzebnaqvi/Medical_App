@@ -11,7 +11,6 @@ import 'package:medical_app/Screens/maintools/myreports.dart';
 import 'package:medical_app/Screens/maintools/pharmacy.dart';
 import 'package:medical_app/Widgets/home_widgets.dart';
 
-
 final List<String> imgList = [
   'https://images.unsplash.com/photo-1520342868574-5fa3804e551c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6ff92caffcdd63681a35134a6770ed3b&auto=format&fit=crop&w=1951&q=80',
   'https://images.unsplash.com/photo-1522205408450-add114ad53fe?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=368f45b0888aeb0b7b08e3a1084d3ede&auto=format&fit=crop&w=1950&q=80',
@@ -73,7 +72,6 @@ class Home extends StatelessWidget {
             // )),
 
             Container(
-              
               child: TextField(
                 autofocus: false,
                 style: TextStyle(fontSize: 15.0, color: Color(0xFFbdc6cf)),
@@ -82,8 +80,8 @@ class Home extends StatelessWidget {
                   suffixIcon: Icon(Icons.search),
                   fillColor: Colors.white,
                   hintText: 'Search',
-                  contentPadding:
-                      const EdgeInsets.only(left: 14.0, bottom: 12.0, top: 12.0),
+                  contentPadding: const EdgeInsets.only(
+                      left: 14.0, bottom: 12.0, top: 12.0),
                   focusedBorder: OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.white),
                     borderRadius: BorderRadius.circular(25.7),
@@ -165,12 +163,8 @@ class Home extends StatelessWidget {
                 }),
           ],
         ),
-          
-      
-      )
-    
-      ),
-    bottomNavigationBar: Bottombar(num: "")  
+      )),
+      // bottomNavigationBar: Bottombar(num: "")
     );
   }
 }

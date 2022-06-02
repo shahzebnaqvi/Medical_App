@@ -778,6 +778,7 @@ class _TimelinesState extends State<Timelines> {
               )
             ],
           ),
+          BottomAppBar()
         ]));
   }
 }
