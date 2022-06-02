@@ -93,13 +93,18 @@ class _TimelinesState extends State<Timelines> {
           child: ClipOval(child: Image.asset('assets/doctor2.jpg'))),
       title: Text(
         'Hello Joseph Allison,',
+        style: TextStyle(color: Constants.mainColorWhite),
         textScaleFactor: 1,
       ),
       subtitle: Text(
         'Things look allright',
+        style: TextStyle(color: Constants.mainColorWhite),
         textScaleFactor: 1,
       ),
-      trailing: Icon(Icons.notification_add_rounded),
+      trailing: Icon(
+        Icons.notification_add_rounded,
+        color: Constants.mainColorWhite,
+      ),
     ));
   }
 
@@ -113,7 +118,12 @@ class _TimelinesState extends State<Timelines> {
         left: MediaQuery.of(context).size.height * 0.02,
         right: MediaQuery.of(context).size.height * 0.02,
       ),
-      padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.04),
+      padding: EdgeInsets.only(
+        bottom: MediaQuery.of(context).size.height * 0.03,
+        top: MediaQuery.of(context).size.height * 0.01,
+        left: MediaQuery.of(context).size.height * 0.01,
+        right: MediaQuery.of(context).size.height * 0.01,
+      ),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(10),
@@ -507,7 +517,10 @@ class _TimelinesState extends State<Timelines> {
                   DropdownButton<String>(
                     underline: Container(),
                     hint: _dropDownValue == ""
-                        ? Text('')
+                        ? Text('PRESCRIPTION MEDICINE',
+                            style: TextStyle(
+                                color: Constants.blackcolor,
+                                fontWeight: FontWeight.bold))
                         : Text(
                             _dropDownValue,
                             style: TextStyle(
