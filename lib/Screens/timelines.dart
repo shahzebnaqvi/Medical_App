@@ -14,6 +14,7 @@ class _TimelinesState extends State<Timelines> {
   bool value = false;
   bool value1 = false;
   bool value2 = false;
+  String _dropDownValue = "";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -166,7 +167,7 @@ class _TimelinesState extends State<Timelines> {
                     child: new CircularProgressIndicator(
                       strokeWidth: 15,
                       value: 0.7,
-                      color: Colors.purple,
+                      color: Constants.bluecolor,
                       backgroundColor: Colors.grey[100],
                     ),
                   ),
@@ -223,10 +224,14 @@ class _TimelinesState extends State<Timelines> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text("WORKOUT PLAN",
-                    style: TextStyle(fontWeight: FontWeight.bold)),
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Constants.mainColorWhite,
+                        backgroundColor: Constants.bluecolor,
+                        fontSize: 18)),
                 InkWell(
                   onTap: () {},
-                  child: Text(" +  ADD PLAN",
+                  child: Text(" + ADD PLAN",
                       style: TextStyle(
                           fontWeight: FontWeight.bold,
                           color: Constants.redcolor)),
@@ -305,8 +310,13 @@ class _TimelinesState extends State<Timelines> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text("MY DIET",
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+              Text("MY  DIET",
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    color: Constants.mainColorWhite,
+                    backgroundColor: Constants.bluecolor,
+                  )),
               InkWell(
                 onTap: () {},
                 child: Text(" +  ADD PLAN",
@@ -406,7 +416,11 @@ class _TimelinesState extends State<Timelines> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text("HEALTH TRACKER",
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                  style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      color: Constants.mainColorWhite,
+                      backgroundColor: Constants.bluecolor)),
               InkWell(
                 onTap: () {},
                 child: Text(" +  ADD PLAN",
@@ -466,7 +480,11 @@ class _TimelinesState extends State<Timelines> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text("MY MEDICINE",
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                  style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      color: Constants.mainColorWhite,
+                      backgroundColor: Constants.bluecolor)),
               InkWell(
                 onTap: () {},
                 child: Text(" +  ADD PLAN",
@@ -480,8 +498,40 @@ class _TimelinesState extends State<Timelines> {
           Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Text("PRESCRIPTION MEDICINE",
-                  style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
+              Row(
+                children: [
+                  // Text("PRESCRIPTION MEDICINE",
+                  //     style:
+                  //         TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
+
+                  DropdownButton<String>(
+                    underline: Container(),
+                    hint: _dropDownValue == ""
+                        ? Text('')
+                        : Text(
+                            _dropDownValue,
+                            style: TextStyle(
+                                color: Constants.blackcolor,
+                                fontWeight: FontWeight.bold),
+                          ),
+                    items: <String>[
+                      'PRESCRIPTION MEDICINE',
+                      'MIGRAINE',
+                      'HUMAIRA'
+                    ].map((String value) {
+                      return DropdownMenuItem<String>(
+                        value: value,
+                        child: Text(value),
+                      );
+                    }).toList(),
+                    onChanged: (value) {
+                      setState(() {
+                        _dropDownValue = value!;
+                      });
+                    },
+                  ),
+                ],
+              ),
               Divider(),
               Text("NUTRITION SUPPLEMENT",
                   style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
@@ -529,7 +579,11 @@ class _TimelinesState extends State<Timelines> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text("CHALLENGES",
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                  style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      color: Constants.mainColorWhite,
+                      backgroundColor: Constants.bluecolor)),
               InkWell(
                 onTap: () {},
                 child: Text(" +  ADD PLAN",
@@ -589,7 +643,11 @@ class _TimelinesState extends State<Timelines> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text("SHOP NOW",
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                  style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      color: Constants.mainColorWhite,
+                      backgroundColor: Constants.bluecolor)),
               InkWell(
                 onTap: () {},
                 child: Text(" +  ADD PLAN",
@@ -647,7 +705,11 @@ class _TimelinesState extends State<Timelines> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text("WATER",
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                  style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      color: Constants.mainColorWhite,
+                      backgroundColor: Constants.bluecolor)),
             ],
           ),
           Divider(),
