@@ -420,7 +420,7 @@ class _TimelinesState extends State<Timelines> {
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
                       color: Constants.mainColorWhite,
-                      backgroundColor: Constants.bluecolor)),
+                      backgroundColor: Constants.mainColor1)),
               InkWell(
                 onTap: () {},
                 child: Text(" +  ADD PLAN",
@@ -484,7 +484,7 @@ class _TimelinesState extends State<Timelines> {
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
                       color: Constants.mainColorWhite,
-                      backgroundColor: Constants.bluecolor)),
+                      backgroundColor: Constants.mainColor1)),
               InkWell(
                 onTap: () {},
                 child: Text(" +  ADD PLAN",
@@ -583,7 +583,7 @@ class _TimelinesState extends State<Timelines> {
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
                       color: Constants.mainColorWhite,
-                      backgroundColor: Constants.bluecolor)),
+                      backgroundColor: Constants.mainColor1)),
               InkWell(
                 onTap: () {},
                 child: Text(" +  ADD PLAN",
@@ -647,7 +647,7 @@ class _TimelinesState extends State<Timelines> {
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
                       color: Constants.mainColorWhite,
-                      backgroundColor: Constants.bluecolor)),
+                      backgroundColor: Constants.mainColor1)),
               InkWell(
                 onTap: () {},
                 child: Text(" +  ADD PLAN",
@@ -709,7 +709,7 @@ class _TimelinesState extends State<Timelines> {
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
                       color: Constants.mainColorWhite,
-                      backgroundColor: Constants.bluecolor)),
+                      backgroundColor: Constants.mainColor1)),
             ],
           ),
           Divider(),
