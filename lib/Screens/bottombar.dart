@@ -15,7 +15,7 @@ class _BottombarState extends State<Bottombarnavigation> {
     return Scaffold(
         bottomNavigationBar: NavigationActionBar(
       context: context,
-      scaffoldColor: Colors.blueAccent,
+      scaffoldColor: Colors.white,
       index: 0,
       subItems: [
         NavBarItem(iconData: Icons.attach_file, size: 25),
