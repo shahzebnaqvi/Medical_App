@@ -235,38 +235,28 @@ class _TimelinesState extends State<Timelines> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Container(
-                  padding:
-                      EdgeInsets.all(MediaQuery.of(context).size.width * 0.02),
-                  decoration: BoxDecoration(
-                    color: Constants.bluecolor,
-                    borderRadius: BorderRadius.circular(18),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.2),
-                        spreadRadius: 0.5,
-                        blurRadius: 10,
-                        offset: Offset(0, 3), // changes position of shadow
-                      ),
-                    ],
+            Container(
+              padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.02),
+              decoration: BoxDecoration(
+                color: Constants.bluecolor,
+                borderRadius: BorderRadius.circular(05),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.2),
+                    spreadRadius: 0.5,
+                    blurRadius: 10,
+                    offset: Offset(0, 3), // changes position of shadow
                   ),
-                  child: Text("WORKOUT PLAN",
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: Constants.mainColorWhite,
-                          backgroundColor: Constants.bluecolor,
-                          fontSize: 16)),
-                ),
-                InkWell(
-                  onTap: () {},
-                  child: Container(
+                ],
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Container(
                     padding: EdgeInsets.all(
                         MediaQuery.of(context).size.width * 0.02),
                     decoration: BoxDecoration(
-                      color: Colors.white,
+                      color: Constants.bluecolor,
                       borderRadius: BorderRadius.circular(18),
                       boxShadow: [
                         BoxShadow(
@@ -277,14 +267,39 @@ class _TimelinesState extends State<Timelines> {
                         ),
                       ],
                     ),
-                    child: Text(" + ADD PLAN",
+                    child: Text("WORKOUT PLAN",
                         style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Constants.redcolor,
-                            fontSize: 16)),
+                          fontWeight: FontWeight.bold,
+                          color: Constants.mainColorWhite,
+                          backgroundColor: Constants.bluecolor,
+                        )),
                   ),
-                ),
-              ],
+                  InkWell(
+                    onTap: () {},
+                    child: Container(
+                      padding: EdgeInsets.all(
+                          MediaQuery.of(context).size.width * 0.02),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(18),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.2),
+                            spreadRadius: 0.5,
+                            blurRadius: 10,
+                            offset: Offset(0, 3), // changes position of shadow
+                          ),
+                        ],
+                      ),
+                      child: Text(" + ADD PLAN",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Constants.redcolor,
+                              fontSize: 16)),
+                    ),
+                  ),
+                ],
+              ),
             ),
             Divider(),
             Column(
@@ -342,7 +357,7 @@ class _TimelinesState extends State<Timelines> {
       padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.04),
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.circular(05),
         boxShadow: [
           BoxShadow(
             color: Colors.grey.withOpacity(0.2),
@@ -355,39 +370,28 @@ class _TimelinesState extends State<Timelines> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Container(
-                padding:
-                    EdgeInsets.all(MediaQuery.of(context).size.width * 0.02),
-                decoration: BoxDecoration(
-                  color: Constants.bluecolor,
-                  borderRadius: BorderRadius.circular(18),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey.withOpacity(0.2),
-                      spreadRadius: 0.5,
-                      blurRadius: 10,
-                      offset: Offset(0, 3), // changes position of shadow
-                    ),
-                  ],
+          Container(
+            padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.02),
+            decoration: BoxDecoration(
+              color: Constants.bluecolor,
+              borderRadius: BorderRadius.circular(18),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey.withOpacity(0.2),
+                  spreadRadius: 0.5,
+                  blurRadius: 10,
+                  offset: Offset(0, 3), // changes position of shadow
                 ),
-                child: Text("MY  DIET",
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                      color: Constants.mainColorWhite,
-                      backgroundColor: Constants.bluecolor,
-                    )),
-              ),
-              InkWell(
-                onTap: () {},
-                child: Container(
+              ],
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Container(
                   padding:
                       EdgeInsets.all(MediaQuery.of(context).size.width * 0.02),
                   decoration: BoxDecoration(
-                    color: Colors.white,
+                    color: Constants.bluecolor,
                     borderRadius: BorderRadius.circular(18),
                     boxShadow: [
                       BoxShadow(
@@ -398,14 +402,40 @@ class _TimelinesState extends State<Timelines> {
                       ),
                     ],
                   ),
-                  child: Text(" +  ADD PLAN",
+                  child: Text("MY  DIET",
                       style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: Constants.redcolor,
-                          fontSize: 16)),
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color: Constants.mainColorWhite,
+                        backgroundColor: Constants.bluecolor,
+                      )),
                 ),
-              ),
-            ],
+                InkWell(
+                  onTap: () {},
+                  child: Container(
+                    padding: EdgeInsets.all(
+                        MediaQuery.of(context).size.width * 0.02),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(18),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.2),
+                          spreadRadius: 0.5,
+                          blurRadius: 10,
+                          offset: Offset(0, 3), // changes position of shadow
+                        ),
+                      ],
+                    ),
+                    child: Text(" +  ADD PLAN",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Constants.redcolor,
+                            fontSize: 16)),
+                  ),
+                ),
+              ],
+            ),
           ),
           Divider(),
           Column(
@@ -569,10 +599,10 @@ class _TimelinesState extends State<Timelines> {
       margin: EdgeInsets.only(
         top: MediaQuery.of(context).size.height * 0.01,
         bottom: MediaQuery.of(context).size.height * 0.01,
-        left: MediaQuery.of(context).size.height * 0.02,
-        right: MediaQuery.of(context).size.height * 0.02,
+        left: MediaQuery.of(context).size.height * 0.01,
+        right: MediaQuery.of(context).size.height * 0.01,
       ),
-      padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.04),
+      padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.01),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(10),
@@ -588,39 +618,54 @@ class _TimelinesState extends State<Timelines> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text("MY MEDICINE",
-                  style: TextStyle(
+          Container(
+            padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.02),
+            decoration: BoxDecoration(
+              color: Constants.bluecolor,
+              borderRadius: BorderRadius.circular(05),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey.withOpacity(0.2),
+                  spreadRadius: 0.5,
+                  blurRadius: 10,
+                  offset: Offset(0, 3), // changes position of shadow
+                ),
+              ],
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text("MY MEDICINE",
+                    style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
                       color: Constants.mainColorWhite,
-                      backgroundColor: Constants.mainColor1)),
-              InkWell(
-                onTap: () {},
-                child: Container(
-                  padding:
-                      EdgeInsets.all(MediaQuery.of(context).size.width * 0.02),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(18),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.2),
-                        spreadRadius: 0.5,
-                        blurRadius: 10,
-                        offset: Offset(0, 3), // changes position of shadow
-                      ),
-                    ],
+                    )),
+                InkWell(
+                  onTap: () {},
+                  child: Container(
+                    padding: EdgeInsets.all(
+                        MediaQuery.of(context).size.width * 0.02),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(18),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.2),
+                          spreadRadius: 0.5,
+                          blurRadius: 10,
+                          offset: Offset(0, 3), // changes position of shadow
+                        ),
+                      ],
+                    ),
+                    child: Text(" +  ADD PLAN",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Constants.redcolor)),
                   ),
-                  child: Text(" +  ADD PLAN",
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: Constants.redcolor)),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
           Divider(),
           Column(
@@ -706,39 +751,54 @@ class _TimelinesState extends State<Timelines> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text("CHALLENGES",
-                  style: TextStyle(
+          Container(
+            padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.02),
+            decoration: BoxDecoration(
+              color: Constants.bluecolor,
+              borderRadius: BorderRadius.circular(05),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey.withOpacity(0.2),
+                  spreadRadius: 0.5,
+                  blurRadius: 10,
+                  offset: Offset(0, 3), // changes position of shadow
+                ),
+              ],
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text("CHALLENGES",
+                    style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
                       color: Constants.mainColorWhite,
-                      backgroundColor: Constants.mainColor1)),
-              InkWell(
-                onTap: () {},
-                child: Container(
-                  padding:
-                      EdgeInsets.all(MediaQuery.of(context).size.width * 0.02),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(18),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.2),
-                        spreadRadius: 0.5,
-                        blurRadius: 10,
-                        offset: Offset(0, 3), // changes position of shadow
-                      ),
-                    ],
+                    )),
+                InkWell(
+                  onTap: () {},
+                  child: Container(
+                    padding: EdgeInsets.all(
+                        MediaQuery.of(context).size.width * 0.02),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(18),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.2),
+                          spreadRadius: 0.5,
+                          blurRadius: 10,
+                          offset: Offset(0, 3), // changes position of shadow
+                        ),
+                      ],
+                    ),
+                    child: Text(" +  ADD PLAN",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Constants.redcolor)),
                   ),
-                  child: Text(" +  ADD PLAN",
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: Constants.redcolor)),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
           Divider(),
           Column(
@@ -786,39 +846,54 @@ class _TimelinesState extends State<Timelines> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text("SHOP NOW",
-                  style: TextStyle(
+          Container(
+            padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.02),
+            decoration: BoxDecoration(
+              color: Constants.bluecolor,
+              borderRadius: BorderRadius.circular(05),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey.withOpacity(0.2),
+                  spreadRadius: 0.5,
+                  blurRadius: 10,
+                  offset: Offset(0, 3), // changes position of shadow
+                ),
+              ],
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text("SHOP NOW",
+                    style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
                       color: Constants.mainColorWhite,
-                      backgroundColor: Constants.mainColor1)),
-              InkWell(
-                onTap: () {},
-                child: Container(
-                  padding:
-                      EdgeInsets.all(MediaQuery.of(context).size.width * 0.02),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(18),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.2),
-                        spreadRadius: 0.5,
-                        blurRadius: 10,
-                        offset: Offset(0, 3), // changes position of shadow
-                      ),
-                    ],
+                    )),
+                InkWell(
+                  onTap: () {},
+                  child: Container(
+                    padding: EdgeInsets.all(
+                        MediaQuery.of(context).size.width * 0.02),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(18),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.2),
+                          spreadRadius: 0.5,
+                          blurRadius: 10,
+                          offset: Offset(0, 3), // changes position of shadow
+                        ),
+                      ],
+                    ),
+                    child: Text(" +  ADD PLAN",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Constants.redcolor)),
                   ),
-                  child: Text(" +  ADD PLAN",
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: Constants.redcolor)),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
           Divider(),
           Column(
@@ -864,32 +939,47 @@ class _TimelinesState extends State<Timelines> {
           ],
         ),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Container(
-                padding:
-                    EdgeInsets.all(MediaQuery.of(context).size.width * 0.02),
-                decoration: BoxDecoration(
-                  color: Constants.bluecolor,
-                  borderRadius: BorderRadius.circular(18),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey.withOpacity(0.2),
-                      spreadRadius: 0.5,
-                      blurRadius: 10,
-                      offset: Offset(0, 3), // changes position of shadow
-                    ),
-                  ],
+          Container(
+            padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.02),
+            decoration: BoxDecoration(
+              color: Constants.bluecolor,
+              borderRadius: BorderRadius.circular(05),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey.withOpacity(0.2),
+                  spreadRadius: 0.5,
+                  blurRadius: 10,
+                  offset: Offset(0, 3), // changes position of shadow
                 ),
-                child: Text("WATER",
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                      color: Constants.mainColorWhite,
-                    )),
-              ),
-            ],
+              ],
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Container(
+                  padding:
+                      EdgeInsets.all(MediaQuery.of(context).size.width * 0.02),
+                  decoration: BoxDecoration(
+                    color: Constants.bluecolor,
+                    borderRadius: BorderRadius.circular(18),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.2),
+                        spreadRadius: 0.5,
+                        blurRadius: 10,
+                        offset: Offset(0, 3), // changes position of shadow
+                      ),
+                    ],
+                  ),
+                  child: Text("WATER",
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                        color: Constants.mainColorWhite,
+                      )),
+                ),
+              ],
+            ),
           ),
           Divider(),
           Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
