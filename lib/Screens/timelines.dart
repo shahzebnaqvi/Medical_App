@@ -998,8 +998,6 @@ class _TimelinesState extends State<Timelines> {
             ])
           ]),
 
-          Bottombarnavigation(),
-
           // Bottombar(),
 //                                                                                                                                                                                                                                                                                  Bottombar(key: ,)
 
