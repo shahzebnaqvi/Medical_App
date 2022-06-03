@@ -374,7 +374,7 @@ class _TimelinesState extends State<Timelines> {
             padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.02),
             decoration: BoxDecoration(
               color: Constants.bluecolor,
-              borderRadius: BorderRadius.circular(18),
+              borderRadius: BorderRadius.circular(05),
               boxShadow: [
                 BoxShadow(
                   color: Colors.grey.withOpacity(0.2),
