@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:medical_app/Screens/additionaltools/bp.dart';
 import 'package:medical_app/Screens/auth/login.dart';
@@ -10,6 +8,7 @@ import 'package:medical_app/Screens/bottombar.dart';
 import 'package:medical_app/Screens/home.dart';
 import 'package:medical_app/testing.dart';
 
+// @dart=2.9
 void main() {
   runApp(const MyApp());
 }
