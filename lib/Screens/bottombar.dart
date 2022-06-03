@@ -77,6 +77,7 @@ class _BottombarState extends State<Bottombarnavigation> {
 //               size: 30,
 //             )),
 
+
 //         BottomNavigationBarItem(
 //             label: "Pharmacy",
 //             icon: Icon(
