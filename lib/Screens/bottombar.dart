@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:navigation_action_bar/navigation_action_bar.dart';
 
-class Bottombar extends StatefulWidget {
-  const Bottombar({Key? key}) : super(key: key);
+class Bottombarnavigation extends StatefulWidget {
+  const Bottombarnavigation({Key? key}) : super(key: key);
 
   @override
-  State<Bottombar> createState() => _BottombarState();
+  State<Bottombarnavigation> createState() => _BottombarState();
 }
 
-class _BottombarState extends State<Bottombar> {
+class _BottombarState extends State<Bottombarnavigation> {
   double currentIndex = 0;
   @override
   Widget build(BuildContext context) {
@@ -49,15 +49,15 @@ class _BottombarState extends State<Bottombar> {
 
 // var pageindex = 0;
 
-// class Bottombar extends StatefulWidget {
+// class Bottombarnavigation extends StatefulWidget {
 //   final String num;
-//   const Bottombar({Key? key, required this.num}) : super(key: key);
+//   const Bottombarnavigation({Key? key, required this.num}) : super(key: key);
 
 //   @override
-//   State<Bottombar> createState() => _BottombarState();
+//   State<Bottombarnavigation> createState() => _BottombarState();
 // }
 
-// class _BottombarState extends State<Bottombar> {
+// class _BottombarState extends State<Bottombarnavigation> {
 //   @override
 //   Widget build(BuildContext context) {
 //     return BottomNavigationBar(

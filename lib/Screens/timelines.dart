@@ -20,6 +20,7 @@ class _TimelinesState extends State<Timelines> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
         //backgroundColor: Constants.redcolor,
         // appBar: AppBar(
         //   backgroundColor: Constants.mainColorWhite,
@@ -83,7 +84,7 @@ class _TimelinesState extends State<Timelines> {
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.01,
               ),
-              water(context)
+              water(context),
             ])));
   }
 
@@ -996,6 +997,8 @@ class _TimelinesState extends State<Timelines> {
               ),
             ])
           ]),
+
+          Bottombarnavigation(),
 
           // Bottombar(),
 //                                                                                                                                                                                                                                                                                  Bottombar(key: ,)
