@@ -219,7 +219,7 @@ class _TimelinesState extends State<Timelines> {
           left: MediaQuery.of(context).size.height * 0.02,
           right: MediaQuery.of(context).size.height * 0.02,
         ),
-        padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.04),
+        padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.01),
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(10),
@@ -252,28 +252,12 @@ class _TimelinesState extends State<Timelines> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Container(
-                    padding: EdgeInsets.all(
-                        MediaQuery.of(context).size.width * 0.02),
-                    decoration: BoxDecoration(
-                      color: Constants.bluecolor,
-                      borderRadius: BorderRadius.circular(18),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey.withOpacity(0.2),
-                          spreadRadius: 0.5,
-                          blurRadius: 10,
-                          offset: Offset(0, 3), // changes position of shadow
-                        ),
-                      ],
-                    ),
-                    child: Text("WORKOUT PLAN",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: Constants.mainColorWhite,
-                          backgroundColor: Constants.bluecolor,
-                        )),
-                  ),
+                  Text("WORKOUT PLAN",
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                        color: Constants.mainColorWhite,
+                      )),
                   InkWell(
                     onTap: () {},
                     child: Container(
@@ -291,11 +275,10 @@ class _TimelinesState extends State<Timelines> {
                           ),
                         ],
                       ),
-                      child: Text(" + ADD PLAN",
+                      child: Text(" +  ADD PLAN",
                           style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              color: Constants.redcolor,
-                              fontSize: 16)),
+                              color: Constants.redcolor)),
                     ),
                   ),
                 ],
@@ -717,7 +700,7 @@ class _TimelinesState extends State<Timelines> {
         left: MediaQuery.of(context).size.height * 0.02,
         right: MediaQuery.of(context).size.height * 0.02,
       ),
-      padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.04),
+      padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.01),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(10),
@@ -812,7 +795,7 @@ class _TimelinesState extends State<Timelines> {
         left: MediaQuery.of(context).size.height * 0.02,
         right: MediaQuery.of(context).size.height * 0.02,
       ),
-      padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.04),
+      padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.01),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(10),
