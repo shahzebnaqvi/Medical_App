@@ -14,7 +14,7 @@ class Constants {
   static const Color mediumColor = Color.fromARGB(255, 216, 210, 210);
   static const Color ligtbluecolor = Color.fromARGB(255, 232, 239, 245);
   static const Color mainColorWhite = Color.fromARGB(255, 253, 253, 253);
-  static const Color bluecolor = Color.fromARGB(255, 90, 154, 207);
+  static const Color bluecolor = Color.fromARGB(255, 108, 176, 232);
   static const Color redcolor = Colors.red;
 
   static const Color blackcolor = Colors.black;
