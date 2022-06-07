@@ -312,7 +312,7 @@ class _TimelinesState extends State<Timelines> {
             Text(
               "Weekly Tasks",
             ),
-            Text("Chest, Trap, Tricep, Abs",
+            Text("Chest,Trap,Tricep,Abs",
                 style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold)),
             Divider(),
             Row(
