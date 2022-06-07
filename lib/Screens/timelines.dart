@@ -579,7 +579,7 @@ class _TimelinesState extends State<Timelines> {
       padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.01),
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.circular(10),flutt
         boxShadow: [
           BoxShadow(
             color: Colors.grey.withOpacity(0.2),
