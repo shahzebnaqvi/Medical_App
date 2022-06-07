@@ -147,24 +147,45 @@ class _TimelinesState extends State<Timelines> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
-                "Completed Task",
+              Icon(
+                Icons.arrow_circle_left_outlined,
+                size: 30,
+                color: Constants.grey,
               ),
               Text(
-                "5/10",
+                "MY TASKS",
+                style: TextStyle(color: Constants.grey, fontSize: 18),
+              ),
+              Icon(
+                Icons.arrow_circle_right_outlined,
+                size: 30,
+                color: Constants.grey,
               ),
             ],
           ),
           SizedBox(
-            height: MediaQuery.of(context).size.height * 0.05,
+            height: MediaQuery.of(context).size.height * 0.03,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                "TODAY",
+                style: TextStyle(fontWeight: FontWeight.bold),
+              )
+            ],
+          ),
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.03,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                "My Tasks",
-                style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                "500",
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
+
               // CircularProgressIndicator(
               //   // key: 3,
               //   value: 5,
@@ -173,6 +194,7 @@ class _TimelinesState extends State<Timelines> {
               //   semanticsValue: "34",
               //   valueColor: AlwaysStoppedAnimation<Color>(Colors.green),
               // ),
+
               Stack(
                 alignment: Alignment.center,
                 children: <Widget>[
@@ -180,14 +202,18 @@ class _TimelinesState extends State<Timelines> {
                     width: 80,
                     height: 80,
                     child: new CircularProgressIndicator(
-                      strokeWidth: 08,
-                      value: 0.7,
+                      strokeWidth: 12,
+                      value: 0.60,
                       color: Constants.bluecolor,
                       backgroundColor: Colors.grey[100],
                     ),
                   ),
                   Text("70%"),
                 ],
+              ),
+              Text(
+                "1000",
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
               // CircularProgressIndicator(
               //     backgroundColor: Colors.grey,
@@ -203,6 +229,10 @@ class _TimelinesState extends State<Timelines> {
               //   progressColor: Colors.red,
               // ),
             ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [Text("Completed Tasks"), Text("Total Tasks")],
           )
         ],
       ),
@@ -275,7 +305,7 @@ class _TimelinesState extends State<Timelines> {
                           ),
                         ],
                       ),
-                      child: Text(" +  ADD PLAN",
+                      child: Text(" + ADD",
                           style: TextStyle(
                               fontWeight: FontWeight.bold,
                               color: Constants.bluecolor)),
@@ -393,7 +423,7 @@ class _TimelinesState extends State<Timelines> {
                         ),
                       ],
                     ),
-                    child: Text(" +  ADD PLAN",
+                    child: Text(" + ADD",
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
                             color: Constants.bluecolor)),
@@ -528,7 +558,7 @@ class _TimelinesState extends State<Timelines> {
                         ),
                       ],
                     ),
-                    child: Text(" +  ADD PLAN",
+                    child: Text(" + ADD",
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
                             color: Constants.bluecolor)),
@@ -670,7 +700,7 @@ class _TimelinesState extends State<Timelines> {
                         ),
                       ],
                     ),
-                    child: Text(" +  ADD PLAN",
+                    child: Text(" + ADD",
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
                             color: Constants.bluecolor)),
@@ -803,7 +833,7 @@ class _TimelinesState extends State<Timelines> {
                         ),
                       ],
                     ),
-                    child: Text(" +  ADD PLAN",
+                    child: Text(" + ADD",
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
                             color: Constants.bluecolor)),
@@ -898,7 +928,7 @@ class _TimelinesState extends State<Timelines> {
                         ),
                       ],
                     ),
-                    child: Text(" +  ADD PLAN",
+                    child: Text(" + ADD",
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
                             color: Constants.bluecolor)),
@@ -991,7 +1021,7 @@ class _TimelinesState extends State<Timelines> {
                         ),
                       ],
                     ),
-                    child: Text(" +  ADD PLAN",
+                    child: Text(" + ADD",
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
                             color: Constants.bluecolor)),
