@@ -180,7 +180,7 @@ class _TimelinesState extends State<Timelines> {
                     width: 80,
                     height: 80,
                     child: new CircularProgressIndicator(
-                      strokeWidth: 05,
+                      strokeWidth: 08,
                       value: 0.7,
                       color: Constants.bluecolor,
                       backgroundColor: Colors.grey[100],
@@ -545,12 +545,19 @@ class _TimelinesState extends State<Timelines> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text("BLOOD PRESURE",
-                      style:
-                          TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
-                  Text("Normal"),
-                  Text("+",
-                      style:
-                          TextStyle(color: Constants.bluecolor, fontSize: 18))
+                      style: TextStyle(
+                        fontSize: 15,
+                      )),
+                  Text(
+                    "Normal",
+                    style: TextStyle(color: Constants.grey),
+                  ),
+                  GestureDetector(
+                    onTap: () {},
+                    child: Text("+",
+                        style: TextStyle(
+                            color: Constants.bluecolor, fontSize: 18)),
+                  )
                 ],
               ),
               Divider(),
@@ -558,12 +565,16 @@ class _TimelinesState extends State<Timelines> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text("SUGAR  LEVEL",
-                      style:
-                          TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
-                  Text("Low"),
-                  Text("+",
-                      style:
-                          TextStyle(color: Constants.bluecolor, fontSize: 18)),
+                      style: TextStyle(
+                        fontSize: 15,
+                      )),
+                  Text("Low", style: TextStyle(color: Constants.grey)),
+                  GestureDetector(
+                    onTap: () {},
+                    child: Text("+",
+                        style: TextStyle(
+                            color: Constants.bluecolor, fontSize: 18)),
+                  ),
                 ],
               ),
               Divider(),
@@ -571,12 +582,17 @@ class _TimelinesState extends State<Timelines> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text("WEIGHT IN KG",
+                      style: TextStyle(
+                        fontSize: 15,
+                      )),
+                  Text("55kg", style: TextStyle(color: Constants.grey)),
+                  GestureDetector(
+                    onTap: () {},
+                    child: Text(
+                      "+",
                       style:
-                          TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
-                  Text("55kg"),
-                  Text(
-                    "+",
-                    style: TextStyle(color: Constants.bluecolor, fontSize: 18),
+                          TextStyle(color: Constants.bluecolor, fontSize: 18),
+                    ),
                   )
                 ],
               ),
