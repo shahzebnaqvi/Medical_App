@@ -575,13 +575,7 @@ class _TimelinesState extends State<Timelines> {
               ],
             ),
           ),
-          SizedBox(
-            height: MediaQuery.of(context).size.height * 0.03,
-          ),
           Divider(),
-          SizedBox(
-            height: MediaQuery.of(context).size.height * 0.03,
-          ),
           Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
@@ -605,9 +599,6 @@ class _TimelinesState extends State<Timelines> {
                 ],
               ),
               Divider(),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.03,
-              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
