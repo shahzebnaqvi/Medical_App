@@ -300,7 +300,7 @@ class _TimelinesState extends State<Timelines> {
                           ),
                         ],
                       ),
-                      child: Text(" +  ADD ",
+                      child: Text(" + ADD",
                           style: TextStyle(
                               fontWeight: FontWeight.bold,
                               color: Constants.bluecolor)),
@@ -418,7 +418,7 @@ class _TimelinesState extends State<Timelines> {
                         ),
                       ],
                     ),
-                    child: Text(" +  ADD",
+                    child: Text(" + ADD",
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
                             color: Constants.bluecolor)),
@@ -553,7 +553,7 @@ class _TimelinesState extends State<Timelines> {
                         ),
                       ],
                     ),
-                    child: Text(" +  ADD ",
+                    child: Text(" + ADD",
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
                             color: Constants.bluecolor)),
@@ -695,7 +695,7 @@ class _TimelinesState extends State<Timelines> {
                         ),
                       ],
                     ),
-                    child: Text(" +  ADD ",
+                    child: Text(" + ADD",
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
                             color: Constants.bluecolor)),
@@ -828,7 +828,7 @@ class _TimelinesState extends State<Timelines> {
                         ),
                       ],
                     ),
-                    child: Text(" +  ADD ",
+                    child: Text(" + ADD",
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
                             color: Constants.bluecolor)),
@@ -923,7 +923,7 @@ class _TimelinesState extends State<Timelines> {
                         ),
                       ],
                     ),
-                    child: Text(" +  ADD ",
+                    child: Text(" + ADD",
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
                             color: Constants.bluecolor)),
@@ -1016,7 +1016,7 @@ class _TimelinesState extends State<Timelines> {
                         ),
                       ],
                     ),
-                    child: Text(" +  ADD ",
+                    child: Text(" + ADD",
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
                             color: Constants.bluecolor)),
