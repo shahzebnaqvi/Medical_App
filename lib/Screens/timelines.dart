@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:medical_app/Screens/bottombar.dart';
@@ -543,7 +545,7 @@ class _TimelinesState extends State<Timelines> {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Text("BLOOD PRESURE",
                       style:
@@ -553,11 +555,27 @@ class _TimelinesState extends State<Timelines> {
                 ],
               ),
               Divider(),
-              Text("SUGAR",
-                  style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Text("SUGAR",
+                      style:
+                          TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
+                  Text("Low"),
+                  Text("+"),
+                ],
+              ),
               Divider(),
-              Text("WEIGHT",
-                  style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Text("WEIGHT",
+                      style:
+                          TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
+                  Text("55kg"),
+                  Text("+")
+                ],
+              ),
               Divider(),
             ],
           )
