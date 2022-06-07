@@ -1,9 +1,6 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:medical_app/Screens/bottombar.dart';
-
 import '../Constants/constants.dart';
 
 class Timelines extends StatefulWidget {
@@ -545,35 +542,42 @@ class _TimelinesState extends State<Timelines> {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text("BLOOD PRESURE",
                       style:
                           TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
                   Text("Normal"),
-                  Text("+")
+                  Text("+",
+                      style:
+                          TextStyle(color: Constants.bluecolor, fontSize: 18))
                 ],
               ),
               Divider(),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text("SUGAR",
                       style:
                           TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
                   Text("Low"),
-                  Text("+"),
+                  Text("+",
+                      style:
+                          TextStyle(color: Constants.bluecolor, fontSize: 18)),
                 ],
               ),
               Divider(),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text("WEIGHT",
                       style:
                           TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
                   Text("55kg"),
-                  Text("+")
+                  Text(
+                    "+",
+                    style: TextStyle(color: Constants.bluecolor, fontSize: 18),
+                  )
                 ],
               ),
               Divider(),
