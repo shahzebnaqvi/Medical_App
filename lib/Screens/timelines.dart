@@ -178,7 +178,7 @@ class _TimelinesState extends State<Timelines> {
                 alignment: Alignment.center,
                 children: <Widget>[
                   Container(
-                    width: 80,
+                    width: 30,
                     height: 80,
                     child: new CircularProgressIndicator(
                       strokeWidth: 15,
@@ -542,8 +542,16 @@ class _TimelinesState extends State<Timelines> {
           Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Text("BLOOD PRESURE",
-                  style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Text("BLOOD PRESURE",
+                      style:
+                          TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
+                  Text("Normal"),
+                  Text("+")
+                ],
+              ),
               Divider(),
               Text("SUGAR",
                   style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
