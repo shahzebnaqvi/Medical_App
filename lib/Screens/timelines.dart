@@ -178,7 +178,7 @@ class _TimelinesState extends State<Timelines> {
                 alignment: Alignment.center,
                 children: <Widget>[
                   Container(
-                    width: 30,
+                    width: 80,
                     height: 80,
                     child: new CircularProgressIndicator(
                       strokeWidth: 15,
@@ -279,7 +279,7 @@ class _TimelinesState extends State<Timelines> {
                       child: Text(" +  ADD PLAN",
                           style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              color: Constants.redcolor)),
+                              color: Constants.bluecolor)),
                     ),
                   ),
                 ],
