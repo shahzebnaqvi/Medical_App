@@ -168,10 +168,15 @@ class _TimelinesState extends State<Timelines> {
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [Text("TODAY")],
+            children: [
+              Text(
+                "TODAY",
+                style: TextStyle(fontWeight: FontWeight.bold),
+              )
+            ],
           ),
           SizedBox(
-            height: MediaQuery.of(context).size.height * 0.05,
+            height: MediaQuery.of(context).size.height * 0.03,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
