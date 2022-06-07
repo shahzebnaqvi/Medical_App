@@ -171,7 +171,9 @@ class _TimelinesState extends State<Timelines> {
             children: [
               Text(
                 "TODAY",
-                style: TextStyle(fontWeight: FontWeight.bold),
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                ),
               )
             ],
           ),
@@ -338,12 +340,18 @@ class _TimelinesState extends State<Timelines> {
             Text("Chest",
                 style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold)),
             Divider(),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.02,
+            ),
             Text(
               "Weekly Tasks",
             ),
             Text("Chest,Trap,Tricep,Abs",
                 style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold)),
             Divider(),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.02,
+            ),
             Row(
               children: [
                 Icon(Icons.watch_later_outlined),
@@ -567,7 +575,13 @@ class _TimelinesState extends State<Timelines> {
               ],
             ),
           ),
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.03,
+          ),
           Divider(),
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.03,
+          ),
           Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
@@ -591,6 +605,9 @@ class _TimelinesState extends State<Timelines> {
                 ],
               ),
               Divider(),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.03,
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
