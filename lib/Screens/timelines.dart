@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:medical_app/Screens/bottombar.dart';
-
 import '../Constants/constants.dart';
 
 class Timelines extends StatefulWidget {
@@ -178,10 +177,10 @@ class _TimelinesState extends State<Timelines> {
                 alignment: Alignment.center,
                 children: <Widget>[
                   Container(
-                    width: 30,
+                    width: 80,
                     height: 80,
                     child: new CircularProgressIndicator(
-                      strokeWidth: 15,
+                      strokeWidth: 08,
                       value: 0.7,
                       color: Constants.bluecolor,
                       backgroundColor: Colors.grey[100],
@@ -279,7 +278,7 @@ class _TimelinesState extends State<Timelines> {
                       child: Text(" +  ADD PLAN",
                           style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              color: Constants.redcolor)),
+                              color: Constants.bluecolor)),
                     ),
                   ),
                 ],
@@ -543,21 +542,60 @@ class _TimelinesState extends State<Timelines> {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text("BLOOD PRESURE",
-                      style:
-                          TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
-                  Text("Normal"),
-                  Text("+")
+                      style: TextStyle(
+                        fontSize: 15,
+                      )),
+                  Text(
+                    "Normal",
+                    style: TextStyle(color: Constants.grey),
+                  ),
+                  GestureDetector(
+                    onTap: () {},
+                    child: Text("+",
+                        style: TextStyle(
+                            color: Constants.bluecolor, fontSize: 18)),
+                  )
                 ],
               ),
               Divider(),
-              Text("SUGAR",
-                  style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text("SUGAR  LEVEL",
+                      style: TextStyle(
+                        fontSize: 15,
+                      )),
+                  Text("Low", style: TextStyle(color: Constants.grey)),
+                  GestureDetector(
+                    onTap: () {},
+                    child: Text("+",
+                        style: TextStyle(
+                            color: Constants.bluecolor, fontSize: 18)),
+                  ),
+                ],
+              ),
               Divider(),
-              Text("WEIGHT",
-                  style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text("WEIGHT IN KG",
+                      style: TextStyle(
+                        fontSize: 15,
+                      )),
+                  Text("55kg", style: TextStyle(color: Constants.grey)),
+                  GestureDetector(
+                    onTap: () {},
+                    child: Text(
+                      "+",
+                      style:
+                          TextStyle(color: Constants.bluecolor, fontSize: 18),
+                    ),
+                  )
+                ],
+              ),
               Divider(),
             ],
           )
