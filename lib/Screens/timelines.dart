@@ -557,7 +557,7 @@ class _TimelinesState extends State<Timelines> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text("SUGAR",
+                  Text("SUGAR  LEVEL",
                       style:
                           TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
                   Text("Low"),
@@ -570,7 +570,7 @@ class _TimelinesState extends State<Timelines> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text("WEIGHT",
+                  Text("WEIGHT IN KG",
                       style:
                           TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
                   Text("55kg"),
