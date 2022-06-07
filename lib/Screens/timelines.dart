@@ -397,7 +397,7 @@ class _TimelinesState extends State<Timelines> {
                     child: Text(" +  ADD PLAN",
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
-                            color: Constants.redcolor)),
+                            color: Constants.bluecolor)),
                   ),
                 ),
               ],
@@ -532,7 +532,7 @@ class _TimelinesState extends State<Timelines> {
                     child: Text(" +  ADD PLAN",
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
-                            color: Constants.redcolor)),
+                            color: Constants.bluecolor)),
                   ),
                 ),
               ],
@@ -627,7 +627,7 @@ class _TimelinesState extends State<Timelines> {
                     child: Text(" +  ADD PLAN",
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
-                            color: Constants.redcolor)),
+                            color: Constants.bluecolor)),
                   ),
                 ),
               ],
@@ -760,7 +760,7 @@ class _TimelinesState extends State<Timelines> {
                     child: Text(" +  ADD PLAN",
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
-                            color: Constants.redcolor)),
+                            color: Constants.bluecolor)),
                   ),
                 ),
               ],
@@ -855,7 +855,7 @@ class _TimelinesState extends State<Timelines> {
                     child: Text(" +  ADD PLAN",
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
-                            color: Constants.redcolor)),
+                            color: Constants.bluecolor)),
                   ),
                 ),
               ],
@@ -948,7 +948,7 @@ class _TimelinesState extends State<Timelines> {
                     child: Text(" +  ADD PLAN",
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
-                            color: Constants.redcolor)),
+                            color: Constants.bluecolor)),
                   ),
                 ),
               ],
