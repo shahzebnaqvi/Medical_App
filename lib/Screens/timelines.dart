@@ -180,7 +180,7 @@ class _TimelinesState extends State<Timelines> {
                     width: 80,
                     height: 80,
                     child: new CircularProgressIndicator(
-                      strokeWidth: 15,
+                      strokeWidth: 05,
                       value: 0.7,
                       color: Constants.bluecolor,
                       backgroundColor: Colors.grey[100],
