@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:medical_app/Screens/auth/signup.dart';
 import 'package:medical_app/Screens/bottombar.dart';
 import '../Constants/constants.dart';
 
@@ -290,28 +291,53 @@ class _TimelinesState extends State<Timelines> {
                         fontWeight: FontWeight.bold,
                         color: Constants.mainColorWhite,
                       )),
-                  InkWell(
-                    onTap: () {},
-                    child: Container(
-                      padding: EdgeInsets.all(
-                          MediaQuery.of(context).size.width * 0.02),
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(18),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey.withOpacity(0.2),
-                            spreadRadius: 0.5,
-                            blurRadius: 10,
-                            offset: Offset(0, 3), // changes position of shadow
-                          ),
-                        ],
-                      ),
-                      child: Text(" + ADD",
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Constants.bluecolor)),
+                  Container(
+                    padding: EdgeInsets.all(
+                        MediaQuery.of(context).size.width * 0.01),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(18),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.2),
+                          spreadRadius: 0.5,
+                          blurRadius: 10,
+                          offset: Offset(0, 3), // changes position of shadow
+                        ),
+                      ],
                     ),
+                    child: DropdownButton<String>(
+                      underline: Container(),
+                      hint: _dropDownValue == ""
+                          ? Text('+ ADD',
+                              style: TextStyle(
+                                  color: Constants.bluecolor,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 15))
+                          : Text(
+                              _dropDownValue,
+                              style: TextStyle(
+                                color: Constants.bluecolor,
+                              ),
+                            ),
+                      items: <String>[
+                        'Create Tasks',
+                      ].map((String value) {
+                        return DropdownMenuItem<String>(
+                          value: value,
+                          child: Text(value),
+                        );
+                      }).toList(),
+                      onChanged: (value) {
+                        setState(() {
+                          _dropDownValue = value!;
+                        });
+                      },
+                    ),
+                    // Text(" + ADD",
+                    //     style: TextStyle(
+                    //         fontWeight: FontWeight.bold,
+                    //         color: Constants.bluecolor)),
                   ),
                 ],
               ),
@@ -590,12 +616,6 @@ class _TimelinesState extends State<Timelines> {
                     "Normal",
                     style: TextStyle(color: Constants.grey),
                   ),
-                  GestureDetector(
-                    onTap: () {},
-                    child: Text("+",
-                        style: TextStyle(
-                            color: Constants.bluecolor, fontSize: 18)),
-                  )
                 ],
               ),
               Divider(),
@@ -606,13 +626,7 @@ class _TimelinesState extends State<Timelines> {
                       style: TextStyle(
                         fontSize: 15,
                       )),
-                  Text("Low", style: TextStyle(color: Constants.grey)),
-                  GestureDetector(
-                    onTap: () {},
-                    child: Text("+",
-                        style: TextStyle(
-                            color: Constants.bluecolor, fontSize: 18)),
-                  ),
+                  Text("High", style: TextStyle(color: Constants.grey)),
                 ],
               ),
               Divider(),
@@ -624,14 +638,6 @@ class _TimelinesState extends State<Timelines> {
                         fontSize: 15,
                       )),
                   Text("55kg", style: TextStyle(color: Constants.grey)),
-                  GestureDetector(
-                    onTap: () {},
-                    child: Text(
-                      "+",
-                      style:
-                          TextStyle(color: Constants.bluecolor, fontSize: 18),
-                    ),
-                  )
                 ],
               ),
               Divider(),
@@ -723,10 +729,6 @@ class _TimelinesState extends State<Timelines> {
             children: [
               Row(
                 children: [
-                  // Text("PRESCRIPTION MEDICINE",
-                  //     style:
-                  //         TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
-
                   DropdownButton<String>(
                     underline: Container(),
                     hint: _dropDownValue == ""
