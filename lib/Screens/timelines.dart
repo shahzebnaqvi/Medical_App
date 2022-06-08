@@ -516,57 +516,61 @@ class _TimelinesState extends State<Timelines> {
             ),
           ),
           Divider(),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              Row(
-                children: [
-                  Text("LUNCH",
-                      style:
-                          TextStyle(fontSize: 15, fontWeight: FontWeight.w500)),
-                  SizedBox(width: MediaQuery.of(context).size.width * 0.13),
-                  Checkbox(
-                      value: value,
-                      onChanged: (bool) {
-                        setState(() {
-                          this.value = !value;
-                        });
-                      }),
-                ],
-              ),
-              Divider(),
-              Row(
-                children: [
-                  Text("BREAKFAST",
-                      style:
-                          TextStyle(fontSize: 15, fontWeight: FontWeight.w500)),
-                  SizedBox(width: MediaQuery.of(context).size.width * 0.04),
-                  Checkbox(
-                      value: value1,
-                      onChanged: (bool) {
-                        setState(() {
-                          this.value1 = !value1;
-                        });
-                      })
-                ],
-              ),
-              Divider(),
-              Row(
-                children: [
-                  Text("DINNER",
-                      style:
-                          TextStyle(fontSize: 15, fontWeight: FontWeight.w500)),
-                  SizedBox(width: MediaQuery.of(context).size.width * 0.12),
-                  Checkbox(
-                      value: value2,
-                      onChanged: (bool) {
-                        setState(() {
-                          this.value2 = !value2;
-                        });
-                      })
-                ],
-              ),
-            ],
+          Container(
+            margin: EdgeInsets.only(
+                left: MediaQuery.of(context).size.height * 0.01),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Row(
+                  children: [
+                    Text("LUNCH",
+                        style: TextStyle(
+                            fontSize: 15, fontWeight: FontWeight.w500)),
+                    SizedBox(width: MediaQuery.of(context).size.width * 0.13),
+                    Checkbox(
+                        value: value,
+                        onChanged: (bool) {
+                          setState(() {
+                            this.value = !value;
+                          });
+                        }),
+                  ],
+                ),
+                Divider(),
+                Row(
+                  children: [
+                    Text("BREAKFAST",
+                        style: TextStyle(
+                            fontSize: 15, fontWeight: FontWeight.w500)),
+                    SizedBox(width: MediaQuery.of(context).size.width * 0.05),
+                    Checkbox(
+                        value: value1,
+                        onChanged: (bool) {
+                          setState(() {
+                            this.value1 = !value1;
+                          });
+                        })
+                  ],
+                ),
+                Divider(),
+                Row(
+                  children: [
+                    Text("DINNER",
+                        style: TextStyle(
+                            fontSize: 15, fontWeight: FontWeight.w500)),
+                    SizedBox(width: MediaQuery.of(context).size.width * 0.11),
+                    Checkbox(
+                        value: value2,
+                        onChanged: (bool) {
+                          setState(() {
+                            this.value2 = !value2;
+                          });
+                        })
+                  ],
+                ),
+              ],
+            ),
           )
         ],
       ),
@@ -689,67 +693,72 @@ class _TimelinesState extends State<Timelines> {
           SizedBox(
             height: MediaQuery.of(context).size.height * 0.02,
           ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text("BLOOD PRESSURE",
+          Container(
+            margin: EdgeInsets.only(
+                left: MediaQuery.of(context).size.height * 0.01),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text("BLOOD PRESSURE",
+                        style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 15,
+                        )),
+                    Text(
+                      "Normal",
                       style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                        fontSize: 15,
-                      )),
-                  Text(
-                    "Normal",
-                    style: TextStyle(
-                        color: Constants.grey, fontWeight: FontWeight.w500),
-                  ),
-                ],
-              ),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.02,
-              ),
-              Divider(),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.02,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text("SUGAR  LEVEL",
-                      style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                        fontSize: 15,
-                      )),
-                  Text("High", style: TextStyle(color: Constants.grey)),
-                ],
-              ),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.02,
-              ),
-              Divider(),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.02,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text("WEIGHT IN KG",
-                      style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                        fontSize: 15,
-                      )),
-                  Text("55kg",
-                      style: TextStyle(
-                          fontWeight: FontWeight.w500, color: Constants.grey)),
-                ],
-              ),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.02,
-              ),
-              Divider(),
-            ],
+                          color: Constants.grey, fontWeight: FontWeight.w500),
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.02,
+                ),
+                Divider(),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.02,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text("SUGAR  LEVEL",
+                        style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 15,
+                        )),
+                    Text("High", style: TextStyle(color: Constants.grey)),
+                  ],
+                ),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.02,
+                ),
+                Divider(),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.02,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text("WEIGHT IN KG",
+                        style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 15,
+                        )),
+                    Text("55kg",
+                        style: TextStyle(
+                            fontWeight: FontWeight.w500,
+                            color: Constants.grey)),
+                  ],
+                ),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.02,
+                ),
+                Divider(),
+              ],
+            ),
           )
         ],
       ),
@@ -865,78 +874,84 @@ class _TimelinesState extends State<Timelines> {
             ),
           ),
           Divider(),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              Row(
-                children: [
-                  DropdownButton<String>(
-                    underline: Container(),
-                    hint: _dropDownValue == ""
-                        ? Text('PRESCRIPTION MEDICINE',
-                            style: TextStyle(
-                              color: Constants.blackcolor,
-                              fontWeight: FontWeight.w500,
-                            ))
-                        : Text(
-                            _dropDownValue,
-                            style: TextStyle(
+          Container(
+            margin: EdgeInsets.only(
+                left: MediaQuery.of(context).size.height * 0.01),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Row(
+                  children: [
+                    DropdownButton<String>(
+                      underline: Container(),
+                      hint: _dropDownValue == ""
+                          ? Text('PRESCRIPTION MEDICINE',
+                              style: TextStyle(
                                 color: Constants.blackcolor,
-                                fontWeight: FontWeight.w500),
+                                fontWeight: FontWeight.w500,
+                              ))
+                          : Text(
+                              _dropDownValue,
+                              style: TextStyle(
+                                  color: Constants.blackcolor,
+                                  fontWeight: FontWeight.w500),
+                            ),
+                      items: <String>[
+                        'PRESCRIPTION MEDICINE',
+                        'MIGRAINE',
+                        'HUMAIRA'
+                      ].map((String value) {
+                        return DropdownMenuItem<String>(
+                          value: value,
+                          child: Text(
+                            value,
+                            style: TextStyle(fontWeight: FontWeight.w500),
                           ),
-                    items: <String>[
-                      'PRESCRIPTION MEDICINE',
-                      'MIGRAINE',
-                      'HUMAIRA'
-                    ].map((String value) {
-                      return DropdownMenuItem<String>(
-                        value: value,
-                        child: Text(
-                          value,
-                          style: TextStyle(fontWeight: FontWeight.w500),
-                        ),
-                      );
-                    }).toList(),
-                    onChanged: (value) {
-                      setState(() {
-                        _dropDownValue = value!;
-                      });
-                    },
-                  ),
-                ],
-              ),
-              Divider(),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.02,
-              ),
-              Text("NUTRITION SUPPLEMENT",
-                  style: TextStyle(
-                    fontSize: 15,
-                    fontWeight: FontWeight.w500,
-                  )),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.02,
-              ),
-              Divider(),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.02,
-              ),
-              Text("MY MEDICAL RECORDS",
-                  style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500)),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.02,
-              ),
-              Divider(),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.02,
-              ),
-              Text("MY APPONIMENT",
-                  style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500)),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.02,
-              ),
-              Divider(),
-            ],
+                        );
+                      }).toList(),
+                      onChanged: (value) {
+                        setState(() {
+                          _dropDownValue = value!;
+                        });
+                      },
+                    ),
+                  ],
+                ),
+                Divider(),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.02,
+                ),
+                Text("NUTRITION SUPPLEMENT",
+                    style: TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.w500,
+                    )),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.02,
+                ),
+                Divider(),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.02,
+                ),
+                Text("MY MEDICAL RECORDS",
+                    style:
+                        TextStyle(fontSize: 15, fontWeight: FontWeight.w500)),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.02,
+                ),
+                Divider(),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.02,
+                ),
+                Text("MY APPONIMENT",
+                    style:
+                        TextStyle(fontSize: 15, fontWeight: FontWeight.w500)),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.02,
+                ),
+                Divider(),
+              ],
+            ),
           )
         ],
       ),
@@ -1058,34 +1073,41 @@ class _TimelinesState extends State<Timelines> {
           SizedBox(
             height: MediaQuery.of(context).size.height * 0.02,
           ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              Text("DIET CHALLENGES",
-                  style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500)),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.02,
-              ),
-              Divider(),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.02,
-              ),
-              Text("FITNESS CHALLENGES",
-                  style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500)),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.02,
-              ),
-              Divider(),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.02,
-              ),
-              Text("CHALLENGES A FRIEND",
-                  style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500)),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.02,
-              ),
-              Divider(),
-            ],
+          Container(
+            margin: EdgeInsets.only(
+                left: MediaQuery.of(context).size.height * 0.01),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Text("DIET CHALLENGES",
+                    style:
+                        TextStyle(fontSize: 15, fontWeight: FontWeight.w500)),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.02,
+                ),
+                Divider(),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.02,
+                ),
+                Text("FITNESS CHALLENGES",
+                    style:
+                        TextStyle(fontSize: 15, fontWeight: FontWeight.w500)),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.02,
+                ),
+                Divider(),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.02,
+                ),
+                Text("CHALLENGES A FRIEND",
+                    style:
+                        TextStyle(fontSize: 15, fontWeight: FontWeight.w500)),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.02,
+                ),
+                Divider(),
+              ],
+            ),
           )
         ],
       ),
@@ -1208,43 +1230,41 @@ class _TimelinesState extends State<Timelines> {
           SizedBox(
             height: MediaQuery.of(context).size.height * 0.02,
           ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              Text("PHARMACY",
-                  style: TextStyle(
-                      fontFamily: 'Lato',
-                      fontSize: 15,
-                      fontWeight: FontWeight.w500)),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.02,
-              ),
-              Divider(),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.02,
-              ),
-              Text("HOME ESSENTIALS",
-                  style: TextStyle(
-                      fontFamily: 'Lato',
-                      fontSize: 15,
-                      fontWeight: FontWeight.w500)),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.02,
-              ),
-              Divider(),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.02,
-              ),
-              Text("GYM SUPPLEMENTS",
-                  style: TextStyle(
-                      fontFamily: 'Lato',
-                      fontSize: 15,
-                      fontWeight: FontWeight.w500)),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.02,
-              ),
-              Divider(),
-            ],
+          Container(
+            margin: EdgeInsets.only(
+                left: MediaQuery.of(context).size.height * 0.01),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Text("PHARMACY",
+                    style:
+                        TextStyle(fontSize: 15, fontWeight: FontWeight.w500)),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.02,
+                ),
+                Divider(),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.02,
+                ),
+                Text("HOME ESSENTIALS",
+                    style:
+                        TextStyle(fontSize: 15, fontWeight: FontWeight.w500)),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.02,
+                ),
+                Divider(),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.02,
+                ),
+                Text("GYM SUPPLEMENTS",
+                    style:
+                        TextStyle(fontSize: 15, fontWeight: FontWeight.w500)),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.02,
+                ),
+                Divider(),
+              ],
+            ),
           )
         ],
       ),
@@ -1361,50 +1381,56 @@ class _TimelinesState extends State<Timelines> {
             ),
           ),
           Divider(),
-          Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
-            Row(
-              children: [
-                CircleAvatar(
-                    backgroundColor: Constants.mainColorWhite,
-                    child: Image.asset('assets/glass.png')),
-                CircleAvatar(
-                    radius: 22,
-                    backgroundColor: Constants.mainColorWhite,
-                    child: Image.asset('assets/glasswhite.jpg')),
-                CircleAvatar(
-                    radius: 22,
-                    backgroundColor: Constants.mainColorWhite,
-                    child: Image.asset('assets/glasswhite.jpg')),
-                CircleAvatar(
-                    radius: 22,
-                    backgroundColor: Constants.mainColorWhite,
-                    child: Image.asset('assets/glasswhite.jpg')),
-                CircleAvatar(
-                    radius: 22,
-                    backgroundColor: Constants.mainColorWhite,
-                    child: Image.asset('assets/glasswhite.jpg')),
-              ],
-            ),
-            Divider(),
-            Row(children: [
-              Text("842 Cal",
-                  style: TextStyle(
-                      fontFamily: 'lato',
-                      fontSize: 20,
-                      fontWeight: FontWeight.w500)),
-              SizedBox(width: MediaQuery.of(context).size.width * 0.05),
-              Icon(
-                Icons.info,
-                color: Constants.grey,
-              ),
-              SizedBox(width: MediaQuery.of(context).size.width * 0.02),
-              Text(
-                "Recommended 615 -820 cal",
-                style: TextStyle(
-                    color: Constants.grey, fontWeight: FontWeight.w500),
-              ),
-            ])
-          ]),
+          Container(
+            margin: EdgeInsets.only(
+                left: MediaQuery.of(context).size.height * 0.01),
+            child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  Row(
+                    children: [
+                      CircleAvatar(
+                          backgroundColor: Constants.mainColorWhite,
+                          child: Image.asset('assets/glass.png')),
+                      CircleAvatar(
+                          radius: 22,
+                          backgroundColor: Constants.mainColorWhite,
+                          child: Image.asset('assets/glasswhite.jpg')),
+                      CircleAvatar(
+                          radius: 22,
+                          backgroundColor: Constants.mainColorWhite,
+                          child: Image.asset('assets/glasswhite.jpg')),
+                      CircleAvatar(
+                          radius: 22,
+                          backgroundColor: Constants.mainColorWhite,
+                          child: Image.asset('assets/glasswhite.jpg')),
+                      CircleAvatar(
+                          radius: 22,
+                          backgroundColor: Constants.mainColorWhite,
+                          child: Image.asset('assets/glasswhite.jpg')),
+                    ],
+                  ),
+                  Divider(),
+                  Row(children: [
+                    Text("842 Cal",
+                        style: TextStyle(
+                            fontFamily: 'lato',
+                            fontSize: 20,
+                            fontWeight: FontWeight.w500)),
+                    SizedBox(width: MediaQuery.of(context).size.width * 0.05),
+                    Icon(
+                      Icons.info,
+                      color: Constants.grey,
+                    ),
+                    SizedBox(width: MediaQuery.of(context).size.width * 0.02),
+                    Text(
+                      "Recommended 615 -820 cal",
+                      style: TextStyle(
+                          color: Constants.grey, fontWeight: FontWeight.w500),
+                    ),
+                  ])
+                ]),
+          ),
 
           // Bottombar(),
 //                                                                                                                                                                                                                                                                                  Bottombar(key: ,)
