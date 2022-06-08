@@ -1406,7 +1406,7 @@ class _TimelinesState extends State<Timelines> {
                   style: TextStyle(
                       fontFamily: 'lato',
                       fontSize: 20,
-                      fontWeight: FontWeight.bold)),
+                      fontWeight: FontWeight.w500)),
               SizedBox(width: MediaQuery.of(context).size.width * 0.05),
               Icon(
                 Icons.info,
