@@ -519,7 +519,7 @@ class _TimelinesState extends State<Timelines> {
                           fontSize: 15,
                           fontFamily: 'lato',
                           fontWeight: FontWeight.bold)),
-                  SizedBox(width: MediaQuery.of(context).size.width * 0.11),
+                  SizedBox(width: MediaQuery.of(context).size.width * 0.13),
                   Checkbox(
                       value: value,
                       onChanged: (bool) {
@@ -537,7 +537,7 @@ class _TimelinesState extends State<Timelines> {
                           fontSize: 15,
                           fontWeight: FontWeight.bold,
                           fontFamily: 'lato')),
-                  SizedBox(width: 05),
+                  SizedBox(width: MediaQuery.of(context).size.width * 0.02),
                   Checkbox(
                       value: value1,
                       onChanged: (bool) {
@@ -555,7 +555,7 @@ class _TimelinesState extends State<Timelines> {
                           fontSize: 15,
                           fontFamily: 'lato',
                           fontWeight: FontWeight.bold)),
-                  SizedBox(width: MediaQuery.of(context).size.width * 0.10),
+                  SizedBox(width: MediaQuery.of(context).size.width * 0.11),
                   Checkbox(
                       value: value2,
                       onChanged: (bool) {
