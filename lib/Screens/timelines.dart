@@ -517,7 +517,7 @@ class _TimelinesState extends State<Timelines> {
                   Text("LUNCH",
                       style: TextStyle(
                           fontSize: 15,
-                          fontFamily: 'lato',
+                          fontFamily: 'Lato',
                           fontWeight: FontWeight.bold)),
                   SizedBox(width: MediaQuery.of(context).size.width * 0.13),
                   Checkbox(
@@ -536,7 +536,7 @@ class _TimelinesState extends State<Timelines> {
                       style: TextStyle(
                           fontSize: 15,
                           fontWeight: FontWeight.bold,
-                          fontFamily: 'lato')),
+                          fontFamily: 'Lato')),
                   SizedBox(width: MediaQuery.of(context).size.width * 0.02),
                   Checkbox(
                       value: value1,
@@ -553,7 +553,7 @@ class _TimelinesState extends State<Timelines> {
                   Text("DINNER",
                       style: TextStyle(
                           fontSize: 15,
-                          fontFamily: 'lato',
+                          fontFamily: 'Lato',
                           fontWeight: FontWeight.bold)),
                   SizedBox(width: MediaQuery.of(context).size.width * 0.11),
                   Checkbox(
@@ -668,7 +668,9 @@ class _TimelinesState extends State<Timelines> {
                                     MaterialPageRoute(
                                         builder: (context) => Signup()));
                               },
-                              child: Text(value)),
+                              child: Text(
+                                value,
+                              )),
                         );
                       }).toList(),
                       onChanged: (value) {
@@ -693,10 +695,10 @@ class _TimelinesState extends State<Timelines> {
                       style: TextStyle(
                           fontWeight: FontWeight.w500,
                           fontSize: 15,
-                          fontFamily: 'lato')),
+                          fontFamily: 'Lato')),
                   Text(
                     "Normal",
-                    style: TextStyle(color: Constants.grey, fontFamily: 'lato'),
+                    style: TextStyle(color: Constants.grey, fontFamily: 'Lato'),
                   ),
                 ],
               ),
@@ -705,7 +707,7 @@ class _TimelinesState extends State<Timelines> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text("SUGAR  LEVEL",
-                      style: TextStyle(fontSize: 15, fontFamily: 'lato')),
+                      style: TextStyle(fontSize: 15, fontFamily: 'Lato')),
                   Text("High", style: TextStyle(color: Constants.grey)),
                 ],
               ),
@@ -714,10 +716,10 @@ class _TimelinesState extends State<Timelines> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text("WEIGHT IN KG",
-                      style: TextStyle(fontSize: 15, fontFamily: 'lato')),
+                      style: TextStyle(fontSize: 15, fontFamily: 'Lato')),
                   Text("55kg",
                       style:
-                          TextStyle(fontFamily: 'lato', color: Constants.grey)),
+                          TextStyle(fontFamily: 'Lato', color: Constants.grey)),
                 ],
               ),
               Divider(),
@@ -831,11 +833,6 @@ class _TimelinesState extends State<Timelines> {
                         });
                       },
                     ),
-                    //   child: Text(" + ADD",
-                    //       style: TextStyle(
-                    //           fontWeight: FontWeight.bold,
-                    //           color: Constants.bluecolor)),
-                    // ),
                   ),
                 )
               ],
@@ -854,7 +851,7 @@ class _TimelinesState extends State<Timelines> {
                             style: TextStyle(
                                 color: Constants.blackcolor,
                                 fontWeight: FontWeight.bold,
-                                fontFamily: 'lato'))
+                                fontFamily: 'Lato'))
                         : Text(
                             _dropDownValue,
                             style: TextStyle(
@@ -870,7 +867,7 @@ class _TimelinesState extends State<Timelines> {
                         value: value,
                         child: Text(
                           value,
-                          style: TextStyle(fontFamily: 'lato'),
+                          style: TextStyle(fontFamily: 'Lato'),
                         ),
                       );
                     }).toList(),
@@ -885,20 +882,20 @@ class _TimelinesState extends State<Timelines> {
               Divider(),
               Text("NUTRITION SUPPLEMENT",
                   style: TextStyle(
-                    fontFamily: 'lato',
+                    fontFamily: 'Lato',
                     fontSize: 15,
                     fontWeight: FontWeight.bold,
                   )),
               Divider(),
               Text("MY MEDICAL RECORDS",
                   style: TextStyle(
-                      fontFamily: 'lato',
+                      fontFamily: 'Lato',
                       fontSize: 15,
                       fontWeight: FontWeight.bold)),
               Divider(),
               Text("MY APPONIMENT",
                   style: TextStyle(
-                      fontFamily: 'lato',
+                      fontFamily: 'Lato',
                       fontSize: 15,
                       fontWeight: FontWeight.bold)),
               Divider(),
@@ -956,7 +953,7 @@ class _TimelinesState extends State<Timelines> {
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
-                      fontFamily: 'lato',
+                      fontFamily: 'Lato',
                       color: Constants.mainColorWhite,
                     )),
                 InkWell(
@@ -1006,7 +1003,7 @@ class _TimelinesState extends State<Timelines> {
                               },
                               child: Text(
                                 value,
-                                style: TextStyle(fontFamily: 'lato'),
+                                style: TextStyle(fontFamily: 'Lato'),
                               )),
                         );
                       }).toList(),
@@ -1027,19 +1024,19 @@ class _TimelinesState extends State<Timelines> {
             children: [
               Text("DIET CHALLENGES",
                   style: TextStyle(
-                      fontFamily: 'lato',
+                      fontFamily: 'Lato',
                       fontSize: 15,
                       fontWeight: FontWeight.bold)),
               Divider(),
               Text("FITNESS CHALLENGES",
                   style: TextStyle(
-                      fontFamily: 'lato',
+                      fontFamily: 'Lato',
                       fontSize: 15,
                       fontWeight: FontWeight.bold)),
               Divider(),
               Text("CHALLENGES A FRIEND",
                   style: TextStyle(
-                      fontFamily: 'lato',
+                      fontFamily: 'Lato',
                       fontSize: 15,
                       fontWeight: FontWeight.bold)),
               Divider(),
@@ -1096,7 +1093,7 @@ class _TimelinesState extends State<Timelines> {
                 Text("SHOP NOW",
                     style: TextStyle(
                       fontSize: 18,
-                      fontFamily: 'lato',
+                      fontFamily: 'Lato',
                       fontWeight: FontWeight.bold,
                       color: Constants.mainColorWhite,
                     )),
@@ -1147,7 +1144,7 @@ class _TimelinesState extends State<Timelines> {
                               },
                               child: Text(
                                 value,
-                                style: TextStyle(fontFamily: 'lato'),
+                                style: TextStyle(fontFamily: 'Lato'),
                               )),
                         );
                       }).toList(),
@@ -1168,19 +1165,19 @@ class _TimelinesState extends State<Timelines> {
             children: [
               Text("PHARMACY",
                   style: TextStyle(
-                      fontFamily: 'lato',
+                      fontFamily: 'Lato',
                       fontSize: 15,
                       fontWeight: FontWeight.bold)),
               Divider(),
               Text("HOME ESSENTIALS",
                   style: TextStyle(
-                      fontFamily: 'lato',
+                      fontFamily: 'Lato',
                       fontSize: 15,
                       fontWeight: FontWeight.bold)),
               Divider(),
               Text("GYM SUPPLEMENTS",
                   style: TextStyle(
-                      fontFamily: 'lato',
+                      fontFamily: 'Lato',
                       fontSize: 15,
                       fontWeight: FontWeight.bold)),
               Divider(),
@@ -1285,7 +1282,7 @@ class _TimelinesState extends State<Timelines> {
                               },
                               child: Text(
                                 value,
-                                style: TextStyle(fontFamily: 'lato'),
+                                style: TextStyle(fontFamily: 'Lato'),
                               )),
                         );
                       }).toList(),
@@ -1341,7 +1338,7 @@ class _TimelinesState extends State<Timelines> {
               Text(
                 "Recommended 615 -820 cal",
                 style: TextStyle(
-                  fontFamily: 'lato',
+                  fontFamily: 'Lato',
                   color: Constants.grey,
                 ),
               ),
