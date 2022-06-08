@@ -292,8 +292,8 @@ class _TimelinesState extends State<Timelines> {
                         color: Constants.mainColorWhite,
                       )),
                   Container(
-                    padding: EdgeInsets.all(
-                        MediaQuery.of(context).size.width * 0.01),
+                    // padding: EdgeInsets.all(
+                    //     MediaQuery.of(context).size.width * 0.01),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(18),
@@ -448,8 +448,8 @@ class _TimelinesState extends State<Timelines> {
                 InkWell(
                   onTap: () {},
                   child: Container(
-                    padding: EdgeInsets.all(
-                        MediaQuery.of(context).size.width * 0.02),
+                    // padding: EdgeInsets.all(
+                    //     MediaQuery.of(context).size.width * 0.02),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(18),
@@ -462,10 +462,47 @@ class _TimelinesState extends State<Timelines> {
                         ),
                       ],
                     ),
-                    child: Text(" + ADD",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Constants.bluecolor)),
+                    child: DropdownButton<String>(
+                      underline: Container(),
+                      hint: _dropDownValue == ""
+                          ? Text('+ ADD',
+                              style: TextStyle(
+                                  color: Constants.bluecolor,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 15))
+                          : Text(
+                              _dropDownValue,
+                              style: TextStyle(
+                                color: Constants.bluecolor,
+                              ),
+                            ),
+                      items: <String>[
+                        'Create Tasks',
+                        'Edit Task',
+                        ' Manage Tasks',
+                      ].map((String value) {
+                        return DropdownMenuItem<String>(
+                          value: value,
+                          child: GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Signup()));
+                              },
+                              child: Text(value)),
+                        );
+                      }).toList(),
+                      onChanged: (value) {
+                        setState(() {
+                          _dropDownValue = value!;
+                        });
+                      },
+                    ),
+                    // Text(" + ADD",
+                    //     style: TextStyle(
+                    //         fontWeight: FontWeight.bold,
+                    //         color: Constants.bluecolor)),
                   ),
                 ),
               ],
@@ -583,8 +620,8 @@ class _TimelinesState extends State<Timelines> {
                 InkWell(
                   onTap: () {},
                   child: Container(
-                    padding: EdgeInsets.all(
-                        MediaQuery.of(context).size.width * 0.02),
+                    // padding: EdgeInsets.all(
+                    //     MediaQuery.of(context).size.width * 0.02),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(18),
@@ -597,10 +634,47 @@ class _TimelinesState extends State<Timelines> {
                         ),
                       ],
                     ),
-                    child: Text(" + ADD",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Constants.bluecolor)),
+                    child: DropdownButton<String>(
+                      underline: Container(),
+                      hint: _dropDownValue == ""
+                          ? Text('+ ADD',
+                              style: TextStyle(
+                                  color: Constants.bluecolor,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 15))
+                          : Text(
+                              _dropDownValue,
+                              style: TextStyle(
+                                color: Constants.bluecolor,
+                              ),
+                            ),
+                      items: <String>[
+                        'Create Tasks',
+                        'Edit Task',
+                        ' Manage Tasks',
+                      ].map((String value) {
+                        return DropdownMenuItem<String>(
+                          value: value,
+                          child: GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Signup()));
+                              },
+                              child: Text(value)),
+                        );
+                      }).toList(),
+                      onChanged: (value) {
+                        setState(() {
+                          _dropDownValue = value!;
+                        });
+                      },
+                    ),
+                    // child: Text(" + ADD",
+                    //     style: TextStyle(
+                    //         fontWeight: FontWeight.bold,
+                    //         color: Constants.bluecolor)),
                   ),
                 ),
               ],
@@ -705,8 +779,8 @@ class _TimelinesState extends State<Timelines> {
                 InkWell(
                   onTap: () {},
                   child: Container(
-                    padding: EdgeInsets.all(
-                        MediaQuery.of(context).size.width * 0.02),
+                    // padding: EdgeInsets.all(
+                    //     MediaQuery.of(context).size.width * 0.02),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(18),
@@ -719,12 +793,50 @@ class _TimelinesState extends State<Timelines> {
                         ),
                       ],
                     ),
-                    child: Text(" + ADD",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Constants.bluecolor)),
+                    child: DropdownButton<String>(
+                      underline: Container(),
+                      hint: _dropDownValue == ""
+                          ? Text('+ ADD',
+                              style: TextStyle(
+                                  color: Constants.bluecolor,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 15))
+                          : Text(
+                              _dropDownValue,
+                              style: TextStyle(
+                                color: Constants.bluecolor,
+                              ),
+                            ),
+                      items: <String>[
+                        'Create Tasks',
+                        'Edit Task',
+                        ' Manage Tasks',
+                      ].map((String value) {
+                        return DropdownMenuItem<String>(
+                          value: value,
+                          child: GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Signup()));
+                              },
+                              child: Text(value)),
+                        );
+                      }).toList(),
+                      onChanged: (value) {
+                        setState(() {
+                          _dropDownValue = value!;
+                        });
+                      },
+                    ),
+                    //   child: Text(" + ADD",
+                    //       style: TextStyle(
+                    //           fontWeight: FontWeight.bold,
+                    //           color: Constants.bluecolor)),
+                    // ),
                   ),
-                ),
+                )
               ],
             ),
           ),
@@ -834,8 +946,8 @@ class _TimelinesState extends State<Timelines> {
                 InkWell(
                   onTap: () {},
                   child: Container(
-                    padding: EdgeInsets.all(
-                        MediaQuery.of(context).size.width * 0.02),
+                    // padding: EdgeInsets.all(
+                    //     MediaQuery.of(context).size.width * 0.02),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(18),
@@ -848,12 +960,50 @@ class _TimelinesState extends State<Timelines> {
                         ),
                       ],
                     ),
-                    child: Text(" + ADD",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Constants.bluecolor)),
+                    child: DropdownButton<String>(
+                      underline: Container(),
+                      hint: _dropDownValue == ""
+                          ? Text('+ ADD',
+                              style: TextStyle(
+                                  color: Constants.bluecolor,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 15))
+                          : Text(
+                              _dropDownValue,
+                              style: TextStyle(
+                                color: Constants.bluecolor,
+                              ),
+                            ),
+                      items: <String>[
+                        'Create Tasks',
+                        'Edit Task',
+                        ' Manage Tasks',
+                      ].map((String value) {
+                        return DropdownMenuItem<String>(
+                          value: value,
+                          child: GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Signup()));
+                              },
+                              child: Text(value)),
+                        );
+                      }).toList(),
+                      onChanged: (value) {
+                        setState(() {
+                          _dropDownValue = value!;
+                        });
+                      },
+                    ),
+                    //   child: Text(" + ADD",
+                    //       style: TextStyle(
+                    //           fontWeight: FontWeight.bold,
+                    //           color: Constants.bluecolor)),
+                    // ),
                   ),
-                ),
+                )
               ],
             ),
           ),
@@ -929,8 +1079,8 @@ class _TimelinesState extends State<Timelines> {
                 InkWell(
                   onTap: () {},
                   child: Container(
-                    padding: EdgeInsets.all(
-                        MediaQuery.of(context).size.width * 0.02),
+                    // padding: EdgeInsets.all(
+                    //     MediaQuery.of(context).size.width * 0.02),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(18),
@@ -943,10 +1093,47 @@ class _TimelinesState extends State<Timelines> {
                         ),
                       ],
                     ),
-                    child: Text(" + ADD",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Constants.bluecolor)),
+                    child: DropdownButton<String>(
+                      underline: Container(),
+                      hint: _dropDownValue == ""
+                          ? Text('+ ADD',
+                              style: TextStyle(
+                                  color: Constants.bluecolor,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 15))
+                          : Text(
+                              _dropDownValue,
+                              style: TextStyle(
+                                color: Constants.bluecolor,
+                              ),
+                            ),
+                      items: <String>[
+                        'Create Tasks',
+                        'Edit Task',
+                        ' Manage Tasks',
+                      ].map((String value) {
+                        return DropdownMenuItem<String>(
+                          value: value,
+                          child: GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Signup()));
+                              },
+                              child: Text(value)),
+                        );
+                      }).toList(),
+                      onChanged: (value) {
+                        setState(() {
+                          _dropDownValue = value!;
+                        });
+                      },
+                    ),
+                    // child: Text(" + ADD",
+                    //     style: TextStyle(
+                    //         fontWeight: FontWeight.bold,
+                    //         color: Constants.bluecolor)),
                   ),
                 ),
               ],
@@ -1022,8 +1209,8 @@ class _TimelinesState extends State<Timelines> {
                 InkWell(
                   onTap: () {},
                   child: Container(
-                    padding: EdgeInsets.all(
-                        MediaQuery.of(context).size.width * 0.02),
+                    // padding: EdgeInsets.all(
+                    //     MediaQuery.of(context).size.width * 0.02),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(18),
@@ -1036,10 +1223,47 @@ class _TimelinesState extends State<Timelines> {
                         ),
                       ],
                     ),
-                    child: Text(" + ADD",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Constants.bluecolor)),
+                    child: DropdownButton<String>(
+                      underline: Container(),
+                      hint: _dropDownValue == ""
+                          ? Text('+ ADD',
+                              style: TextStyle(
+                                  color: Constants.bluecolor,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 15))
+                          : Text(
+                              _dropDownValue,
+                              style: TextStyle(
+                                color: Constants.bluecolor,
+                              ),
+                            ),
+                      items: <String>[
+                        'Create Tasks',
+                        'Edit Task',
+                        ' Manage Tasks',
+                      ].map((String value) {
+                        return DropdownMenuItem<String>(
+                          value: value,
+                          child: GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Signup()));
+                              },
+                              child: Text(value)),
+                        );
+                      }).toList(),
+                      onChanged: (value) {
+                        setState(() {
+                          _dropDownValue = value!;
+                        });
+                      },
+                    ),
+                    // child: Text(" + ADD",
+                    //     style: TextStyle(
+                    //         fontWeight: FontWeight.bold,
+                    //         color: Constants.bluecolor)),
                   ),
                 ),
               ],
