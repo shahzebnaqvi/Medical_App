@@ -322,10 +322,19 @@ class _TimelinesState extends State<Timelines> {
                             ),
                       items: <String>[
                         'Create Tasks',
+                        'Edit Task',
+                        ' Manage Tasks',
                       ].map((String value) {
                         return DropdownMenuItem<String>(
                           value: value,
-                          child: Text(value),
+                          child: GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Signup()));
+                              },
+                              child: Text(value)),
                         );
                       }).toList(),
                       onChanged: (value) {
@@ -334,10 +343,6 @@ class _TimelinesState extends State<Timelines> {
                         });
                       },
                     ),
-                    // Text(" + ADD",
-                    //     style: TextStyle(
-                    //         fontWeight: FontWeight.bold,
-                    //         color: Constants.bluecolor)),
                   ),
                 ],
               ),
