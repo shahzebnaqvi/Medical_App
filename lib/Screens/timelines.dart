@@ -155,7 +155,10 @@ class _TimelinesState extends State<Timelines> {
               ),
               Text(
                 "MY TASKS",
-                style: TextStyle(color: Constants.grey, fontSize: 18),
+                style: TextStyle(
+                    color: Constants.grey,
+                    fontSize: 18,
+                    fontWeight: FontWeight.w500),
               ),
               Icon(
                 Icons.arrow_circle_right_outlined,
@@ -173,7 +176,7 @@ class _TimelinesState extends State<Timelines> {
               Text(
                 "TODAY",
                 style: TextStyle(
-                  fontWeight: FontWeight.bold,
+                  fontWeight: FontWeight.w500,
                 ),
               )
             ],
@@ -186,7 +189,7 @@ class _TimelinesState extends State<Timelines> {
             children: [
               Text(
                 "500",
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
               ),
 
               // CircularProgressIndicator(
@@ -216,7 +219,7 @@ class _TimelinesState extends State<Timelines> {
               ),
               Text(
                 "1000",
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
               ),
               // CircularProgressIndicator(
               //     backgroundColor: Colors.grey,
@@ -369,16 +372,17 @@ class _TimelinesState extends State<Timelines> {
               ],
             ),
             Text("Chest",
-                style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold)),
+                style: TextStyle(fontSize: 25, fontWeight: FontWeight.w500)),
             Divider(),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.02,
             ),
             Text(
               "Weekly Tasks",
+              style: TextStyle(fontWeight: FontWeight.w500),
             ),
             Text("Chest,Trap,Tricep,Abs",
-                style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold)),
+                style: TextStyle(fontSize: 25, fontWeight: FontWeight.w500)),
             Divider(),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.02,
@@ -389,7 +393,10 @@ class _TimelinesState extends State<Timelines> {
                 SizedBox(
                   width: MediaQuery.of(context).size.width * 0.01,
                 ),
-                Text("60 mins")
+                Text(
+                  "60 mins",
+                  style: TextStyle(fontWeight: FontWeight.w500),
+                )
               ],
             )
           ],
@@ -442,7 +449,7 @@ class _TimelinesState extends State<Timelines> {
                 Text("MY DIET",
                     style: TextStyle(
                       fontSize: 18,
-                      fontWeight: FontWeight.bold,
+                      fontWeight: FontWeight.w500,
                       color: Constants.mainColorWhite,
                     )),
                 InkWell(
@@ -468,7 +475,7 @@ class _TimelinesState extends State<Timelines> {
                           ? Text('+ ADD',
                               style: TextStyle(
                                   color: Constants.bluecolor,
-                                  fontWeight: FontWeight.bold,
+                                  fontWeight: FontWeight.w500,
                                   fontSize: 15))
                           : Text(
                               _dropDownValue,
@@ -515,10 +522,8 @@ class _TimelinesState extends State<Timelines> {
               Row(
                 children: [
                   Text("LUNCH",
-                      style: TextStyle(
-                          fontSize: 15,
-                          fontFamily: 'Lato',
-                          fontWeight: FontWeight.bold)),
+                      style:
+                          TextStyle(fontSize: 15, fontWeight: FontWeight.w500)),
                   SizedBox(width: MediaQuery.of(context).size.width * 0.13),
                   Checkbox(
                       value: value,
@@ -533,11 +538,9 @@ class _TimelinesState extends State<Timelines> {
               Row(
                 children: [
                   Text("BREAKFAST",
-                      style: TextStyle(
-                          fontSize: 15,
-                          fontWeight: FontWeight.bold,
-                          fontFamily: 'Lato')),
-                  SizedBox(width: MediaQuery.of(context).size.width * 0.02),
+                      style:
+                          TextStyle(fontSize: 15, fontWeight: FontWeight.w500)),
+                  SizedBox(width: MediaQuery.of(context).size.width * 0.04),
                   Checkbox(
                       value: value1,
                       onChanged: (bool) {
@@ -551,11 +554,9 @@ class _TimelinesState extends State<Timelines> {
               Row(
                 children: [
                   Text("DINNER",
-                      style: TextStyle(
-                          fontSize: 15,
-                          fontFamily: 'Lato',
-                          fontWeight: FontWeight.bold)),
-                  SizedBox(width: MediaQuery.of(context).size.width * 0.11),
+                      style:
+                          TextStyle(fontSize: 15, fontWeight: FontWeight.w500)),
+                  SizedBox(width: MediaQuery.of(context).size.width * 0.12),
                   Checkbox(
                       value: value2,
                       onChanged: (bool) {
@@ -620,7 +621,7 @@ class _TimelinesState extends State<Timelines> {
                 Text("HEALTH TRACKER",
                     style: TextStyle(
                       fontSize: 18,
-                      fontWeight: FontWeight.bold,
+                      fontWeight: FontWeight.w500,
                       color: Constants.mainColorWhite,
                     )),
                 InkWell(
@@ -696,12 +697,13 @@ class _TimelinesState extends State<Timelines> {
                 children: [
                   Text("BLOOD PRESSURE",
                       style: TextStyle(
-                          fontWeight: FontWeight.w500,
-                          fontSize: 15,
-                          fontFamily: 'Lato')),
+                        fontWeight: FontWeight.w500,
+                        fontSize: 15,
+                      )),
                   Text(
                     "Normal",
-                    style: TextStyle(color: Constants.grey, fontFamily: 'Lato'),
+                    style: TextStyle(
+                        color: Constants.grey, fontWeight: FontWeight.w500),
                   ),
                 ],
               ),
@@ -717,9 +719,9 @@ class _TimelinesState extends State<Timelines> {
                 children: [
                   Text("SUGAR  LEVEL",
                       style: TextStyle(
-                          fontWeight: FontWeight.w500,
-                          fontSize: 15,
-                          fontFamily: 'Lato')),
+                        fontWeight: FontWeight.w500,
+                        fontSize: 15,
+                      )),
                   Text("High", style: TextStyle(color: Constants.grey)),
                 ],
               ),
@@ -735,12 +737,12 @@ class _TimelinesState extends State<Timelines> {
                 children: [
                   Text("WEIGHT IN KG",
                       style: TextStyle(
-                          fontWeight: FontWeight.w500,
-                          fontSize: 15,
-                          fontFamily: 'Lato')),
+                        fontWeight: FontWeight.w500,
+                        fontSize: 15,
+                      )),
                   Text("55kg",
-                      style:
-                          TextStyle(fontFamily: 'Lato', color: Constants.grey)),
+                      style: TextStyle(
+                          fontWeight: FontWeight.w500, color: Constants.grey)),
                 ],
               ),
               SizedBox(
@@ -800,7 +802,7 @@ class _TimelinesState extends State<Timelines> {
                 Text("MY MEDICINE",
                     style: TextStyle(
                       fontSize: 18,
-                      fontWeight: FontWeight.bold,
+                      fontWeight: FontWeight.w500,
                       color: Constants.mainColorWhite,
                     )),
                 InkWell(
@@ -826,7 +828,7 @@ class _TimelinesState extends State<Timelines> {
                           ? Text('+ ADD',
                               style: TextStyle(
                                   color: Constants.bluecolor,
-                                  fontWeight: FontWeight.bold,
+                                  fontWeight: FontWeight.w500,
                                   fontSize: 15))
                           : Text(
                               _dropDownValue,
@@ -873,14 +875,14 @@ class _TimelinesState extends State<Timelines> {
                     hint: _dropDownValue == ""
                         ? Text('PRESCRIPTION MEDICINE',
                             style: TextStyle(
-                                color: Constants.blackcolor,
-                                fontWeight: FontWeight.bold,
-                                fontFamily: 'Lato'))
+                              color: Constants.blackcolor,
+                              fontWeight: FontWeight.w500,
+                            ))
                         : Text(
                             _dropDownValue,
                             style: TextStyle(
                                 color: Constants.blackcolor,
-                                fontWeight: FontWeight.bold),
+                                fontWeight: FontWeight.w500),
                           ),
                     items: <String>[
                       'PRESCRIPTION MEDICINE',
@@ -891,7 +893,7 @@ class _TimelinesState extends State<Timelines> {
                         value: value,
                         child: Text(
                           value,
-                          style: TextStyle(fontFamily: 'Lato'),
+                          style: TextStyle(fontWeight: FontWeight.w500),
                         ),
                       );
                     }).toList(),
@@ -909,9 +911,8 @@ class _TimelinesState extends State<Timelines> {
               ),
               Text("NUTRITION SUPPLEMENT",
                   style: TextStyle(
-                    fontFamily: 'Lato',
                     fontSize: 15,
-                    fontWeight: FontWeight.bold,
+                    fontWeight: FontWeight.w500,
                   )),
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.02,
@@ -921,10 +922,7 @@ class _TimelinesState extends State<Timelines> {
                 height: MediaQuery.of(context).size.height * 0.02,
               ),
               Text("MY MEDICAL RECORDS",
-                  style: TextStyle(
-                      fontFamily: 'Lato',
-                      fontSize: 15,
-                      fontWeight: FontWeight.bold)),
+                  style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500)),
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.02,
               ),
@@ -933,10 +931,7 @@ class _TimelinesState extends State<Timelines> {
                 height: MediaQuery.of(context).size.height * 0.02,
               ),
               Text("MY APPONIMENT",
-                  style: TextStyle(
-                      fontFamily: 'Lato',
-                      fontSize: 15,
-                      fontWeight: FontWeight.bold)),
+                  style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500)),
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.02,
               ),
@@ -994,8 +989,7 @@ class _TimelinesState extends State<Timelines> {
                 Text("CHALLENGES",
                     style: TextStyle(
                       fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                      fontFamily: 'Lato',
+                      fontWeight: FontWeight.w500,
                       color: Constants.mainColorWhite,
                     )),
                 InkWell(
@@ -1021,7 +1015,7 @@ class _TimelinesState extends State<Timelines> {
                           ? Text('+ ADD',
                               style: TextStyle(
                                   color: Constants.bluecolor,
-                                  fontWeight: FontWeight.bold,
+                                  fontWeight: FontWeight.w500,
                                   fontSize: 15))
                           : Text(
                               _dropDownValue,
@@ -1045,7 +1039,7 @@ class _TimelinesState extends State<Timelines> {
                               },
                               child: Text(
                                 value,
-                                style: TextStyle(fontFamily: 'Lato'),
+                                style: TextStyle(fontWeight: FontWeight.w500),
                               )),
                         );
                       }).toList(),
@@ -1068,10 +1062,7 @@ class _TimelinesState extends State<Timelines> {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Text("DIET CHALLENGES",
-                  style: TextStyle(
-                      fontFamily: 'Lato',
-                      fontSize: 15,
-                      fontWeight: FontWeight.bold)),
+                  style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500)),
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.02,
               ),
@@ -1080,10 +1071,7 @@ class _TimelinesState extends State<Timelines> {
                 height: MediaQuery.of(context).size.height * 0.02,
               ),
               Text("FITNESS CHALLENGES",
-                  style: TextStyle(
-                      fontFamily: 'Lato',
-                      fontSize: 15,
-                      fontWeight: FontWeight.bold)),
+                  style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500)),
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.02,
               ),
@@ -1092,10 +1080,7 @@ class _TimelinesState extends State<Timelines> {
                 height: MediaQuery.of(context).size.height * 0.02,
               ),
               Text("CHALLENGES A FRIEND",
-                  style: TextStyle(
-                      fontFamily: 'Lato',
-                      fontSize: 15,
-                      fontWeight: FontWeight.bold)),
+                  style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500)),
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.02,
               ),
@@ -1154,7 +1139,7 @@ class _TimelinesState extends State<Timelines> {
                     style: TextStyle(
                       fontSize: 18,
                       fontFamily: 'Lato',
-                      fontWeight: FontWeight.bold,
+                      fontWeight: FontWeight.w500,
                       color: Constants.mainColorWhite,
                     )),
                 InkWell(
@@ -1180,7 +1165,7 @@ class _TimelinesState extends State<Timelines> {
                           ? Text('+ ADD',
                               style: TextStyle(
                                   color: Constants.bluecolor,
-                                  fontWeight: FontWeight.bold,
+                                  fontWeight: FontWeight.w500,
                                   fontSize: 15))
                           : Text(
                               _dropDownValue,
@@ -1204,7 +1189,7 @@ class _TimelinesState extends State<Timelines> {
                               },
                               child: Text(
                                 value,
-                                style: TextStyle(fontFamily: 'Lato'),
+                                style: TextStyle(fontWeight: FontWeight.w500),
                               )),
                         );
                       }).toList(),
@@ -1230,7 +1215,7 @@ class _TimelinesState extends State<Timelines> {
                   style: TextStyle(
                       fontFamily: 'Lato',
                       fontSize: 15,
-                      fontWeight: FontWeight.bold)),
+                      fontWeight: FontWeight.w500)),
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.02,
               ),
@@ -1242,7 +1227,7 @@ class _TimelinesState extends State<Timelines> {
                   style: TextStyle(
                       fontFamily: 'Lato',
                       fontSize: 15,
-                      fontWeight: FontWeight.bold)),
+                      fontWeight: FontWeight.w500)),
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.02,
               ),
@@ -1254,7 +1239,7 @@ class _TimelinesState extends State<Timelines> {
                   style: TextStyle(
                       fontFamily: 'Lato',
                       fontSize: 15,
-                      fontWeight: FontWeight.bold)),
+                      fontWeight: FontWeight.w500)),
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.02,
               ),
@@ -1310,7 +1295,7 @@ class _TimelinesState extends State<Timelines> {
                 Text("WATER",
                     style: TextStyle(
                       fontSize: 18,
-                      fontWeight: FontWeight.bold,
+                      fontWeight: FontWeight.w500,
                       color: Constants.mainColorWhite,
                     )),
                 InkWell(
@@ -1336,7 +1321,7 @@ class _TimelinesState extends State<Timelines> {
                           ? Text('+ ADD',
                               style: TextStyle(
                                   color: Constants.bluecolor,
-                                  fontWeight: FontWeight.bold,
+                                  fontWeight: FontWeight.w500,
                                   fontSize: 15))
                           : Text(
                               _dropDownValue,
@@ -1416,9 +1401,7 @@ class _TimelinesState extends State<Timelines> {
               Text(
                 "Recommended 615 -820 cal",
                 style: TextStyle(
-                  fontFamily: 'Lato',
-                  color: Constants.grey,
-                ),
+                    color: Constants.grey, fontWeight: FontWeight.w500),
               ),
             ])
           ]),
