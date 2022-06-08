@@ -685,6 +685,9 @@ class _TimelinesState extends State<Timelines> {
             ),
           ),
           Divider(),
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.02,
+          ),
           Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
@@ -702,25 +705,46 @@ class _TimelinesState extends State<Timelines> {
                   ),
                 ],
               ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.02,
+              ),
               Divider(),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.02,
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text("SUGAR  LEVEL",
-                      style: TextStyle(fontSize: 15, fontFamily: 'Lato')),
+                      style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 15,
+                          fontFamily: 'Lato')),
                   Text("High", style: TextStyle(color: Constants.grey)),
                 ],
               ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.02,
+              ),
               Divider(),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.02,
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text("WEIGHT IN KG",
-                      style: TextStyle(fontSize: 15, fontFamily: 'Lato')),
+                      style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 15,
+                          fontFamily: 'Lato')),
                   Text("55kg",
                       style:
                           TextStyle(fontFamily: 'Lato', color: Constants.grey)),
                 ],
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.02,
               ),
               Divider(),
             ],
@@ -880,24 +904,42 @@ class _TimelinesState extends State<Timelines> {
                 ],
               ),
               Divider(),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.02,
+              ),
               Text("NUTRITION SUPPLEMENT",
                   style: TextStyle(
                     fontFamily: 'Lato',
                     fontSize: 15,
                     fontWeight: FontWeight.bold,
                   )),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.02,
+              ),
               Divider(),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.02,
+              ),
               Text("MY MEDICAL RECORDS",
                   style: TextStyle(
                       fontFamily: 'Lato',
                       fontSize: 15,
                       fontWeight: FontWeight.bold)),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.02,
+              ),
               Divider(),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.02,
+              ),
               Text("MY APPONIMENT",
                   style: TextStyle(
                       fontFamily: 'Lato',
                       fontSize: 15,
                       fontWeight: FontWeight.bold)),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.02,
+              ),
               Divider(),
             ],
           )
@@ -1019,6 +1061,9 @@ class _TimelinesState extends State<Timelines> {
             ),
           ),
           Divider(),
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.02,
+          ),
           Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
@@ -1027,18 +1072,33 @@ class _TimelinesState extends State<Timelines> {
                       fontFamily: 'Lato',
                       fontSize: 15,
                       fontWeight: FontWeight.bold)),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.02,
+              ),
               Divider(),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.02,
+              ),
               Text("FITNESS CHALLENGES",
                   style: TextStyle(
                       fontFamily: 'Lato',
                       fontSize: 15,
                       fontWeight: FontWeight.bold)),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.02,
+              ),
               Divider(),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.02,
+              ),
               Text("CHALLENGES A FRIEND",
                   style: TextStyle(
                       fontFamily: 'Lato',
                       fontSize: 15,
                       fontWeight: FontWeight.bold)),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.02,
+              ),
               Divider(),
             ],
           )
@@ -1160,6 +1220,9 @@ class _TimelinesState extends State<Timelines> {
             ),
           ),
           Divider(),
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.02,
+          ),
           Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
@@ -1168,18 +1231,33 @@ class _TimelinesState extends State<Timelines> {
                       fontFamily: 'Lato',
                       fontSize: 15,
                       fontWeight: FontWeight.bold)),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.02,
+              ),
               Divider(),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.02,
+              ),
               Text("HOME ESSENTIALS",
                   style: TextStyle(
                       fontFamily: 'Lato',
                       fontSize: 15,
                       fontWeight: FontWeight.bold)),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.02,
+              ),
               Divider(),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.02,
+              ),
               Text("GYM SUPPLEMENTS",
                   style: TextStyle(
                       fontFamily: 'Lato',
                       fontSize: 15,
                       fontWeight: FontWeight.bold)),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.02,
+              ),
               Divider(),
             ],
           )
