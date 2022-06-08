@@ -693,11 +693,10 @@ class _TimelinesState extends State<Timelines> {
                       style: TextStyle(
                           fontWeight: FontWeight.w500,
                           fontSize: 15,
-                          fontFamily: 'RobotoMono')),
+                          fontFamily: 'lato')),
                   Text(
                     "Normal",
-                    style: TextStyle(
-                        color: Constants.grey, fontFamily: 'RobotoMono'),
+                    style: TextStyle(color: Constants.grey, fontFamily: 'lato'),
                   ),
                 ],
               ),
