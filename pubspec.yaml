@@ -86,14 +86,15 @@ flutter:
   fonts:
     - family: verdana
       fonts:
-        - asset: fonts/Schyler-Regular.ttf
-        - asset: fonts/Schyler-Italic.ttf
+        - asset: fonts/verdana-Regular.ttf
+        - asset: fonts/verdana-Italic.ttf
           style: italic
     - family: lato
       fonts:
-        - asset: fonts/TrajanPro.ttf
-        - asset: fonts/TrajanPro_Bold.ttf
+        - asset: fonts/lato.ttf
+        - asset: fonts/lato_Bold.ttf
           weight: 700
+   
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

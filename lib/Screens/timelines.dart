@@ -690,7 +690,10 @@ class _TimelinesState extends State<Timelines> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text("BLOOD PRESSURE",
-                      style: TextStyle(fontSize: 15, fontFamily: 'lato')),
+                      style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 15,
+                          fontFamily: 'lato')),
                   Text(
                     "Normal",
                     style: TextStyle(color: Constants.grey, fontFamily: 'lato'),
