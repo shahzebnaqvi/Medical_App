@@ -4,6 +4,8 @@ import 'package:medical_app/Screens/auth/signup.dart';
 import 'package:medical_app/Screens/bottombar.dart';
 import '../Constants/constants.dart';
 
+import 'package:carousel_slider/carousel_slider.dart';
+
 class Timelines extends StatefulWidget {
   const Timelines({Key? key}) : super(key: key);
 
@@ -53,6 +55,7 @@ class _TimelinesState extends State<Timelines> {
               mytasks(
                 context,
               ),
+              crauselSilder1(context),
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.01,
               ),
@@ -86,6 +89,35 @@ class _TimelinesState extends State<Timelines> {
               ),
               water(context),
             ])));
+  }
+
+// CarouselSlider
+  Widget crauselSilder1(context) {
+    return Container(
+      child: CarouselSlider(
+        items: [
+          Container(
+              child: Text("ADD IMAGE URL HERE"),
+              margin: EdgeInsets.all(6.0),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(8.0),
+                image: DecorationImage(
+                  image: NetworkImage("ADD IMAGE URL HERE"),
+                  fit: BoxFit.cover,
+                ),
+              )),
+        ],
+        options: CarouselOptions(
+          height: 180.0,
+          enlargeCenterPage: true,
+          aspectRatio: 16 / 9,
+          autoPlayCurve: Curves.fastOutSlowIn,
+          enableInfiniteScroll: true,
+          autoPlayAnimationDuration: Duration(milliseconds: 800),
+          viewportFraction: 0.8,
+        ),
+      ),
+    );
   }
 
 // Profile
