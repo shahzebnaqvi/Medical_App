@@ -5,7 +5,6 @@ import 'package:medical_app/Screens/bottombar.dart';
 import '../Constants/constants.dart';
 import 'package:medical_app/Screens/bottombar.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-
 import 'carouselslider.dart';
 
 class Timelines extends StatefulWidget {
