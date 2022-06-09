@@ -1159,7 +1159,6 @@ class _TimelinesState extends State<Timelines> {
                 Text("SHOP NOW",
                     style: TextStyle(
                       fontSize: 18,
-                      fontFamily: 'Lato',
                       fontWeight: FontWeight.w500,
                       color: Constants.mainColorWhite,
                     )),
@@ -1366,7 +1365,7 @@ class _TimelinesState extends State<Timelines> {
                               },
                               child: Text(
                                 value,
-                                style: TextStyle(fontFamily: 'Lato'),
+                                style: TextStyle(fontWeight: FontWeight.w500),
                               )),
                         );
                       }).toList(),
