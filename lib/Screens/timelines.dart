@@ -1370,9 +1370,7 @@ class _TimelinesState extends State<Timelines> {
                         );
                       }).toList(),
                       onChanged: (value) {
-                        setState(() {
-                          _dropDownValue = value!;
-                        });
+                        setState(() {});
                       },
                     ),
                   ),
