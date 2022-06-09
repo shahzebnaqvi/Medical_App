@@ -1411,6 +1411,9 @@ class _TimelinesState extends State<Timelines> {
                     ],
                   ),
                   Divider(),
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.01,
+                  ),
                   Row(children: [
                     Text("842 Cal",
                         style: TextStyle(
@@ -1433,9 +1436,7 @@ class _TimelinesState extends State<Timelines> {
           ),
 
           // Bottombar(),
-//                                                                                                                                                                                                                                                                                  Bottombar(key: ,)
 
-          // NavigationActionBar(
           //   context: context,
           //   scaffoldColor: Colors.blueAccent,
           //   index: 0,
