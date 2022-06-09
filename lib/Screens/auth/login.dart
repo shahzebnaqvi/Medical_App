@@ -37,7 +37,7 @@ class _LoginState extends State<Login> {
               'Welcome back! ',
               style: TextStyle(
                   fontSize: MediaQuery.of(context).size.height * 0.02,
-                  fontWeight: FontWeight.bold),
+                  fontWeight: FontWeight.w500),
             ),
           ),
           Container(
@@ -125,6 +125,7 @@ class _LoginState extends State<Login> {
               child: Text(
                 "Log In",
                 style: TextStyle(
+                  fontWeight: FontWeight.w500,
                   fontSize: MediaQuery.of(context).size.width * 0.04,
                 ),
               ),
@@ -149,7 +150,7 @@ class _LoginState extends State<Login> {
                 "Login with social account",
                 style: TextStyle(
                     decoration: TextDecoration.underline,
-                    fontWeight: FontWeight.bold),
+                    fontWeight: FontWeight.w500),
               )
             ],
           )),
@@ -184,7 +185,10 @@ class _LoginState extends State<Login> {
                           SizedBox(
                             width: 05,
                           ),
-                          Text("Facebook")
+                          Text(
+                            "Facebook",
+                            style: TextStyle(fontWeight: FontWeight.w500),
+                          )
                         ],
                       ),
                     )),
@@ -215,7 +219,8 @@ class _LoginState extends State<Login> {
                         ),
                         Text(
                           "Twitter",
-                          style: TextStyle(fontSize: 15),
+                          style: TextStyle(
+                              fontWeight: FontWeight.w500, fontSize: 15),
                         )
                       ],
                     ),
@@ -239,7 +244,9 @@ class _LoginState extends State<Login> {
                     },
                     child: Text(
                       "Sign up",
-                      style: TextStyle(color: Constants.mainColor),
+                      style: TextStyle(
+                          color: Constants.mainColor,
+                          fontWeight: FontWeight.w500),
                     ))
               ],
             ),
