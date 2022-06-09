@@ -21,14 +21,14 @@ Widget crauselSilder2(context, days) {
   return Container(
     child: CarouselSlider(
       items: [
-        slidercontainer1(context, "Today"),
-        slidercontainer1(context, "Monday"),
-        slidercontainer1(context, "Tuesday"),
-        slidercontainer1(context, "Wednesday"),
-        slidercontainer1(context, "Thursday"),
-        slidercontainer1(context, "Friday"),
-        slidercontainer1(context, "Saturday"),
-        slidercontainer1(context, "Sunday"),
+        slidercontainer1(context, "Today", '500', '200'),
+        slidercontainer1(context, "Monday", '600', '300'),
+        slidercontainer1(context, "Tuesday", '700', '400'),
+        slidercontainer1(context, "Wednesday", '800', '500'),
+        slidercontainer1(context, "Thursday", '900', '600'),
+        slidercontainer1(context, "Friday", '1000', '700'),
+        slidercontainer1(context, "Saturday", '1100', '800'),
+        slidercontainer1(context, "Sunday", '1200', '900'),
       ],
       options: CarouselOptions(
         height: 270.0,
@@ -43,7 +43,7 @@ Widget crauselSilder2(context, days) {
   );
 }
 
-Widget slidercontainer1(context, days) {
+Widget slidercontainer1(context, days, totaltasks, completedtasks) {
   return Container(
     width: MediaQuery.of(context).size.width * 0.9,
     margin: EdgeInsets.only(
@@ -116,7 +116,7 @@ Widget slidercontainer1(context, days) {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
-              "500",
+              completedtasks,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
             ),
             Container(
@@ -144,7 +144,7 @@ Widget slidercontainer1(context, days) {
               ),
             ),
             Text(
-              "1000",
+              totaltasks,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
             ),
           ],
