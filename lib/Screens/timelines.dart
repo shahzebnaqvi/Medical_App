@@ -52,9 +52,9 @@ class _TimelinesState extends State<Timelines> {
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.01,
               ),
-              mytasks(
-                context,
-              ),
+              // mytasks(
+              //   context,
+              // ),
               crauselSilder1(context),
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.01,
@@ -97,18 +97,114 @@ class _TimelinesState extends State<Timelines> {
       child: CarouselSlider(
         items: [
           Container(
-              child: Text("ADD IMAGE URL HERE"),
-              margin: EdgeInsets.all(6.0),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(8.0),
-                image: DecorationImage(
-                  image: NetworkImage("ADD IMAGE URL HERE"),
-                  fit: BoxFit.cover,
+            width: MediaQuery.of(context).size.width * 0.9,
+            margin: EdgeInsets.only(
+              top: MediaQuery.of(context).size.height * 0.01,
+              bottom: MediaQuery.of(context).size.height * 0.01,
+              left: MediaQuery.of(context).size.height * 0.002,
+              right: MediaQuery.of(context).size.height * 0.002,
+            ),
+            padding: EdgeInsets.only(
+              bottom: MediaQuery.of(context).size.height * 0.03,
+              top: MediaQuery.of(context).size.height * 0.01,
+              left: MediaQuery.of(context).size.height * 0.01,
+              right: MediaQuery.of(context).size.height * 0.01,
+            ),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(10),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey.withOpacity(0.2),
+                  spreadRadius: 5,
+                  blurRadius: 7,
+                  offset: Offset(0, 3), // changes position of shadow
                 ),
-              )),
+              ],
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.arrow_circle_left_outlined,
+                      size: 30,
+                      color: Constants.grey,
+                    ),
+                    Text(
+                      "MY TASKS",
+                      style: TextStyle(
+                          color: Constants.grey,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w500),
+                    ),
+                    Icon(
+                      Icons.arrow_circle_right_outlined,
+                      size: 30,
+                      color: Constants.grey,
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.03,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      "TODAY",
+                      style: TextStyle(
+                        fontWeight: FontWeight.w500,
+                      ),
+                    )
+                  ],
+                ),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.03,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "500",
+                      style:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+                    ),
+                    Stack(
+                      alignment: Alignment.center,
+                      children: <Widget>[
+                        Container(
+                          width: 80,
+                          height: 80,
+                          child: new CircularProgressIndicator(
+                            strokeWidth: 12,
+                            value: 0.60,
+                            color: Constants.bluecolor,
+                            backgroundColor: Colors.grey[100],
+                          ),
+                        ),
+                        Text("70%"),
+                      ],
+                    ),
+                    Text(
+                      "1000",
+                      style:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+                    ),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [Text("Completed Tasks"), Text("Total Tasks")],
+                )
+              ],
+            ),
+          )
         ],
         options: CarouselOptions(
-          height: 180.0,
+          height: 270.0,
           enlargeCenterPage: true,
           aspectRatio: 16 / 9,
           autoPlayCurve: Curves.fastOutSlowIn,
