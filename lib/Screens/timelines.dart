@@ -295,8 +295,9 @@ class _TimelinesState extends State<Timelines> {
                         color: Constants.mainColorWhite,
                       )),
                   Container(
-                    // padding: EdgeInsets.all(
-                    //     MediaQuery.of(context).size.width * 0.01),
+                    padding: EdgeInsets.only(
+                      left: MediaQuery.of(context).size.height * 0.01,
+                    ),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(18),
@@ -315,7 +316,7 @@ class _TimelinesState extends State<Timelines> {
                           ? Text('+ ADD',
                               style: TextStyle(
                                   color: Constants.bluecolor,
-                                  fontWeight: FontWeight.bold,
+                                  fontWeight: FontWeight.w500,
                                   fontSize: 15))
                           : Text(
                               _dropDownValue,
@@ -455,8 +456,9 @@ class _TimelinesState extends State<Timelines> {
                 InkWell(
                   onTap: () {},
                   child: Container(
-                    // padding: EdgeInsets.all(
-                    //     MediaQuery.of(context).size.width * 0.02),
+                    padding: EdgeInsets.only(
+                      left: MediaQuery.of(context).size.height * 0.01,
+                    ),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(18),
@@ -506,10 +508,6 @@ class _TimelinesState extends State<Timelines> {
                         });
                       },
                     ),
-                    // Text(" + ADD",
-                    //     style: TextStyle(
-                    //         fontWeight: FontWeight.bold,
-                    //         color: Constants.bluecolor)),
                   ),
                 ),
               ],
@@ -577,8 +575,6 @@ class _TimelinesState extends State<Timelines> {
     );
   }
 
-// checkbox
-
 // Widget Health Tarcker
   Widget healthtracker(context) {
     return Container(
@@ -631,8 +627,9 @@ class _TimelinesState extends State<Timelines> {
                 InkWell(
                   onTap: () {},
                   child: Container(
-                    // padding: EdgeInsets.all(
-                    //     MediaQuery.of(context).size.width * 0.02),
+                    padding: EdgeInsets.only(
+                      left: MediaQuery.of(context).size.height * 0.01,
+                    ),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(18),
@@ -651,7 +648,7 @@ class _TimelinesState extends State<Timelines> {
                           ? Text('+ ADD',
                               style: TextStyle(
                                   color: Constants.bluecolor,
-                                  fontWeight: FontWeight.bold,
+                                  fontWeight: FontWeight.w500,
                                   fontSize: 15))
                           : Text(
                               _dropDownValue,
@@ -817,8 +814,9 @@ class _TimelinesState extends State<Timelines> {
                 InkWell(
                   onTap: () {},
                   child: Container(
-                    // padding: EdgeInsets.all(
-                    //     MediaQuery.of(context).size.width * 0.02),
+                    padding: EdgeInsets.only(
+                      left: MediaQuery.of(context).size.height * 0.01,
+                    ),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(18),
@@ -1010,8 +1008,9 @@ class _TimelinesState extends State<Timelines> {
                 InkWell(
                   onTap: () {},
                   child: Container(
-                    // padding: EdgeInsets.all(
-                    //     MediaQuery.of(context).size.width * 0.02),
+                    padding: EdgeInsets.only(
+                      left: MediaQuery.of(context).size.height * 0.01,
+                    ),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(18),
@@ -1167,8 +1166,9 @@ class _TimelinesState extends State<Timelines> {
                 InkWell(
                   onTap: () {},
                   child: Container(
-                    // padding: EdgeInsets.all(
-                    //     MediaQuery.of(context).size.width * 0.02),
+                    padding: EdgeInsets.only(
+                      left: MediaQuery.of(context).size.height * 0.01,
+                    ),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(18),
@@ -1321,8 +1321,9 @@ class _TimelinesState extends State<Timelines> {
                 InkWell(
                   onTap: () {},
                   child: Container(
-                    // padding: EdgeInsets.all(
-                    //     MediaQuery.of(context).size.width * 0.02),
+                    padding: EdgeInsets.only(
+                      left: MediaQuery.of(context).size.height * 0.01,
+                    ),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(18),
