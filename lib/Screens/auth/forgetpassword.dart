@@ -41,7 +41,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                   ),
                   alignment: Alignment.center,
                   child: Image.asset(
-                    'assets/login.jpg',
+                    'assets/doctor2.jpg',
                     width: MediaQuery.of(context).size.width * 0.35,
                   )),
               SizedBox(height: MediaQuery.of(context).size.height * 0.1),
