@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'package:medical_app/Constants/constants.dart';
 import 'package:medical_app/Screens/additionaltools/bmi.dart';
 import 'package:medical_app/Screens/additionaltools/bp.dart';
-import 'package:medical_app/Screens/bottombar.dart';
+
 import 'package:medical_app/Screens/maintools/appointments.dart';
 import 'package:medical_app/Screens/maintools/myhistory.dart';
 import 'package:medical_app/Screens/maintools/myreports.dart';
