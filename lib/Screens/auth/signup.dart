@@ -165,7 +165,8 @@ class _SignupState extends State<Signup> {
                       child: Center(
                           child: Text(
                         "Sign Up",
-                        style: TextStyle(fontSize: 15),
+                        style: TextStyle(
+                            fontWeight: FontWeight.w500, fontSize: 15),
                       )),
                     ),
                   ),
@@ -186,7 +187,9 @@ class _SignupState extends State<Signup> {
                             },
                             child: Text(
                               "Login",
-                              style: TextStyle(color: Constants.bluecolor),
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w500,
+                                  color: Constants.bluecolor),
                             ))
                       ],
                     ),
