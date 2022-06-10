@@ -21,14 +21,14 @@ Widget crauselSilder2(context, days) {
   return Container(
     child: CarouselSlider(
       items: [
-        slidercontainer1(context, "Today", '500', '200'),
-        slidercontainer1(context, "Monday", '600', '300'),
-        slidercontainer1(context, "Tuesday", '700', '400'),
-        slidercontainer1(context, "Wednesday", '800', '500'),
-        slidercontainer1(context, "Thursday", '900', '600'),
-        slidercontainer1(context, "Friday", '1000', '700'),
-        slidercontainer1(context, "Saturday", '1100', '800'),
-        slidercontainer1(context, "Sunday", '1200', '900'),
+        slidercontainer1(context, "Today", '500', '200', 0.60),
+        slidercontainer1(context, "Monday", '600', '300', 0.50),
+        slidercontainer1(context, "Tuesday", '700', '400', 0.70),
+        slidercontainer1(context, "Wednesday", '800', '500', 0.80),
+        slidercontainer1(context, "Thursday", '900', '600', 0.85),
+        slidercontainer1(context, "Friday", '1000', '700', 0.90),
+        slidercontainer1(context, "Saturday", '1100', '800', 0.95),
+        slidercontainer1(context, "Sunday", '1200', '900', 0.55),
       ],
       options: CarouselOptions(
         height: 270.0,
@@ -43,7 +43,7 @@ Widget crauselSilder2(context, days) {
   );
 }
 
-Widget slidercontainer1(context, days, totaltasks, completedtasks) {
+Widget slidercontainer1(context, days, totaltasks, completedtasks, values) {
   return Container(
     width: MediaQuery.of(context).size.width * 0.9,
     margin: EdgeInsets.only(
@@ -134,7 +134,7 @@ Widget slidercontainer1(context, days, totaltasks, completedtasks) {
                     height: 80,
                     child: new CircularProgressIndicator(
                       strokeWidth: 12,
-                      value: 0.60,
+                      value: values,
                       color: Constants.bluecolor,
                       backgroundColor: Colors.grey[100],
                     ),
