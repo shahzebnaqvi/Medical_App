@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:medical_app/Screens/additionaltools/bp.dart';
 import 'package:medical_app/Screens/auth/login.dart';
@@ -6,7 +8,7 @@ import 'package:medical_app/Screens/auth/myprofile.dart';
 import 'package:medical_app/Screens/auth/signup.dart';
 import 'package:medical_app/Screens/bottombar.dart';
 import 'package:medical_app/Screens/home.dart';
-import 'package:medical_app/Screens/recipes.dart';
+
 import 'package:medical_app/testing.dart';
 
 void main() {
@@ -23,7 +25,7 @@ class MyApp extends StatelessWidget {
     ]);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: recipes(),
+      home: Login(),
     );
   }
 }
