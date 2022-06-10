@@ -37,7 +37,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
             children: [
               Container(
                   padding: EdgeInsets.only(
-                    top: MediaQuery.of(context).size.height * 0.02,
+                    top: MediaQuery.of(context).size.height * 0.07,
                   ),
                   alignment: Alignment.center,
                   child: Image.asset(
