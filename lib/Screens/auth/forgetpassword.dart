@@ -38,7 +38,6 @@ class _ForgetPasswordState extends State<ForgetPassword> {
               Container(
                   padding: EdgeInsets.only(
                     top: MediaQuery.of(context).size.height * 0.02,
-                    //  bottom: MediaQuery.of(context).size.height * 0.09,
                   ),
                   alignment: Alignment.center,
                   child: Image.asset(
@@ -47,6 +46,8 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                   )),
               SizedBox(height: MediaQuery.of(context).size.height * 0.1),
               Container(
+                padding: EdgeInsets.only(
+                    left: MediaQuery.of(context).size.height * 0.02),
                 alignment: Alignment.bottomLeft,
                 child: Text(
                   "Reset it",
@@ -56,23 +57,41 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                 ),
               ),
               Container(
-                padding: EdgeInsets.all(10),
+                padding: EdgeInsets.only(
+                    left: MediaQuery.of(context).size.height * 0.02,
+                    right: MediaQuery.of(context).size.height * 0.02),
                 child: TextField(
-                    cursorColor: Constants.blackcolor,
-                    decoration: InputDecoration(
-                      border: InputBorder.none,
-                      labelText: 'Enter Email',
-                    )),
+                  cursorColor: Constants.blackcolor,
+                  decoration: InputDecoration(
+                      // border: InputBorder.none,
+                      labelText: "Enter Email",
+                      suffixIcon: Icon(Icons.task_alt_outlined)),
+                ),
               ),
-              ElevatedButton(
-                  style: ElevatedButton.styleFrom(primary: Constants.mainColor),
-                  onPressed: () {
-                    Navigator.pushReplacement(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => ResetAnimation()));
-                  },
-                  child: Text("Reset"))
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.02,
+              ),
+              Container(
+                height: MediaQuery.of(context).size.height * 0.055,
+                margin: EdgeInsets.only(
+                  left: MediaQuery.of(context).size.height * 0.02,
+                  right: MediaQuery.of(context).size.height * 0.02,
+                ),
+                child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      primary: Constants.cyan_dark,
+                    ),
+                    onPressed: () {
+                      Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ResetAnimation()));
+                    },
+                    child: Text(
+                      "Reset",
+                      style: TextStyle(fontWeight: FontWeight.w500),
+                    )),
+              )
             ],
           ),
         ),
