@@ -138,7 +138,12 @@ class _LoginState extends State<Login> {
               child: Column(
             children: [
               GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => ForgetPassword()));
+                  },
                   child: Text(
                     "Forgot Password?",
                     style: TextStyle(color: Constants.mainColor),

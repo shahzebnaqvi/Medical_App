@@ -14,28 +14,45 @@ class _ForgetPasswordState extends State<ForgetPassword> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Constants.mainColorWhite,
+      appBar: AppBar(
+        backgroundColor: Constants.mainColorWhite,
+        title: Text(
+          "Forgot  Password",
+          style: TextStyle(color: Constants.blackcolor),
+        ),
+        leading: IconButton(
+            color: Colors.white,
+            icon: Icon(
+              Icons.arrow_back,
+              color: Colors.black,
+              size: 20,
+            ),
+            onPressed: () {
+              Navigator.pop(context);
+            }),
+      ),
       body: Center(
         child: Container(
-          width: MediaQuery.of(context).size.width * 0.93,
           child: ListView(
             children: [
               Container(
                   padding: EdgeInsets.only(
-                    top: MediaQuery.of(context).size.height * 0.06,
-                    bottom: MediaQuery.of(context).size.height * 0.09,
+                    top: MediaQuery.of(context).size.height * 0.02,
+                    //  bottom: MediaQuery.of(context).size.height * 0.09,
                   ),
-                  alignment: Alignment.bottomLeft,
+                  alignment: Alignment.center,
                   child: Image.asset(
                     'assets/login.jpg',
                     width: MediaQuery.of(context).size.width * 0.35,
                   )),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.1),
               Container(
                 alignment: Alignment.bottomLeft,
                 child: Text(
                   "Reset it",
                   style: TextStyle(
                       fontSize: MediaQuery.of(context).size.width * 0.1,
-                      fontWeight: FontWeight.bold),
+                      fontWeight: FontWeight.w500),
                 ),
               ),
               Container(
