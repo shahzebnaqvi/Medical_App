@@ -12,14 +12,34 @@ class recipes extends StatefulWidget {
 class _recipesState extends State<recipes> {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Column(
+    return Scaffold(
+      backgroundColor: Constants.mainColorWhite,
+      appBar: AppBar(
+        backgroundColor: Constants.mainColorWhite,
+        title: Text(
+          "Recipes",
+          style: TextStyle(color: Constants.blackcolor),
+        ),
+        leading: IconButton(
+            color: Colors.white,
+            icon: Icon(
+              Icons.arrow_back,
+              color: Colors.black,
+              size: 20,
+            ),
+            onPressed: () {
+              Navigator.pop(context);
+            }),
+      ),
+      body: ListView(
         children: [
           Reports(context, 'Chicken sandwich ', '6:40 AM', 'Monday'),
           Reports(context, 'Chicken sandwich ', '6:40 AM', 'Tuesday'),
           Reports(context, 'Chicken sandwich ', '6:40 AM', 'Wednesday'),
           Reports(context, 'Chicken sandwich ', '6:40 AM', 'Thursday'),
           Reports(context, 'Chicken sandwich ', '6:40 AM', 'Friday'),
+          Reports(context, 'Chicken sandwich ', '6:40 AM', 'Monday'),
+          Reports(context, 'Chicken sandwich ', '6:40 AM', 'Tuesday'),
         ],
       ),
     );
@@ -36,8 +56,7 @@ Widget Reports(context, title, subtitile, subtitile1) {
       ),
       child: Column(children: [
         Card(
-            semanticContainer: true,
-            elevation: 8,
+            elevation: 5,
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
             child: ListTile(

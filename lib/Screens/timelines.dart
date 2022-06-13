@@ -54,10 +54,6 @@ class _TimelinesState extends State<Timelines> {
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.01,
               ),
-              // mytasks(
-              //   context,
-              // ),
-
               GestureDetector(
                   onTap: () {
                     Navigator.push(context,
