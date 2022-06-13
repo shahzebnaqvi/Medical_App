@@ -17,6 +17,9 @@ class _recipesState extends State<recipes> {
         children: [
           Reports(context, 'Chicken sandwich ', '6:40 AM', 'Monday'),
           Reports(context, 'Chicken sandwich ', '6:40 AM', 'Tuesday'),
+          Reports(context, 'Chicken sandwich ', '6:40 AM', 'Wednesday'),
+          Reports(context, 'Chicken sandwich ', '6:40 AM', 'Thursday'),
+          Reports(context, 'Chicken sandwich ', '6:40 AM', 'Friday'),
         ],
       ),
     );
