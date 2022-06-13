@@ -15,7 +15,8 @@ class _recipesState extends State<recipes> {
     return Center(
       child: Column(
         children: [
-          Reports(context, 'Chicken sandwich ', '6:40 AM', 'Monady'),
+          Reports(context, 'Chicken sandwich ', '6:40 AM', 'Monday'),
+          Reports(context, 'Chicken sandwich ', '6:40 AM', 'Tuesday'),
         ],
       ),
     );
@@ -24,53 +25,61 @@ class _recipesState extends State<recipes> {
 
 Widget Reports(context, title, subtitile, subtitile1) {
   return Container(
-      padding: EdgeInsets.all(10),
+      padding: EdgeInsets.only(
+        top: MediaQuery.of(context).size.height * 0.021,
+        left: MediaQuery.of(context).size.height * 0.01,
+        right: MediaQuery.of(context).size.height * 0.01,
+        bottom: MediaQuery.of(context).size.height * 0.01,
+      ),
       child: Column(children: [
         Card(
-            elevation: 10,
+            semanticContainer: true,
+            elevation: 15,
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
             child: ListTile(
-                leading: Image.asset(
-                  'assets/Sign_up.jpg',
-                  fit: BoxFit.cover,
+              leading: CircleAvatar(
+                radius: 10,
+                child: Text(
+                  "A",
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 10,
+                      color: Constants.mainColorWhite),
                 ),
-                title: Text(
+                backgroundColor: Constants.ubl,
+              ),
+              title: Padding(
+                padding: const EdgeInsets.only(bottom: 10.0),
+                child: Text(
                   title,
                   textAlign: TextAlign.start,
                   style: TextStyle(
                       color: Colors.grey[800], fontWeight: FontWeight.bold),
                 ),
-                subtitle: Row(
-                  children: [
-                    Text(subtitile),
-                    SizedBox(
-                      width: 5,
-                    ),
-                    Text(subtitile1),
-                  ],
-                ),
-                trailing: Column(
-                  children: [
-                    // Text(
-                    //   trailing,
-                    //   style: TextStyle(
-                    //       fontSize: MediaQuery.of(context).size.height * 0.012,
-                    //       // fontSize: 12,
-                    //       color: Constants.blackcolor,
-                    //       fontWeight: FontWeight.bold),
-                    // ),
-                    SizedBox(
-                      // height: 1,
-                      height: MediaQuery.of(context).size.height * 0.005,
-                    ),
-                    GestureDetector(
-                      child: Icon(Icons.share, color: Constants.bluecolor),
-                      onTap: () {
-                        print('Welcome Report');
-                      },
-                    )
-                  ],
-                )))
+              ),
+              subtitle: Row(
+                children: [
+                  Icon(
+                    Icons.alarm,
+                    size: 15,
+                  ),
+                  Text(
+                    subtitile,
+                    style: TextStyle(fontWeight: FontWeight.w500),
+                  ),
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.05,
+                  ),
+                  Icon(
+                    Icons.no_backpack,
+                    size: 15,
+                  ),
+                  Text(
+                    subtitile1,
+                  ),
+                ],
+              ),
+            ))
       ]));
 }
