@@ -47,60 +47,74 @@ class _recipesState extends State<recipes> {
 
 Widget Reports(context, title, subtitile, subtitile1) {
   return Container(
+      margin: EdgeInsets.only(
+        top: MediaQuery.of(context).size.height * 0.01,
+        bottom: MediaQuery.of(context).size.height * 0.01,
+        left: MediaQuery.of(context).size.height * 0.02,
+        right: MediaQuery.of(context).size.height * 0.02,
+      ),
       padding: EdgeInsets.only(
         top: MediaQuery.of(context).size.height * 0.021,
         left: MediaQuery.of(context).size.height * 0.01,
         right: MediaQuery.of(context).size.height * 0.01,
         bottom: MediaQuery.of(context).size.height * 0.01,
       ),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(10),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.2),
+            spreadRadius: 5,
+            blurRadius: 7,
+            offset: Offset(0, 3), // changes position of shadow
+          ),
+        ],
+      ),
       child: Column(children: [
-        Card(
-            elevation: 5,
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-            child: ListTile(
-              leading: CircleAvatar(
-                radius: 10,
-                child: Text(
-                  "A",
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 10,
-                      color: Constants.mainColorWhite),
-                ),
-                backgroundColor: Constants.ubl,
+        ListTile(
+          leading: CircleAvatar(
+            radius: 10,
+            child: Text(
+              "A",
+              style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 10,
+                  color: Constants.mainColorWhite),
+            ),
+            backgroundColor: Constants.ubl,
+          ),
+          title: Padding(
+            padding: const EdgeInsets.only(bottom: 10.0),
+            child: Text(
+              title,
+              textAlign: TextAlign.start,
+              style: TextStyle(
+                  color: Colors.grey[800], fontWeight: FontWeight.bold),
+            ),
+          ),
+          subtitle: Row(
+            children: [
+              Icon(
+                Icons.alarm,
+                size: 15,
               ),
-              title: Padding(
-                padding: const EdgeInsets.only(bottom: 10.0),
-                child: Text(
-                  title,
-                  textAlign: TextAlign.start,
-                  style: TextStyle(
-                      color: Colors.grey[800], fontWeight: FontWeight.bold),
-                ),
+              Text(
+                subtitile,
+                style: TextStyle(fontWeight: FontWeight.w500),
               ),
-              subtitle: Row(
-                children: [
-                  Icon(
-                    Icons.alarm,
-                    size: 15,
-                  ),
-                  Text(
-                    subtitile,
-                    style: TextStyle(fontWeight: FontWeight.w500),
-                  ),
-                  SizedBox(
-                    width: MediaQuery.of(context).size.width * 0.05,
-                  ),
-                  Icon(
-                    Icons.no_backpack,
-                    size: 15,
-                  ),
-                  Text(
-                    subtitile1,
-                  ),
-                ],
+              SizedBox(
+                width: MediaQuery.of(context).size.width * 0.05,
               ),
-            ))
+              Icon(
+                Icons.no_backpack,
+                size: 15,
+              ),
+              Text(
+                subtitile1,
+              ),
+            ],
+          ),
+        )
       ]));
 }
