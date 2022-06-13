@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:medical_app/Screens/auth/recipes.dart';
 import 'package:medical_app/Screens/auth/signup.dart';
 import 'package:medical_app/Screens/bottombar.dart';
 import '../Constants/constants.dart';
@@ -57,7 +58,12 @@ class _TimelinesState extends State<Timelines> {
               //   context,
               // ),
 
-              crauselSilder1(),
+              GestureDetector(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => recipes()));
+                  },
+                  child: crauselSilder1()),
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.01,
               ),

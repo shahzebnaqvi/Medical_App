@@ -37,7 +37,7 @@ Widget Reports(context, title, subtitile, subtitile1) {
       child: Column(children: [
         Card(
             semanticContainer: true,
-            elevation: 15,
+            elevation: 8,
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
             child: ListTile(
