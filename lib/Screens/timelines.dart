@@ -75,7 +75,8 @@ class _TimelinesState extends State<Timelines> {
                 height: MediaQuery.of(context).size.height * 0.01,
               ),
               water(context),
-            ])));
+            ])),
+        bottomNavigationBar: Bottombarcircular(num: "0"));
   }
 
 // Profile

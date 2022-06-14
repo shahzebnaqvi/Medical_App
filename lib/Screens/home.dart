@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:medical_app/Constants/constants.dart';
 import 'package:medical_app/Screens/additionaltools/bmi.dart';
 import 'package:medical_app/Screens/additionaltools/bp.dart';
+import 'package:medical_app/Screens/bottombar.dart';
 
 import 'package:medical_app/Screens/maintools/appointments.dart';
 import 'package:medical_app/Screens/maintools/myhistory.dart';
@@ -165,7 +166,8 @@ class Home extends StatelessWidget {
                   }),
             ],
           ),
-        )));
+        )),
+        bottomNavigationBar: Bottombarcircular(num: "0"));
     // bottomNavigationBar: Bottombar(num: ""));
   }
 }

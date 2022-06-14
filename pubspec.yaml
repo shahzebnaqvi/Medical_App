@@ -35,6 +35,8 @@ dependencies:
   carousel_slider: ^4.0.0
   flutter_speed_dial: ^5.0.0+1
   ml_kit_image_labeler: ^0.0.3+2
+  pandabar: ^0.1.2
+  circular_menu: ^2.0.0
   
 
 
