@@ -302,7 +302,7 @@ class _TimelinesState extends State<Timelines> {
                   Text("WORKOUT PLAN",
                       style: TextStyle(
                         fontSize: 18,
-                        fontWeight: FontWeight.bold,
+                        fontWeight: FontWeight.w400,
                         color: Constants.mainColorWhite,
                       )),
                   Container(
@@ -461,7 +461,7 @@ class _TimelinesState extends State<Timelines> {
                 Text("MY DIET",
                     style: TextStyle(
                       fontSize: 18,
-                      fontWeight: FontWeight.w500,
+                      fontWeight: FontWeight.w400,
                       color: Constants.mainColorWhite,
                     )),
                 InkWell(
@@ -632,7 +632,7 @@ class _TimelinesState extends State<Timelines> {
                 Text("HEALTH TRACKER",
                     style: TextStyle(
                       fontSize: 18,
-                      fontWeight: FontWeight.w500,
+                      fontWeight: FontWeight.w400,
                       color: Constants.mainColorWhite,
                     )),
                 InkWell(
@@ -819,7 +819,7 @@ class _TimelinesState extends State<Timelines> {
                 Text("MY MEDICINE",
                     style: TextStyle(
                       fontSize: 18,
-                      fontWeight: FontWeight.w500,
+                      fontWeight: FontWeight.w400,
                       color: Constants.mainColorWhite,
                     )),
                 InkWell(
@@ -1013,7 +1013,7 @@ class _TimelinesState extends State<Timelines> {
                 Text("CHALLENGES",
                     style: TextStyle(
                       fontSize: 18,
-                      fontWeight: FontWeight.w500,
+                      fontWeight: FontWeight.w400,
                       color: Constants.mainColorWhite,
                     )),
                 InkWell(
@@ -1170,7 +1170,7 @@ class _TimelinesState extends State<Timelines> {
                 Text("SHOP NOW",
                     style: TextStyle(
                       fontSize: 18,
-                      fontWeight: FontWeight.w500,
+                      fontWeight: FontWeight.w400,
                       color: Constants.mainColorWhite,
                     )),
                 InkWell(
@@ -1325,7 +1325,7 @@ class _TimelinesState extends State<Timelines> {
                 Text("WATER",
                     style: TextStyle(
                       fontSize: 18,
-                      fontWeight: FontWeight.w500,
+                      fontWeight: FontWeight.w400,
                       color: Constants.mainColorWhite,
                     )),
                 InkWell(
