@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:medical_app/Screens/Book_Doctors_Appoinment/Hospital.dart';
+import 'package:medical_app/Screens/Health%20&%20Fitness%20Goal/test_indicators.dart';
 import 'package:medical_app/Screens/auth/recipes.dart';
 import 'package:medical_app/Screens/auth/signup.dart';
 import 'package:medical_app/Screens/bottombar.dart';
@@ -80,8 +82,14 @@ class _TimelinesState extends State<Timelines> {
   Widget profile(context) {
     return Container(
         child: ListTile(
-      leading: CircleAvatar(
-          child: ClipOval(child: Image.asset('assets/doctor2.jpg'))),
+      leading: GestureDetector(
+        onTap: () {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => Hospital()));
+        },
+        child: CircleAvatar(
+            child: ClipOval(child: Image.asset('assets/doctor2.jpg'))),
+      ),
       title: Text(
         'Hello Joseph Allison,',
         style: TextStyle(color: Constants.mainColorWhite),
@@ -93,7 +101,10 @@ class _TimelinesState extends State<Timelines> {
         textScaleFactor: 1,
       ),
       trailing: InkWell(
-        onTap: () {},
+        onTap: () {
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => test_indicators()));
+        },
         child: Icon(
           Icons.notification_add_rounded,
           color: Constants.mainColorWhite,
@@ -279,7 +290,7 @@ class _TimelinesState extends State<Timelines> {
                   Text("WORKOUT PLAN",
                       style: TextStyle(
                         fontSize: 18,
-                        fontWeight: FontWeight.bold,
+                        fontWeight: FontWeight.w400,
                         color: Constants.mainColorWhite,
                       )),
                   Container(
@@ -438,7 +449,7 @@ class _TimelinesState extends State<Timelines> {
                 Text("MY DIET",
                     style: TextStyle(
                       fontSize: 18,
-                      fontWeight: FontWeight.w500,
+                      fontWeight: FontWeight.w400,
                       color: Constants.mainColorWhite,
                     )),
                 InkWell(
@@ -609,7 +620,7 @@ class _TimelinesState extends State<Timelines> {
                 Text("HEALTH TRACKER",
                     style: TextStyle(
                       fontSize: 18,
-                      fontWeight: FontWeight.w500,
+                      fontWeight: FontWeight.w400,
                       color: Constants.mainColorWhite,
                     )),
                 InkWell(
@@ -796,7 +807,7 @@ class _TimelinesState extends State<Timelines> {
                 Text("MY MEDICINE",
                     style: TextStyle(
                       fontSize: 18,
-                      fontWeight: FontWeight.w500,
+                      fontWeight: FontWeight.w400,
                       color: Constants.mainColorWhite,
                     )),
                 InkWell(
@@ -990,7 +1001,7 @@ class _TimelinesState extends State<Timelines> {
                 Text("CHALLENGES",
                     style: TextStyle(
                       fontSize: 18,
-                      fontWeight: FontWeight.w500,
+                      fontWeight: FontWeight.w400,
                       color: Constants.mainColorWhite,
                     )),
                 InkWell(
@@ -1147,7 +1158,7 @@ class _TimelinesState extends State<Timelines> {
                 Text("SHOP NOW",
                     style: TextStyle(
                       fontSize: 18,
-                      fontWeight: FontWeight.w500,
+                      fontWeight: FontWeight.w400,
                       color: Constants.mainColorWhite,
                     )),
                 InkWell(
@@ -1302,7 +1313,7 @@ class _TimelinesState extends State<Timelines> {
                 Text("WATER",
                     style: TextStyle(
                       fontSize: 18,
-                      fontWeight: FontWeight.w500,
+                      fontWeight: FontWeight.w400,
                       color: Constants.mainColorWhite,
                     )),
                 InkWell(

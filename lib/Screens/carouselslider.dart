@@ -129,7 +129,7 @@ Widget slidercontainer1(context, days, totaltasks, completedtasks, values) {
                 children: <Widget>[
                   Container(
                     margin: EdgeInsets.only(
-                        left: MediaQuery.of(context).size.height * 0.01),
+                        left: MediaQuery.of(context).size.height * 0.001),
                     width: 80,
                     height: 80,
                     child: new CircularProgressIndicator(
