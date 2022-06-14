@@ -35,20 +35,18 @@ class _test_indicatorsState extends State<test_indicators> {
         children: [
           Container(
             margin: EdgeInsets.only(
-              top: MediaQuery.of(context).size.height * 0.03,
+              top: MediaQuery.of(context).size.height * 0.02,
               bottom: MediaQuery.of(context).size.height * 0.01,
               left: MediaQuery.of(context).size.height * 0.01,
               right: MediaQuery.of(context).size.height * 0.01,
             ),
             padding: EdgeInsets.only(
-              top: MediaQuery.of(context).size.height * 0.010,
-              left: MediaQuery.of(context).size.height * 0.01,
-              right: MediaQuery.of(context).size.height * 0.01,
-              bottom: MediaQuery.of(context).size.height * 0.01,
+              top: MediaQuery.of(context).size.height * 0.0002,
+              bottom: MediaQuery.of(context).size.height * 0.0002,
             ),
             decoration: BoxDecoration(
               color: Colors.white,
-              borderRadius: BorderRadius.circular(15),
+              borderRadius: BorderRadius.circular(25),
               boxShadow: [
                 BoxShadow(
                   color: Colors.grey.withOpacity(0.2),
@@ -62,7 +60,7 @@ class _test_indicatorsState extends State<test_indicators> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Container(
-                  margin: EdgeInsets.all(10),
+                  margin: EdgeInsets.all(08),
                   padding: EdgeInsets.only(
                     top: MediaQuery.of(context).size.height * 0.01,
                     left: MediaQuery.of(context).size.height * 0.07,
@@ -84,16 +82,17 @@ class _test_indicatorsState extends State<test_indicators> {
                   child: Text(
                     "Basic",
                     style: TextStyle(
-                        fontWeight: FontWeight.w600,
+                        fontWeight: FontWeight.w500,
                         fontSize: 15,
                         color: Constants.mainColorWhite),
                   ),
                 ),
                 Container(
+                  margin: EdgeInsets.all(08),
                   padding: EdgeInsets.only(
                     top: MediaQuery.of(context).size.height * 0.01,
                     left: MediaQuery.of(context).size.height * 0.07,
-                    right: MediaQuery.of(context).size.height * 0.07,
+                    right: MediaQuery.of(context).size.height * 0.05,
                     bottom: MediaQuery.of(context).size.height * 0.01,
                   ),
                   decoration: BoxDecoration(
@@ -102,7 +101,7 @@ class _test_indicatorsState extends State<test_indicators> {
                     boxShadow: [
                       BoxShadow(
                         color: Colors.grey.withOpacity(0.2),
-                        spreadRadius: 5,
+                        spreadRadius: 2,
                         blurRadius: 7,
                         offset: Offset(0, 3), // changes position of shadow
                       ),
@@ -111,7 +110,7 @@ class _test_indicatorsState extends State<test_indicators> {
                   child: Text(
                     "Premium",
                     style: TextStyle(
-                        fontWeight: FontWeight.w600,
+                        fontWeight: FontWeight.w500,
                         fontSize: 15,
                         color: Constants.mainColorWhite),
                   ),
@@ -151,7 +150,7 @@ Widget healthtest(context, title) {
       boxShadow: [
         BoxShadow(
           color: Colors.grey.withOpacity(0.2),
-          spreadRadius: 5,
+          spreadRadius: 2,
           blurRadius: 7,
           offset: Offset(0, 3), // changes position of shadow
         ),
