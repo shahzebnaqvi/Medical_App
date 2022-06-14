@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:medical_app/Screens/Health%20&%20Fitness%20Goal/test_indicators.dart';
 import 'package:medical_app/Screens/auth/recipes.dart';
 import 'package:medical_app/Screens/auth/signup.dart';
 import 'package:medical_app/Screens/bottombar.dart';
@@ -112,7 +113,10 @@ class _TimelinesState extends State<Timelines> {
         textScaleFactor: 1,
       ),
       trailing: InkWell(
-        onTap: () {},
+        onTap: () {
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => test_indicators()));
+        },
         child: Icon(
           Icons.notification_add_rounded,
           color: Constants.mainColorWhite,
