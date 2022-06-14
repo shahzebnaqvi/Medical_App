@@ -162,6 +162,7 @@ Widget healthtest(context, title) {
         Icons.health_and_safety,
         color: Constants.mainColorWhite,
       )),
+      horizontalTitleGap: 10,
       title: Text(
         title,
         style: TextStyle(
