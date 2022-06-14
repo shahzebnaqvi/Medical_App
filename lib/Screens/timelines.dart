@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:medical_app/Screens/Book_Doctors_Appoinment/Hospital.dart';
 import 'package:medical_app/Screens/Health%20&%20Fitness%20Goal/test_indicators.dart';
 import 'package:medical_app/Screens/auth/recipes.dart';
 import 'package:medical_app/Screens/auth/signup.dart';
@@ -100,8 +101,14 @@ class _TimelinesState extends State<Timelines> {
   Widget profile(context) {
     return Container(
         child: ListTile(
-      leading: CircleAvatar(
-          child: ClipOval(child: Image.asset('assets/doctor2.jpg'))),
+      leading: GestureDetector(
+        onTap: () {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => Hospital()));
+        },
+        child: CircleAvatar(
+            child: ClipOval(child: Image.asset('assets/doctor2.jpg'))),
+      ),
       title: Text(
         'Hello Joseph Allison,',
         style: TextStyle(color: Constants.mainColorWhite),
