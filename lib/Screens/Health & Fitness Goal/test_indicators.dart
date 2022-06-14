@@ -37,8 +37,8 @@ class _test_indicatorsState extends State<test_indicators> {
             margin: EdgeInsets.only(
               top: MediaQuery.of(context).size.height * 0.02,
               bottom: MediaQuery.of(context).size.height * 0.01,
-              left: MediaQuery.of(context).size.height * 0.01,
-              right: MediaQuery.of(context).size.height * 0.01,
+              left: MediaQuery.of(context).size.height * 0.02,
+              right: MediaQuery.of(context).size.height * 0.02,
             ),
             padding: EdgeInsets.only(
               top: MediaQuery.of(context).size.height * 0.0002,
@@ -141,8 +141,8 @@ Widget healthtest(context, title) {
     margin: EdgeInsets.only(
       top: MediaQuery.of(context).size.height * 0.03,
       bottom: MediaQuery.of(context).size.height * 0.01,
-      left: MediaQuery.of(context).size.height * 0.01,
-      right: MediaQuery.of(context).size.height * 0.01,
+      left: MediaQuery.of(context).size.height * 0.02,
+      right: MediaQuery.of(context).size.height * 0.02,
     ),
     padding: EdgeInsets.only(
       top: MediaQuery.of(context).size.height * 0.015,
