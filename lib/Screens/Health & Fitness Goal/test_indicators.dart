@@ -79,12 +79,15 @@ class _test_indicatorsState extends State<test_indicators> {
                       ),
                     ],
                   ),
-                  child: Text(
-                    "Basic",
-                    style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                        fontSize: 15,
-                        color: Constants.mainColorWhite),
+                  child: GestureDetector(
+                    onTap: () {},
+                    child: Text(
+                      "Basic",
+                      style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 15,
+                          color: Constants.mainColorWhite),
+                    ),
                   ),
                 ),
                 Container(
@@ -107,12 +110,15 @@ class _test_indicatorsState extends State<test_indicators> {
                       ),
                     ],
                   ),
-                  child: Text(
-                    "Premium",
-                    style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                        fontSize: 15,
-                        color: Constants.mainColorWhite),
+                  child: GestureDetector(
+                    onTap: () {},
+                    child: Text(
+                      "Premium",
+                      style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 15,
+                          color: Constants.mainColorWhite),
+                    ),
                   ),
                 ),
               ],
