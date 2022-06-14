@@ -73,13 +73,18 @@ class _HospitalState extends State<Hospital> {
                 ),
               ),
             ),
-            Hospitallocation(context)
+            Hospitallocation(context, 'Healer Hospital'),
+            Hospitallocation(context, 'Mamji Hospital'),
+            Hospitallocation(context, 'Manji Hospital'),
+            Hospitallocation(context, 'Dow Hospital'),
+            Hospitallocation(context, 'Healer Hospital'),
+            Hospitallocation(context, 'Mamji Hospital'),
           ],
         ));
   }
 }
 
-Widget Hospitallocation(context) {
+Widget Hospitallocation(context, title) {
   return Container(
     margin: EdgeInsets.only(
       top: MediaQuery.of(context).size.height * 0.03,
@@ -106,13 +111,20 @@ Widget Hospitallocation(context) {
       ],
     ),
     child: ListTile(
-        leading: CircleAvatar(
-            child: Icon(
-          Icons.health_and_safety,
-          color: Constants.mainColorWhite,
-        )),
+        leading: ClipOval(
+          child: CircleAvatar(
+            child: Image.asset(
+              'assets/doctor2.jpg',
+            ),
+            //     child: Icon(
+            //   Icons.health_and_safety,
+            //   size: 25,
+            //   color: Constants.mainColorWhite,
+            // )
+          ),
+        ),
         title: Text(
-          'Healer Hospital',
+          title,
           style: TextStyle(
               fontWeight: FontWeight.bold,
               color: Constants.blackcolor,
@@ -131,7 +143,8 @@ Widget Hospitallocation(context) {
         ),
         trailing: Text(
           "5.0",
-          style: TextStyle(color: Constants.ubl, fontSize: 15),
+          style: TextStyle(
+              color: Constants.ubl, fontSize: 15, fontWeight: FontWeight.w600),
         )),
   );
 }
