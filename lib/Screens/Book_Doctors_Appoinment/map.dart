@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_polyline_points/flutter_polyline_points.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:geolocator/geolocator.dart';
 import 'package:medical_app/Constants/constants.dart';
 import 'package:medical_app/Screens/Book_Doctors_Appoinment/Hospital.dart';
+import 'package:medical_app/Screens/Book_Doctors_Appoinment/mapstyle.dart';
 
 class Maps extends StatefulWidget {
   const Maps({Key? key}) : super(key: key);
@@ -29,7 +29,7 @@ class _HomeState extends State<Maps> {
   }
 
   void _onMapCreated(GoogleMapController controller) {
-    // controller.setMapStyle(Mapstyle.mapStyle);
+    controller.setMapStyle(Mapstyle.mapStyle);
     _controllerGoogleMap.complete(controller);
     newGoogleMapController = controller;
 
@@ -100,7 +100,7 @@ class _HomeState extends State<Maps> {
             ),
             title: Text(
               "Book Your Ride",
-              style: TextStyle(color: Constants.ubl),
+              style: TextStyle(color: Constants.grey),
             ),
           )),
           Positioned(
@@ -117,23 +117,23 @@ class _HomeState extends State<Maps> {
                 child: Column(
                   children: [
                     TextField(
-                      style: TextStyle(color: Constants.ubl),
+                      style: TextStyle(color: Constants.grey),
                       decoration: InputDecoration(
                         contentPadding: EdgeInsets.all(10.0),
-                        fillColor: Constants.ubl,
+                        fillColor: Constants.grey,
                         filled: true,
                         border: InputBorder.none,
                         prefixIcon: IconButton(
                           icon: Icon(
                             Icons.circle,
-                            color: Constants.ubl,
+                            color: Constants.grey,
                             size: 16,
                           ),
                           onPressed: () {},
                         ),
                         suffixIcon: IconButton(
                           icon: Icon(Icons.location_on),
-                          color: Constants.ubl,
+                          color: Constants.grey,
                           onPressed: () {
                             locatePosition();
                           },
@@ -144,7 +144,7 @@ class _HomeState extends State<Maps> {
                     Container(
                         alignment: Alignment.centerLeft,
                         width: MediaQuery.of(context).size.width,
-                        color: Constants.ubl,
+                        color: Constants.grey,
                         child: Padding(
                           padding: const EdgeInsets.only(left: 12.0),
                           child: Icon(
@@ -153,29 +153,29 @@ class _HomeState extends State<Maps> {
                           ),
                         )),
                     TextField(
-                      style: TextStyle(color: Constants.ubl),
+                      style: TextStyle(color: Constants.grey),
                       decoration: InputDecoration(
                         contentPadding: EdgeInsets.all(10.0),
-                        fillColor: Constants.ubl,
+                        fillColor: Constants.grey,
                         filled: true,
                         border: InputBorder.none,
                         prefixIcon: IconButton(
                           icon: Icon(
                             Icons.circle,
-                            color: Constants.ubl,
+                            color: Constants.grey,
                             size: 16,
                           ),
-                          color: Constants.ubl,
+                          color: Constants.grey,
                           onPressed: () {},
                         ),
                         suffixIcon: IconButton(
-                          icon:
-                              Icon(Icons.favorite_border, color: Constants.ubl),
+                          icon: Icon(Icons.favorite_border,
+                              color: Constants.grey),
                           onPressed: () {
                             locatePositionfinal();
                           },
                         ),
-                        suffixStyle: TextStyle(color: Constants.ubl),
+                        suffixStyle: TextStyle(color: Constants.grey),
                       ),
                     ),
                   ],
@@ -197,7 +197,7 @@ class _HomeState extends State<Maps> {
                           style: ElevatedButton.styleFrom(
                             padding: EdgeInsets.all(
                                 MediaQuery.of(context).size.width * 0.05),
-                            primary: Constants.ubl,
+                            primary: Constants.grey,
                           ),
                           onPressed: () {},
                           child: Wrap(children: [
@@ -205,7 +205,7 @@ class _HomeState extends State<Maps> {
                             PopupMenuButton(
                                 child: Text(
                                   "Wallet",
-                                  style: TextStyle(color: Constants.ubl),
+                                  style: TextStyle(color: Constants.grey),
                                 ),
                                 itemBuilder: (context) => [
                                       PopupMenuItem(
@@ -234,7 +234,7 @@ class _HomeState extends State<Maps> {
                           style: ElevatedButton.styleFrom(
                             padding: EdgeInsets.all(
                                 MediaQuery.of(context).size.width * 0.05),
-                            primary: Constants.ubl,
+                            primary: Constants.grey,
                           ),
                           onPressed: () {},
                           child: Wrap(children: [
@@ -242,7 +242,7 @@ class _HomeState extends State<Maps> {
                             PopupMenuButton(
                                 child: Text(
                                   "1 Person",
-                                  style: TextStyle(color: Constants.ubl),
+                                  style: TextStyle(color: Constants.grey),
                                 ),
                                 itemBuilder: (context) => [
                                       PopupMenuItem(
@@ -273,7 +273,7 @@ class _HomeState extends State<Maps> {
                       style: ElevatedButton.styleFrom(
                         padding: EdgeInsets.all(
                             MediaQuery.of(context).size.width * 0.06),
-                        primary: Constants.ubl,
+                        primary: Constants.grey,
                       ),
                       onPressed: () {
                         Navigator.push(
@@ -283,7 +283,7 @@ class _HomeState extends State<Maps> {
                       },
                       child: Text("CONTINUE",
                           style: TextStyle(
-                              letterSpacing: 6, color: Constants.ubl))))
+                              letterSpacing: 6, color: Constants.blackcolor))))
             ]),
           ),
         ],
