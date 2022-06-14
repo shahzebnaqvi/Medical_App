@@ -16,10 +16,17 @@ class Constants {
   static const Color mainColorWhite = Color.fromARGB(255, 253, 253, 253);
   static const Color bluecolor = Color.fromARGB(255, 108, 176, 232);
   static const Color redcolor = Colors.red;
-
   static const Color blackcolor = Colors.black;
   static const Color cyan_dark = Color.fromARGB(255, 24, 208, 184);
   static const Color cyan_light = Color.fromARGB(255, 111, 198, 238);
-
   static const Color grey = Colors.grey;
+
+  Color primarycolor = Colors.black;
+  Color secondarycolor = Colors.black12;
+  Color secondarycolor1 = Colors.black45;
+
+  Color secondarycolor2 = Colors.blueGrey;
+  Color secondarycolor3 = Colors.yellow;
+  Color secondarycolor4 = Colors.grey;
+  Color secondarycolor5 = Colors.white;
 }
