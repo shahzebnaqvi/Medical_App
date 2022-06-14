@@ -73,6 +73,7 @@ class _HospitalState extends State<Hospital> {
                 ),
               ),
             ),
+            Hospitallocation(context)
           ],
         ));
   }
@@ -105,21 +106,32 @@ Widget Hospitallocation(context) {
       ],
     ),
     child: ListTile(
-      leading: CircleAvatar(
-          child: Icon(
-        Icons.health_and_safety,
-        color: Constants.mainColorWhite,
-      )),
-      horizontalTitleGap: 10,
-      title: Text(
-        'Healer Hospital',
-        style: TextStyle(
-            fontWeight: FontWeight.bold, color: Constants.grey, fontSize: 18),
-      ),
-      trailing: Icon(
-        Icons.task_alt_rounded,
-        color: Constants.bluecolor,
-      ),
-    ),
+        leading: CircleAvatar(
+            child: Icon(
+          Icons.health_and_safety,
+          color: Constants.mainColorWhite,
+        )),
+        title: Text(
+          'Healer Hospital',
+          style: TextStyle(
+              fontWeight: FontWeight.bold,
+              color: Constants.blackcolor,
+              fontSize: 18),
+        ),
+        subtitle: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              "Cardiologist",
+              style:
+                  TextStyle(color: Constants.grey, fontWeight: FontWeight.w500),
+            ),
+            Text("0.8 km away"),
+          ],
+        ),
+        trailing: Text(
+          "5.0",
+          style: TextStyle(color: Constants.ubl, fontSize: 15),
+        )),
   );
 }
