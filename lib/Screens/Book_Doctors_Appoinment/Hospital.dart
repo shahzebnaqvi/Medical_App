@@ -143,10 +143,22 @@ Widget Hospitallocation(context, title) {
             Text("0.8 km away"),
           ],
         ),
-        trailing: Text(
-          "5.0",
-          style: TextStyle(
-              color: Constants.ubl, fontSize: 15, fontWeight: FontWeight.w600),
+        trailing: Wrap(
+          spacing: 2,
+          children: [
+            Icon(
+              Icons.star,
+              color: Constants.ubl,
+              size: 18,
+            ),
+            Text(
+              "5.0",
+              style: TextStyle(
+                  color: Constants.ubl,
+                  fontSize: 15,
+                  fontWeight: FontWeight.w600),
+            ),
+          ],
         )),
   );
 }
