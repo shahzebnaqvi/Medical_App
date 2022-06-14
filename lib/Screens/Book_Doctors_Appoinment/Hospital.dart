@@ -1,0 +1,125 @@
+import 'package:flutter/material.dart';
+
+import '../../Constants/constants.dart';
+
+class Hospital extends StatefulWidget {
+  const Hospital({Key? key}) : super(key: key);
+
+  @override
+  State<Hospital> createState() => _HospitalState();
+}
+
+class _HospitalState extends State<Hospital> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        backgroundColor: Constants.mainColorWhite,
+        appBar: AppBar(
+          backgroundColor: Constants.ubl,
+          title: Text(
+            "Hospital",
+            style: TextStyle(color: Constants.mainColorWhite),
+          ),
+          leading: IconButton(
+              color: Colors.white,
+              icon: Icon(
+                Icons.arrow_back,
+                color: Colors.black,
+                size: 20,
+              ),
+              onPressed: () {
+                Navigator.pop(context);
+              }),
+        ),
+        body: ListView(
+          children: [
+            Container(
+              decoration: BoxDecoration(
+                color: Constants.lightColor,
+                borderRadius: BorderRadius.all(
+                    Radius.circular(MediaQuery.of(context).size.width * 0.010)),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.2),
+                    spreadRadius: 1,
+                    blurRadius: 2,
+                    offset: Offset(0, 3), // changes position of shadow
+                  ),
+                ],
+              ),
+              margin: EdgeInsets.only(
+                top: MediaQuery.of(context).size.width * 0.06,
+                left: MediaQuery.of(context).size.width * 0.02,
+                right: MediaQuery.of(context).size.width * 0.02,
+              ),
+              child: TextField(
+                autofocus: false,
+                style: TextStyle(fontSize: 15.0, color: Color(0xFFbdc6cf)),
+                decoration: InputDecoration(
+                  filled: true,
+                  suffixIcon: Icon(Icons.search),
+                  fillColor: Colors.white,
+                  hintText: 'Search Location',
+                  contentPadding: const EdgeInsets.only(
+                      left: 14.0, bottom: 12.0, top: 12.0),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.white),
+                    borderRadius: BorderRadius.circular(29),
+                  ),
+                  enabledBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: Colors.white),
+                    borderRadius: BorderRadius.circular(25.7),
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ));
+  }
+}
+
+Widget Hospitallocation(context) {
+  return Container(
+    margin: EdgeInsets.only(
+      top: MediaQuery.of(context).size.height * 0.03,
+      bottom: MediaQuery.of(context).size.height * 0.01,
+      left: MediaQuery.of(context).size.height * 0.01,
+      right: MediaQuery.of(context).size.height * 0.01,
+    ),
+    padding: EdgeInsets.only(
+      top: MediaQuery.of(context).size.height * 0.015,
+      left: MediaQuery.of(context).size.height * 0.01,
+      right: MediaQuery.of(context).size.height * 0.01,
+      bottom: MediaQuery.of(context).size.height * 0.01,
+    ),
+    decoration: BoxDecoration(
+      color: Colors.white,
+      borderRadius: BorderRadius.circular(12),
+      boxShadow: [
+        BoxShadow(
+          color: Colors.grey.withOpacity(0.2),
+          spreadRadius: 2,
+          blurRadius: 7,
+          offset: Offset(0, 3), // changes position of shadow
+        ),
+      ],
+    ),
+    child: ListTile(
+      leading: CircleAvatar(
+          child: Icon(
+        Icons.health_and_safety,
+        color: Constants.mainColorWhite,
+      )),
+      horizontalTitleGap: 10,
+      title: Text(
+        'Healer Hospital',
+        style: TextStyle(
+            fontWeight: FontWeight.bold, color: Constants.grey, fontSize: 18),
+      ),
+      trailing: Icon(
+        Icons.task_alt_rounded,
+        color: Constants.bluecolor,
+      ),
+    ),
+  );
+}
