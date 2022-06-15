@@ -13,6 +13,7 @@ import 'package:medical_app/Screens/home.dart';
 
 import 'package:medical_app/testing.dart';
 
+import 'Screens/Book_Doctors_Appoinment/Doctors_Profile.dart';
 import 'Screens/auth/recipes.dart';
 
 void main() {
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
     ]);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Login(),
+      home: Doctors_Profiles(),
     );
   }
 }
