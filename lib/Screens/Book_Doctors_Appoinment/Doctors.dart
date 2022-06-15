@@ -1,4 +1,7 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
+import 'package:medical_app/Screens/Book_Doctors_Appoinment/Doctors_Profile.dart';
 
 import '../../Constants/constants.dart';
 
@@ -44,7 +47,14 @@ class _HospitalState extends State<Doctors> {
         ),
         body: ListView(
           children: [
-            Hospitallocation(context, 'John Smith'),
+            GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => Doctors_Profiles()));
+                },
+                child: Hospitallocation(context, 'John Smith')),
             Hospitallocation(context, 'Hamlet pham'),
             Hospitallocation(context, 'Manji Doctors'),
             Hospitallocation(context, 'Mary Hihi'),
@@ -60,8 +70,8 @@ Widget Hospitallocation(context, title) {
     margin: EdgeInsets.only(
       top: MediaQuery.of(context).size.height * 0.03,
       bottom: MediaQuery.of(context).size.height * 0.01,
-      left: MediaQuery.of(context).size.height * 0.01,
-      right: MediaQuery.of(context).size.height * 0.01,
+      left: MediaQuery.of(context).size.height * 0.02,
+      right: MediaQuery.of(context).size.height * 0.02,
     ),
     padding: EdgeInsets.only(
       top: MediaQuery.of(context).size.height * 0.015,
