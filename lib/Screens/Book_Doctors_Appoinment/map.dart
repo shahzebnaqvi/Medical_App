@@ -186,6 +186,9 @@ class _MyAppState extends State<Maps> {
                       "Cardiologist",
                       style: TextStyle(color: Constants.grey),
                     )),
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height * 0.02,
+                    ),
                     Container(
                       margin: EdgeInsets.only(
                         top: MediaQuery.of(context).size.height * 0.02,
