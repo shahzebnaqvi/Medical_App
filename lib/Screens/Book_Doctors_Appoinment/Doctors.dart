@@ -85,15 +85,9 @@ Widget Hospitallocation(context, title) {
         leading: ClipOval(
           child: CircleAvatar(
             radius: 25,
-
             child: Image.asset(
               'assets/Sign_up.jpg',
             ),
-            //     child: Icon(
-            //   Icons.health_and_safety,
-            //   size: 25,
-            //   color: Constants.mainColorWhite,
-            // )
           ),
         ),
         title: Text(

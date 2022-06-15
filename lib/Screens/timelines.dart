@@ -26,57 +26,58 @@ class _TimelinesState extends State<Timelines> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Container(
-            padding:
-                EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.02),
-            decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage("assets/curve.jpg"), fit: BoxFit.cover)),
-            child: ListView(children: [
-              profile(context),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.01,
-              ),
-              GestureDetector(
-                  onTap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => recipes()));
-                  },
-                  child: crauselSilder1()),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.01,
-              ),
-              workoutplan(
-                context,
-              ),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.01,
-              ),
-              dietplan(context),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.01,
-              ),
-              healthtracker(context),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.01,
-              ),
-              mymedicine(
-                context,
-              ),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.01,
-              ),
-              Challenges(context),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.01,
-              ),
-              shopnow(context),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.01,
-              ),
-              water(context),
-            ])),
-        bottomNavigationBar: Bottombarcircular(num: "0"));
+      body: Container(
+          padding:
+              EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.02),
+          decoration: BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage("assets/curve.jpg"), fit: BoxFit.cover)),
+          child: ListView(children: [
+            profile(context),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.01,
+            ),
+            GestureDetector(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => recipes()));
+                },
+                child: crauselSilder1()),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.01,
+            ),
+            workoutplan(
+              context,
+            ),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.01,
+            ),
+            dietplan(context),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.01,
+            ),
+            healthtracker(context),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.01,
+            ),
+            mymedicine(
+              context,
+            ),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.01,
+            ),
+            Challenges(context),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.01,
+            ),
+            shopnow(context),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.01,
+            ),
+            water(context),
+          ])),
+      // bottomNavigationBar: Bottombarcircular(num: "0")
+    );
   }
 
 // Profile
