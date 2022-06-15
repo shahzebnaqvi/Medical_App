@@ -69,23 +69,26 @@ class _HospitalState extends State<Doctors_Profiles> {
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.01,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(
-                  Icons.star,
-                  color: Constants.bluecolor,
-                  size: 18,
-                ),
-                Text(
-                  "5.0",
-                  style: TextStyle(color: Constants.grey),
-                ),
-                SizedBox(
-                  width: MediaQuery.of(context).size.width * 0.02,
-                ),
-                Text("(234 reviewer)", style: TextStyle(color: Constants.grey))
-              ],
+            Container(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(
+                    Icons.star,
+                    color: Constants.bluecolor,
+                    size: 18,
+                  ),
+                  Text(
+                    "5.0",
+                    style: TextStyle(color: Constants.grey),
+                  ),
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.02,
+                  ),
+                  Text("(234 reviewer)",
+                      style: TextStyle(color: Constants.grey))
+                ],
+              ),
             ),
             Container(
               margin: EdgeInsets.only(
