@@ -34,16 +34,19 @@ class _HospitalState extends State<Doctors_Profiles> {
         body: ListView(
           children: [
             Container(
-              height: MediaQuery.of(context).size.height * 0.25,
+              height: MediaQuery.of(context).size.height * 0.20,
               margin: EdgeInsets.only(
                 left: MediaQuery.of(context).size.height * 0.025,
                 right: MediaQuery.of(context).size.height * 0.025,
-                top: MediaQuery.of(context).size.height * 0.030,
+                top: MediaQuery.of(context).size.height * 0.025,
               ),
               child: CircleAvatar(
-                radius: 30,
-                backgroundImage: NetworkImage(
-                    'https://avatars.githubusercontent.com/u/84890859?v=4'),
+                child: ClipOval(
+                  child: Image.asset(
+                    'assets/doctor2.jpg',
+                    fit: BoxFit.cover,
+                  ),
+                ),
               ),
             ),
             SizedBox(
@@ -98,20 +101,23 @@ class _HospitalState extends State<Doctors_Profiles> {
                 bottom: MediaQuery.of(context).size.height * 0.02,
               ),
               decoration: BoxDecoration(
-                color: Constants.bluecolor,
+                color: Constants.mainColor1,
                 borderRadius: BorderRadius.circular(30),
                 boxShadow: [
                   BoxShadow(
                     color: Colors.grey.withOpacity(0.2),
-                    spreadRadius: 2,
+                    spreadRadius: 8,
                     blurRadius: 7,
                     offset: Offset(0, 3),
                   ),
                 ],
               ),
-              child: Text(
-                "BOOK APPOINTMENT",
-                style: TextStyle(fontSize: 18, color: Constants.mainColorWhite),
+              child: Center(
+                child: Text(
+                  "BOOK APPOINTMENT",
+                  style:
+                      TextStyle(fontSize: 18, color: Constants.mainColorWhite),
+                ),
               ),
             ),
             Container(),
@@ -128,8 +134,8 @@ Widget Profile(context, icon, title) {
       margin: EdgeInsets.only(
         top: MediaQuery.of(context).size.height * 0.03,
         bottom: MediaQuery.of(context).size.height * 0.01,
-        left: MediaQuery.of(context).size.height * 0.01,
-        right: MediaQuery.of(context).size.height * 0.01,
+        left: MediaQuery.of(context).size.height * 0.02,
+        right: MediaQuery.of(context).size.height * 0.02,
       ),
       padding: EdgeInsets.only(
         top: MediaQuery.of(context).size.height * 0.015,
