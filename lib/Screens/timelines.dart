@@ -26,25 +26,6 @@ class _TimelinesState extends State<Timelines> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
-        //backgroundColor: Constants.redcolor,
-        // appBar: AppBar(
-        //   backgroundColor: Constants.mainColorWhite,
-        //   title: Text(
-        //     "Timelines",
-        //     style: TextStyle(color: Constants.blackcolor),
-        //   ),
-        //   leading: IconButton(
-        //       color: Colors.white,
-        //       icon: Icon(
-        //         Icons.arrow_back,
-        //         color: Colors.black,
-        //         size: 20,
-        //       ),
-        //       onPressed: () {
-        //         Navigator.pop(context);
-        //       }),
-        // ),
         body: Container(
             padding:
                 EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.02),
@@ -94,7 +75,8 @@ class _TimelinesState extends State<Timelines> {
                 height: MediaQuery.of(context).size.height * 0.01,
               ),
               water(context),
-            ])));
+            ])),
+        bottomNavigationBar: Bottombarcircular(num: "0"));
   }
 
 // Profile
@@ -273,7 +255,7 @@ class _TimelinesState extends State<Timelines> {
           left: MediaQuery.of(context).size.height * 0.02,
           right: MediaQuery.of(context).size.height * 0.02,
         ),
-        padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.01),
+        padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.04),
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(10),
@@ -432,7 +414,7 @@ class _TimelinesState extends State<Timelines> {
         left: MediaQuery.of(context).size.height * 0.02,
         right: MediaQuery.of(context).size.height * 0.02,
       ),
-      padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.01),
+      padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.04),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(10),
@@ -603,7 +585,7 @@ class _TimelinesState extends State<Timelines> {
         left: MediaQuery.of(context).size.height * 0.02,
         right: MediaQuery.of(context).size.height * 0.02,
       ),
-      padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.01),
+      padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.04),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(10),
@@ -790,7 +772,7 @@ class _TimelinesState extends State<Timelines> {
         left: MediaQuery.of(context).size.height * 0.02,
         right: MediaQuery.of(context).size.height * 0.02,
       ),
-      padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.01),
+      padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.04),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(10),
@@ -984,7 +966,7 @@ class _TimelinesState extends State<Timelines> {
         left: MediaQuery.of(context).size.height * 0.02,
         right: MediaQuery.of(context).size.height * 0.02,
       ),
-      padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.01),
+      padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.04),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(10),
@@ -1141,7 +1123,7 @@ class _TimelinesState extends State<Timelines> {
         left: MediaQuery.of(context).size.height * 0.02,
         right: MediaQuery.of(context).size.height * 0.02,
       ),
-      padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.01),
+      padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.04),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(10),
@@ -1298,7 +1280,7 @@ class _TimelinesState extends State<Timelines> {
           left: MediaQuery.of(context).size.height * 0.02,
           right: MediaQuery.of(context).size.height * 0.02,
         ),
-        padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.01),
+        padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.04),
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(10),

@@ -42,10 +42,14 @@
 import 'package:flutter/material.dart';
 import 'package:medical_app/Constants/constants.dart';
 import 'package:medical_app/Screens/additionaltools/bmi.dart';
+import 'package:medical_app/Screens/circular.dart';
 import 'package:medical_app/Screens/maintools/appointments.dart';
+import 'package:medical_app/Screens/maintools/maintoolssubscreens/bookappointment.dart';
 import 'package:medical_app/Screens/maintools/myhistory.dart';
 import 'package:medical_app/Screens/maintools/myreports.dart';
 import 'package:medical_app/Screens/maintools/pharmacy.dart';
+import 'package:pandabar/pandabar.dart';
+import 'package:circular_menu/circular_menu.dart';
 
 var pageindex = 0;
 
@@ -116,6 +120,106 @@ class _BottombarState extends State<Bottombarnavigation> {
       unselectedItemColor: Colors.grey,
       showUnselectedLabels: true,
       selectedItemColor: Constants.mainColor,
+    );
+  }
+}
+
+int page = 0;
+
+class Bottombarcircular extends StatefulWidget {
+  final String num;
+  const Bottombarcircular({Key? key, required this.num}) : super(key: key);
+
+  @override
+  State<Bottombarcircular> createState() => _BottombarcircularState();
+}
+
+String _colorName = 'No';
+Color _color = Colors.black;
+
+class _BottombarcircularState extends State<Bottombarcircular> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: Colors.transparent,
+      child: PandaBar(
+        fabIcon: Icon(
+          Icons.account_balance_wallet,
+          color: Colors.white,
+        ),
+        buttonColor: Colors.white,
+        backgroundColor: Color.fromARGB(255, 6, 129, 23),
+        buttonSelectedColor: Colors.white,
+        fabColors: [
+          Color.fromARGB(255, 6, 129, 23),
+          Color.fromARGB(255, 9, 110, 23),
+          Color.fromARGB(255, 18, 129, 23),
+          Color.fromARGB(255, 13, 87, 12),
+        ],
+        buttonData: [
+          PandaBarButtonData(id: 0, icon: Icons.home, title: 'Home'),
+          PandaBarButtonData(id: 1, icon: Icons.book, title: 'News Update'),
+          PandaBarButtonData(id: 2, icon: Icons.headset_mic, title: 'Support'),
+          PandaBarButtonData(id: 3, icon: Icons.person, title: 'Profile'),
+        ],
+        onChange: (id) {
+          setState(() {
+            page = id;
+            print(page);
+            print(page.runtimeType);
+            print(id.runtimeType);
+          });
+          if (page == 0 && widget.num != "0") {
+            Navigator.pushReplacement(
+                context, MaterialPageRoute(builder: (context) => MyHistory()));
+            print(widget.num);
+          } else if (id == 1 && widget.num != "1") {
+            Navigator.pushReplacement(context,
+                MaterialPageRoute(builder: (context) => BookApppointment()));
+            id = 0;
+          } else if (id == 2 && widget.num != "2") {
+            Navigator.pushReplacement(
+                context, MaterialPageRoute(builder: (context) => Pharmacy()));
+            id = 0;
+          } else if (id == 3 && widget.num != "3") {
+            // Support()
+            Navigator.pushReplacement(
+                context, MaterialPageRoute(builder: (context) => MyHistory()));
+            id = 0;
+          }
+        },
+        onFabButtonPressed: () {
+          // Navigator.pushReplacement(context,
+          //     MaterialPageRoute(builder: (context) => Circularbutton()));
+          final circularMenu = CircularMenu(items: [
+            CircularMenuItem(
+                icon: Icons.home,
+                onTap: () {
+                  // callback
+                }),
+            CircularMenuItem(
+                icon: Icons.search,
+                onTap: () {
+                  //callback
+                }),
+            CircularMenuItem(
+                icon: Icons.settings,
+                onTap: () {
+                  //callback
+                }),
+            CircularMenuItem(
+                icon: Icons.star,
+                onTap: () {
+                  //callback
+                }),
+            CircularMenuItem(
+                icon: Icons.pages,
+                onTap: () {
+                  //callback
+                }),
+          ]);
+        },
+      ),
     );
   }
 }
