@@ -45,7 +45,6 @@ Widget crauselSilder2(context, days) {
 
 Widget slidercontainer1(context, days, totaltasks, completedtasks, values) {
   return Container(
-    width: MediaQuery.of(context).size.width * 0.9,
     margin: EdgeInsets.only(
       top: MediaQuery.of(context).size.height * 0.01,
       bottom: MediaQuery.of(context).size.height * 0.01,
