@@ -102,6 +102,8 @@ class _MyAppState extends State<Maps> {
                 ),
               ),
             ),
+
+            // Widget call
             Align(
               alignment: Alignment.bottomCenter,
               child: Container(

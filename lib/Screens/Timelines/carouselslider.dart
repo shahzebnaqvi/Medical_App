@@ -1,7 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
-import '../Constants/constants.dart';
+import '../../Constants/constants.dart';
 
 class crauselSilder1 extends StatefulWidget {
   const crauselSilder1({Key? key}) : super(key: key);

@@ -7,7 +7,7 @@ import 'package:medical_app/Constants/constants.dart';
 import 'package:medical_app/Screens/auth/forgetpassword.dart';
 import 'package:medical_app/Screens/auth/signup.dart';
 import 'package:medical_app/Screens/home.dart';
-import 'package:medical_app/Screens/timelines.dart';
+import 'package:medical_app/Screens/Timelines/timelines.dart';
 
 class Login extends StatefulWidget {
   @override
