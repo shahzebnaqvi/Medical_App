@@ -27,7 +27,7 @@ Widget crauselSilder2(context) {
         ),
       ],
       options: CarouselOptions(
-        // autoPlay: true,
+        //autoPlay: true,
         height: 270.0,
         enlargeCenterPage: true,
         aspectRatio: 16 / 9,
@@ -44,8 +44,8 @@ Widget mapslider(context) {
   return Align(
       alignment: Alignment.bottomCenter,
       child: Container(
-        // height: MediaQuery.of(context).size.height * 0.350,
-        // width: MediaQuery.of(context).size.width * 0.350,
+        height: MediaQuery.of(context).size.height * 0.350,
+        width: MediaQuery.of(context).size.width * 0.550,
         // margin: EdgeInsets.only(
         //   top: MediaQuery.of(context).size.height * 0.02,
         //   bottom: MediaQuery.of(context).size.height * 0.01,
@@ -171,8 +171,8 @@ Widget mapslider(context) {
                         ),
                       ],
                     ),
-                    child:
-                        GestureDetector(onTap: () {}, child: Icon(Icons.phone)),
+                    child: GestureDetector(
+                        onTap: () {}, child: Icon(Icons.message)),
                   ),
                   Container(
                     margin: EdgeInsets.all(08),
