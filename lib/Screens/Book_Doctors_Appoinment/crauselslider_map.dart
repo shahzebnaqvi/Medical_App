@@ -27,7 +27,7 @@ Widget crauselSilder2(context) {
         ),
       ],
       options: CarouselOptions(
-        //autoPlay: true,
+        autoPlay: true,
         height: 290.0,
         enlargeCenterPage: true,
         aspectRatio: 16 / 9,
@@ -44,14 +44,8 @@ Widget mapslider(context) {
   return Align(
       alignment: Alignment.bottomCenter,
       child: Container(
-        height: MediaQuery.of(context).size.height * 0.350,
+        height: MediaQuery.of(context).size.height * 0.320,
         width: MediaQuery.of(context).size.width * 0.550,
-        // margin: EdgeInsets.only(
-        //   top: MediaQuery.of(context).size.height * 0.02,
-        //   bottom: MediaQuery.of(context).size.height * 0.01,
-        //   left: MediaQuery.of(context).size.height * 0.12,
-        //   right: MediaQuery.of(context).size.height * 0.12,
-        // ),
         padding: EdgeInsets.only(
           left: MediaQuery.of(context).size.height * 0.01,
           right: MediaQuery.of(context).size.height * 0.01,
@@ -96,7 +90,6 @@ Widget mapslider(context) {
             ),
             Container(
               height: MediaQuery.of(context).size.height * 0.11,
-              // width: MediaQuery.of(context).size.width * 0.11,
               margin: EdgeInsets.only(
                 left: MediaQuery.of(context).size.height * 0.025,
                 right: MediaQuery.of(context).size.height * 0.025,
@@ -112,15 +105,11 @@ Widget mapslider(context) {
                 ),
               ),
             ),
-            // SizedBox(
-            //   height: MediaQuery.of(context).size.height * 0.01,
-            // ),
             Center(
                 child: Text(
               "Alexander Wolfe",
               style: TextStyle(fontWeight: FontWeight.bold),
             )),
-
             Center(
                 child: Text(
               "Cardiologist",
@@ -134,7 +123,6 @@ Widget mapslider(context) {
               ),
               padding: EdgeInsets.only(
                 top: MediaQuery.of(context).size.height * 0.0002,
-                //  bottom: MediaQuery.of(context).size.height * 0.002,
                 left: MediaQuery.of(context).size.height * 0.01,
                 right: MediaQuery.of(context).size.height * 0.01,
               ),

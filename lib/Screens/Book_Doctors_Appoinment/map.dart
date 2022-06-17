@@ -56,7 +56,9 @@ class _MyAppState extends State<Maps> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Maps'),
+          title: Text(
+            'Maps',
+          ),
           backgroundColor: Constants.ubl,
           leading: IconButton(
               color: Colors.white,
@@ -83,33 +85,10 @@ class _MyAppState extends State<Maps> {
             ),
             Padding(
               padding: const EdgeInsets.all(16.0),
-              // child: Align(
-              //   alignment: Alignment.center,
-              //   child: ListView(
-              //     children: <Widget>[
-              //       FloatingActionButton(
-              //         onPressed: _onMapTypeButtonPressed,
-              //         materialTapTargetSize: MaterialTapTargetSize.padded,
-              //         backgroundColor: Constants.bluecolor,
-              //         child: const Icon(Icons.map, size: 36.0),
-              //       ),
-              //       SizedBox(height: 16.0),
-              //       FloatingActionButton(
-              //         onPressed: _onAddMarkerButtonPressed,
-              //         materialTapTargetSize: MaterialTapTargetSize.padded,
-              //         backgroundColor: Constants.bluecolor,
-              //         child: const Icon(Icons.add_location, size: 36.0),
-              //       ),
-              //     ],
-              //   ),
-              // ),
             ),
-            MapCrausel()
-
             // Widget call
-            // Align(
-            //   alignment: Alignment.bottomCenter,
-            //   child:
+
+            MapCrausel()
           ],
         ),
       ),
