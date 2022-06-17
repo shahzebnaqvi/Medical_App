@@ -28,7 +28,7 @@ Widget crauselSilder2(context) {
       ],
       options: CarouselOptions(
         //autoPlay: true,
-        height: 270.0,
+        height: 290.0,
         enlargeCenterPage: true,
         aspectRatio: 16 / 9,
         autoPlayCurve: Curves.fastOutSlowIn,
@@ -55,7 +55,7 @@ Widget mapslider(context) {
         padding: EdgeInsets.only(
           left: MediaQuery.of(context).size.height * 0.01,
           right: MediaQuery.of(context).size.height * 0.01,
-          bottom: MediaQuery.of(context).size.height * 0.01,
+          bottom: MediaQuery.of(context).size.height * 0.001,
         ),
         decoration: BoxDecoration(
           color: Constants.mainColorWhite,
@@ -95,7 +95,7 @@ Widget mapslider(context) {
               ],
             ),
             Container(
-              height: MediaQuery.of(context).size.height * 0.10,
+              height: MediaQuery.of(context).size.height * 0.11,
               margin: EdgeInsets.only(
                 left: MediaQuery.of(context).size.height * 0.025,
                 right: MediaQuery.of(context).size.height * 0.025,
@@ -134,7 +134,7 @@ Widget mapslider(context) {
               ),
               padding: EdgeInsets.only(
                 top: MediaQuery.of(context).size.height * 0.0002,
-                bottom: MediaQuery.of(context).size.height * 0.002,
+                //  bottom: MediaQuery.of(context).size.height * 0.002,
                 left: MediaQuery.of(context).size.height * 0.01,
                 right: MediaQuery.of(context).size.height * 0.01,
               ),
@@ -172,14 +172,18 @@ Widget mapslider(context) {
                       ],
                     ),
                     child: GestureDetector(
-                        onTap: () {}, child: Icon(Icons.message)),
+                        onTap: () {},
+                        child: Icon(
+                          Icons.message,
+                          size: 10,
+                        )),
                   ),
                   Container(
-                    margin: EdgeInsets.all(08),
+                    margin: EdgeInsets.all(05),
                     padding: EdgeInsets.only(
                       top: MediaQuery.of(context).size.height * 0.01,
                       left: MediaQuery.of(context).size.height * 0.07,
-                      bottom: MediaQuery.of(context).size.height * 0.01,
+                      bottom: MediaQuery.of(context).size.height * 0.06,
                     ),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
@@ -193,7 +197,10 @@ Widget mapslider(context) {
                       ],
                     ),
                     child: GestureDetector(
-                        onTap: () {}, child: Icon(Icons.message)),
+                        onTap: () {},
+                        child: Icon(
+                          Icons.message,
+                        )),
                   ),
                 ],
               ),
