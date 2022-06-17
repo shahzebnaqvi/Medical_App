@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
 import 'package:medical_app/Screens/Book_Doctors_Appoinment/My_Apponiments.dart';
+import 'package:medical_app/Screens/Book_Doctors_Appoinment/calendar.dart';
 
 import '../../Constants/constants.dart';
 
@@ -63,7 +64,9 @@ class _HospitalState extends State<Book_Appointment> {
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.01,
             ),
-            Container(),
+            Container(
+              child: CalendarScreen(),
+            ),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.01,
             ),

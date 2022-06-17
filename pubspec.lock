@@ -90,13 +90,6 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-  flutter_calendar_carousel:
-    dependency: "direct main"
-    description:
-      name: flutter_calendar_carousel
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "2.2.0"
   flutter_lints:
     dependency: "direct dev"
     description:
@@ -104,6 +97,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.4"
+  flutter_neat_and_clean_calendar:
+    dependency: "direct main"
+    description:
+      name: flutter_neat_and_clean_calendar
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.3.6+19"
   flutter_plugin_android_lifecycle:
     dependency: transitive
     description:
@@ -352,13 +352,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "5.0.0"
-  simple_gesture_detector:
-    dependency: transitive
-    description:
-      name: simple_gesture_detector
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.2.0"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -399,13 +392,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.1.1"
-  table_calendar:
-    dependency: "direct main"
-    description:
-      name: table_calendar
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "3.0.6"
   term_glyph:
     dependency: transitive
     description:

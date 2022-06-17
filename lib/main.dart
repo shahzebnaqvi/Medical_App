@@ -22,9 +22,7 @@ class MyApp extends StatelessWidget {
     ]);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Calendar(
-        title: 'CAL',
-      ),
+      home: Book_Appointment(),
     );
   }
 }
