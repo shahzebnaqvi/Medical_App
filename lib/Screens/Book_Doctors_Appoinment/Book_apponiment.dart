@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/route_manager.dart';
+import 'package:medical_app/Screens/Book_Doctors_Appoinment/My_Apponiments.dart';
 
 import '../../Constants/constants.dart';
 
@@ -91,10 +93,18 @@ class _HospitalState extends State<Book_Appointment> {
                 ],
               ),
               child: Center(
-                child: Text(
-                  "BOOK NOW",
-                  style:
-                      TextStyle(fontSize: 18, color: Constants.mainColorWhite),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => MyAppointments()));
+                  },
+                  child: Text(
+                    "BOOK NOW",
+                    style: TextStyle(
+                        fontSize: 18, color: Constants.mainColorWhite),
+                  ),
                 ),
               ),
             ),
