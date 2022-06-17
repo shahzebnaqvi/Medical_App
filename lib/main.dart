@@ -17,6 +17,7 @@ import 'package:medical_app/testing.dart';
 import 'Screens/Book_Doctors_Appoinment/Book_apponiment.dart';
 import 'Screens/Book_Doctors_Appoinment/Doctors_Profile.dart';
 import 'Screens/auth/recipes.dart';
+import 'Screens/maintools/appointments.dart';
 
 void main() {
   runApp(const MyApp());
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
     ]);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Maps(),
+      home: Book_Appointment(),
     );
   }
 }

@@ -50,7 +50,7 @@ class _HospitalState extends State<Book_Appointment> {
               ),
             ),
             SizedBox(
-              height: MediaQuery.of(context).size.height * 0.03,
+              height: MediaQuery.of(context).size.height * 0.02,
             ),
             Center(
               child: Text(
