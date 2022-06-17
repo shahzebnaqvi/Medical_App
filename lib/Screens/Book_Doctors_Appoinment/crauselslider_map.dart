@@ -22,9 +22,10 @@ Widget crauselSilder2(context) {
     alignment: Alignment.bottomCenter,
     child: CarouselSlider(
       items: [
-        mapslider(
-          context,
-        ),
+        mapslider(context, 'Alexander Robert'),
+        mapslider(context, 'Royal Shano'),
+        mapslider(context, 'David Warner'),
+        mapslider(context, 'Bridge Duf'),
       ],
       options: CarouselOptions(
         autoPlay: true,
@@ -40,7 +41,7 @@ Widget crauselSilder2(context) {
   );
 }
 
-Widget mapslider(context) {
+Widget mapslider(context, name) {
   return Align(
       alignment: Alignment.bottomCenter,
       child: Container(
@@ -107,7 +108,7 @@ Widget mapslider(context) {
             ),
             Center(
                 child: Text(
-              "Alexander Wolfe",
+              name,
               style: TextStyle(fontWeight: FontWeight.bold),
             )),
             Center(
