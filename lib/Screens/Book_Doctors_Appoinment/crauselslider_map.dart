@@ -128,11 +128,11 @@ Widget mapslider(context) {
               ),
               decoration: BoxDecoration(
                 color: Constants.bluecolor,
-                borderRadius: BorderRadius.circular(40),
+                borderRadius: BorderRadius.circular(10),
                 boxShadow: [
                   BoxShadow(
                     color: Colors.grey.withOpacity(0.2),
-                    spreadRadius: 5,
+                    spreadRadius: 8,
                     blurRadius: 7,
                     offset: Offset(0, 3), // changes position of shadow
                   ),
