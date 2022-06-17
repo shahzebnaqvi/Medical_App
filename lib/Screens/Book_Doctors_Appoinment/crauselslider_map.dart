@@ -96,12 +96,14 @@ Widget mapslider(context) {
             ),
             Container(
               height: MediaQuery.of(context).size.height * 0.11,
+              // width: MediaQuery.of(context).size.width * 0.11,
               margin: EdgeInsets.only(
                 left: MediaQuery.of(context).size.height * 0.025,
                 right: MediaQuery.of(context).size.height * 0.025,
                 top: MediaQuery.of(context).size.height * 0.020,
               ),
               child: CircleAvatar(
+                radius: MediaQuery.of(context).size.width / 0.30,
                 child: ClipOval(
                   child: Image.asset(
                     'assets/doctor2.jpg',
@@ -110,24 +112,22 @@ Widget mapslider(context) {
                 ),
               ),
             ),
-            SizedBox(
-              height: MediaQuery.of(context).size.height * 0.01,
-            ),
+            // SizedBox(
+            //   height: MediaQuery.of(context).size.height * 0.01,
+            // ),
             Center(
                 child: Text(
               "Alexander Wolfe",
               style: TextStyle(fontWeight: FontWeight.bold),
             )),
-            // SizedBox(
-            //   height: MediaQuery.of(context).size.height * 0.01,
-            // ),
+
             Center(
                 child: Text(
               "Cardiologist",
               style: TextStyle(color: Constants.grey),
             )),
             Container(
-              height: MediaQuery.of(context).size.height * 0.070,
+              height: MediaQuery.of(context).size.height * 0.060,
               margin: EdgeInsets.only(
                 top: MediaQuery.of(context).size.height * 0.04,
                 bottom: MediaQuery.of(context).size.height * 0.01,
@@ -151,38 +151,12 @@ Widget mapslider(context) {
                 ],
               ),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Container(
-                    margin: EdgeInsets.all(08),
-                    padding: EdgeInsets.only(
-                      top: MediaQuery.of(context).size.height * 0.01,
-                      bottom: MediaQuery.of(context).size.height * 0.01,
-                      left: MediaQuery.of(context).size.height * 0.01,
-                      right: MediaQuery.of(context).size.height * 0.01,
-                    ),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      boxShadow: [
-                        BoxShadow(
-                          spreadRadius: 5,
-                          blurRadius: 7,
-                          offset: Offset(0, 3), // changes position of shadow
-                        ),
-                      ],
-                    ),
-                    child: GestureDetector(
-                        onTap: () {},
-                        child: Icon(
-                          Icons.message,
-                          size: 10,
-                        )),
-                  ),
                   Container(
                     margin: EdgeInsets.all(05),
                     padding: EdgeInsets.only(
                       top: MediaQuery.of(context).size.height * 0.01,
-                      left: MediaQuery.of(context).size.height * 0.07,
                       bottom: MediaQuery.of(context).size.height * 0.06,
                     ),
                     decoration: BoxDecoration(
@@ -199,7 +173,8 @@ Widget mapslider(context) {
                     child: GestureDetector(
                         onTap: () {},
                         child: Icon(
-                          Icons.message,
+                          Icons.phone,
+                          size: 25,
                         )),
                   ),
                 ],
