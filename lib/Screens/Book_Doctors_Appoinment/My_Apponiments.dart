@@ -21,17 +21,17 @@ class _HospitalState extends State<MyAppointments> {
             "MyAppointments",
             style: TextStyle(color: Constants.mainColorWhite),
           ),
-          actions: [
-            Padding(
-                padding: EdgeInsets.only(right: 20.0),
-                child: GestureDetector(
-                  onTap: () {},
-                  child: Icon(
-                    Icons.search,
-                    size: 26.0,
-                  ),
-                )),
-          ],
+          // actions: [
+          //   Padding(
+          //       padding: EdgeInsets.only(right: 20.0),
+          //       child: GestureDetector(
+          //         onTap: () {},
+          //         child: Icon(
+          //           Icons.search,
+          //           size: 26.0,
+          //         ),
+          //       )),
+          // ],
           leading: IconButton(
               color: Colors.white,
               icon: Icon(
@@ -53,14 +53,12 @@ class _HospitalState extends State<MyAppointments> {
                           builder: (context) => Doctors_Profiles()));
                 },
                 child: Appointment(
-                    context, ' Appointment', 'Accepted', 'Dr.Ethel Howard')),
-            Appointment(
-                context, 'Hamlet pham', 'Still in Progress ', 'Dr.John Ray'),
-            Appointment(
-                context, 'Manji MyAppointments', 'Rejected', 'Dr.Ethel Howard'),
-            Appointment(context, 'Mary Hihi', 'Accepted', 'Dr.John Ray'),
-            Appointment(context, 'Johny Doe', 'Unconfirmed', 'Dr.John Ray'),
-            Appointment(context, 'May Hampton', 'Accepted', 'Dr.Ethel Howard'),
+                    context, 'Appointment', 'Accepted', 'Dr.Ethel Howard')),
+            Appointment(context, 'Appointment', 'Progress ', 'Dr.John Ray'),
+            Appointment(context, 'Appointment ', 'Rejected', 'Dr.Ethel Howard'),
+            Appointment(context, 'Appointment', 'Accepted', 'Dr.John Ray'),
+            Appointment(context, 'Appointment', 'Unconfirmed', 'Dr.John Ray'),
+            Appointment(context, 'Appointment', 'Accepted', 'Dr.Ethel Howard'),
           ],
         ));
   }
@@ -97,56 +95,54 @@ Widget Appointment(context, title, title1, doctor) {
           child: CircleAvatar(
             radius: 25,
             child: Image.asset(
-              'assets/Sign_up.jpg',
+              'assets/apponitment.jpg',
             ),
           ),
         ),
-        title: Row(
-          children: [
-            Text(
-              title,
-              style:
-                  TextStyle(color: Constants.grey, fontWeight: FontWeight.w500),
-            ),
-            SizedBox(
-              width: MediaQuery.of(context).size.width * 0.05,
-            ),
-            Text(
-              title1,
-              style:
-                  TextStyle(color: Constants.grey, fontWeight: FontWeight.w500),
-            ),
-          ],
+        title: Padding(
+          padding: const EdgeInsets.all(3),
+          child: Row(
+            children: [
+              Text(
+                title,
+                style: TextStyle(
+                    color: Constants.grey, fontWeight: FontWeight.w500),
+              ),
+              SizedBox(
+                width: MediaQuery.of(context).size.width * 0.03,
+              ),
+              Text(
+                title1,
+                style: TextStyle(
+                    color: Constants.grey, fontWeight: FontWeight.w500),
+              ),
+            ],
+          ),
         ),
         subtitle: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              doctor,
-              style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: Constants.blackcolor,
-                  fontSize: 18),
+            Padding(
+              padding: const EdgeInsets.all(3),
+              child: Text(
+                doctor,
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Constants.blackcolor,
+                    fontSize: 18),
+              ),
             ),
-            Text("0.8 km away"),
+            Padding(
+              padding: const EdgeInsets.all(3),
+              child: Text(
+                "08:00PM - 08:30PM",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Constants.grey,
+                ),
+              ),
+            ),
           ],
         ),
-        // trailing: Wrap(
-        //   spacing: 2,
-        //   children: [
-        //     Icon(
-        //       Icons.star,
-        //       color: Constants.ubl,
-        //       size: 18,
-        //     ),
-        //     Text(
-        //       "5.0",
-        //       style: TextStyle(
-        //           color: Constants.ubl,
-        //           fontSize: 15,
-        //           fontWeight: FontWeight.w600),
-        //     ),
-        //   ],
-        // )),
       ));
 }
