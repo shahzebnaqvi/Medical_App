@@ -42,7 +42,7 @@ class _HospitalState extends State<Book_Appointment> {
         body: ListView(
           children: [
             Container(
-              height: MediaQuery.of(context).size.height * 0.20,
+              height: MediaQuery.of(context).size.height * 0.18,
               margin: EdgeInsets.only(
                 left: MediaQuery.of(context).size.height * 0.025,
                 right: MediaQuery.of(context).size.height * 0.025,
@@ -129,7 +129,7 @@ class _HospitalState extends State<Book_Appointment> {
             ),
             Container(
               margin: EdgeInsets.only(
-                top: MediaQuery.of(context).size.height * 0.03,
+                top: MediaQuery.of(context).size.height * 0.05,
                 bottom: MediaQuery.of(context).size.height * 0.01,
                 left: MediaQuery.of(context).size.height * 0.03,
                 right: MediaQuery.of(context).size.height * 0.03,
@@ -147,7 +147,7 @@ class _HospitalState extends State<Book_Appointment> {
                   BoxShadow(
                     color: Colors.grey.withOpacity(0.2),
                     spreadRadius: 8,
-                    blurRadius: 7,
+                    blurRadius: 8,
                     offset: Offset(0, 3),
                   ),
                 ],
