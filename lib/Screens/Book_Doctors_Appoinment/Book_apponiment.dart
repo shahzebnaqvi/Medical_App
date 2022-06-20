@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'package:medical_app/Screens/Book_Doctors_Appoinment/My_Apponiments.dart';
+import 'package:medical_app/Screens/Book_Doctors_Appoinment/calendar.dart';
 
 import '../../Constants/constants.dart';
 import '../../Controllers/appointment_controller.dart';
@@ -64,9 +65,11 @@ class _HospitalState extends State<Book_Appointment> {
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
               ),
             ),
+            Container(width: 200, height: 300, child: CalendarScreen()),
+            // Flexible(flex: 1, child: CalendarScreen()),
             Padding(
               padding: EdgeInsets.only(
-                top: MediaQuery.of(context).size.height * 0.03,
+                top: MediaQuery.of(context).size.height * 0.01,
               ),
               child: SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
@@ -122,7 +125,7 @@ class _HospitalState extends State<Book_Appointment> {
             ),
             Container(
               margin: EdgeInsets.only(
-                top: MediaQuery.of(context).size.height * 0.03,
+                top: MediaQuery.of(context).size.height * 0.06,
                 bottom: MediaQuery.of(context).size.height * 0.01,
                 left: MediaQuery.of(context).size.height * 0.03,
                 right: MediaQuery.of(context).size.height * 0.03,
@@ -184,7 +187,7 @@ Widget conttime(context, date, day, colorcolor, fontcolor) {
       ],
     ),
     padding: EdgeInsets.only(
-        top: MediaQuery.of(context).size.height * 0.02,
+        // top: MediaQuery.of(context).size.height * 0.02,
         right: MediaQuery.of(context).size.width * 0.06,
         left: MediaQuery.of(context).size.width * 0.06,
         bottom: MediaQuery.of(context).size.height * 0.02),
