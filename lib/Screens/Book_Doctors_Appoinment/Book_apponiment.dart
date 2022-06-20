@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import 'package:medical_app/Screens/Book_Doctors_Appoinment/My_Apponiments.dart';
 
 import '../../Constants/constants.dart';
-import '../maintools/maintoolssubscreens/bookappointment.dart';
+import '../../Controllers/appointment_controller.dart';
 
 class Book_Appointment extends StatefulWidget {
   const Book_Appointment({Key? key}) : super(key: key);
@@ -11,6 +12,8 @@ class Book_Appointment extends StatefulWidget {
   @override
   State<Book_Appointment> createState() => _HospitalState();
 }
+
+final appointmentController = Get.put(AppointmentController());
 
 class _HospitalState extends State<Book_Appointment> {
   @override
@@ -61,7 +64,6 @@ class _HospitalState extends State<Book_Appointment> {
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
               ),
             ),
-            //
             Padding(
               padding: EdgeInsets.only(
                 top: MediaQuery.of(context).size.height * 0.03,
@@ -117,9 +119,6 @@ class _HospitalState extends State<Book_Appointment> {
                   ],
                 ),
               ),
-            ),
-            SizedBox(
-              height: MediaQuery.of(context).size.height * 0.01,
             ),
             Container(
               margin: EdgeInsets.only(
@@ -185,10 +184,10 @@ Widget conttime(context, date, day, colorcolor, fontcolor) {
       ],
     ),
     padding: EdgeInsets.only(
-        top: MediaQuery.of(context).size.height * 0.04,
+        top: MediaQuery.of(context).size.height * 0.02,
         right: MediaQuery.of(context).size.width * 0.06,
         left: MediaQuery.of(context).size.width * 0.06,
-        bottom: MediaQuery.of(context).size.height * 0.04),
+        bottom: MediaQuery.of(context).size.height * 0.02),
     margin: EdgeInsets.all(MediaQuery.of(context).size.height * 0.01),
     child: Row(
       children: [

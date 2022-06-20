@@ -25,24 +25,6 @@ class _CalendarScreenState extends State<CalendarScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Constants.mainColorWhite,
-      appBar: AppBar(
-        backgroundColor: Constants.ubl,
-        title: Text(
-          "Book Appointment",
-          style: TextStyle(color: Constants.mainColorWhite),
-        ),
-        leading: IconButton(
-            color: Colors.white,
-            icon: Icon(
-              Icons.arrow_back,
-              color: Colors.black,
-              size: 20,
-            ),
-            onPressed: () {
-              Navigator.pop(context);
-            }),
-      ),
       body: Container(
         child: Calendar(
           startOnMonday: true,
