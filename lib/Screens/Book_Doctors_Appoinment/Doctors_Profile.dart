@@ -96,8 +96,8 @@ class _HospitalState extends State<Doctors_Profiles> {
               margin: EdgeInsets.only(
                 top: MediaQuery.of(context).size.height * 0.03,
                 bottom: MediaQuery.of(context).size.height * 0.01,
-                left: MediaQuery.of(context).size.height * 0.05,
-                right: MediaQuery.of(context).size.height * 0.05,
+                left: MediaQuery.of(context).size.height * 0.03,
+                right: MediaQuery.of(context).size.height * 0.03,
               ),
               padding: EdgeInsets.only(
                 top: MediaQuery.of(context).size.height * 0.015,
@@ -128,7 +128,9 @@ class _HospitalState extends State<Doctors_Profiles> {
                   child: Text(
                     "BOOK APPOINTMENT",
                     style: TextStyle(
-                        fontSize: 18, color: Constants.mainColorWhite),
+                        fontSize: 18,
+                        color: Constants.mainColorWhite,
+                        fontWeight: FontWeight.w600),
                   ),
                 ),
               ),

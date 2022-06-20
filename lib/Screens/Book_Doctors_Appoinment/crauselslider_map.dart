@@ -134,7 +134,7 @@ Widget mapslider(context, name) {
                 right: MediaQuery.of(context).size.height * 0.01,
               ),
               decoration: BoxDecoration(
-                color: Constants.bluecolor,
+                color: Constants.mainColor1,
                 borderRadius: BorderRadius.circular(10),
                 boxShadow: [
                   BoxShadow(
@@ -155,7 +155,7 @@ Widget mapslider(context, name) {
                       bottom: MediaQuery.of(context).size.height * 0.06,
                     ),
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
+                      borderRadius: BorderRadius.circular(30),
                       boxShadow: [
                         BoxShadow(
                           color: Colors.grey.withOpacity(0.2),
@@ -168,8 +168,8 @@ Widget mapslider(context, name) {
                     child: GestureDetector(
                         onTap: () {},
                         child: Icon(
-                          Icons.phone,
-                          size: 25,
+                          Icons.phone_callback,
+                          size: 30,
                         )),
                   ),
                 ],
