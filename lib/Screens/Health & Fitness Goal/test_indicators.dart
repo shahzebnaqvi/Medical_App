@@ -40,10 +40,10 @@ class _test_indicatorsState extends State<test_indicators> {
               left: MediaQuery.of(context).size.height * 0.02,
               right: MediaQuery.of(context).size.height * 0.02,
             ),
-            padding: EdgeInsets.only(
-              top: MediaQuery.of(context).size.height * 0.0002,
-              bottom: MediaQuery.of(context).size.height * 0.0002,
-            ),
+            // padding: EdgeInsets.only(
+            //   top: MediaQuery.of(context).size.height * 0.0002,
+            //   bottom: MediaQuery.of(context).size.height * 0.0002,
+            // ),
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(25),
@@ -68,7 +68,7 @@ class _test_indicatorsState extends State<test_indicators> {
                     bottom: MediaQuery.of(context).size.height * 0.01,
                   ),
                   decoration: BoxDecoration(
-                    color: Constants.bluecolor,
+                    color: Constants.mainColor1,
                     borderRadius: BorderRadius.circular(20),
                     boxShadow: [
                       BoxShadow(
@@ -99,7 +99,7 @@ class _test_indicatorsState extends State<test_indicators> {
                     bottom: MediaQuery.of(context).size.height * 0.01,
                   ),
                   decoration: BoxDecoration(
-                    color: Constants.bluecolor,
+                    color: Constants.mainColor1,
                     borderRadius: BorderRadius.circular(20),
                     boxShadow: [
                       BoxShadow(
@@ -164,10 +164,11 @@ Widget healthtest(context, title) {
     ),
     child: ListTile(
       leading: CircleAvatar(
+          backgroundColor: Constants.mainColor1,
           child: Icon(
-        Icons.health_and_safety,
-        color: Constants.mainColorWhite,
-      )),
+            Icons.health_and_safety,
+            color: Constants.mainColorWhite,
+          )),
       horizontalTitleGap: 10,
       title: Text(
         title,

@@ -68,9 +68,10 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                       suffixIcon: Icon(Icons.task_alt_outlined)),
                 ),
               ),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.02,
-              ),
+              Padding(
+                  padding: EdgeInsets.only(
+                top: MediaQuery.of(context).size.height * 0.3,
+              )),
               Container(
                 height: MediaQuery.of(context).size.height * 0.055,
                 margin: EdgeInsets.only(
@@ -79,7 +80,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                 ),
                 child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      primary: Constants.cyan_dark,
+                      primary: Constants.mainColor1,
                     ),
                     onPressed: () {
                       Navigator.pushReplacement(
@@ -89,7 +90,8 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                     },
                     child: Text(
                       "Reset",
-                      style: TextStyle(fontWeight: FontWeight.w500),
+                      style:
+                          TextStyle(fontWeight: FontWeight.w500, fontSize: 20),
                     )),
               )
             ],
