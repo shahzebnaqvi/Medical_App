@@ -129,10 +129,10 @@ class _HospitalState extends State<Book_Appointment> {
             ),
             Container(
               margin: EdgeInsets.only(
-                top: MediaQuery.of(context).size.height * 0.05,
+                top: MediaQuery.of(context).size.height * 0.03,
                 bottom: MediaQuery.of(context).size.height * 0.01,
-                left: MediaQuery.of(context).size.height * 0.03,
-                right: MediaQuery.of(context).size.height * 0.03,
+                left: MediaQuery.of(context).size.height * 0.02,
+                right: MediaQuery.of(context).size.height * 0.01,
               ),
               padding: EdgeInsets.only(
                 top: MediaQuery.of(context).size.height * 0.015,
@@ -189,7 +189,7 @@ Widget conttime(context, date, day, colorcolor, fontcolor) {
       ],
     ),
     padding: EdgeInsets.only(
-        // top: MediaQuery.of(context).size.height * 0.02,
+        top: MediaQuery.of(context).size.height * 0.02,
         right: MediaQuery.of(context).size.width * 0.06,
         left: MediaQuery.of(context).size.width * 0.06,
         bottom: MediaQuery.of(context).size.height * 0.02),

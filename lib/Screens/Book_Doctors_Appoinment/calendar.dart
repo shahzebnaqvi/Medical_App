@@ -25,6 +25,24 @@ class _CalendarScreenState extends State<CalendarScreen> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.only(
+        //  top: MediaQuery.of(context).size.height * 0.02,
+        left: MediaQuery.of(context).size.height * 0.02,
+        right: MediaQuery.of(context).size.height * 0.02,
+        bottom: MediaQuery.of(context).size.height * 0.03,
+      ),
+      decoration: BoxDecoration(
+        color: Constants.mainColorWhite,
+        borderRadius: BorderRadius.circular(10),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.2),
+            spreadRadius: 2,
+            blurRadius: 7,
+            offset: Offset(0, 3),
+          ),
+        ],
+      ),
       child: Calendar(
         startOnMonday: true,
         weekDays: ['Mon', 'Tues', 'Wed', 'Thr', 'Fri', 'Sat', 'Sun'],
