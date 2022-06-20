@@ -17,6 +17,7 @@ class _ProfileState extends State<Profile> {
     return Scaffold(
       backgroundColor: Constants.mainColorWhite,
       appBar: AppBar(
+        backgroundColor: Constants.mainColor1,
         title: Text(
           "My profile",
           style: TextStyle(color: Constants.blackcolor),
@@ -118,14 +119,14 @@ class _ProfileState extends State<Profile> {
             ),
             Container(
               margin: EdgeInsets.only(
-                left: MediaQuery.of(context).size.height * 0.03,
+                left: MediaQuery.of(context).size.height * 0.01,
                 right: MediaQuery.of(context).size.height * 0.01,
               ),
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20)),
-                    primary: Constants.ubl,
+                    primary: Constants.mainColor1,
                     minimumSize: Size(
                         20,
                         MediaQuery.of(context).size.height *
@@ -138,8 +139,9 @@ class _ProfileState extends State<Profile> {
                 child: Text(
                   "SUBMIT",
                   style: TextStyle(
-                    fontSize: MediaQuery.of(context).size.width * 0.05,
-                  ),
+                      fontSize: 18,
+                      color: Constants.mainColorWhite,
+                      fontWeight: FontWeight.w600),
                 ),
               ),
             ),

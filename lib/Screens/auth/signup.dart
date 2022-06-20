@@ -27,7 +27,7 @@ class _SignupState extends State<Signup> {
     return Scaffold(
         backgroundColor: Constants.mainColorWhite,
         appBar: AppBar(
-          backgroundColor: Constants.mainColorWhite,
+          backgroundColor: Constants.mainColor1,
           title: Text(
             "Create Account",
             style: TextStyle(color: Constants.blackcolor),
@@ -155,7 +155,7 @@ class _SignupState extends State<Signup> {
                       style: ElevatedButton.styleFrom(
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(25)),
-                          primary: Constants.ubl,
+                          primary: Constants.mainColor1,
                           minimumSize: Size(
                               20, MediaQuery.of(context).size.height * 0.06)),
                       onPressed: () {
@@ -166,7 +166,9 @@ class _SignupState extends State<Signup> {
                           child: Text(
                         "Sign Up",
                         style: TextStyle(
-                            fontWeight: FontWeight.w500, fontSize: 15),
+                            fontSize: 18,
+                            color: Constants.mainColorWhite,
+                            fontWeight: FontWeight.w600),
                       )),
                     ),
                   ),
@@ -189,7 +191,7 @@ class _SignupState extends State<Signup> {
                               "Login",
                               style: TextStyle(
                                   fontWeight: FontWeight.w500,
-                                  color: Constants.bluecolor),
+                                  color: Constants.mainColor1),
                             ))
                       ],
                     ),

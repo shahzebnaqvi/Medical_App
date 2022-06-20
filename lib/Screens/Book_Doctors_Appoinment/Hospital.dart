@@ -16,7 +16,7 @@ class _HospitalState extends State<Hospital> {
     return Scaffold(
         backgroundColor: Constants.mainColorWhite,
         appBar: AppBar(
-          backgroundColor: Constants.ubl,
+          backgroundColor: Constants.mainColor1,
           title: Text(
             "Hospital",
             style: TextStyle(color: Constants.mainColorWhite),

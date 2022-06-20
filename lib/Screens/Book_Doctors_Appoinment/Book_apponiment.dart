@@ -23,7 +23,7 @@ class _HospitalState extends State<Book_Appointment> {
     return Scaffold(
         backgroundColor: Constants.mainColorWhite,
         appBar: AppBar(
-          backgroundColor: Constants.ubl,
+          backgroundColor: Constants.mainColor1,
           title: Text(
             "Doctor Appointment",
             style: TextStyle(color: Constants.mainColorWhite),

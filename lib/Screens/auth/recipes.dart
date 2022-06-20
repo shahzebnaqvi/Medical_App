@@ -14,7 +14,7 @@ class _recipesState extends State<recipes> {
     return Scaffold(
       backgroundColor: Constants.mainColorWhite,
       appBar: AppBar(
-        backgroundColor: Constants.mainColorWhite,
+        backgroundColor: Constants.mainColor1,
         title: Text(
           "Recipes",
           style: TextStyle(color: Constants.blackcolor),
