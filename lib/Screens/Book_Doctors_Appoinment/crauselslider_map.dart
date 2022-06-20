@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:medical_app/Screens/Book_Doctors_Appoinment/My_Apponiments.dart';
 
 import '../../Constants/constants.dart';
 
@@ -22,7 +23,12 @@ Widget crauselSilder2(context) {
     alignment: Alignment.bottomCenter,
     child: CarouselSlider(
       items: [
-        mapslider(context, 'Alexander Robert'),
+        GestureDetector(
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => MyAppointments()));
+            },
+            child: mapslider(context, 'Alexander Robert')),
         mapslider(context, 'Royal Shano'),
         mapslider(context, 'David Warner'),
         mapslider(context, 'Bridge Duf'),

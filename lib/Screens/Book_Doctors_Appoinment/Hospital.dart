@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:medical_app/Screens/Book_Doctors_Appoinment/Doctors.dart';
 
 import '../../Constants/constants.dart';
 
@@ -73,7 +74,12 @@ class _HospitalState extends State<Hospital> {
                 ),
               ),
             ),
-            Hospitallocation(context, 'Healer Hospital'),
+            GestureDetector(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Doctors()));
+                },
+                child: Hospitallocation(context, 'Healer Hospital')),
             Hospitallocation(context, 'Mamji Hospital'),
             Hospitallocation(context, 'Manji Hospital'),
             Hospitallocation(context, 'Dow Hospital'),

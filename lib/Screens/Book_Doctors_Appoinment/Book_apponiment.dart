@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 
 import 'package:medical_app/Screens/Book_Doctors_Appoinment/My_Apponiments.dart';
 import 'package:medical_app/Screens/Book_Doctors_Appoinment/calendar.dart';
+import 'package:medical_app/Screens/Book_Doctors_Appoinment/map.dart';
 
 import '../../Constants/constants.dart';
 import '../../Controllers/appointment_controller.dart';
@@ -24,7 +25,7 @@ class _HospitalState extends State<Book_Appointment> {
         appBar: AppBar(
           backgroundColor: Constants.ubl,
           title: Text(
-            "Book Appointment",
+            "Doctor Appointment",
             style: TextStyle(color: Constants.mainColorWhite),
           ),
           leading: IconButton(
@@ -128,7 +129,7 @@ class _HospitalState extends State<Book_Appointment> {
             ),
             Container(
               margin: EdgeInsets.only(
-                top: MediaQuery.of(context).size.height * 0.06,
+                top: MediaQuery.of(context).size.height * 0.03,
                 bottom: MediaQuery.of(context).size.height * 0.01,
                 left: MediaQuery.of(context).size.height * 0.03,
                 right: MediaQuery.of(context).size.height * 0.03,
@@ -154,10 +155,8 @@ class _HospitalState extends State<Book_Appointment> {
               child: Center(
                 child: GestureDetector(
                   onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => MyAppointments()));
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Maps()));
                   },
                   child: Text(
                     "BOOK NOW",
