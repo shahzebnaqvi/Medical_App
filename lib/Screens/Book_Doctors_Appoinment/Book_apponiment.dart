@@ -65,6 +65,9 @@ class _HospitalState extends State<Book_Appointment> {
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
               ),
             ),
+            Padding(
+                padding: EdgeInsets.only(
+                    top: MediaQuery.of(context).size.height * 0.02)),
             Container(width: 200, height: 300, child: CalendarScreen()),
             // Flexible(flex: 1, child: CalendarScreen()),
             Padding(

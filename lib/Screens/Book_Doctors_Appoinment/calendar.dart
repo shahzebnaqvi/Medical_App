@@ -24,23 +24,25 @@ class _CalendarScreenState extends State<CalendarScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Calendar(
-      startOnMonday: true,
-      weekDays: ['Mon', 'Tues', 'Wed', 'Thr', 'Fri', 'Sat', 'Sun'],
-      //   eventsList: _eventList,
-      // isExpandable: true,
-      eventDoneColor: Colors.green,
-      selectedColor: Colors.pink,
-      selectedTodayColor: Colors.green,
-      todayColor: Colors.blue,
-      eventColor: null,
-      allDayEventText: 'Ganztägig',
-      multiDayEndText: 'Ende',
-      isExpanded: true,
-      expandableDateFormat: 'EEEE, dd. MMMM yyyy',
-      datePickerType: DatePickerType.date,
-      dayOfWeekStyle: TextStyle(
-          color: Colors.black, fontWeight: FontWeight.w800, fontSize: 11),
+    return Container(
+      child: Calendar(
+        startOnMonday: true,
+        weekDays: ['Mon', 'Tues', 'Wed', 'Thr', 'Fri', 'Sat', 'Sun'],
+        //   eventsList: _eventList,
+        // isExpandable: true,
+        eventDoneColor: Colors.green,
+        selectedColor: Colors.pink,
+        selectedTodayColor: Colors.green,
+        todayColor: Colors.blue,
+        eventColor: null,
+        allDayEventText: 'Ganztägig',
+        multiDayEndText: 'Ende',
+        isExpanded: true,
+        expandableDateFormat: 'EEEE, dd. MMMM yyyy',
+        datePickerType: DatePickerType.date,
+        dayOfWeekStyle: TextStyle(
+            color: Colors.black, fontWeight: FontWeight.w800, fontSize: 11),
+      ),
     );
   }
 }
