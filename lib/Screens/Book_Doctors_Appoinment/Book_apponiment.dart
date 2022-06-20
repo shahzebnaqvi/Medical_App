@@ -73,7 +73,7 @@ class _HospitalState extends State<Book_Appointment> {
             // Flexible(flex: 1, child: CalendarScreen()),
             Padding(
               padding: EdgeInsets.only(
-                top: MediaQuery.of(context).size.height * 0.01,
+                top: MediaQuery.of(context).size.height * 0.001,
               ),
               child: SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
@@ -129,7 +129,7 @@ class _HospitalState extends State<Book_Appointment> {
             ),
             Container(
               margin: EdgeInsets.only(
-                top: MediaQuery.of(context).size.height * 0.03,
+                top: MediaQuery.of(context).size.height * 0.04,
                 bottom: MediaQuery.of(context).size.height * 0.01,
                 left: MediaQuery.of(context).size.height * 0.02,
                 right: MediaQuery.of(context).size.height * 0.01,
