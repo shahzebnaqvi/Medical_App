@@ -23,7 +23,7 @@ Widget crauselSilder2(context, days) {
   return Container(
     child: CarouselSlider(
       items: [
-        slidercontainer1(context, '10', '7', 0.60),
+        slidercontainer1(context, '10', '07', 0.60),
         slidercontainer1(context, '600', '300', 0.50),
         slidercontainer1(context, '700', '400', 0.70),
         slidercontainer1(context, '800', '500', 0.80),
@@ -33,7 +33,7 @@ Widget crauselSilder2(context, days) {
         slidercontainer1(context, '1200', '900', 0.55),
       ],
       options: CarouselOptions(
-        height: 280.0,
+        height: 290.0,
         enlargeCenterPage: true,
         aspectRatio: 16 / 9,
         autoPlayCurve: Curves.fastOutSlowIn,
@@ -167,8 +167,8 @@ Widget slidercontainer1(context, totaltasks, completedtasks, values) {
                   Container(
                     margin: EdgeInsets.only(
                         left: MediaQuery.of(context).size.height * 0.001),
-                    width: 80,
-                    height: 80,
+                    width: 90,
+                    height: 90,
                     child: new CircularProgressIndicator(
                       strokeWidth: 12,
                       value: values,
@@ -176,7 +176,9 @@ Widget slidercontainer1(context, totaltasks, completedtasks, values) {
                       backgroundColor: Colors.grey[100],
                     ),
                   ),
-                  Text("70%"),
+                  Column(
+                    children: [Text("70%"), Text("Completed")],
+                  ),
                 ],
               ),
             ),
