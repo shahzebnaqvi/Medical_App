@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter/services.dart';
 
+import 'Screens/Timelines/timelines.dart';
 import 'Screens/auth/login.dart';
 
 void main() {
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
     ]);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Login(),
+      home: Timelines(),
     );
   }
 }

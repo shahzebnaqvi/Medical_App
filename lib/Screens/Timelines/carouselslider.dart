@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
@@ -21,17 +23,17 @@ Widget crauselSilder2(context, days) {
   return Container(
     child: CarouselSlider(
       items: [
-        slidercontainer1(context, "Today", '500', '200', 0.60),
-        slidercontainer1(context, "Monday", '600', '300', 0.50),
-        slidercontainer1(context, "Tuesday", '700', '400', 0.70),
-        slidercontainer1(context, "Wednesday", '800', '500', 0.80),
-        slidercontainer1(context, "Thursday", '900', '600', 0.85),
-        slidercontainer1(context, "Friday", '1000', '700', 0.90),
-        slidercontainer1(context, "Saturday", '1100', '800', 0.95),
-        slidercontainer1(context, "Sunday", '1200', '900', 0.55),
+        slidercontainer1(context, '10', '7', 0.60),
+        slidercontainer1(context, '600', '300', 0.50),
+        slidercontainer1(context, '700', '400', 0.70),
+        slidercontainer1(context, '800', '500', 0.80),
+        slidercontainer1(context, '900', '600', 0.85),
+        slidercontainer1(context, '1000', '700', 0.90),
+        slidercontainer1(context, '1100', '800', 0.95),
+        slidercontainer1(context, '1200', '900', 0.55),
       ],
       options: CarouselOptions(
-        height: 270.0,
+        height: 280.0,
         enlargeCenterPage: true,
         aspectRatio: 16 / 9,
         autoPlayCurve: Curves.fastOutSlowIn,
@@ -43,7 +45,7 @@ Widget crauselSilder2(context, days) {
   );
 }
 
-Widget slidercontainer1(context, days, totaltasks, completedtasks, values) {
+Widget slidercontainer1(context, totaltasks, completedtasks, values) {
   return Container(
     margin: EdgeInsets.only(
       top: MediaQuery.of(context).size.height * 0.01,
@@ -81,7 +83,7 @@ Widget slidercontainer1(context, days, totaltasks, completedtasks, values) {
               color: Constants.grey,
             ),
             Text(
-              "MY TASKS",
+              "TODAY'S TASK",
               style: TextStyle(
                   color: Constants.grey,
                   fontSize: 18,
@@ -95,21 +97,57 @@ Widget slidercontainer1(context, days, totaltasks, completedtasks, values) {
           ],
         ),
         SizedBox(
-          height: MediaQuery.of(context).size.height * 0.03,
+          height: MediaQuery.of(context).size.height * 0.01,
         ),
         Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            Text(
-              days,
-              style: TextStyle(
-                fontWeight: FontWeight.w500,
+            // Text(
+            //   days,
+            //   style: TextStyle(
+            //     fontWeight: FontWeight.w500,
+            //   ),
+            // ),
+            Container(
+              margin: EdgeInsets.only(
+                top: MediaQuery.of(context).size.height * 0.01,
+                bottom: MediaQuery.of(context).size.height * 0.01,
+                left: MediaQuery.of(context).size.height * 0.003,
+                right: MediaQuery.of(context).size.height * 0.003,
+              ),
+              padding: EdgeInsets.only(
+                bottom: MediaQuery.of(context).size.height * 0.01,
+                top: MediaQuery.of(context).size.height * 0.01,
+                left: MediaQuery.of(context).size.height * 0.01,
+                right: MediaQuery.of(context).size.height * 0.01,
+              ),
+              decoration: BoxDecoration(
+                color: Constants.mainColorWhite,
+                border: Border.all(
+                    color: Constants.mainColor1,
+                    width: MediaQuery.of(context).size.width * 0.01),
+                borderRadius: BorderRadius.circular(10),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.2),
+                    spreadRadius: 3,
+                    blurRadius: 5,
+                    offset: Offset(0, 3), // changes position of shadow
+                  ),
+                ],
+              ),
+              child: Text(
+                '+ Add New',
+                style: TextStyle(
+                    color: Constants.mainColor1,
+                    fontWeight: FontWeight.w500,
+                    fontSize: 16),
               ),
             )
           ],
         ),
         SizedBox(
-          height: MediaQuery.of(context).size.height * 0.03,
+          height: MediaQuery.of(context).size.height * 0.01,
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -150,7 +188,14 @@ Widget slidercontainer1(context, days, totaltasks, completedtasks, values) {
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [Text("Completed Tasks"), Text("Total Tasks")],
+          children: [
+            Text(
+              "Completed ",
+              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+            ),
+            Text("Total Tasks",
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500))
+          ],
         )
       ],
     ),
