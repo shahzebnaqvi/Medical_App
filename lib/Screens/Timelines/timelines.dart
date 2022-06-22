@@ -36,7 +36,7 @@ class _TimelinesState extends State<Timelines> {
       'Find Doctor',
       'Test Iquiry',
       'Diet Planner',
-      'Women' 's' 'Club ',
+      'Women Club ',
       'Emergency',
       'Invite Friend'
     ];
@@ -75,8 +75,8 @@ class _TimelinesState extends State<Timelines> {
                     shrinkWrap: true,
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2,
-                      mainAxisSpacing: 10,
-                      crossAxisSpacing: 10,
+                      mainAxisSpacing: 02,
+                      // crossAxisSpacing: 02,
                       mainAxisExtent: 100,
                     ),
                     itemBuilder: (context, index) {
@@ -96,9 +96,9 @@ class _TimelinesState extends State<Timelines> {
                             color: Colors.white,
                             boxShadow: [
                               BoxShadow(
-                                color: Colors.grey.withOpacity(0.2),
+                                color: Colors.blue.withOpacity(0.2),
                                 spreadRadius: 0.1,
-                                blurRadius: 5,
+                                blurRadius: 2,
                                 offset:
                                     Offset(0, 3), // changes position of shadow
                               ),
@@ -107,15 +107,17 @@ class _TimelinesState extends State<Timelines> {
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Icon(Icons.tiktok),
-                              // Text(
-                              //   'data',
-                              // ),
+                              Icon(
+                                Icons.medical_services_sharp,
+                                color: Constants.mainColor1,
+                                size: 25,
+                              ),
                               Spacer(),
                               Text(
                                 title[index],
                                 overflow: TextOverflow.ellipsis,
-                                style: TextStyle(fontSize: 12),
+                                style: TextStyle(
+                                    fontSize: 13, fontWeight: FontWeight.w600),
                               ),
                             ],
                           ));
