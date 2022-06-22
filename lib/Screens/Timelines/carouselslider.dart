@@ -33,7 +33,7 @@ Widget crauselSilder2(context, days) {
         slidercontainer1(context, '1200', '900', 0.55),
       ],
       options: CarouselOptions(
-        height: 290.0,
+        height: 295.0,
         enlargeCenterPage: true,
         aspectRatio: 16 / 9,
         autoPlayCurve: Curves.fastOutSlowIn,
@@ -74,27 +74,44 @@ Widget slidercontainer1(context, totaltasks, completedtasks, values) {
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Icon(
-              Icons.arrow_circle_left_outlined,
-              size: 30,
-              color: Constants.grey,
-            ),
-            Text(
-              "TODAY'S TASK",
-              style: TextStyle(
-                  color: Constants.grey,
-                  fontSize: 18,
-                  fontWeight: FontWeight.w500),
-            ),
-            Icon(
-              Icons.arrow_circle_right_outlined,
-              size: 30,
-              color: Constants.grey,
-            ),
-          ],
+        Container(
+          decoration: BoxDecoration(
+            color: Constants.mainColorWhite,
+            border: Border.all(
+                color: Constants.mainColor1,
+                width: MediaQuery.of(context).size.width * 0.01),
+            borderRadius: BorderRadius.circular(08),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey.withOpacity(0.2),
+                spreadRadius: 3,
+                blurRadius: 5,
+                offset: Offset(0, 3), // changes position of shadow
+              ),
+            ],
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Icon(
+                Icons.arrow_back,
+                size: 30,
+                color: Constants.grey,
+              ),
+              Text(
+                "TODAY'S TASK",
+                style: TextStyle(
+                    color: Constants.grey,
+                    fontSize: 18,
+                    fontWeight: FontWeight.w500),
+              ),
+              Icon(
+                Icons.arrow_forward,
+                size: 30,
+                color: Constants.grey,
+              ),
+            ],
+          ),
         ),
         SizedBox(
           height: MediaQuery.of(context).size.height * 0.01,
@@ -126,7 +143,7 @@ Widget slidercontainer1(context, totaltasks, completedtasks, values) {
                 border: Border.all(
                     color: Constants.mainColor1,
                     width: MediaQuery.of(context).size.width * 0.01),
-                borderRadius: BorderRadius.circular(10),
+                borderRadius: BorderRadius.circular(08),
                 boxShadow: [
                   BoxShadow(
                     color: Colors.grey.withOpacity(0.2),
@@ -141,7 +158,7 @@ Widget slidercontainer1(context, totaltasks, completedtasks, values) {
                 style: TextStyle(
                     color: Constants.mainColor1,
                     fontWeight: FontWeight.w500,
-                    fontSize: 16),
+                    fontSize: 15),
               ),
             )
           ],
