@@ -27,7 +27,7 @@ class _TimelinesState extends State<Timelines> {
   @override
   Widget build(BuildContext context) {
     List title = [
-      'Git Fit',
+      'Get Fit',
       'Goals & Challenges',
       'Pill Reminder',
       'Health Records',

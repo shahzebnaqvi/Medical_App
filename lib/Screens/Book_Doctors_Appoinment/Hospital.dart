@@ -168,7 +168,3 @@ Widget Hospitallocation(context, title) {
         )),
   );
 }
-
-Widget slideable() {
-  return slideable();
-}

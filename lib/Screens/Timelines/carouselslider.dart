@@ -72,7 +72,7 @@ Widget slidercontainer1(context, totaltasks, completedtasks, values) {
       ],
     ),
     child: Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.end,
       children: [
         Container(
           decoration: BoxDecoration(
@@ -91,24 +91,14 @@ Widget slidercontainer1(context, totaltasks, completedtasks, values) {
             ],
           ),
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Icon(
-                Icons.arrow_back,
-                size: 30,
-                color: Constants.grey,
-              ),
               Text(
                 "TODAY'S TASK",
                 style: TextStyle(
                     color: Constants.grey,
                     fontSize: 18,
                     fontWeight: FontWeight.w500),
-              ),
-              Icon(
-                Icons.arrow_forward,
-                size: 30,
-                color: Constants.grey,
               ),
             ],
           ),
@@ -117,14 +107,36 @@ Widget slidercontainer1(context, totaltasks, completedtasks, values) {
           height: MediaQuery.of(context).size.height * 0.01,
         ),
         Row(
-          mainAxisAlignment: MainAxisAlignment.end,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            // Text(
-            //   days,
-            //   style: TextStyle(
-            //     fontWeight: FontWeight.w500,
-            //   ),
-            // ),
+            Container(
+              margin: EdgeInsets.only(
+                left: MediaQuery.of(context).size.height * 0.02,
+                top: MediaQuery.of(context).size.height * 0.001,
+              ),
+              child: Stack(
+                alignment: Alignment.center,
+                children: <Widget>[
+                  Container(
+                    margin: EdgeInsets.only(
+                        left: MediaQuery.of(context).size.height * 0.001,
+                        top: MediaQuery.of(context).size.height * 0.03,
+                        bottom: MediaQuery.of(context).size.height * 0.04),
+                    width: 85,
+                    height: 85,
+                    child: new CircularProgressIndicator(
+                      strokeWidth: 12,
+                      value: values,
+                      color: Constants.bluecolor,
+                      backgroundColor: Colors.grey[100],
+                    ),
+                  ),
+                  Column(
+                    children: [Text("70%"), Text("Completed")],
+                  ),
+                ],
+              ),
+            ),
             Container(
               margin: EdgeInsets.only(
                 top: MediaQuery.of(context).size.height * 0.01,
@@ -163,57 +175,59 @@ Widget slidercontainer1(context, totaltasks, completedtasks, values) {
             )
           ],
         ),
-        SizedBox(
-          height: MediaQuery.of(context).size.height * 0.01,
-        ),
-        Row(
+        // SizedBox(
+        //   height: MediaQuery.of(context).size.height * 0.03,
+        // ),
+        // Row(
+        // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        // children: [
+        //   Text(
+        //     completedtasks,
+        //     style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+        //   ),
+        // Container(
+        //   margin: EdgeInsets.only(
+        //     left: MediaQuery.of(context).size.height * 0.02,
+        //     top: MediaQuery.of(context).size.height * 0.001,
+        //   ),
+        //   child: Stack(
+        //     alignment: Alignment.center,
+        //     children: <Widget>[
+        //       Container(
+        //         margin: EdgeInsets.only(
+        //             left: MediaQuery.of(context).size.height * 0.001),
+        //         width: 90,
+        //         height: 90,
+        //         child: new CircularProgressIndicator(
+        //           strokeWidth: 12,
+        //           value: values,
+        //           color: Constants.bluecolor,
+        //           backgroundColor: Colors.grey[100],
+        //         ),
+        //       ),
+        //       Column(
+        //         children: [Text("70%"), Text("Completed")],
+        //       ),
+        //     ],
+        //   ),
+        // ),
+        //     Text(
+        //       totaltasks,
+        //       style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+        //     ),
+        //   ],
+        // ),
+        // ),
+
+        Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
+            Text("Total Tasks 10",
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500)),
             Text(
-              completedtasks,
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
-            ),
-            Container(
-              margin: EdgeInsets.only(
-                left: MediaQuery.of(context).size.height * 0.02,
-                top: MediaQuery.of(context).size.height * 0.001,
-              ),
-              child: Stack(
-                alignment: Alignment.center,
-                children: <Widget>[
-                  Container(
-                    margin: EdgeInsets.only(
-                        left: MediaQuery.of(context).size.height * 0.001),
-                    width: 90,
-                    height: 90,
-                    child: new CircularProgressIndicator(
-                      strokeWidth: 12,
-                      value: values,
-                      color: Constants.bluecolor,
-                      backgroundColor: Colors.grey[100],
-                    ),
-                  ),
-                  Column(
-                    children: [Text("70%"), Text("Completed")],
-                  ),
-                ],
-              ),
-            ),
-            Text(
-              totaltasks,
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
-            ),
-          ],
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text(
-              "Completed ",
+              "Completed 05 ",
               style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
             ),
-            Text("Total Tasks",
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500))
           ],
         )
       ],
