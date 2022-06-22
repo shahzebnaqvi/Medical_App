@@ -66,7 +66,7 @@ class _TimelinesState extends State<Timelines> {
                   padding: EdgeInsets.only(
                 right: MediaQuery.of(context).size.width * 0.04,
                 left: MediaQuery.of(context).size.width * 0.04,
-                // bottom: MediaQuery.of(context).size.width * 0.04,
+                bottom: MediaQuery.of(context).size.width * 0.04,
               )),
               Column(children: [
                 GridView.builder(
@@ -76,14 +76,14 @@ class _TimelinesState extends State<Timelines> {
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2,
                       mainAxisSpacing: 02,
-                      // crossAxisSpacing: 02,
+                      crossAxisSpacing: 10,
                       mainAxisExtent: 100,
                     ),
                     itemBuilder: (context, index) {
                       return Container(
                           margin: EdgeInsets.only(
                             left: MediaQuery.of(context).size.height * 0.02,
-                            right: MediaQuery.of(context).size.height * 0.02,
+                            right: MediaQuery.of(context).size.height * 0.01,
                             top: MediaQuery.of(context).size.height * 0.01,
                             bottom: MediaQuery.of(context).size.height * 0.008,
                           ),
