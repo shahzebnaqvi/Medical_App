@@ -133,8 +133,11 @@ Widget slidercontainer1(context, totaltasks, completedtasks, values) {
                       backgroundColor: Colors.grey[100],
                     ),
                   ),
-                  Column(
-                    children: [Text("70%"), Text("Completed")],
+                  Padding(
+                    padding: const EdgeInsets.only(top: 8.0),
+                    child: Column(
+                      children: [Text("70%"), Text("Completed")],
+                    ),
                   ),
                 ],
               ),
