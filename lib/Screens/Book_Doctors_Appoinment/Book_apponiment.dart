@@ -121,7 +121,7 @@ class _HospitalState extends State<Book_Appointment> {
                         child: appointmentController.time.value == 4
                             ? conttime(context, "29", "12:20AM",
                                 Constants.mainColor1, Constants.lightColor)
-                            : conttime(context, "29", "12:20AM",
+                            : conttime(context, "", "12:20AM",
                                 Constants.lightColor, Constants.mainColor1)),
                   ],
                 ),

@@ -144,8 +144,8 @@ Widget slidercontainer1(context, totaltasks, completedtasks, values) {
             ),
             Container(
               margin: EdgeInsets.only(
-                top: MediaQuery.of(context).size.height * 0.01,
-                bottom: MediaQuery.of(context).size.height * 0.01,
+                // top: MediaQuery.of(context).size.height * 0.08,
+                bottom: MediaQuery.of(context).size.height * 0.05,
                 left: MediaQuery.of(context).size.height * 0.003,
                 right: MediaQuery.of(context).size.height * 0.003,
               ),
@@ -227,15 +227,19 @@ Widget slidercontainer1(context, totaltasks, completedtasks, values) {
         Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text("Total Tasks 10",
+            Text("  Total Tasks: 10",
                 style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.w500,
+                    color: Constants.mainColor1,
                     letterSpacing: 1)),
             Text(
-              "Completed 05 ",
+              "   Completed: 05 ",
               style: TextStyle(
-                  fontSize: 16, fontWeight: FontWeight.w500, letterSpacing: 1),
+                  fontSize: 16,
+                  fontWeight: FontWeight.w500,
+                  color: Constants.mainColor1,
+                  letterSpacing: 1),
             ),
           ],
         )
