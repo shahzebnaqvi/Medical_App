@@ -54,7 +54,7 @@ Widget slidercontainer1(context, totaltasks, completedtasks, values) {
       right: MediaQuery.of(context).size.height * 0.003,
     ),
     padding: EdgeInsets.only(
-      bottom: MediaQuery.of(context).size.height * 0.02,
+      // bottom: MediaQuery.of(context).size.height * 0.02,
       top: MediaQuery.of(context).size.height * 0.01,
       left: MediaQuery.of(context).size.height * 0.01,
       right: MediaQuery.of(context).size.height * 0.01,
@@ -75,6 +75,7 @@ Widget slidercontainer1(context, totaltasks, completedtasks, values) {
       crossAxisAlignment: CrossAxisAlignment.end,
       children: [
         Container(
+          height: MediaQuery.of(context).size.height * 0.05,
           decoration: BoxDecoration(
             color: Constants.mainColorWhite,
             border: Border.all(
@@ -119,11 +120,12 @@ Widget slidercontainer1(context, totaltasks, completedtasks, values) {
                 children: <Widget>[
                   Container(
                     margin: EdgeInsets.only(
-                        left: MediaQuery.of(context).size.height * 0.001,
-                        top: MediaQuery.of(context).size.height * 0.03,
-                        bottom: MediaQuery.of(context).size.height * 0.04),
-                    width: 85,
-                    height: 85,
+                      left: MediaQuery.of(context).size.height * 0.001,
+                      top: MediaQuery.of(context).size.height * 0.03,
+                      // bottom: MediaQuery.of(context).size.height * 0.04
+                    ),
+                    width: MediaQuery.of(context).size.width * 0.30,
+                    height: MediaQuery.of(context).size.height * 0.15,
                     child: new CircularProgressIndicator(
                       strokeWidth: 12,
                       value: values,
