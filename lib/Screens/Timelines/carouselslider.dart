@@ -224,6 +224,9 @@ Widget slidercontainer1(context, totaltasks, completedtasks, values) {
           children: [
             Text("Total Tasks 10",
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500)),
+            // SizedBox(
+            //   height: MediaQuery.of(context).size.height * 0.0001,
+            // ),
             Text(
               "Completed 05 ",
               style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
