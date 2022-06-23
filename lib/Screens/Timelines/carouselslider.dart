@@ -228,13 +228,14 @@ Widget slidercontainer1(context, totaltasks, completedtasks, values) {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text("Total Tasks 10",
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500)),
-            // SizedBox(
-            //   height: MediaQuery.of(context).size.height * 0.0001,
-            // ),
+                style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                    letterSpacing: 1)),
             Text(
               "Completed 05 ",
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+              style: TextStyle(
+                  fontSize: 16, fontWeight: FontWeight.w500, letterSpacing: 1),
             ),
           ],
         )
