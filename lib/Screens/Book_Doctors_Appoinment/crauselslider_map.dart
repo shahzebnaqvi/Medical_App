@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_connect/http/src/utils/utils.dart';
 import 'package:medical_app/Screens/Book_Doctors_Appoinment/My_Apponiments.dart';
 
 import '../../Constants/constants.dart';
@@ -63,7 +64,7 @@ Widget mapslider(context, name) {
           borderRadius: BorderRadius.circular(10),
           boxShadow: [
             BoxShadow(
-              color: Colors.grey.withOpacity(0.2),  
+              color: Colors.grey.withOpacity(0.2),
               spreadRadius: 2,
               blurRadius: 7,
               offset: Offset(0, 3),
