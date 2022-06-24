@@ -30,7 +30,6 @@ class _MyAppState extends State<Maps> {
   void _onAddMarkerButtonPressed() {
     setState(() {
       _markers.add(Marker(
-        // This marker id can be anything that uniquely identifies each marker.
         markerId: MarkerId(_lastMapPosition.toString()),
         position: _lastMapPosition,
         infoWindow: InfoWindow(
@@ -87,7 +86,6 @@ class _MyAppState extends State<Maps> {
               padding: const EdgeInsets.all(16.0),
             ),
             // Widget call
-
             MapCrausel()
           ],
         ),
