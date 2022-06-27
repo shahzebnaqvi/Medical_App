@@ -42,88 +42,89 @@ class _TimelinesState extends State<Timelines> {
     ];
 
     return Scaffold(
-        body: Container(
-            padding:
-                EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.02),
-            decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage("assets/curve.jpg"), fit: BoxFit.cover)),
-            child: ListView(children: [
-              profile(context),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.01,
-              ),
-              GestureDetector(
-                  onTap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => recipes()));
-                  },
-                  child: crauselSilder1()),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.01,
-              ),
-              Padding(
-                  padding: EdgeInsets.only(
-                right: MediaQuery.of(context).size.width * 0.04,
-                left: MediaQuery.of(context).size.width * 0.04,
-                bottom: MediaQuery.of(context).size.width * 0.04,
-              )),
-              Column(children: [
-                GridView.builder(
-                    physics: NeverScrollableScrollPhysics(),
-                    itemCount: 12,
-                    shrinkWrap: true,
-                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 2,
-                      mainAxisSpacing: 02,
-                      crossAxisSpacing: 10,
-                      mainAxisExtent: 100,
-                    ),
-                    itemBuilder: (context, index) {
-                      return Container(
-                          margin: EdgeInsets.only(
-                            left: MediaQuery.of(context).size.height * 0.02,
-                            right: MediaQuery.of(context).size.height * 0.01,
-                            top: MediaQuery.of(context).size.height * 0.01,
-                            bottom: MediaQuery.of(context).size.height * 0.008,
-                          ),
-                          padding: EdgeInsets.only(
-                            top: MediaQuery.of(context).size.height * 0.02,
-                            bottom: MediaQuery.of(context).size.height * 0.02,
-                          ),
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            color: Colors.white,
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.blue.withOpacity(0.2),
-                                spreadRadius: 0.1,
-                                blurRadius: 2,
-                                offset:
-                                    Offset(0, 3), // changes position of shadow
-                              ),
-                            ],
-                          ),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Icon(
-                                Icons.medical_services_sharp,
-                                color: Constants.mainColor1,
-                                size: 25,
-                              ),
-                              Spacer(),
-                              Text(
-                                title[index],
-                                overflow: TextOverflow.ellipsis,
-                                style: TextStyle(
-                                    fontSize: 13, fontWeight: FontWeight.w600),
-                              ),
-                            ],
-                          ));
-                    })
-              ])
-            ])));
+      body: Container(
+          padding:
+              EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.02),
+          decoration: BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage("assets/curve.jpg"), fit: BoxFit.cover)),
+          child: ListView(children: [
+            profile(context),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.01,
+            ),
+            GestureDetector(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => recipes()));
+                },
+                child: crauselSilder1()),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.01,
+            ),
+            Padding(
+                padding: EdgeInsets.only(
+              right: MediaQuery.of(context).size.width * 0.04,
+              left: MediaQuery.of(context).size.width * 0.04,
+              bottom: MediaQuery.of(context).size.width * 0.04,
+            )),
+            Column(children: [
+              GridView.builder(
+                  physics: NeverScrollableScrollPhysics(),
+                  itemCount: 12,
+                  shrinkWrap: true,
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    mainAxisSpacing: 02,
+                    crossAxisSpacing: 10,
+                    mainAxisExtent: 100,
+                  ),
+                  itemBuilder: (context, index) {
+                    return Container(
+                        margin: EdgeInsets.only(
+                          left: MediaQuery.of(context).size.height * 0.02,
+                          right: MediaQuery.of(context).size.height * 0.01,
+                          top: MediaQuery.of(context).size.height * 0.01,
+                          bottom: MediaQuery.of(context).size.height * 0.008,
+                        ),
+                        padding: EdgeInsets.only(
+                          top: MediaQuery.of(context).size.height * 0.02,
+                          bottom: MediaQuery.of(context).size.height * 0.02,
+                        ),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.white,
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.blue.withOpacity(0.2),
+                              spreadRadius: 0.1,
+                              blurRadius: 2,
+                              offset:
+                                  Offset(0, 3), // changes position of shadow
+                            ),
+                          ],
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Icons.medical_services_sharp,
+                              color: Constants.mainColor1,
+                              size: 25,
+                            ),
+                            Spacer(),
+                            Text(
+                              title[index],
+                              overflow: TextOverflow.ellipsis,
+                              style: TextStyle(
+                                  fontSize: 13, fontWeight: FontWeight.w600),
+                            ),
+                          ],
+                        ));
+                  }),
+            ])
+          ])),
+    );
   }
 
 // Profile
