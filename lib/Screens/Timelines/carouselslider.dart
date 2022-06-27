@@ -147,7 +147,7 @@ Widget slidercontainer1(context, totaltasks, completedtasks, values) {
                 // top: MediaQuery.of(context).size.height * 0.08,
                 bottom: MediaQuery.of(context).size.height * 0.12,
                 left: MediaQuery.of(context).size.height * 0.003,
-                right: MediaQuery.of(context).size.height * 0.003,
+                // right: MediaQuery.of(context).size.height * 0.003,
               ),
               padding: EdgeInsets.only(
                 bottom: MediaQuery.of(context).size.height * 0.01,
@@ -186,7 +186,7 @@ Widget slidercontainer1(context, totaltasks, completedtasks, values) {
             // top: MediaQuery.of(context).size.height * 0.08,
             bottom: MediaQuery.of(context).size.height * 0.0,
             left: MediaQuery.of(context).size.height * 0.03,
-            //right: MediaQuery.of(context).size.height * 0.03,
+            right: MediaQuery.of(context).size.height * 0.03,
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
