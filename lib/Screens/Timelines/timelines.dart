@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:get/get.dart';
 import 'package:medical_app/Screens/Book_Doctors_Appoinment/Hospital.dart';
 import 'package:medical_app/Screens/Health%20&%20Fitness%20Goal/test_indicators.dart';
@@ -60,14 +61,55 @@ class _TimelinesState extends State<Timelines> {
                 },
                 child: crauselSilder1()),
             SizedBox(
-              height: MediaQuery.of(context).size.height * 0.01,
+              height: MediaQuery.of(context).size.height * 0.0,
+            ),
+            //Banner
+
+            Container(
+              margin: EdgeInsets.only(
+                left: MediaQuery.of(context).size.height * 0.02,
+                right: MediaQuery.of(context).size.height * 0.02,
+                top: MediaQuery.of(context).size.height * 0.01,
+                bottom: MediaQuery.of(context).size.height * 0.008,
+              ),
+              padding: EdgeInsets.only(
+                top: MediaQuery.of(context).size.height * 0.02,
+                bottom: MediaQuery.of(context).size.height * 0.02,
+              ),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(05),
+                color: Constants.bluecolor,
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.blue.withOpacity(0.2),
+                    spreadRadius: 0.1,
+                    blurRadius: 2,
+                    offset: Offset(0, 3), // changes position of shadow
+                  ),
+                ],
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Text(
+                    "Nice Jobs!",
+                    style: TextStyle(fontWeight: FontWeight.w500),
+                  ),
+                  Text("This is 320X50 test add",
+                      style: TextStyle(
+                        fontWeight: FontWeight.w500,
+                      )),
+                  Icon(Icons.shop),
+                ],
+              ),
             ),
 
             Padding(
                 padding: EdgeInsets.only(
+              // top: MediaQuery.of(context).size.width * 0.04,
               right: MediaQuery.of(context).size.width * 0.04,
               left: MediaQuery.of(context).size.width * 0.04,
-              bottom: MediaQuery.of(context).size.width * 0.04,
+              // bottom: MediaQuery.of(context).size.width * 0.04,
             )),
             Column(children: [
               GridView.builder(
