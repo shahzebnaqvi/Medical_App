@@ -49,7 +49,7 @@ Widget slidercontainer1(context, totaltasks, completedtasks, values) {
   return Container(
     margin: EdgeInsets.only(
       top: MediaQuery.of(context).size.height * 0.01,
-      bottom: MediaQuery.of(context).size.height * 0.01,
+      bottom: MediaQuery.of(context).size.height * 0.03,
       left: MediaQuery.of(context).size.height * 0.003,
       right: MediaQuery.of(context).size.height * 0.003,
     ),
@@ -112,7 +112,7 @@ Widget slidercontainer1(context, totaltasks, completedtasks, values) {
           children: [
             Container(
               margin: EdgeInsets.only(
-                left: MediaQuery.of(context).size.height * 0.02,
+                left: MediaQuery.of(context).size.height * 0.002,
                 top: MediaQuery.of(context).size.height * 0.001,
               ),
               child: Stack(
@@ -127,14 +127,14 @@ Widget slidercontainer1(context, totaltasks, completedtasks, values) {
                     width: MediaQuery.of(context).size.width * 0.30,
                     height: MediaQuery.of(context).size.height * 0.15,
                     child: new CircularProgressIndicator(
-                      strokeWidth: 12,
+                      strokeWidth: 05,
                       value: values,
                       color: Constants.bluecolor,
                       backgroundColor: Colors.grey[100],
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(top: 8.0),
+                    padding: const EdgeInsets.only(top: 12.0),
                     child: Column(
                       children: [Text("70%"), Text("Completed")],
                     ),
@@ -145,7 +145,7 @@ Widget slidercontainer1(context, totaltasks, completedtasks, values) {
             Container(
               margin: EdgeInsets.only(
                 // top: MediaQuery.of(context).size.height * 0.08,
-                bottom: MediaQuery.of(context).size.height * 0.05,
+                bottom: MediaQuery.of(context).size.height * 0.12,
                 left: MediaQuery.of(context).size.height * 0.003,
                 right: MediaQuery.of(context).size.height * 0.003,
               ),
@@ -180,6 +180,35 @@ Widget slidercontainer1(context, totaltasks, completedtasks, values) {
             )
           ],
         ),
+
+        Container(
+          margin: EdgeInsets.only(
+            // top: MediaQuery.of(context).size.height * 0.08,
+            bottom: MediaQuery.of(context).size.height * 0.0,
+            left: MediaQuery.of(context).size.height * 0.03,
+            //right: MediaQuery.of(context).size.height * 0.03,
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text("  Total Tasks: 10",
+                  style: TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.w500,
+                      color: Constants.mainColor1,
+                      letterSpacing: 1)),
+              Text(
+                "   Completed: 05 ",
+                style: TextStyle(
+                    fontSize: 15,
+                    fontWeight: FontWeight.w500,
+                    color: Constants.mainColor1,
+                    letterSpacing: 1),
+              ),
+            ],
+          ),
+        )
+
         // SizedBox(
         //   height: MediaQuery.of(context).size.height * 0.03,
         // ),
@@ -223,26 +252,6 @@ Widget slidercontainer1(context, totaltasks, completedtasks, values) {
         //   ],
         // ),
         // ),
-
-        Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text("  Total Tasks: 10",
-                style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w500,
-                    color: Constants.mainColor1,
-                    letterSpacing: 1)),
-            Text(
-              "   Completed: 05 ",
-              style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w500,
-                  color: Constants.mainColor1,
-                  letterSpacing: 1),
-            ),
-          ],
-        )
       ],
     ),
   );

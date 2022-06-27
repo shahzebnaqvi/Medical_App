@@ -148,13 +148,13 @@ class _BottombarcircularState extends State<Bottombarcircular> {
           color: Colors.white,
         ),
         buttonColor: Colors.white,
-        backgroundColor: Color.fromARGB(255, 6, 129, 23),
+        backgroundColor: Constants.mainColor1,
         buttonSelectedColor: Colors.white,
         fabColors: [
-          Color.fromARGB(255, 6, 129, 23),
-          Color.fromARGB(255, 9, 110, 23),
-          Color.fromARGB(255, 18, 129, 23),
-          Color.fromARGB(255, 13, 87, 12),
+          Constants.mainColor1,
+          Constants.mainColor1,
+          Constants.mainColor1,
+          Constants.mainColor1,
         ],
         buttonData: [
           PandaBarButtonData(id: 0, icon: Icons.home, title: 'Home'),
@@ -189,8 +189,8 @@ class _BottombarcircularState extends State<Bottombarcircular> {
           }
         },
         onFabButtonPressed: () {
-          // Navigator.pushReplacement(context,
-          //     MaterialPageRoute(builder: (context) => Circularbutton()));
+          Navigator.pushReplacement(context,
+              MaterialPageRoute(builder: (context) => Circularbutton()));
           final circularMenu = CircularMenu(items: [
             CircularMenuItem(
                 icon: Icons.home,

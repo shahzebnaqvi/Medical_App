@@ -13,6 +13,7 @@ class _CircularbuttonState extends State<Circularbutton> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: CircularMenu(
           alignment: Alignment.bottomCenter,
