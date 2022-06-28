@@ -20,6 +20,7 @@ class Constants {
   static const Color cyan_dark = Color.fromARGB(255, 24, 208, 184);
   static const Color cyan_light = Color.fromARGB(255, 111, 198, 238);
   static const Color grey = Colors.grey;
+  static const Color bannercolor = Color.fromARGB(255, 137, 204, 236);
 
   Color primarycolor = Colors.black;
   Color secondarycolor = Colors.black12;

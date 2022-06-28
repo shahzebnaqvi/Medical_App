@@ -60,9 +60,9 @@ class _TimelinesState extends State<Timelines> {
                       MaterialPageRoute(builder: (context) => recipes()));
                 },
                 child: crauselSilder1()),
-            SizedBox(
-              height: MediaQuery.of(context).size.height * 0.0,
-            ),
+            // SizedBox(
+            //   height: MediaQuery.of(context).size.height * 0.001,
+            // ),
             //Banner
 
             Container(
@@ -78,7 +78,7 @@ class _TimelinesState extends State<Timelines> {
               ),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(05),
-                color: Constants.bluecolor,
+                color: Constants.bannercolor,
                 boxShadow: [
                   BoxShadow(
                     color: Colors.blue.withOpacity(0.2),
@@ -88,22 +88,31 @@ class _TimelinesState extends State<Timelines> {
                   ),
                 ],
               ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              child: Column(
                 children: [
-                  Text(
-                    "Nice Jobs!",
-                    style: TextStyle(fontWeight: FontWeight.w500),
+                  Text("Test Adds",
+                      style:
+                          TextStyle(fontWeight: FontWeight.w500, fontSize: 15)),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Text(
+                        "Nice Jobs!",
+                        style: TextStyle(fontWeight: FontWeight.w500),
+                      ),
+                      Text("This is 320 X 50 test add",
+                          style: TextStyle(
+                            fontWeight: FontWeight.w500,
+                          )),
+                      Icon(Icons.shop),
+                    ],
                   ),
-                  Text("This is 320X50 test add",
-                      style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                      )),
-                  Icon(Icons.shop),
                 ],
               ),
             ),
-
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.003,
+            ),
             Padding(
                 padding: EdgeInsets.only(
               // top: MediaQuery.of(context).size.width * 0.04,
