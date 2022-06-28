@@ -25,17 +25,12 @@ class _TimelinesState extends State<Timelines> {
   bool value2 = false;
   String _dropDownValue = "";
   double currentIndex = 0;
-  late PageController _pageController;
-  List<String> images = [
-    "https://images.wallpapersden.com/image/download/purple-sunrise-4k-vaporwave_bGplZmiUmZqaraWkpJRmbmdlrWZlbWU.jpg",
-    "https://wallpaperaccess.com/full/2637581.jpg",
-    "https://uhdwallpapers.org/uploads/converted/20/01/14/the-mandalorian-5k-1920x1080_477555-mm-90.jpg"
+  final List<String> imagesList = [
+    'https://cdn.pixabay.com/photo/2020/11/01/23/22/breakfast-5705180_1280.jpg',
+    'https://cdn.pixabay.com/photo/2016/11/18/19/00/breads-1836411_1280.jpg',
+    'https://cdn.pixabay.com/photo/2019/01/14/17/25/gelato-3932596_1280.jpg',
+    'https://cdn.pixabay.com/photo/2017/04/04/18/07/ice-cream-2202561_1280.jpg',
   ];
-  @override
-  void initState() {
-    super.initState();
-    _pageController = PageController(viewportFraction: 0.8);
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -55,141 +50,237 @@ class _TimelinesState extends State<Timelines> {
     ];
 
     return Scaffold(
-      body: Container(
-          padding:
-              EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.02),
-          decoration: BoxDecoration(
-              image: DecorationImage(
-                  image: AssetImage("assets/curve.jpg"), fit: BoxFit.cover)),
-          child: ListView(children: [
-            profile(context),
-            SizedBox(
-              height: MediaQuery.of(context).size.height * 0.01,
-            ),
-            GestureDetector(
-                onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => recipes()));
-                },
-                child: crauselSilder1()),
-            // SizedBox(
-            //   height: MediaQuery.of(context).size.height * 0.001,
-            // ),
-            //Banner
-            Container(
-              margin: EdgeInsets.only(
-                left: MediaQuery.of(context).size.height * 0.02,
-                right: MediaQuery.of(context).size.height * 0.02,
-                top: MediaQuery.of(context).size.height * 0.01,
-                bottom: MediaQuery.of(context).size.height * 0.008,
+        body: Container(
+            padding:
+                EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.02),
+            decoration: BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage("assets/curve.jpg"), fit: BoxFit.cover)),
+            child: ListView(children: [
+              profile(context),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.01,
               ),
-              padding: EdgeInsets.only(
-                top: MediaQuery.of(context).size.height * 0.02,
-                bottom: MediaQuery.of(context).size.height * 0.02,
-              ),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(05),
-                color: Constants.bannercolor,
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.blue.withOpacity(0.2),
-                    spreadRadius: 0.1,
-                    blurRadius: 2,
-                    offset: Offset(0, 3), // changes position of shadow
-                  ),
-                ],
-              ),
-              child: Column(
-                children: [
-                  Text("Test Adds",
-                      style:
-                          TextStyle(fontWeight: FontWeight.w500, fontSize: 15)),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Text(
-                        "Nice Jobs!",
-                        style: TextStyle(fontWeight: FontWeight.w500),
-                      ),
-                      Text("This is 320 X 50 test add",
-                          style: TextStyle(
-                            fontWeight: FontWeight.w500,
-                          )),
-                      Icon(Icons.shop),
-                    ],
-                  ),
-                ],
-              ),
-            ),
-            SizedBox(
-              height: MediaQuery.of(context).size.height * 0.003,
-            ),
-            Padding(
+              GestureDetector(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => recipes()));
+                  },
+                  child: crauselSilder1()),
+              // SizedBox(
+              //   height: MediaQuery.of(context).size.height * 0.001,
+              // ),
+              //Banner
+              Container(
+                margin: EdgeInsets.only(
+                  left: MediaQuery.of(context).size.height * 0.02,
+                  right: MediaQuery.of(context).size.height * 0.02,
+                  top: MediaQuery.of(context).size.height * 0.01,
+                  bottom: MediaQuery.of(context).size.height * 0.008,
+                ),
                 padding: EdgeInsets.only(
-              // top: MediaQuery.of(context).size.width * 0.04,
-              right: MediaQuery.of(context).size.width * 0.04,
-              left: MediaQuery.of(context).size.width * 0.04,
-              // bottom: MediaQuery.of(context).size.width * 0.04,
-            )),
-            Column(children: [
-              GridView.builder(
-                  physics: NeverScrollableScrollPhysics(),
-                  itemCount: 12,
-                  shrinkWrap: true,
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2,
-                    mainAxisSpacing: 02,
-                    crossAxisSpacing: 10,
-                    mainAxisExtent: 100,
+                  top: MediaQuery.of(context).size.height * 0.02,
+                  bottom: MediaQuery.of(context).size.height * 0.02,
+                ),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(05),
+                  color: Constants.bannercolor,
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.blue.withOpacity(0.2),
+                      spreadRadius: 0.1,
+                      blurRadius: 2,
+                      offset: Offset(0, 3), // changes position of shadow
+                    ),
+                  ],
+                ),
+                child: Column(
+                  children: [
+                    Text("Test Adds",
+                        style: TextStyle(
+                            fontWeight: FontWeight.w500, fontSize: 15)),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Text(
+                          "Nice Jobs!",
+                          style: TextStyle(fontWeight: FontWeight.w500),
+                        ),
+                        Text("This is 320 X 50 test add",
+                            style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                            )),
+                        Icon(Icons.shop),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.003,
+              ),
+              Padding(
+                  padding: EdgeInsets.only(
+                // top: MediaQuery.of(context).size.width * 0.04,
+                right: MediaQuery.of(context).size.width * 0.04,
+                left: MediaQuery.of(context).size.width * 0.04,
+                // bottom: MediaQuery.of(context).size.width * 0.04,
+              )),
+              Column(children: [
+                GridView.builder(
+                    physics: NeverScrollableScrollPhysics(),
+                    itemCount: 12,
+                    shrinkWrap: true,
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 2,
+                      mainAxisSpacing: 02,
+                      crossAxisSpacing: 10,
+                      mainAxisExtent: 100,
+                    ),
+                    itemBuilder: (context, index) {
+                      return Container(
+                          margin: EdgeInsets.only(
+                            left: MediaQuery.of(context).size.height * 0.02,
+                            right: MediaQuery.of(context).size.height * 0.01,
+                            top: MediaQuery.of(context).size.height * 0.01,
+                            bottom: MediaQuery.of(context).size.height * 0.008,
+                          ),
+                          padding: EdgeInsets.only(
+                            top: MediaQuery.of(context).size.height * 0.02,
+                            bottom: MediaQuery.of(context).size.height * 0.02,
+                          ),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: Colors.white,
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.blue.withOpacity(0.2),
+                                spreadRadius: 0.1,
+                                blurRadius: 2,
+                                offset:
+                                    Offset(0, 3), // changes position of shadow
+                              ),
+                            ],
+                          ),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Icon(
+                                Icons.medical_services_sharp,
+                                color: Constants.mainColor1,
+                                size: 25,
+                              ),
+                              Spacer(),
+                              Text(
+                                title[index],
+                                overflow: TextOverflow.ellipsis,
+                                style: TextStyle(
+                                    fontSize: 13, fontWeight: FontWeight.w600),
+                              ),
+                            ],
+                          ));
+                    }),
+                // SizedBox(
+                //   height: MediaQuery.of(context).size.height * 0.02,
+                // ),
+                // Shop Crausel slider
+
+                CarouselSlider(
+                  options: CarouselOptions(
+                    autoPlay: true,
+                    enlargeCenterPage: true,
+                    // scrollDirection: Axis.vertical,
+                    // // // onPageChanged: (index, reason) {
+                    // // //   setState(
+                    // // //     () {
+                    // // //       _currentIndex = index;
+                    // // //     },
+                    // //   );
+                    // },
                   ),
-                  itemBuilder: (context, index) {
-                    return Container(
-                        margin: EdgeInsets.only(
-                          left: MediaQuery.of(context).size.height * 0.02,
-                          right: MediaQuery.of(context).size.height * 0.01,
-                          top: MediaQuery.of(context).size.height * 0.01,
-                          bottom: MediaQuery.of(context).size.height * 0.008,
-                        ),
-                        padding: EdgeInsets.only(
-                          top: MediaQuery.of(context).size.height * 0.02,
-                          bottom: MediaQuery.of(context).size.height * 0.02,
-                        ),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: Colors.white,
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.blue.withOpacity(0.2),
-                              spreadRadius: 0.1,
-                              blurRadius: 2,
-                              offset:
-                                  Offset(0, 3), // changes position of shadow
+                  items: imagesList
+                      .map(
+                        (item) => Padding(
+                          padding: const EdgeInsets.all(0.0),
+                          child: Card(
+                            margin: EdgeInsets.only(
+                                // top: 05.0,
+                                // bottom: 10.0,
+                                ),
+                            elevation: 6.0,
+                            shadowColor: Colors.redAccent,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(30.0),
                             ),
-                          ],
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(15.0),
+                              ),
+                              child: Stack(
+                                children: <Widget>[
+                                  Image.network(
+                                    item,
+                                    fit: BoxFit.cover,
+                                    width: double.infinity,
+                                  ),
+                                  // Center(
+                                  //   child: Text(
+                                  //     'AA',
+                                  //     style: TextStyle(
+                                  //       fontSize: 24.0,
+                                  //       fontWeight: FontWeight.bold,
+                                  //       backgroundColor: Colors.black45,
+                                  //       color: Colors.white,
+                                  //     ),
+                                  //   ),
+                                  // ),
+                                ],
+                              ),
+                            ),
+                          ),
                         ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Icon(
-                              Icons.medical_services_sharp,
-                              color: Constants.mainColor1,
-                              size: 25,
-                            ),
-                            Spacer(),
-                            Text(
-                              title[index],
-                              overflow: TextOverflow.ellipsis,
-                              style: TextStyle(
-                                  fontSize: 13, fontWeight: FontWeight.w600),
-                            ),
-                          ],
-                        ));
-                  }),
-              // Shop Crausel slider
-            ]),
-            //Bottombarcircular(num: "1"),
-          ])),
-    );
+                      )
+                      .toList(),
+                ),
+                // SizedBox(
+                //   height: MediaQuery.of(context).size.height * 0.02,
+                // ),
+              ]),
+            ]))
+
+        //     Container(
+        //       height: 200,
+        //       width: 500,
+        //       margin: EdgeInsets.only(
+        //         left: MediaQuery.of(context).size.height * 0.02,
+        //         right: MediaQuery.of(context).size.height * 0.01,
+        //         // top: MediaQuery.of(context).size.height * 0.01,
+        //         bottom: MediaQuery.of(context).size.height * 0.008,
+        //       ),
+        //       padding: EdgeInsets.only(
+        //         top: MediaQuery.of(context).size.height * 0.02,
+        //         bottom: MediaQuery.of(context).size.height * 0.02,
+        //       ),
+        //       decoration: BoxDecoration(
+        //         borderRadius: BorderRadius.circular(10),
+        //         color: Colors.white,
+        //         boxShadow: [
+        //           BoxShadow(
+        //             color: Colors.blue.withOpacity(0.2),
+        //             spreadRadius: 0.1,
+        //             blurRadius: 2,
+        //             offset: Offset(0, 3), // changes position of shadow
+        //           ),
+        //         ],
+        //       ),
+        //
+        //     )
+        //   ]),
+        //   //Bottombarcircular(num: "1"),
+        // ]
+        // )
+        // ),
+        );
   }
 
 // Profile
