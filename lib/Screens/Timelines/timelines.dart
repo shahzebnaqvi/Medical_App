@@ -180,106 +180,50 @@ class _TimelinesState extends State<Timelines> {
                             ],
                           ));
                     }),
-                // SizedBox(
-                //   height: MediaQuery.of(context).size.height * 0.02,
-                // ),
+
                 // Shop Crausel slider
-
-                CarouselSlider(
-                  options: CarouselOptions(
-                    autoPlay: true,
-                    enlargeCenterPage: true,
-                    scrollDirection: Axis.horizontal,
-                    // // // onPageChanged: (index, reason) {
-                    // // //   setState(
-                    // // //     () {
-                    // // //       _currentIndex = index;
-                    // // //     },
-                    // //   );
-                    // },
-                  ),
-                  items: imagesList
-                      .map(
-                        (item) => Padding(
-                          padding: const EdgeInsets.all(0.0),
-                          child: Card(
-                            elevation: 6.0,
-                            shadowColor: Constants.grey,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(25.0),
-                            ),
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.all(
-                                Radius.circular(20.0),
-                              ),
-                              child: Stack(
-                                children: <Widget>[
-                                  Container(
-                                    padding: EdgeInsets.all(10),
-                                    child: Image.network(
-                                      item,
-                                      fit: BoxFit.cover,
-                                      width: double.infinity,
-                                    ),
-                                  ),
-                                  // Center(
-                                  //   child: Text(
-                                  //     'AA',
-                                  //     style: TextStyle(
-                                  //       fontSize: 24.0,
-                                  //       fontWeight: FontWeight.bold,
-                                  //       backgroundColor: Colors.black45,
-                                  //       color: Colors.white,
-                                  //     ),
-                                  //   ),
-                                  // ),
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
-                      )
-                      .toList(),
-                ),
-                // SizedBox(
-                //   height: MediaQuery.of(context).size.height * 0.02,
-                // ),
+                shopcrausel()
               ]),
-            ]))
+            ])));
+  }
 
-        //     Container(
-        //       height: 200,
-        //       width: 500,
-        //       margin: EdgeInsets.only(
-        //         left: MediaQuery.of(context).size.height * 0.02,
-        //         right: MediaQuery.of(context).size.height * 0.01,
-        //         // top: MediaQuery.of(context).size.height * 0.01,
-        //         bottom: MediaQuery.of(context).size.height * 0.008,
-        //       ),
-        //       padding: EdgeInsets.only(
-        //         top: MediaQuery.of(context).size.height * 0.02,
-        //         bottom: MediaQuery.of(context).size.height * 0.02,
-        //       ),
-        //       decoration: BoxDecoration(
-        //         borderRadius: BorderRadius.circular(10),
-        //         color: Colors.white,
-        //         boxShadow: [
-        //           BoxShadow(
-        //             color: Colors.blue.withOpacity(0.2),
-        //             spreadRadius: 0.1,
-        //             blurRadius: 2,
-        //             offset: Offset(0, 3), // changes position of shadow
-        //           ),
-        //         ],
-        //       ),
-        //
-        //     )
-        //   ]),
-        //   //Bottombarcircular(num: "1"),
-        // ]
-        // )
-        // ),
-        );
+// Crausel Shop
+  Widget shopcrausel() {
+    return CarouselSlider(
+      options: CarouselOptions(
+        autoPlay: true,
+        enlargeCenterPage: true,
+        scrollDirection: Axis.horizontal,
+      ),
+      items: imagesList
+          .map(
+            (item) => Padding(
+              padding: const EdgeInsets.all(0.0),
+              child: Card(
+                elevation: 6.0,
+                shadowColor: Constants.grey,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(25.0),
+                ),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(20.0),
+                  ),
+                  child: Stack(
+                    children: <Widget>[
+                      Image.network(
+                        item,
+                        fit: BoxFit.cover,
+                        width: double.infinity,
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          )
+          .toList(),
+    );
   }
 
 // Profile
