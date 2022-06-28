@@ -25,6 +25,18 @@ class _TimelinesState extends State<Timelines> {
   bool value2 = false;
   String _dropDownValue = "";
   double currentIndex = 0;
+  late PageController _pageController;
+  List<String> images = [
+    "https://images.wallpapersden.com/image/download/purple-sunrise-4k-vaporwave_bGplZmiUmZqaraWkpJRmbmdlrWZlbWU.jpg",
+    "https://wallpaperaccess.com/full/2637581.jpg",
+    "https://uhdwallpapers.org/uploads/converted/20/01/14/the-mandalorian-5k-1920x1080_477555-mm-90.jpg"
+  ];
+  @override
+  void initState() {
+    super.initState();
+    _pageController = PageController(viewportFraction: 0.8);
+  }
+
   @override
   Widget build(BuildContext context) {
     List title = [
@@ -64,7 +76,6 @@ class _TimelinesState extends State<Timelines> {
             //   height: MediaQuery.of(context).size.height * 0.001,
             // ),
             //Banner
-
             Container(
               margin: EdgeInsets.only(
                 left: MediaQuery.of(context).size.height * 0.02,
@@ -174,8 +185,9 @@ class _TimelinesState extends State<Timelines> {
                           ],
                         ));
                   }),
+              // Shop Crausel slider
             ]),
-            // Bottombarcircular(num: "1"),
+            //Bottombarcircular(num: "1"),
           ])),
     );
   }
