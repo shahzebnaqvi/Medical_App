@@ -189,7 +189,7 @@ class _TimelinesState extends State<Timelines> {
                   options: CarouselOptions(
                     autoPlay: true,
                     enlargeCenterPage: true,
-                    // scrollDirection: Axis.vertical,
+                    scrollDirection: Axis.horizontal,
                     // // // onPageChanged: (index, reason) {
                     // // //   setState(
                     // // //     () {
@@ -203,25 +203,24 @@ class _TimelinesState extends State<Timelines> {
                         (item) => Padding(
                           padding: const EdgeInsets.all(0.0),
                           child: Card(
-                            margin: EdgeInsets.only(
-                                // top: 05.0,
-                                // bottom: 10.0,
-                                ),
                             elevation: 6.0,
-                            shadowColor: Colors.redAccent,
+                            shadowColor: Constants.grey,
                             shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(30.0),
+                              borderRadius: BorderRadius.circular(25.0),
                             ),
                             child: ClipRRect(
                               borderRadius: BorderRadius.all(
-                                Radius.circular(15.0),
+                                Radius.circular(20.0),
                               ),
                               child: Stack(
                                 children: <Widget>[
-                                  Image.network(
-                                    item,
-                                    fit: BoxFit.cover,
-                                    width: double.infinity,
+                                  Container(
+                                    padding: EdgeInsets.all(10),
+                                    child: Image.network(
+                                      item,
+                                      fit: BoxFit.cover,
+                                      width: double.infinity,
+                                    ),
                                   ),
                                   // Center(
                                   //   child: Text(
