@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 
 import 'Screens/Timelines/timelines.dart';
 import 'Screens/auth/login.dart';
+import 'Screens/maintools/pharmacy.dart';
 
 void main() {
   runApp(const MyApp());

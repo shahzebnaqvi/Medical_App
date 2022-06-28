@@ -186,11 +186,25 @@ class _PharmacyState extends State<Pharmacy> {
                                 SizedBox(
                                     height: MediaQuery.of(context).size.height *
                                         0.05),
-                                Text(
-                                  'Rs.68.54',
-                                  style: TextStyle(
-                                      color:
-                                          Color.fromARGB(255, 112, 166, 210)),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      'Rs.68.54',
+                                      style: TextStyle(
+                                          decoration:
+                                              TextDecoration.lineThrough,
+                                          color: Color.fromARGB(
+                                              255, 112, 166, 210)),
+                                    ),
+                                    Text(
+                                      'Rs.68.54',
+                                      style: TextStyle(
+                                          color: Color.fromARGB(
+                                              255, 112, 166, 210)),
+                                    ),
+                                  ],
                                 ),
                               ]),
                         );
