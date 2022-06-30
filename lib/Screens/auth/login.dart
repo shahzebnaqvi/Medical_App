@@ -180,13 +180,20 @@ class _LoginState extends State<Login> {
                       onPressed: () {},
                       child: Row(
                         children: [
-                          CircleAvatar(
-                              radius: 15,
-                              child: ClipOval(
-                                child: Image.asset(
-                                  'assets/facebook1.jpg',
-                                ),
-                              )),
+                          Icon(
+                            Icons.facebook,
+                            color: Colors.white,
+                            size: 30.0,
+                          ),
+                          // CircleAvatar(
+                          //     radius: 15,
+                          //     child: ClipOval(
+                          //       child:
+
+                          //       Image.asset(
+                          //         'assets/facebook1.jpg',
+                          //       ),
+                          //     )),
                           SizedBox(
                             width: 05,
                           ),
