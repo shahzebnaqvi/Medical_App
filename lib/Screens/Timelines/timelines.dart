@@ -67,6 +67,7 @@ class _TimelinesState extends State<Timelines> {
                         MaterialPageRoute(builder: (context) => recipes()));
                   },
                   child: crauselSilder1()),
+
               // SizedBox(
               //   height: MediaQuery.of(context).size.height * 0.001,
               // ),
@@ -182,6 +183,7 @@ class _TimelinesState extends State<Timelines> {
                     }),
 
                 // Shop Crausel slider
+
                 shopcrausel()
               ]),
             ])));

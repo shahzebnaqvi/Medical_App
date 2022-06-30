@@ -6,6 +6,7 @@ import 'package:get/get.dart';
 import 'package:medical_app/Constants/constants.dart';
 import 'package:medical_app/Screens/auth/forgetpassword.dart';
 import 'package:medical_app/Screens/auth/signup.dart';
+import 'package:medical_app/Screens/bottombar.dart';
 import 'package:medical_app/Screens/home.dart';
 import 'package:medical_app/Screens/Timelines/timelines.dart';
 
@@ -259,7 +260,7 @@ class _LoginState extends State<Login> {
                       style: TextStyle(
                           color: Constants.mainColor,
                           fontWeight: FontWeight.w500),
-                    ))
+                    )),
               ],
             ),
           )
