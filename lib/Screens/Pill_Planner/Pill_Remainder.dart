@@ -12,10 +12,10 @@ class PillRemainder extends StatefulWidget {
 
 class _PillRemainderState extends State<PillRemainder> {
   final List<String> imagesList = [
-    'assets/shop1.jpg',
-    'assets/shop1.jpg',
-    'assets/shop1.jpg',
-    'assets/shop1.jpg',
+    'https://cdn.pixabay.com/photo/2020/11/01/23/22/breakfast-5705180_1280.jpg',
+    'https://cdn.pixabay.com/photo/2016/11/18/19/00/breads-1836411_1280.jpg',
+    'https://cdn.pixabay.com/photo/2019/01/14/17/25/gelato-3932596_1280.jpg',
+    'https://cdn.pixabay.com/photo/2017/04/04/18/07/ice-cream-2202561_1280.jpg',
   ];
   @override
   Widget build(BuildContext context) {
@@ -35,8 +35,8 @@ class _PillRemainderState extends State<PillRemainder> {
             right: MediaQuery.of(context).size.width * 0.040,
           ),
           child: CircleAvatar(
-            backgroundColor: Color.fromARGB(255, 209, 203, 203),
-            radius: 150,
+            backgroundColor: Constants.bluecolor,
+            radius: 100,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -49,11 +49,11 @@ class _PillRemainderState extends State<PillRemainder> {
                   },
                   child: Text(
                     '+',
-                    style: TextStyle(fontSize: 35, color: Colors.black),
+                    style: TextStyle(fontSize: 25, color: Colors.black),
                   ),
                 ),
                 Text("Add Reminder",
-                    style: TextStyle(fontSize: 35, color: Colors.black)),
+                    style: TextStyle(fontSize: 25, color: Colors.black)),
               ],
             ), //Text
           ),
@@ -91,6 +91,53 @@ class _PillRemainderState extends State<PillRemainder> {
         ),
         // Shop Slider
         shopcrausel(),
+        Container(
+          margin: EdgeInsets.only(
+            left: MediaQuery.of(context).size.height * 0.02,
+            right: MediaQuery.of(context).size.height * 0.02,
+            top: MediaQuery.of(context).size.height * 0.01,
+            bottom: MediaQuery.of(context).size.height * 0.008,
+          ),
+          padding: EdgeInsets.only(
+            top: MediaQuery.of(context).size.height * 0.02,
+            bottom: MediaQuery.of(context).size.height * 0.02,
+          ),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(05),
+            color: Constants.bannercolor,
+            boxShadow: [
+              BoxShadow(
+                color: Colors.blue.withOpacity(0.2),
+                spreadRadius: 0.1,
+                blurRadius: 2,
+                offset: Offset(0, 3), // changes position of shadow
+              ),
+            ],
+          ),
+          child: Column(
+            children: [
+              Text("Voucher",
+                  style: TextStyle(fontWeight: FontWeight.w500, fontSize: 15)),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Text(
+                    "Nice Jobs!",
+                    style: TextStyle(fontWeight: FontWeight.w500),
+                  ),
+                  Text("Discount to celebrate this ",
+                      style: TextStyle(
+                        fontWeight: FontWeight.w500,
+                      )),
+                  Text("50% OFF",
+                      style: TextStyle(
+                        fontWeight: FontWeight.w500,
+                      ))
+                ],
+              ),
+            ],
+          ),
+        ),
       ]),
     );
   }
