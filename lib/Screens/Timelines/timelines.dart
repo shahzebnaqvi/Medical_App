@@ -3,6 +3,7 @@ import 'package:flutter/rendering.dart';
 import 'package:get/get.dart';
 import 'package:medical_app/Screens/Book_Doctors_Appoinment/Hospital.dart';
 import 'package:medical_app/Screens/Health%20&%20Fitness%20Goal/test_indicators.dart';
+import 'package:medical_app/Screens/Pill_Planner/Pill_Remainder.dart';
 import 'package:medical_app/Screens/auth/recipes.dart';
 import 'package:medical_app/Screens/auth/signup.dart';
 import 'package:medical_app/Screens/bottombar.dart';
@@ -68,9 +69,6 @@ class _TimelinesState extends State<Timelines> {
                   },
                   child: crauselSilder1()),
 
-              // SizedBox(
-              //   height: MediaQuery.of(context).size.height * 0.001,
-              // ),
               //Banner
               Container(
                 margin: EdgeInsets.only(
@@ -172,11 +170,21 @@ class _TimelinesState extends State<Timelines> {
                                 size: 25,
                               ),
                               Spacer(),
-                              Text(
-                                title[index],
-                                overflow: TextOverflow.ellipsis,
-                                style: TextStyle(
-                                    fontSize: 13, fontWeight: FontWeight.w600),
+                              InkWell(
+                                onTap: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              PillRemainder()));
+                                },
+                                child: Text(
+                                  title[index],
+                                  overflow: TextOverflow.ellipsis,
+                                  style: TextStyle(
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.w600),
+                                ),
                               ),
                             ],
                           ));
