@@ -33,7 +33,7 @@ Widget crauselSilder2(context, days) {
         slidercontainer1(context, '1200', '900', 0.55),
       ],
       options: CarouselOptions(
-        height: 295.0,
+        height: 265.0,
         enlargeCenterPage: true,
         aspectRatio: 16 / 9,
         autoPlayCurve: Curves.fastOutSlowIn,
@@ -107,6 +107,39 @@ Widget slidercontainer1(context, totaltasks, completedtasks, values) {
         SizedBox(
           height: MediaQuery.of(context).size.height * 0.01,
         ),
+        Container(
+          padding: EdgeInsets.only(
+            bottom: MediaQuery.of(context).size.height * 0.00,
+            top: MediaQuery.of(context).size.height * 0.01,
+            left: MediaQuery.of(context).size.height * 0.01,
+            right: MediaQuery.of(context).size.height * 0.01,
+          ),
+          decoration: BoxDecoration(
+            color: Constants.mainColorWhite,
+            border: Border.all(
+                color: Constants.mainColor1,
+                width: MediaQuery.of(context).size.width * 0.01),
+            borderRadius: BorderRadius.circular(08),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey.withOpacity(0.2),
+                spreadRadius: 3,
+                blurRadius: 5,
+                offset: Offset(0, 3), // changes position of shadow
+              ),
+            ],
+          ),
+          child: Text(
+            '+ Add New',
+            style: TextStyle(
+                color: Constants.mainColor1,
+                fontWeight: FontWeight.w500,
+                fontSize: 15),
+          ),
+        ),
+        SizedBox(
+          height: MediaQuery.of(context).size.height * 0.01,
+        ),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -124,8 +157,8 @@ Widget slidercontainer1(context, totaltasks, completedtasks, values) {
                       top: MediaQuery.of(context).size.height * 0.03,
                       // bottom: MediaQuery.of(context).size.height * 0.04
                     ),
-                    width: MediaQuery.of(context).size.width * 0.30,
-                    height: MediaQuery.of(context).size.height * 0.15,
+                    width: MediaQuery.of(context).size.width * 0.230,
+                    height: MediaQuery.of(context).size.height * 0.1115,
                     child: new CircularProgressIndicator(
                       strokeWidth: 05,
                       value: values,
@@ -136,78 +169,104 @@ Widget slidercontainer1(context, totaltasks, completedtasks, values) {
                   Padding(
                     padding: const EdgeInsets.only(top: 12.0),
                     child: Column(
+                      mainAxisAlignment: MainAxisAlignment.end,
                       children: [Text("70%"), Text("Completed")],
                     ),
                   ),
                 ],
               ),
             ),
+
             Container(
-              margin: EdgeInsets.only(
-                // top: MediaQuery.of(context).size.height * 0.08,
-                bottom: MediaQuery.of(context).size.height * 0.12,
-                left: MediaQuery.of(context).size.height * 0.003,
-                // right: MediaQuery.of(context).size.height * 0.003,
+              margin: EdgeInsets.only(bottom: 0),
+              child: Padding(
+                padding: const EdgeInsets.only(top: 30, left: 5),
+                child: Column(
+                  children: [
+                    Text("  Total Tasks: 10",
+                        style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w500,
+                            color: Constants.mainColor1,
+                            letterSpacing: 1)),
+                    Text(
+                      "   Completed: 05 ",
+                      style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w500,
+                          color: Constants.mainColor1,
+                          letterSpacing: 1),
+                    ),
+                  ],
+                ),
               ),
-              padding: EdgeInsets.only(
-                bottom: MediaQuery.of(context).size.height * 0.01,
-                top: MediaQuery.of(context).size.height * 0.01,
-                left: MediaQuery.of(context).size.height * 0.01,
-                right: MediaQuery.of(context).size.height * 0.01,
-              ),
-              decoration: BoxDecoration(
-                color: Constants.mainColorWhite,
-                border: Border.all(
-                    color: Constants.mainColor1,
-                    width: MediaQuery.of(context).size.width * 0.01),
-                borderRadius: BorderRadius.circular(08),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey.withOpacity(0.2),
-                    spreadRadius: 3,
-                    blurRadius: 5,
-                    offset: Offset(0, 3), // changes position of shadow
-                  ),
-                ],
-              ),
-              child: Text(
-                '+ Add New',
-                style: TextStyle(
-                    color: Constants.mainColor1,
-                    fontWeight: FontWeight.w500,
-                    fontSize: 15),
-              ),
-            )
+            ),
+            // Container(
+            //   margin: EdgeInsets.only(
+            //     // top: MediaQuery.of(context).size.height * 0.08,
+            //     bottom: MediaQuery.of(context).size.height * 0.12,
+            //     left: MediaQuery.of(context).size.height * 0.003,
+            //     // right: MediaQuery.of(context).size.height * 0.003,
+            //   ),
+            //   padding: EdgeInsets.only(
+            //     bottom: MediaQuery.of(context).size.height * 0.01,
+            //     top: MediaQuery.of(context).size.height * 0.01,
+            //     left: MediaQuery.of(context).size.height * 0.01,
+            //     right: MediaQuery.of(context).size.height * 0.01,
+            //   ),
+            //   decoration: BoxDecoration(
+            //     color: Constants.mainColorWhite,
+            //     border: Border.all(
+            //         color: Constants.mainColor1,
+            //         width: MediaQuery.of(context).size.width * 0.01),
+            //     borderRadius: BorderRadius.circular(08),
+            //     boxShadow: [
+            //       BoxShadow(
+            //         color: Colors.grey.withOpacity(0.2),
+            //         spreadRadius: 3,
+            //         blurRadius: 5,
+            //         offset: Offset(0, 3), // changes position of shadow
+            //       ),
+            //     ],
+            //   ),
+            //   child: Text(
+            //     '+ Add New',
+            //     style: TextStyle(
+            //         color: Constants.mainColor1,
+            //         fontWeight: FontWeight.w500,
+            //         fontSize: 15),
+            //   ),
+            // )
           ],
         ),
 
-        Container(
-          margin: EdgeInsets.only(
-            // top: MediaQuery.of(context).size.height * 0.08,
-            bottom: MediaQuery.of(context).size.height * 0.0,
-            left: MediaQuery.of(context).size.height * 0.03,
-            right: MediaQuery.of(context).size.height * 0.03,
-          ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text("  Total Tasks: 10",
-                  style: TextStyle(
-                      fontSize: 15,
-                      fontWeight: FontWeight.w500,
-                      color: Constants.mainColor1,
-                      letterSpacing: 1)),
-              Text(
-                "   Completed: 05 ",
-                style: TextStyle(
-                    fontSize: 15,
-                    fontWeight: FontWeight.w500,
-                    color: Constants.mainColor1,
-                    letterSpacing: 1),
-              ),
-            ],
-          ),
-        )
+        // Container(
+        //   margin: EdgeInsets.only(
+        //     // top: MediaQuery.of(context).size.height * 0.08,
+        //     bottom: MediaQuery.of(context).size.height * 0.0,
+        //     left: MediaQuery.of(context).size.height * 0.03,
+        //     right: MediaQuery.of(context).size.height * 0.03,
+        //   ),
+        //   child: Column(
+        //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        //     children: [
+        //       Text("  Total Tasks: 10",
+        //           style: TextStyle(
+        //               fontSize: 15,
+        //               fontWeight: FontWeight.w500,
+        //               color: Constants.mainColor1,
+        //               letterSpacing: 1)),
+        //       Text(
+        //         "   Completed: 05 ",
+        //         style: TextStyle(
+        //             fontSize: 15,
+        //             fontWeight: FontWeight.w500,
+        //             color: Constants.mainColor1,
+        //             letterSpacing: 1),
+        //       ),
+        //     ],
+        //   ),
+        // )
 
         // SizedBox(
         //   height: MediaQuery.of(context).size.height * 0.03,
