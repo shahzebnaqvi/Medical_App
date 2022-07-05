@@ -137,57 +137,57 @@ class _TimelinesState extends State<Timelines> {
                       mainAxisExtent: 100,
                     ),
                     itemBuilder: (context, index) {
-                      return Container(
-                          margin: EdgeInsets.only(
-                            left: MediaQuery.of(context).size.height * 0.02,
-                            right: MediaQuery.of(context).size.height * 0.01,
-                            top: MediaQuery.of(context).size.height * 0.01,
-                            bottom: MediaQuery.of(context).size.height * 0.008,
-                          ),
-                          padding: EdgeInsets.only(
-                            top: MediaQuery.of(context).size.height * 0.02,
-                            bottom: MediaQuery.of(context).size.height * 0.02,
-                          ),
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            color: Colors.white,
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.blue.withOpacity(0.2),
-                                spreadRadius: 0.1,
-                                blurRadius: 2,
-                                offset:
-                                    Offset(0, 3), // changes position of shadow
-                              ),
-                            ],
-                          ),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Icon(
-                                Icons.medical_services_sharp,
-                                color: Constants.mainColor1,
-                                size: 25,
-                              ),
-                              Spacer(),
-                              InkWell(
-                                onTap: () {
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) =>
-                                              PillRemainder()));
-                                },
-                                child: Text(
+                      return InkWell(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => PillRemainder()));
+                        },
+                        child: Container(
+                            margin: EdgeInsets.only(
+                              left: MediaQuery.of(context).size.height * 0.02,
+                              right: MediaQuery.of(context).size.height * 0.01,
+                              top: MediaQuery.of(context).size.height * 0.01,
+                              bottom:
+                                  MediaQuery.of(context).size.height * 0.008,
+                            ),
+                            padding: EdgeInsets.only(
+                              top: MediaQuery.of(context).size.height * 0.02,
+                              bottom: MediaQuery.of(context).size.height * 0.02,
+                            ),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: Colors.white,
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.blue.withOpacity(0.2),
+                                  spreadRadius: 0.1,
+                                  blurRadius: 2,
+                                  offset: Offset(
+                                      0, 3), // changes position of shadow
+                                ),
+                              ],
+                            ),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  Icons.medical_services_sharp,
+                                  color: Constants.mainColor1,
+                                  size: 25,
+                                ),
+                                Spacer(),
+                                Text(
                                   title[index],
                                   overflow: TextOverflow.ellipsis,
                                   style: TextStyle(
                                       fontSize: 13,
                                       fontWeight: FontWeight.w600),
                                 ),
-                              ),
-                            ],
-                          ));
+                              ],
+                            )),
+                      );
                     }),
 
                 // Shop Crausel slider

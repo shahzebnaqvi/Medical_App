@@ -20,7 +20,39 @@ class _PillRemainderState extends State<PillRemainder> {
             "Pill Remainder",
             style: TextStyle(color: Constants.mainColorWhite),
           )),
-      body: Container(),
+      body: ListView(children: [
+        Container(
+          margin: EdgeInsets.only(
+            top: MediaQuery.of(context).size.height * 0.02,
+            left: MediaQuery.of(context).size.width * 0.090,
+            right: MediaQuery.of(context).size.width * 0.040,
+          ),
+          child: CircleAvatar(
+            backgroundColor: Color.fromARGB(255, 209, 203, 203),
+            radius: 150,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => PillRemainder()));
+                  },
+                  child: Text(
+                    '+',
+                    style: TextStyle(fontSize: 35, color: Colors.black),
+                  ),
+                ),
+                Text("Add Reminder",
+                    style: TextStyle(fontSize: 35, color: Colors.black)),
+              ],
+            ), //Text
+          ),
+        ),
+        Container()
+      ]),
     );
   }
 }
