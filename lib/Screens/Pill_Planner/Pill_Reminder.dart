@@ -52,7 +52,7 @@ class _PillRemainderState extends State<PillRemainder> {
                     },
                     child: Text(
                       '+',
-                      style: TextStyle(fontSize: 25, color: Colors.black),
+                      style: TextStyle(fontSize: 30, color: Colors.black),
                     ),
                   ),
                   Text("Add Reminder",
@@ -91,7 +91,7 @@ class _PillRemainderState extends State<PillRemainder> {
             children: [
               Row(
                 children:[
-              Icon(Icons.circle,color: Constants.ligtbluecolor,),
+              Icon(Icons.circle,color: Constants.cyan_light,),
               SizedBox(width: MediaQuery.of(context).size.width*0.02),
               Text("Today, 04:40 PM",style: TextStyle(fontSize: 15,fontWeight: FontWeight.w500),),
            

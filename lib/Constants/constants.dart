@@ -12,7 +12,7 @@ class Constants {
   static const Color lightColor = Color.fromARGB(255, 255, 255, 255);
   static const Color lighterColor = Color.fromRGBO(254, 248, 240, 1);
   static const Color mediumColor = Color.fromARGB(255, 216, 210, 210);
-  static const Color ligtbluecolor = Color.fromARGB(255, 232, 239, 245);
+  static const Color lightbluecolor = Color.fromARGB(255, 232, 239, 245);
   static const Color mainColorWhite = Color.fromARGB(255, 253, 253, 253);
   static const Color bluecolor = Color.fromARGB(255, 108, 176, 232);
   static const Color redcolor = Colors.red;
