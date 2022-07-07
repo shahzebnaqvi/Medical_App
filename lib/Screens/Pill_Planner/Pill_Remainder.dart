@@ -32,30 +32,32 @@ class _PillRemainderState extends State<PillRemainder> {
         Container(
           margin: EdgeInsets.only(
             top: MediaQuery.of(context).size.height * 0.02,
-            left: MediaQuery.of(context).size.width * 0.090,
-            right: MediaQuery.of(context).size.width * 0.040,
+            // left: MediaQuery.of(context).size.width * 0.090,
+            // right: MediaQuery.of(context).size.width * 0.040,
           ),
-          child: CircleAvatar(
-            backgroundColor: Constants.bluecolor,
-            radius: 100,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                InkWell(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => PillRemainder()));
-                  },
-                  child: Text(
-                    '+',
-                    style: TextStyle(fontSize: 25, color: Colors.black),
+          child: Center(
+            child: CircleAvatar(
+              backgroundColor: Constants.bluecolor,
+              radius: 100,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => PillRemainder()));
+                    },
+                    child: Text(
+                      '+',
+                      style: TextStyle(fontSize: 25, color: Colors.black),
+                    ),
                   ),
-                ),
-                Text("Add Reminder",
-                    style: TextStyle(fontSize: 25, color: Colors.black)),
-              ],
+                  Text("Add Reminder",
+                      style: TextStyle(fontSize: 25,fontWeight: FontWeight.w500)),
+                ],
+              ),
             ),
           ),
         ),
