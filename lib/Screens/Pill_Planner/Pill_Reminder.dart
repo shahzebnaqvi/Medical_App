@@ -12,7 +12,7 @@ class PillRemainder extends StatefulWidget {
 
 class _PillRemainderState extends State<PillRemainder> {
   final List<String> imagesList = [
-    'assets/Shop2.jpg',
+
     'https://cdn.pixabay.com/photo/2020/11/01/23/22/breakfast-5705180_1280.jpg',
     'https://cdn.pixabay.com/photo/2016/11/18/19/00/breads-1836411_1280.jpg',
     'https://cdn.pixabay.com/photo/2019/01/14/17/25/gelato-3932596_1280.jpg',
