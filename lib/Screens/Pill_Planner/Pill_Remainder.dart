@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
@@ -139,6 +141,57 @@ class _PillRemainderState extends State<PillRemainder> {
             ],
           ),
         ),
+        Container(
+          padding: EdgeInsets.only(top: MediaQuery.of(context).size.height*0.001,
+          bottom:MediaQuery.of(context).size.height*0.001,
+          left: MediaQuery.of(context).size.height*0.001,
+
+          right: MediaQuery.of(context).size.height*0.001,
+          ),
+          margin:EdgeInsets.only(top:MediaQuery.of(context).size.height*0.001,
+          bottom:MediaQuery.of(context).size.height*0.001,
+             left: MediaQuery.of(context).size.height * 0.02,
+            right: MediaQuery.of(context).size.height * 0.02,
+          ),
+           decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(05),
+            color: Constants.bannercolor,
+            boxShadow: [
+              BoxShadow(
+                color: Colors.blue.withOpacity(0.2),
+                spreadRadius: 0.1,
+                blurRadius: 2,
+                offset: Offset(0, 3), // changes position of shadow
+              ),
+            ],
+          ),
+          child: Column(
+            children: [
+              Row(
+                children:[
+              Icon(Icons.circle,color: Constants.grey,),
+              SizedBox(width: MediaQuery.of(context).size.width*0.02),
+              Text("Today, 04:40 PM",style: TextStyle(fontSize: 15,fontWeight: FontWeight.w500),),
+           
+              
+            ],
+          ),
+          Row(
+            children: [
+              Padding(padding: EdgeInsets.only(left: 26)),
+                 Text("Panadol Paracetamol .... ",style: TextStyle(fontSize: 20,fontWeight: FontWeight.w500))
+            ],
+          ),
+          SizedBox(height: MediaQuery.of(context).size.height*0.02,),
+             Row(
+            children: [
+              Padding(padding: EdgeInsets.only(left: 26)),
+                 Text("Take Before Meal For  07 Days.... ",style: TextStyle(fontSize: 20,fontWeight: FontWeight.w500))
+            ],
+          ) 
+          
+      ])
+        )
       ]),
     );
   }
