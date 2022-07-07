@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:medical_app/Screens/Pill_Planner/Add_Pill_Reminder.dart';
 
 import '../../Constants/constants.dart';
 
@@ -47,7 +48,7 @@ class _PillRemainderState extends State<PillRemainder> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => PillRemainder()));
+                              builder: (context) => AddPillReminder()));
                     },
                     child: Text(
                       '+',

@@ -22,6 +22,7 @@ class _AddPillReminderState extends State<AddPillReminder> {
             "Add Pill Remainder",
             style: TextStyle(color: Constants.mainColorWhite),
           )),
+          body: Container(),
     );
   }
 }
