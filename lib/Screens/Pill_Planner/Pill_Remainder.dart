@@ -188,8 +188,12 @@ class _PillRemainderState extends State<PillRemainder> {
     return CarouselSlider(
       options: CarouselOptions(
         autoPlay: true,
-        enlargeCenterPage: true,
+        aspectRatio: 16/8,
+
+        enlargeCenterPage: true,    
+ 
         scrollDirection: Axis.horizontal,
+
       ),
       items: imagesList
           .map(
