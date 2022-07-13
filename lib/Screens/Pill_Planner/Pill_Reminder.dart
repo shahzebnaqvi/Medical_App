@@ -13,7 +13,6 @@ class PillRemainder extends StatefulWidget {
 
 class _PillRemainderState extends State<PillRemainder> {
   final List<String> imagesList = [
-
     'https://cdn.pixabay.com/photo/2020/11/01/23/22/breakfast-5705180_1280.jpg',
     'https://cdn.pixabay.com/photo/2016/11/18/19/00/breads-1836411_1280.jpg',
     'https://cdn.pixabay.com/photo/2019/01/14/17/25/gelato-3932596_1280.jpg',
@@ -56,64 +55,83 @@ class _PillRemainderState extends State<PillRemainder> {
                     ),
                   ),
                   Text("Add Reminder",
-                      style: TextStyle(fontSize: 25,fontWeight: FontWeight.w500)),
+                      style:
+                          TextStyle(fontSize: 25, fontWeight: FontWeight.w500)),
                 ],
               ),
             ),
           ),
         ),
-        SizedBox(height: MediaQuery.of(context).size.height*0.01,),
-         Container(
-          padding: EdgeInsets.only(top: MediaQuery.of(context).size.height*0.001,
-          bottom:MediaQuery.of(context).size.height*0.02,
-          left: MediaQuery.of(context).size.height*0.001,
-
-          right: MediaQuery.of(context).size.height*0.001,
-          ),
-          margin:EdgeInsets.only(top:MediaQuery.of(context).size.height*0.001,
-          bottom:MediaQuery.of(context).size.height*0.001,
-             left: MediaQuery.of(context).size.height * 0.02,
-            right: MediaQuery.of(context).size.height * 0.02,
-          ),
-           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(05),
-            color: Constants.mainColorWhite,
-            boxShadow: [
-              BoxShadow(
-                color: Colors.blue.withOpacity(0.2),
-                spreadRadius: 0.1,
-                blurRadius: 2,
-                offset: Offset(0, 3), // changes position of shadow
-              ),
-            ],
-          ),
-          child: Column(
-            children: [
-              Row(
-                children:[
-              Icon(Icons.circle,color: Constants.cyan_light,),
-              SizedBox(width: MediaQuery.of(context).size.width*0.02),
-              Text("Today, 04:40 PM",style: TextStyle(fontSize: 15,fontWeight: FontWeight.w500),),
-           
-              
-            ],
-          ),
-          Row(
-            children: [
-              Padding(padding: EdgeInsets.only(left: 26)),
-                 Text("Panadol Paracetamol .... ",style: TextStyle(fontSize: 20,fontWeight: FontWeight.w500))
-            ],
-          ),
-          SizedBox(height: MediaQuery.of(context).size.height*0.02,),
-             Row(
-            children: [
-              Padding(padding: EdgeInsets.only(left: 26)),
-                 Text("Take Before Meal For  07 Days ",style: TextStyle(fontSize: 20,fontWeight: FontWeight.w500))
-            ],
-          ) 
-          
-      ])
+        SizedBox(
+          height: MediaQuery.of(context).size.height * 0.01,
         ),
+        Container(
+            padding: EdgeInsets.only(
+              top: MediaQuery.of(context).size.height * 0.001,
+              bottom: MediaQuery.of(context).size.height * 0.02,
+              left: MediaQuery.of(context).size.height * 0.001,
+              right: MediaQuery.of(context).size.height * 0.001,
+            ),
+            margin: EdgeInsets.only(
+              top: MediaQuery.of(context).size.height * 0.001,
+              bottom: MediaQuery.of(context).size.height * 0.001,
+              left: MediaQuery.of(context).size.height * 0.02,
+              right: MediaQuery.of(context).size.height * 0.02,
+            ),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(05),
+              border: Border.all(),
+              color: Constants.mainColorWhite,
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.blue.withOpacity(0.2),
+                  spreadRadius: 0.1,
+                  blurRadius: 2,
+                  offset: Offset(0, 3), // changes position of shadow
+                ),
+              ],
+            ),
+            child: Column(children: [
+              Row(
+                children: [
+                  Padding(padding: EdgeInsets.only(left: 26)),
+                  Icon(
+                    Icons.circle,
+                    color: Constants.green,
+                  ),
+                  SizedBox(width: MediaQuery.of(context).size.width * 0.02),
+                  Text(
+                    "Today, 04:40 PM",
+                    style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500),
+                  ),
+                ],
+              ),
+              Row(
+                children: [
+                  Padding(padding: EdgeInsets.only(left: 26)),
+                  Text("Panadol Paracetamol .... ",
+                      style:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.w500))
+                ],
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.02,
+              ),
+              Row(
+                children: [
+                  Padding(padding: EdgeInsets.only(left: 10)),
+                  Icon(Icons.access_alarm),
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.01,
+                  ),
+                  Text("Take Before Meal For  07 Days ",
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w500,
+                      ))
+                ],
+              )
+            ])),
 
         Container(
           padding: EdgeInsets.only(
@@ -122,16 +140,14 @@ class _PillRemainderState extends State<PillRemainder> {
             right: MediaQuery.of(context).size.height * 0.02,
             bottom: MediaQuery.of(context).size.height * 0.01,
           ),
-          child: Row(
-            children: [
-          Text(
-            "My Mart",
-            style: TextStyle(fontWeight: FontWeight.w600, fontSize: 25),
-          )]),
-            
-          ),
-        
-       
+          child: Row(children: [
+            Text(
+              "My Mart",
+              style: TextStyle(fontWeight: FontWeight.w600, fontSize: 25),
+            )
+          ]),
+        ),
+
         // Shop Slider
         shopcrausel(),
         Container(
@@ -181,7 +197,6 @@ class _PillRemainderState extends State<PillRemainder> {
             ],
           ),
         ),
-       
       ]),
     );
   }
@@ -191,12 +206,9 @@ class _PillRemainderState extends State<PillRemainder> {
     return CarouselSlider(
       options: CarouselOptions(
         autoPlay: true,
-        aspectRatio: 16/8,
-
-        enlargeCenterPage: true,    
- 
+        aspectRatio: 16 / 8,
+        enlargeCenterPage: true,
         scrollDirection: Axis.horizontal,
-
       ),
       items: imagesList
           .map(
