@@ -107,9 +107,24 @@ class _AddPillReminderState extends State<AddPillReminder> {
                       Icons.access_alarm_rounded,
                       size: 40,
                     ),
-                    Icon(Icons.remove),
-                    Text("1"),
-                    Icon(Icons.add),
+                    InkWell(
+                        onTap: () {
+                          setState(() {
+                            itemcounter--;
+                          });
+                        },
+                        child: Icon(Icons.remove)),
+                    Text(
+                      "$itemcounter".toString(),
+                      style: TextStyle(fontSize: 30),
+                    ),
+                    InkWell(
+                        onTap: () {
+                          setState(() {
+                            itemcounter++;
+                          });
+                        },
+                        child: Icon(Icons.add)),
                     Container(
                       margin: EdgeInsets.only(
                           right: MediaQuery.of(context).size.height * 0.01),
