@@ -36,28 +36,26 @@ class _PillRemainderState extends State<PillRemainder> {
             // right: MediaQuery.of(context).size.width * 0.040,
           ),
           child: Center(
-            child: CircleAvatar(
-              backgroundColor: Constants.bluecolor,
-              radius: 100,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  InkWell(
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => AddPillReminder()));
-                    },
-                    child: Text(
+            child: InkWell(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => AddPillReminder()));
+              },
+              child: CircleAvatar(
+                backgroundColor: Constants.bluecolor,
+                radius: 100,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
                       '+',
                       style: TextStyle(fontSize: 30, color: Colors.black),
                     ),
-                  ),
-                  Text("Add Reminder",
-                      style:
-                          TextStyle(fontSize: 25, fontWeight: FontWeight.w500)),
-                ],
+                    Text("Add Reminder",
+                        style: TextStyle(
+                            fontSize: 25, fontWeight: FontWeight.w500)),
+                  ],
+                ),
               ),
             ),
           ),
@@ -124,7 +122,7 @@ class _PillRemainderState extends State<PillRemainder> {
                   SizedBox(
                     width: MediaQuery.of(context).size.width * 0.01,
                   ),
-                  Text("Take Before Meal For  07 Days ",
+                  Text("Take Before Meal For 07 Days ",
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.w500,
