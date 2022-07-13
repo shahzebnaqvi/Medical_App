@@ -1,9 +1,10 @@
-import 'dart:html';
-
 import 'package:flutter/animation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/foundation/key.dart';
+import 'package:get/get_connect/http/src/utils/utils.dart';
+import 'package:medical_app/Screens/Pill_Planner/Pill_Reminder.dart';
+import 'package:medical_app/Screens/Timelines/timelines.dart';
 
 import '../../Constants/constants.dart';
 
@@ -76,7 +77,7 @@ class _AddPillReminderState extends State<AddPillReminder> {
                     ],
                   ),
                   child: TextField(
-                    autofocus: true,
+                    autofocus: false,
                     style:
                         TextStyle(fontSize: 15.0, color: Constants.blackcolor),
                     decoration: InputDecoration(
@@ -160,7 +161,7 @@ class _AddPillReminderState extends State<AddPillReminder> {
             ),
           ),
           SizedBox(
-            height: MediaQuery.of(context).size.height * 0.08,
+            height: MediaQuery.of(context).size.height * 0.10,
           ),
           Container(
             height: MediaQuery.of(context).size.height * 0.10,
@@ -198,82 +199,94 @@ class _AddPillReminderState extends State<AddPillReminder> {
             )),
           ),
           SizedBox(
-            height: MediaQuery.of(context).size.height * 0.20,
+            height: MediaQuery.of(context).size.height * 0.15,
           ),
-          Container(
-            height: MediaQuery.of(context).size.height * 0.10,
-            padding: EdgeInsets.only(
-              top: MediaQuery.of(context).size.height * 0.01,
-              bottom: MediaQuery.of(context).size.height * 0.01,
-              left: MediaQuery.of(context).size.height * 0.001,
-              right: MediaQuery.of(context).size.height * 0.001,
+          InkWell(
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => PillRemainder()));
+            },
+            child: Container(
+              height: MediaQuery.of(context).size.height * 0.10,
+              padding: EdgeInsets.only(
+                top: MediaQuery.of(context).size.height * 0.01,
+                bottom: MediaQuery.of(context).size.height * 0.01,
+                left: MediaQuery.of(context).size.height * 0.001,
+                right: MediaQuery.of(context).size.height * 0.001,
+              ),
+              margin: EdgeInsets.only(
+                top: MediaQuery.of(context).size.height * 0.001,
+                bottom: MediaQuery.of(context).size.height * 0.001,
+                left: MediaQuery.of(context).size.height * 0.02,
+                right: MediaQuery.of(context).size.height * 0.02,
+              ),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                border: Border.all(color: Constants.bluecolor, width: 05),
+                color: Constants.mainColorWhite,
+                // // boxShadow: [
+                // //   BoxShadow(
+                // //     // color: Colors.blue.withOpacity(0.2),
+                // //     spreadRadius: 0.1,
+                // //     blurRadius: 2,
+                // //     offset: Offset(0, 3), // changes position of shadow
+                // //   ),
+                // ],
+              ),
+              child: Center(
+                  child: Text(
+                "Back To  Pill Reminder",
+                style: TextStyle(
+                    fontSize: 25,
+                    fontWeight: FontWeight.w400,
+                    color: Constants.blackcolor),
+              )),
             ),
-            margin: EdgeInsets.only(
-              top: MediaQuery.of(context).size.height * 0.001,
-              bottom: MediaQuery.of(context).size.height * 0.001,
-              left: MediaQuery.of(context).size.height * 0.02,
-              right: MediaQuery.of(context).size.height * 0.02,
-            ),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              border: Border.all(color: Constants.bluecolor, width: 05),
-              color: Constants.mainColorWhite,
-              // // boxShadow: [
-              // //   BoxShadow(
-              // //     // color: Colors.blue.withOpacity(0.2),
-              // //     spreadRadius: 0.1,
-              // //     blurRadius: 2,
-              // //     offset: Offset(0, 3), // changes position of shadow
-              // //   ),
-              // ],
-            ),
-            child: Center(
-                child: Text(
-              "Back To  Pill Reminder",
-              style: TextStyle(
-                  fontSize: 25,
-                  fontWeight: FontWeight.w400,
-                  color: Constants.blackcolor),
-            )),
           ),
           SizedBox(
             height: MediaQuery.of(context).size.height * 0.02,
           ),
-          Container(
-            height: MediaQuery.of(context).size.height * 0.10,
-            padding: EdgeInsets.only(
-              top: MediaQuery.of(context).size.height * 0.01,
-              bottom: MediaQuery.of(context).size.height * 0.01,
-              left: MediaQuery.of(context).size.height * 0.001,
-              right: MediaQuery.of(context).size.height * 0.001,
+          InkWell(
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => Timelines()));
+            },
+            child: Container(
+              height: MediaQuery.of(context).size.height * 0.10,
+              padding: EdgeInsets.only(
+                top: MediaQuery.of(context).size.height * 0.01,
+                bottom: MediaQuery.of(context).size.height * 0.01,
+                left: MediaQuery.of(context).size.height * 0.001,
+                right: MediaQuery.of(context).size.height * 0.001,
+              ),
+              margin: EdgeInsets.only(
+                top: MediaQuery.of(context).size.height * 0.001,
+                bottom: MediaQuery.of(context).size.height * 0.001,
+                left: MediaQuery.of(context).size.height * 0.02,
+                right: MediaQuery.of(context).size.height * 0.02,
+              ),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                border: Border.all(color: Constants.bluecolor, width: 05),
+                color: Constants.mainColorWhite,
+                // boxShadow: [
+                //   BoxShadow(
+                //     color: Colors.blue.withOpacity(0.2),
+                //     spreadRadius: 0.1,
+                //     blurRadius: 2,
+                //     offset: Offset(0, 3), // changes position of shadow
+                //   ),
+                // ],
+              ),
+              child: Center(
+                  child: Text(
+                "Back To Home ",
+                style: TextStyle(
+                    fontSize: 25,
+                    fontWeight: FontWeight.w400,
+                    color: Constants.blackcolor),
+              )),
             ),
-            margin: EdgeInsets.only(
-              top: MediaQuery.of(context).size.height * 0.001,
-              bottom: MediaQuery.of(context).size.height * 0.001,
-              left: MediaQuery.of(context).size.height * 0.02,
-              right: MediaQuery.of(context).size.height * 0.02,
-            ),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              border: Border.all(color: Constants.bluecolor, width: 05),
-              color: Constants.mainColorWhite,
-              // boxShadow: [
-              //   BoxShadow(
-              //     color: Colors.blue.withOpacity(0.2),
-              //     spreadRadius: 0.1,
-              //     blurRadius: 2,
-              //     offset: Offset(0, 3), // changes position of shadow
-              //   ),
-              // ],
-            ),
-            child: Center(
-                child: Text(
-              "Back To Home ",
-              style: TextStyle(
-                  fontSize: 25,
-                  fontWeight: FontWeight.w400,
-                  color: Constants.blackcolor),
-            )),
           )
         ]));
   }
