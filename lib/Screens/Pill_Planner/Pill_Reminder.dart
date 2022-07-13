@@ -80,14 +80,14 @@ class _PillRemainderState extends State<PillRemainder> {
               borderRadius: BorderRadius.circular(05),
               border: Border.all(),
               color: Constants.mainColorWhite,
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.blue.withOpacity(0.2),
-                  spreadRadius: 0.1,
-                  blurRadius: 2,
-                  offset: Offset(0, 3), // changes position of shadow
-                ),
-              ],
+              // boxShadow: [
+              //   BoxShadow(
+              //     color: Colors.blue.withOpacity(0.2),
+              //     spreadRadius: 0.1,
+              //     blurRadius: 2,
+              //     offset: Offset(0, 3), // changes position of shadow
+              //   ),
+              // ],
             ),
             child: Column(children: [
               Row(
