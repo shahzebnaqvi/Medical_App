@@ -64,8 +64,9 @@ class _PillRemainderState extends State<PillRemainder> {
           height: MediaQuery.of(context).size.height * 0.01,
         ),
         Container(
+            height: MediaQuery.of(context).size.height * 0.15,
             padding: EdgeInsets.only(
-              top: MediaQuery.of(context).size.height * 0.001,
+              top: MediaQuery.of(context).size.height * 0.01,
               bottom: MediaQuery.of(context).size.height * 0.02,
               left: MediaQuery.of(context).size.height * 0.001,
               right: MediaQuery.of(context).size.height * 0.001,

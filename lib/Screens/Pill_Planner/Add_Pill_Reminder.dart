@@ -81,18 +81,18 @@ class _AddPillReminderState extends State<AddPillReminder> {
                     style:
                         TextStyle(fontSize: 15.0, color: Constants.blackcolor),
                     decoration: InputDecoration(
-                      filled: true,
+                      filled: false,
                       suffixIcon: Icon(Icons.search),
                       fillColor: Constants.mainColorWhite,
                       hintText: 'Search Medicine',
                       contentPadding: const EdgeInsets.only(
                           left: 14.0, bottom: 12.0, top: 12.0),
                       focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.white),
+                        borderSide: BorderSide(color: Colors.black),
                         borderRadius: BorderRadius.circular(10),
                       ),
                       enabledBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: Colors.white),
+                        borderSide: BorderSide(color: Colors.black),
                         borderRadius: BorderRadius.circular(25.7),
                       ),
                     ),
