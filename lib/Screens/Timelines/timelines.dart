@@ -3,6 +3,7 @@ import 'package:flutter/rendering.dart';
 import 'package:get/get.dart';
 import 'package:medical_app/Screens/Book_Doctors_Appoinment/Hospital.dart';
 import 'package:medical_app/Screens/Health%20&%20Fitness%20Goal/test_indicators.dart';
+import 'package:medical_app/Screens/Pill_Planner/Add_Pill_Reminder.dart';
 import 'package:medical_app/Screens/Pill_Planner/Pill_Reminder.dart';
 import 'package:medical_app/Screens/auth/recipes.dart';
 import 'package:medical_app/Screens/auth/signup.dart';
@@ -32,6 +33,15 @@ class _TimelinesState extends State<Timelines> {
     'https://cdn.pixabay.com/photo/2019/01/14/17/25/gelato-3932596_1280.jpg',
     'https://cdn.pixabay.com/photo/2017/04/04/18/07/ice-cream-2202561_1280.jpg',
   ];
+  void tapped(int index) {
+    if (index == 1) {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => PillRemainder()));
+    } else {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => AddPillReminder()));
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -139,10 +149,7 @@ class _TimelinesState extends State<Timelines> {
                     itemBuilder: (context, index) {
                       return InkWell(
                         onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => PillRemainder()));
+                          tapped(index);
                         },
                         child: Container(
                             margin: EdgeInsets.only(
