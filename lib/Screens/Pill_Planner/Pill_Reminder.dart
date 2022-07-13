@@ -112,7 +112,10 @@ class _PillRemainderState extends State<PillRemainder> {
                   Text("Panadol Paracetamol .... ",
                       style:
                           TextStyle(fontSize: 20, fontWeight: FontWeight.w500)),
-                  Icon(Icons.medical_services)
+                  Icon(
+                    Icons.medical_services,
+                    color: Constants.bluecolor,
+                  )
                 ],
               ),
               SizedBox(
@@ -126,10 +129,8 @@ class _PillRemainderState extends State<PillRemainder> {
                     width: MediaQuery.of(context).size.width * 0.01,
                   ),
                   Text("Take Before Meal For 07 Days ",
-                      style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.w500,
-                      ))
+                      style:
+                          TextStyle(fontSize: 16, fontWeight: FontWeight.w500)),
                 ],
               )
             ])),
