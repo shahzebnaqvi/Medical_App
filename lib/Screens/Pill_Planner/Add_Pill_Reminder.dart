@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:flutter/animation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -13,6 +15,7 @@ class AddPillReminder extends StatefulWidget {
 }
 
 class _AddPillReminderState extends State<AddPillReminder> {
+  int itemcounter = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,7 +42,7 @@ class _AddPillReminderState extends State<AddPillReminder> {
             ),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(05),
-              border: Border.all(color: Constants.blackcolor, width: 01),
+              border: Border.all(color: Constants.blackcolor, width: 02),
               color: Constants.mainColorWhite,
               boxShadow: [
                 BoxShadow(
@@ -55,7 +58,7 @@ class _AddPillReminderState extends State<AddPillReminder> {
                 Container(
                   margin: EdgeInsets.only(
                     top: MediaQuery.of(context).size.width * 0.03,
-                    right: MediaQuery.of(context).size.width * 0.25,
+                    right: MediaQuery.of(context).size.width * 0.02,
                     left: MediaQuery.of(context).size.width * 0.02,
                   ),
                   decoration: BoxDecoration(
@@ -73,7 +76,7 @@ class _AddPillReminderState extends State<AddPillReminder> {
                     ],
                   ),
                   child: TextField(
-                    autofocus: false,
+                    autofocus: true,
                     style:
                         TextStyle(fontSize: 15.0, color: Constants.blackcolor),
                     decoration: InputDecoration(
@@ -95,7 +98,7 @@ class _AddPillReminderState extends State<AddPillReminder> {
                   ),
                 ),
                 SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.02,
+                  height: MediaQuery.of(context).size.height * 0.03,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -104,6 +107,9 @@ class _AddPillReminderState extends State<AddPillReminder> {
                       Icons.access_alarm_rounded,
                       size: 40,
                     ),
+                    Icon(Icons.remove),
+                    Text("1"),
+                    Icon(Icons.add),
                     Container(
                       margin: EdgeInsets.only(
                           right: MediaQuery.of(context).size.height * 0.01),
@@ -118,14 +124,14 @@ class _AddPillReminderState extends State<AddPillReminder> {
                         border:
                             Border.all(color: Constants.bluecolor, width: 03),
                         borderRadius: BorderRadius.circular(05),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey.withOpacity(0.2),
-                            spreadRadius: 3,
-                            blurRadius: 5,
-                            offset: Offset(0, 3), // changes position of shadow
-                          ),
-                        ],
+                        // boxShadow: [
+                        //   BoxShadow(
+                        //     color: Colors.grey.withOpacity(0.2),
+                        //     spreadRadius: 3,
+                        //     blurRadius: 5,
+                        //     offset: Offset(0, 3), // changes position of shadow
+                        //   ),
+                        // ],
                       ),
                       child: Text(
                         "More...",
@@ -177,7 +183,7 @@ class _AddPillReminderState extends State<AddPillReminder> {
             )),
           ),
           SizedBox(
-            height: MediaQuery.of(context).size.height * 0.30,
+            height: MediaQuery.of(context).size.height * 0.20,
           ),
           Container(
             height: MediaQuery.of(context).size.height * 0.10,
