@@ -34,17 +34,18 @@ class _AddPillReminderState extends State<AddPillReminder> {
               right: MediaQuery.of(context).size.height * 0.001,
             ),
             margin: EdgeInsets.only(
-              top: MediaQuery.of(context).size.height * 0.001,
+              top: MediaQuery.of(context).size.height * 0.01,
               bottom: MediaQuery.of(context).size.height * 0.001,
-              left: MediaQuery.of(context).size.height * 0.02,
-              right: MediaQuery.of(context).size.height * 0.02,
+              left: MediaQuery.of(context).size.height * 0.01,
+              right: MediaQuery.of(context).size.height * 0.01,
             ),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(05),
+              border: Border.all(color: Constants.blackcolor, width: 01),
               color: Constants.mainColorWhite,
               boxShadow: [
                 BoxShadow(
-                  color: Colors.blue.withOpacity(0.2),
+                  color: Colors.grey.withOpacity(0.2),
                   spreadRadius: 0.1,
                   blurRadius: 2,
                   offset: Offset(0, 3), // changes position of shadow
@@ -55,14 +56,15 @@ class _AddPillReminderState extends State<AddPillReminder> {
               children: [
                 Container(
                   margin: EdgeInsets.only(
-                    top: MediaQuery.of(context).size.width * 0.04,
+                    top: MediaQuery.of(context).size.width * 0.03,
                     right: MediaQuery.of(context).size.width * 0.25,
                     left: MediaQuery.of(context).size.width * 0.02,
                   ),
                   decoration: BoxDecoration(
                     color: Constants.lightColor,
                     borderRadius: BorderRadius.all(Radius.circular(
-                        MediaQuery.of(context).size.width * 0.04)),
+                        MediaQuery.of(context).size.width * 0.03)),
+                    border: Border.all(color: Constants.blackcolor),
                     boxShadow: [
                       BoxShadow(
                         color: Colors.grey.withOpacity(0.2),
@@ -74,17 +76,18 @@ class _AddPillReminderState extends State<AddPillReminder> {
                   ),
                   child: TextField(
                     autofocus: false,
-                    style: TextStyle(fontSize: 15.0, color: Color(0xFFbdc6cf)),
+                    style:
+                        TextStyle(fontSize: 15.0, color: Constants.blackcolor),
                     decoration: InputDecoration(
                       filled: true,
                       suffixIcon: Icon(Icons.search),
-                      fillColor: Colors.white,
+                      fillColor: Constants.mainColorWhite,
                       hintText: 'Search Medicine',
                       contentPadding: const EdgeInsets.only(
                           left: 14.0, bottom: 12.0, top: 12.0),
                       focusedBorder: OutlineInputBorder(
                         borderSide: BorderSide(color: Colors.white),
-                        borderRadius: BorderRadius.circular(29),
+                        borderRadius: BorderRadius.circular(10),
                       ),
                       enabledBorder: UnderlineInputBorder(
                         borderSide: BorderSide(color: Colors.white),
@@ -99,11 +102,38 @@ class _AddPillReminderState extends State<AddPillReminder> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Icon(Icons.access_alarm_rounded),
-                    Text(
-                      "More..",
-                      style:
-                          TextStyle(fontWeight: FontWeight.w500, fontSize: 25),
+                    Icon(
+                      Icons.access_alarm_rounded,
+                      size: 40,
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(
+                          right: MediaQuery.of(context).size.height * 0.01),
+                      padding: EdgeInsets.only(
+                        bottom: MediaQuery.of(context).size.height * 0.01,
+                        top: MediaQuery.of(context).size.height * 0.01,
+                        left: MediaQuery.of(context).size.height * 0.01,
+                        right: MediaQuery.of(context).size.height * 0.01,
+                      ),
+                      decoration: BoxDecoration(
+                        color: Constants.mainColorWhite,
+                        border:
+                            Border.all(color: Constants.bluecolor, width: 03),
+                        borderRadius: BorderRadius.circular(05),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.2),
+                            spreadRadius: 3,
+                            blurRadius: 5,
+                            offset: Offset(0, 3), // changes position of shadow
+                          ),
+                        ],
+                      ),
+                      child: Text(
+                        "More...",
+                        style: TextStyle(
+                            fontWeight: FontWeight.w500, fontSize: 20),
+                      ),
                     )
                   ],
                 )
