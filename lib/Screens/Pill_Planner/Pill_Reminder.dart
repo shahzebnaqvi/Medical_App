@@ -43,7 +43,7 @@ class _PillRemainderState extends State<PillRemainder> {
               },
               child: CircleAvatar(
                 backgroundColor: Constants.bluecolor,
-                radius: 100,
+                radius: 80,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -53,7 +53,7 @@ class _PillRemainderState extends State<PillRemainder> {
                     ),
                     Text("Add Reminder",
                         style: TextStyle(
-                            fontSize: 25, fontWeight: FontWeight.w500)),
+                            fontSize: 20, fontWeight: FontWeight.w500)),
                   ],
                 ),
               ),
@@ -93,7 +93,7 @@ class _PillRemainderState extends State<PillRemainder> {
             child: Column(children: [
               Row(
                 children: [
-                  Padding(padding: EdgeInsets.only(left: 26)),
+                  Padding(padding: EdgeInsets.only(left: 10)),
                   Icon(
                     Icons.circle,
                     color: Constants.green,
@@ -106,11 +106,13 @@ class _PillRemainderState extends State<PillRemainder> {
                 ],
               ),
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Padding(padding: EdgeInsets.only(left: 26)),
+                  Padding(padding: EdgeInsets.only(left: 8)),
                   Text("Panadol Paracetamol .... ",
                       style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.w500))
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.w500)),
+                  Icon(Icons.medical_services)
                 ],
               ),
               SizedBox(
