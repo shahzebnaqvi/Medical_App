@@ -161,10 +161,10 @@ class _AddPillReminderState extends State<AddPillReminder> {
             ),
           ),
           SizedBox(
-            height: MediaQuery.of(context).size.height * 0.10,
+            height: MediaQuery.of(context).size.height * 0.33,
           ),
           Container(
-            height: MediaQuery.of(context).size.height * 0.10,
+            height: MediaQuery.of(context).size.height * 0.07,
             padding: EdgeInsets.only(
               top: MediaQuery.of(context).size.height * 0.01,
               bottom: MediaQuery.of(context).size.height * 0.01,
@@ -199,7 +199,7 @@ class _AddPillReminderState extends State<AddPillReminder> {
             )),
           ),
           SizedBox(
-            height: MediaQuery.of(context).size.height * 0.15,
+            height: MediaQuery.of(context).size.height * 0.02,
           ),
           InkWell(
             onTap: () {
@@ -207,7 +207,6 @@ class _AddPillReminderState extends State<AddPillReminder> {
                   MaterialPageRoute(builder: (context) => PillRemainder()));
             },
             child: Container(
-              height: MediaQuery.of(context).size.height * 0.10,
               padding: EdgeInsets.only(
                 top: MediaQuery.of(context).size.height * 0.01,
                 bottom: MediaQuery.of(context).size.height * 0.01,
@@ -252,7 +251,6 @@ class _AddPillReminderState extends State<AddPillReminder> {
                   MaterialPageRoute(builder: (context) => Timelines()));
             },
             child: Container(
-              height: MediaQuery.of(context).size.height * 0.10,
               padding: EdgeInsets.only(
                 top: MediaQuery.of(context).size.height * 0.01,
                 bottom: MediaQuery.of(context).size.height * 0.01,
