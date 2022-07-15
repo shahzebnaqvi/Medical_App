@@ -67,7 +67,7 @@ class _PillRemainderState extends State<PillRemainder> {
             height: MediaQuery.of(context).size.height * 0.15,
             padding: EdgeInsets.only(
               top: MediaQuery.of(context).size.height * 0.01,
-              bottom: MediaQuery.of(context).size.height * 0.02,
+              bottom: MediaQuery.of(context).size.height * 0.00,
               left: MediaQuery.of(context).size.height * 0.001,
               right: MediaQuery.of(context).size.height * 0.001,
             ),
@@ -106,15 +106,16 @@ class _PillRemainderState extends State<PillRemainder> {
                 ],
               ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   Padding(padding: EdgeInsets.only(left: 8)),
                   Text("Panadol Paracetamol .... ",
                       style:
                           TextStyle(fontSize: 20, fontWeight: FontWeight.w500)),
                   Icon(
-                    Icons.medical_services,
+                    Icons.medication_liquid,
                     color: Constants.bluecolor,
+                    size: 30,
                   )
                 ],
               ),
@@ -164,7 +165,7 @@ class _PillRemainderState extends State<PillRemainder> {
             bottom: MediaQuery.of(context).size.height * 0.02,
           ),
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(05),
+            borderRadius: BorderRadius.circular(10),
             color: Constants.bannercolor,
             boxShadow: [
               BoxShadow(
@@ -177,22 +178,31 @@ class _PillRemainderState extends State<PillRemainder> {
           ),
           child: Column(
             children: [
-              Text("Voucher",
-                  style: TextStyle(fontWeight: FontWeight.w500, fontSize: 15)),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Icon(Icons.vaccines),
+                  Text("Voucher",
+                      style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 15,
+                          letterSpacing: 01)),
+                  Icon(Icons.vaccines),
+                ],
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Text(
                     "Nice Jobs!",
-                    style: TextStyle(fontWeight: FontWeight.w500),
+                    style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                   Text("Discount to celebrate this ",
                       style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                      )),
+                          fontWeight: FontWeight.w500, letterSpacing: 0.1)),
                   Text("50% OFF",
                       style: TextStyle(
-                        fontWeight: FontWeight.w500,
+                        fontWeight: FontWeight.bold,
                       ))
                 ],
               ),
