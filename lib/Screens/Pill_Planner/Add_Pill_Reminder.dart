@@ -198,35 +198,127 @@ class _AddPillReminderState extends State<AddPillReminder> {
                       fontSize: 20,
                     ),
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      // InkWell(
-                      //     onTap: () {
-                      //       setState(() {
-                      //         print(graphbut);
-                      //         graphbut = 1;
-                      //         selectedtype = 0;
-                      //       });
-                      //     },
-                      //     child: graphbut == 1
-                      //         ? TimesDay("1D", graphbut,
-                      //             Color.fromARGB(255, 2, 107, 6))
-                      //         : TimesDay("1D", graphbut, Colors.green)),
-                      // InkWell(
-                      //     onTap: () {
-                      //       setState(() {
-                      //         print(graphbut);
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.01,
+                  ),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        InkWell(
+                            onTap: () {
+                              setState(() {
+                                print(graphbut);
+                                graphbut = 1;
+                                selectedtype = 0;
+                              });
+                            },
+                            child: graphbut == 1
+                                ? TimesDay("1D", graphbut,
+                                    Color.fromARGB(255, 2, 107, 6))
+                                : TimesDay("1D", graphbut, Colors.blue)),
+                        SizedBox(
+                          width: MediaQuery.of(context).size.width * 0.06,
+                        ),
+                        InkWell(
+                            onTap: () {
+                              setState(() {
+                                print(graphbut);
 
-                      //         graphbut = 2;
-                      //         selectedtype = 1;
-                      //       });
-                      //     },
-                      //     child: graphbut == 2
-                      //         ? GraphText("1M", graphbut,
-                      //             Color.fromARGB(255, 2, 107, 6))
-                      //         : GraphText("1M", graphbut, Colors.green)),
-                    ],
+                                graphbut = 2;
+                                selectedtype = 1;
+                              });
+                            },
+                            child: graphbut == 2
+                                ? TimesDay("2D", graphbut,
+                                    Color.fromARGB(255, 2, 107, 6))
+                                : TimesDay("2D", graphbut, Colors.blue)),
+                        SizedBox(
+                          width: MediaQuery.of(context).size.width * 0.06,
+                        ),
+                        InkWell(
+                            onTap: () {
+                              setState(() {
+                                print(graphbut);
+
+                                graphbut = 3;
+                                selectedtype = 2;
+                              });
+                            },
+                            child: graphbut == 3
+                                ? TimesDay("3D", graphbut,
+                                    Color.fromARGB(255, 2, 107, 6))
+                                : TimesDay("3D", graphbut, Colors.blue)),
+                        SizedBox(
+                          width: MediaQuery.of(context).size.width * 0.06,
+                        ),
+                        InkWell(
+                            onTap: () {
+                              setState(() {
+                                print(graphbut);
+
+                                graphbut = 4;
+                                selectedtype = 3;
+                              });
+                            },
+                            child: graphbut == 4
+                                ? TimesDay("4D", graphbut,
+                                    Color.fromARGB(255, 2, 107, 6))
+                                : TimesDay("4D", graphbut, Colors.blue)),
+                        SizedBox(
+                          width: MediaQuery.of(context).size.width * 0.06,
+                        ),
+                        InkWell(
+                            onTap: () {
+                              setState(() {
+                                print(graphbut);
+
+                                graphbut = 5;
+                                selectedtype = 4;
+                              });
+                            },
+                            child: graphbut == 5
+                                ? TimesDay("5D", graphbut,
+                                    Color.fromARGB(255, 2, 107, 6))
+                                : TimesDay("5D", graphbut, Colors.blue)),
+                        SizedBox(
+                          width: MediaQuery.of(context).size.width * 0.06,
+                        ),
+                        InkWell(
+                            onTap: () {
+                              setState(() {
+                                print(graphbut);
+
+                                graphbut = 6;
+                                selectedtype = 5;
+                              });
+                            },
+                            child: graphbut == 6
+                                ? TimesDay("6D", graphbut,
+                                    Color.fromARGB(255, 2, 107, 6))
+                                : TimesDay("6D", graphbut, Colors.blue)),
+                        SizedBox(
+                          width: MediaQuery.of(context).size.width * 0.06,
+                        ),
+                        InkWell(
+                            onTap: () {
+                              setState(() {
+                                print(graphbut);
+
+                                graphbut = 7;
+                                selectedtype = 6;
+                              });
+                            },
+                            child: graphbut == 7
+                                ? TimesDay("7D", graphbut,
+                                    Color.fromARGB(255, 2, 107, 6))
+                                : TimesDay("7D", graphbut, Colors.blue)),
+                        SizedBox(
+                          width: MediaQuery.of(context).size.width * 0.06,
+                        ),
+                      ],
+                    ),
                   )
                 ],
               )),
