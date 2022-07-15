@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:flutter/animation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -196,6 +198,9 @@ class _AddPillReminderState extends State<AddPillReminder> {
                     "Times A Day",
                     style: TextStyle(
                       fontSize: 20,
+                      letterSpacing: 0.1,
+                      wordSpacing: 0.1,
+                      fontWeight: FontWeight.w500,
                     ),
                   ),
                   SizedBox(
@@ -354,16 +359,107 @@ class _AddPillReminderState extends State<AddPillReminder> {
               Text(
                 "Meal",
                 style: TextStyle(
+                  fontWeight: FontWeight.w500,
                   fontSize: 20,
+                  letterSpacing: 0.1,
+                  wordSpacing: 0.1,
                 ),
               ),
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.01,
               ),
+              Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                InkWell(
+                    onTap: () {
+                      setState(() {
+                        print(graphbut);
+
+                        graphbut = 8;
+                        selectedtype = 7;
+                      });
+                    },
+                    child: graphbut == 8
+                        ? TimesDay(
+                            "Before ", graphbut, Color.fromARGB(255, 2, 107, 6))
+                        : TimesDay("Before", graphbut, Colors.blue)),
+                SizedBox(
+                  width: MediaQuery.of(context).size.width * 0.06,
+                ),
+                InkWell(
+                    onTap: () {
+                      setState(() {
+                        print(graphbut);
+
+                        graphbut = 9;
+                        selectedtype = 8;
+                      });
+                    },
+                    child: graphbut == 9
+                        ? TimesDay(
+                            "After ", graphbut, Color.fromARGB(255, 2, 107, 6))
+                        : TimesDay("After", graphbut, Colors.blue)),
+                SizedBox(
+                  width: MediaQuery.of(context).size.width * 0.06,
+                ),
+                InkWell(
+                    onTap: () {
+                      setState(() {
+                        print(graphbut);
+
+                        graphbut = 10;
+                        selectedtype = 9;
+                      });
+                    },
+                    child: graphbut == 10
+                        ? TimesDay(
+                            "With", graphbut, Color.fromARGB(255, 2, 107, 6))
+                        : TimesDay("With", graphbut, Colors.blue)),
+              ]),
+              SizedBox(
+                width: MediaQuery.of(context).size.width * 0.06,
+              ),
             ]),
           ),
           SizedBox(
-            height: MediaQuery.of(context).size.height * 0.33,
+            height: MediaQuery.of(context).size.height * 0.02,
+          ),
+          Container(
+            height: MediaQuery.of(context).size.height * 0.1,
+            padding: EdgeInsets.only(
+              top: MediaQuery.of(context).size.height * 0.01,
+              bottom: MediaQuery.of(context).size.height * 0.01,
+              left: MediaQuery.of(context).size.height * 0.001,
+              right: MediaQuery.of(context).size.height * 0.001,
+            ),
+            margin: EdgeInsets.only(
+              top: MediaQuery.of(context).size.height * 0.001,
+              bottom: MediaQuery.of(context).size.height * 0.001,
+              left: MediaQuery.of(context).size.height * 0.02,
+              right: MediaQuery.of(context).size.height * 0.02,
+            ),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(07),
+              color: Constants.mainColorWhite,
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.blue.withOpacity(0.2),
+                  spreadRadius: 0.1,
+                  blurRadius: 2,
+                  offset: Offset(0, 3), // changes position of shadow
+                ),
+              ],
+            ),
+            child: Center(
+                child: Text(
+              "Take this Med for 5 Days ",
+              style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w500,
+                  letterSpacing: 0.1),
+            )),
+          ),
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.03,
           ),
           Container(
             height: MediaQuery.of(context).size.height * 0.07,
