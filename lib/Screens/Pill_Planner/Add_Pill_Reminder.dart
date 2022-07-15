@@ -323,6 +323,46 @@ class _AddPillReminderState extends State<AddPillReminder> {
                 ],
               )),
           SizedBox(
+            height: MediaQuery.of(context).size.height * 0.01,
+          ),
+          Container(
+            padding: EdgeInsets.only(
+              top: MediaQuery.of(context).size.height * 0.01,
+              bottom: MediaQuery.of(context).size.height * 0.01,
+              left: MediaQuery.of(context).size.height * 0.001,
+              right: MediaQuery.of(context).size.height * 0.001,
+            ),
+            margin: EdgeInsets.only(
+              top: MediaQuery.of(context).size.height * 0.001,
+              bottom: MediaQuery.of(context).size.height * 0.001,
+              left: MediaQuery.of(context).size.height * 0.02,
+              right: MediaQuery.of(context).size.height * 0.02,
+            ),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(07),
+              color: Constants.mainColorWhite,
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.blue.withOpacity(0.2),
+                  spreadRadius: 0.1,
+                  blurRadius: 2,
+                  offset: Offset(0, 3), // changes position of shadow
+                ),
+              ],
+            ),
+            child: Column(children: [
+              Text(
+                "Meal",
+                style: TextStyle(
+                  fontSize: 20,
+                ),
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.01,
+              ),
+            ]),
+          ),
+          SizedBox(
             height: MediaQuery.of(context).size.height * 0.33,
           ),
           Container(
