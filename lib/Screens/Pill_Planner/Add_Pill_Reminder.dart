@@ -17,6 +17,8 @@ class AddPillReminder extends StatefulWidget {
 
 class _AddPillReminderState extends State<AddPillReminder> {
   int itemcounter = 0;
+  var graphbut = 1;
+  var selectedtype = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -199,22 +201,35 @@ class _AddPillReminderState extends State<AddPillReminder> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Text("data"),
-                      Text("data"),
-                      Text("data"),
+                      // InkWell(
+                      //     onTap: () {
+                      //       setState(() {
+                      //         print(graphbut);
+                      //         graphbut = 1;
+                      //         selectedtype = 0;
+                      //       });
+                      //     },
+                      //     child: graphbut == 1
+                      //         ? TimesDay("1D", graphbut,
+                      //             Color.fromARGB(255, 2, 107, 6))
+                      //         : TimesDay("1D", graphbut, Colors.green)),
+                      // InkWell(
+                      //     onTap: () {
+                      //       setState(() {
+                      //         print(graphbut);
+
+                      //         graphbut = 2;
+                      //         selectedtype = 1;
+                      //       });
+                      //     },
+                      //     child: graphbut == 2
+                      //         ? GraphText("1M", graphbut,
+                      //             Color.fromARGB(255, 2, 107, 6))
+                      //         : GraphText("1M", graphbut, Colors.green)),
                     ],
                   )
                 ],
-              )
-              // Center(
-              //     child: Text(
-              //   " Add Another Pill",
-              //   style: TextStyle(
-              //     fontSize: 25,
-              //     fontWeight: FontWeight.w500,
-              //   ),
-              // )),
-              ),
+              )),
           SizedBox(
             height: MediaQuery.of(context).size.height * 0.33,
           ),
@@ -381,6 +396,27 @@ class _AddPillReminderState extends State<AddPillReminder> {
                 fontSize: MediaQuery.of(context).size.width * 0.05),
           ),
         ],
+      ),
+    );
+  }
+}
+
+class TimesDay extends StatelessWidget {
+  final String? title;
+  final int? state;
+  final Color? col;
+  TimesDay(this.title, this.state, this.col);
+  @override
+  Widget build(BuildContext context) {
+    var theme = Theme.of(context).textTheme;
+
+    return Container(
+      padding: EdgeInsets.symmetric(horizontal: 13, vertical: 5),
+      decoration:
+          BoxDecoration(color: col, borderRadius: BorderRadius.circular(5)),
+      child: Text(
+        title!.toUpperCase(),
+        style: theme.bodyText2!.copyWith(color: Colors.white),
       ),
     );
   }
