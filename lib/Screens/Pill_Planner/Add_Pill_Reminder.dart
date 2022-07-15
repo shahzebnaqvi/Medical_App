@@ -476,7 +476,7 @@ class _AddPillReminderState extends State<AddPillReminder> {
               right: MediaQuery.of(context).size.height * 0.02,
             ),
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(05),
+              borderRadius: BorderRadius.circular(07),
               color: Constants.bannercolor,
               boxShadow: [
                 BoxShadow(
