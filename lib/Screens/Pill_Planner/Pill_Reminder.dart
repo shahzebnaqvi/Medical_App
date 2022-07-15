@@ -42,7 +42,7 @@ class _PillRemainderState extends State<PillRemainder> {
                     MaterialPageRoute(builder: (context) => AddPillReminder()));
               },
               child: CircleAvatar(
-                backgroundColor: Constants.bluecolor,
+                backgroundColor: Color.fromARGB(255, 141, 176, 204),
                 radius: 80,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -79,16 +79,16 @@ class _PillRemainderState extends State<PillRemainder> {
             ),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(05),
-              border: Border.all(),
+              // border: Border.all(),
               color: Constants.mainColorWhite,
-              // boxShadow: [
-              //   BoxShadow(
-              //     color: Colors.blue.withOpacity(0.2),
-              //     spreadRadius: 0.1,
-              //     blurRadius: 2,
-              //     offset: Offset(0, 3), // changes position of shadow
-              //   ),
-              // ],
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.blue.withOpacity(0.2),
+                  spreadRadius: 0.1,
+                  blurRadius: 2,
+                  offset: Offset(0, 3), // changes position of shadow
+                ),
+              ],
             ),
             child: Column(children: [
               Row(
