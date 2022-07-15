@@ -586,47 +586,6 @@ class _AddPillReminderState extends State<AddPillReminder> {
           )
         ]));
   }
-
-  Widget days(context, date, day, colorcolor, fontcolor) {
-    return Container(
-      decoration: BoxDecoration(
-        color: colorcolor,
-        borderRadius: BorderRadius.all(
-            Radius.circular(MediaQuery.of(context).size.width * 0.05)),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.grey.withOpacity(0.2),
-            spreadRadius: 1,
-            blurRadius: 2,
-            offset: Offset(0, 3), // changes position of shadow
-          ),
-        ],
-      ),
-      padding: EdgeInsets.only(
-          top: MediaQuery.of(context).size.height * 0.02,
-          right: MediaQuery.of(context).size.width * 0.06,
-          left: MediaQuery.of(context).size.width * 0.06,
-          bottom: MediaQuery.of(context).size.height * 0.02),
-      margin: EdgeInsets.all(MediaQuery.of(context).size.height * 0.01),
-      child: Row(
-        children: [
-          Icon(
-            Icons.sunny,
-            color: fontcolor,
-          ),
-          SizedBox(
-            width: MediaQuery.of(context).size.width * 0.02,
-          ),
-          Text(
-            day,
-            style: TextStyle(
-                color: fontcolor,
-                fontSize: MediaQuery.of(context).size.width * 0.05),
-          ),
-        ],
-      ),
-    );
-  }
 }
 
 class TimesDay extends StatelessWidget {
