@@ -105,9 +105,16 @@ class _TimelinesState extends State<Timelines> {
                 ),
                 child: Column(
                   children: [
-                    Text("Test Adds",
-                        style: TextStyle(
-                            fontWeight: FontWeight.w500, fontSize: 15)),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Icon(Icons.vaccines),
+                        Text("Test Adds",
+                            style: TextStyle(
+                                fontWeight: FontWeight.w500, fontSize: 15)),
+                        Icon(Icons.vaccines),
+                      ],
+                    ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
