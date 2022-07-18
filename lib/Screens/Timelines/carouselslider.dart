@@ -31,6 +31,7 @@ Widget crauselSilder2(context, days) {
         slidercontainer1(context, '1000', '700', 0.90),
         slidercontainer1(context, '1100', '800', 0.95),
         slidercontainer1(context, '1200', '900', 0.55),
+        Medicine(context),
       ],
       options: CarouselOptions(
         height: 265.0,
@@ -43,6 +44,146 @@ Widget crauselSilder2(context, days) {
       ),
     ),
   );
+}
+
+// Medicine Slider
+Widget Medicine(context) {
+  return Container(
+      margin: EdgeInsets.only(
+        top: MediaQuery.of(context).size.height * 0.01,
+        bottom: MediaQuery.of(context).size.height * 0.03,
+        left: MediaQuery.of(context).size.height * 0.003,
+        right: MediaQuery.of(context).size.height * 0.003,
+      ),
+      padding: EdgeInsets.only(
+        // bottom: MediaQuery.of(context).size.height * 0.02,
+        top: MediaQuery.of(context).size.height * 0.01,
+        left: MediaQuery.of(context).size.height * 0.01,
+        right: MediaQuery.of(context).size.height * 0.01,
+      ),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(10),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.2),
+            spreadRadius: 5,
+            blurRadius: 7,
+            offset: Offset(0, 3), // changes position of shadow
+          ),
+        ],
+      ),
+      child: Column(crossAxisAlignment: CrossAxisAlignment.end, children: [
+        Container(
+          height: MediaQuery.of(context).size.height * 0.05,
+          decoration: BoxDecoration(
+            color: Constants.mainColorWhite,
+            border: Border.all(
+                color: Constants.mainColor1,
+                width: MediaQuery.of(context).size.width * 0.01),
+            borderRadius: BorderRadius.circular(08),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey.withOpacity(0.2),
+                spreadRadius: 3,
+                blurRadius: 5,
+                offset: Offset(0, 3), // changes position of shadow
+              ),
+            ],
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                "TODAY'S TASK",
+                style: TextStyle(
+                    color: Constants.grey,
+                    fontSize: 18,
+                    fontWeight: FontWeight.w500),
+              ),
+            ],
+          ),
+        ),
+        SizedBox(
+          height: MediaQuery.of(context).size.height * 0.01,
+        ),
+        Container(
+          padding: EdgeInsets.only(
+            // bottom: MediaQuery.of(context).size.height * 0.01,
+            // top: MediaQuery.of(context).size.height * 0.01,
+            left: MediaQuery.of(context).size.height * 0.01,
+            right: MediaQuery.of(context).size.height * 0.01,
+          ),
+          decoration: BoxDecoration(
+            color: Constants.mainColorWhite,
+            border: Border.all(
+                color: Constants.mainColor1,
+                width: MediaQuery.of(context).size.width * 0.01),
+            borderRadius: BorderRadius.circular(08),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey.withOpacity(0.2),
+                spreadRadius: 3,
+                blurRadius: 5,
+                offset: Offset(0, 3), // changes position of shadow
+              ),
+            ],
+          ),
+          child: Text(
+            'Done',
+            style: TextStyle(
+                color: Constants.mainColor1,
+                fontWeight: FontWeight.w500,
+                fontSize: 15),
+          ),
+        ),
+        SizedBox(
+          height: MediaQuery.of(context).size.height * 0.01,
+        ),
+        Column(children: [
+          Row(
+            children: [
+              Padding(padding: EdgeInsets.only(left: 10)),
+              Icon(
+                Icons.circle,
+                color: Constants.green,
+              ),
+              SizedBox(width: MediaQuery.of(context).size.width * 0.02),
+              Text(
+                "Today, 04:40 PM",
+                style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500),
+              ),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Padding(padding: EdgeInsets.only(left: 8)),
+              Text("Panadol Paracetamol .... ",
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500)),
+              Icon(
+                Icons.medication_liquid,
+                color: Constants.bluecolor,
+                size: 30,
+              )
+            ],
+          ),
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.02,
+          ),
+          Row(
+            children: [
+              Padding(padding: EdgeInsets.only(left: 10)),
+              Icon(Icons.access_alarm),
+              SizedBox(
+                width: MediaQuery.of(context).size.width * 0.01,
+              ),
+              Text("Take Before Meal For 07 Days ",
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500)),
+            ],
+          )
+        ]),
+      ]));
 }
 
 Widget slidercontainer1(context, totaltasks, completedtasks, values) {
@@ -109,8 +250,8 @@ Widget slidercontainer1(context, totaltasks, completedtasks, values) {
         ),
         Container(
           padding: EdgeInsets.only(
-            bottom: MediaQuery.of(context).size.height * 0.00,
-            top: MediaQuery.of(context).size.height * 0.01,
+            // bottom: MediaQuery.of(context).size.height * 0.01,
+            // top: MediaQuery.of(context).size.height * 0.01,
             left: MediaQuery.of(context).size.height * 0.01,
             right: MediaQuery.of(context).size.height * 0.01,
           ),
@@ -176,7 +317,6 @@ Widget slidercontainer1(context, totaltasks, completedtasks, values) {
                 ],
               ),
             ),
-
             Container(
               margin: EdgeInsets.only(bottom: 0),
               child: Padding(
@@ -201,117 +341,120 @@ Widget slidercontainer1(context, totaltasks, completedtasks, values) {
                 ),
               ),
             ),
-            // Container(
-            //   margin: EdgeInsets.only(
-            //     // top: MediaQuery.of(context).size.height * 0.08,
-            //     bottom: MediaQuery.of(context).size.height * 0.12,
-            //     left: MediaQuery.of(context).size.height * 0.003,
-            //     // right: MediaQuery.of(context).size.height * 0.003,
-            //   ),
-            //   padding: EdgeInsets.only(
-            //     bottom: MediaQuery.of(context).size.height * 0.01,
-            //     top: MediaQuery.of(context).size.height * 0.01,
-            //     left: MediaQuery.of(context).size.height * 0.01,
-            //     right: MediaQuery.of(context).size.height * 0.01,
-            //   ),
-            //   decoration: BoxDecoration(
-            //     color: Constants.mainColorWhite,
-            //     border: Border.all(
-            //         color: Constants.mainColor1,
-            //         width: MediaQuery.of(context).size.width * 0.01),
-            //     borderRadius: BorderRadius.circular(08),
-            //     boxShadow: [
-            //       BoxShadow(
-            //         color: Colors.grey.withOpacity(0.2),
-            //         spreadRadius: 3,
-            //         blurRadius: 5,
-            //         offset: Offset(0, 3), // changes position of shadow
-            //       ),
-            //     ],
-            //   ),
-            //   child: Text(
-            //     '+ Add New',
-            //     style: TextStyle(
-            //         color: Constants.mainColor1,
-            //         fontWeight: FontWeight.w500,
-            //         fontSize: 15),
-            //   ),
-            // )
           ],
         ),
-
-        // Container(
-        //   margin: EdgeInsets.only(
-        //     // top: MediaQuery.of(context).size.height * 0.08,
-        //     bottom: MediaQuery.of(context).size.height * 0.0,
-        //     left: MediaQuery.of(context).size.height * 0.03,
-        //     right: MediaQuery.of(context).size.height * 0.03,
-        //   ),
-        //   child: Column(
-        //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        //     children: [
-        //       Text("  Total Tasks: 10",
-        //           style: TextStyle(
-        //               fontSize: 15,
-        //               fontWeight: FontWeight.w500,
-        //               color: Constants.mainColor1,
-        //               letterSpacing: 1)),
-        //       Text(
-        //         "   Completed: 05 ",
-        //         style: TextStyle(
-        //             fontSize: 15,
-        //             fontWeight: FontWeight.w500,
-        //             color: Constants.mainColor1,
-        //             letterSpacing: 1),
-        //       ),
-        //     ],
-        //   ),
-        // )
-
-        // SizedBox(
-        //   height: MediaQuery.of(context).size.height * 0.03,
-        // ),
-        // Row(
-        // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        // children: [
-        //   Text(
-        //     completedtasks,
-        //     style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
-        //   ),
-        // Container(
-        //   margin: EdgeInsets.only(
-        //     left: MediaQuery.of(context).size.height * 0.02,
-        //     top: MediaQuery.of(context).size.height * 0.001,
-        //   ),
-        //   child: Stack(
-        //     alignment: Alignment.center,
-        //     children: <Widget>[
-        //       Container(
-        //         margin: EdgeInsets.only(
-        //             left: MediaQuery.of(context).size.height * 0.001),
-        //         width: 90,
-        //         height: 90,
-        //         child: new CircularProgressIndicator(
-        //           strokeWidth: 12,
-        //           value: values,
-        //           color: Constants.bluecolor,
-        //           backgroundColor: Colors.grey[100],
-        //         ),
-        //       ),
-        //       Column(
-        //         children: [Text("70%"), Text("Completed")],
-        //       ),
-        //     ],
-        //   ),
-        // ),
-        //     Text(
-        //       totaltasks,
-        //       style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
-        //     ),
-        //   ],
-        // ),
-        // ),
       ],
     ),
   );
 }
+
+//
+
+// Container(
+//   margin: EdgeInsets.only(
+//     // top: MediaQuery.of(context).size.height * 0.08,
+//     bottom: MediaQuery.of(context).size.height * 0.12,
+//     left: MediaQuery.of(context).size.height * 0.003,
+//     // right: MediaQuery.of(context).size.height * 0.003,
+//   ),
+//   padding: EdgeInsets.only(
+//     bottom: MediaQuery.of(context).size.height * 0.01,
+//     top: MediaQuery.of(context).size.height * 0.01,
+//     left: MediaQuery.of(context).size.height * 0.01,
+//     right: MediaQuery.of(context).size.height * 0.01,
+//   ),
+//   decoration: BoxDecoration(
+//     color: Constants.mainColorWhite,
+//     border: Border.all(
+//         color: Constants.mainColor1,
+//         width: MediaQuery.of(context).size.width * 0.01),
+//     borderRadius: BorderRadius.circular(08),
+//     boxShadow: [
+//       BoxShadow(
+//         color: Colors.grey.withOpacity(0.2),
+//         spreadRadius: 3,
+//         blurRadius: 5,
+//         offset: Offset(0, 3), // changes position of shadow
+//       ),
+//     ],
+//   ),
+//   child: Text(
+//     '+ Add New',
+//     style: TextStyle(
+//         color: Constants.mainColor1,
+//         fontWeight: FontWeight.w500,
+//         fontSize: 15),
+//   ),
+// )
+
+// Container(
+//   margin: EdgeInsets.only(
+//     // top: MediaQuery.of(context).size.height * 0.08,
+//     bottom: MediaQuery.of(context).size.height * 0.0,
+//     left: MediaQuery.of(context).size.height * 0.03,
+//     right: MediaQuery.of(context).size.height * 0.03,
+//   ),
+//   child: Column(
+//     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//     children: [
+//       Text("  Total Tasks: 10",
+//           style: TextStyle(
+//               fontSize: 15,
+//               fontWeight: FontWeight.w500,
+//               color: Constants.mainColor1,
+//               letterSpacing: 1)),
+//       Text(
+//         "   Completed: 05 ",
+//         style: TextStyle(
+//             fontSize: 15,
+//             fontWeight: FontWeight.w500,
+//             color: Constants.mainColor1,
+//             letterSpacing: 1),
+//       ),
+//     ],
+//   ),
+// )
+
+// SizedBox(
+//   height: MediaQuery.of(context).size.height * 0.03,
+// ),
+// Row(
+// mainAxisAlignment: MainAxisAlignment.spaceBetween,
+// children: [
+//   Text(
+//     completedtasks,
+//     style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+//   ),
+// Container(
+//   margin: EdgeInsets.only(
+//     left: MediaQuery.of(context).size.height * 0.02,
+//     top: MediaQuery.of(context).size.height * 0.001,
+//   ),
+//   child: Stack(
+//     alignment: Alignment.center,
+//     children: <Widget>[
+//       Container(
+//         margin: EdgeInsets.only(
+//             left: MediaQuery.of(context).size.height * 0.001),
+//         width: 90,
+//         height: 90,
+//         child: new CircularProgressIndicator(
+//           strokeWidth: 12,
+//           value: values,
+//           color: Constants.bluecolor,
+//           backgroundColor: Colors.grey[100],
+//         ),
+//       ),
+//       Column(
+//         children: [Text("70%"), Text("Completed")],
+//       ),
+//     ],
+//   ),
+// ),
+//     Text(
+//       totaltasks,
+//       style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+//     ),
+//   ],
+// ),
+// ),
