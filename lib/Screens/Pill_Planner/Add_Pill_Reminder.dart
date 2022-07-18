@@ -1,9 +1,5 @@
-import 'package:flutter/animation.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:get/get_connect/http/src/utils/utils.dart';
+
 import 'package:medical_app/Screens/Pill_Planner/Pill_Reminder.dart';
 import 'package:medical_app/Screens/Timelines/timelines.dart';
 
