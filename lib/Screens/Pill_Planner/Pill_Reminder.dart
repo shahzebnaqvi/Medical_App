@@ -79,7 +79,7 @@ class _PillRemainderState extends State<PillRemainder> {
             ),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(05),
-              // border: Border.all(),
+              border: Border.all(color: Constants.cyan_dark),
               color: Constants.mainColorWhite,
               boxShadow: [
                 BoxShadow(
