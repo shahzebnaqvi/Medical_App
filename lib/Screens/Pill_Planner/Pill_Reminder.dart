@@ -96,7 +96,7 @@ class _PillRemainderState extends State<PillRemainder> {
                   Padding(padding: EdgeInsets.only(left: 10)),
                   Icon(
                     Icons.circle,
-                    color: Constants.green,
+                    color: Color.fromARGB(255, 140, 238, 143),
                   ),
                   SizedBox(width: MediaQuery.of(context).size.width * 0.02),
                   Text(
