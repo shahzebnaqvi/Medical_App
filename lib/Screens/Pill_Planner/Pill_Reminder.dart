@@ -125,7 +125,8 @@ class _PillRemainderState extends State<PillRemainder> {
               Row(
                 children: [
                   Padding(padding: EdgeInsets.only(left: 10)),
-                  Icon(Icons.access_alarm),
+                  GestureDetector(
+                      onTap: () {}, child: Icon(Icons.access_alarm)),
                   SizedBox(
                     width: MediaQuery.of(context).size.width * 0.01,
                   ),

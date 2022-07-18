@@ -112,9 +112,16 @@ class _AddPillReminderState extends State<AddPillReminder> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Icon(
-                      Icons.access_alarm_rounded,
-                      size: 40,
+                    GestureDetector(
+                      onTap: () {
+                        TimeOfDay initialTime = TimeOfDay.now();
+                        showTimePicker(
+                            context: context, initialTime: initialTime);
+                      },
+                      child: Icon(
+                        Icons.access_alarm_rounded,
+                        size: 40,
+                      ),
                     ),
                     InkWell(
                         onTap: () {
@@ -496,15 +503,15 @@ class _AddPillReminderState extends State<AddPillReminder> {
                     )),
                   ),
                 ]),
-          ElevatedButton(
-              onPressed: () {
-                TimeOfDay initialTime = TimeOfDay.now();
-                showTimePicker(
-                  context: context,
-                  initialTime: initialTime,
-                );
-              },
-              child: Text("assa")),
+          // ElevatedButton(
+          //     onPressed: () {
+          //       TimeOfDay initialTime = TimeOfDay.now();
+          //       showTimePicker(
+          //         context: context,
+          //         initialTime: initialTime,
+          //       );
+          //     },
+          //     child: Text("assa")),
           SizedBox(
             height: MediaQuery.of(context).size.height * 0.03,
           ),
