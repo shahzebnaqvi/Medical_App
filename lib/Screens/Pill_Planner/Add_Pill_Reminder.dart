@@ -117,24 +117,40 @@ class _AddPillReminderState extends State<AddPillReminder> {
                         size: 40,
                       ),
                     ),
-                    InkWell(
-                        onTap: () {
-                          setState(() {
-                            itemcounter--;
-                          });
-                        },
-                        child: Icon(Icons.remove)),
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Constants.mainColorWhite,
+                        border:
+                            Border.all(color: Constants.bluecolor, width: 03),
+                        borderRadius: BorderRadius.circular(05),
+                      ),
+                      child: InkWell(
+                          onTap: () {
+                            setState(() {
+                              itemcounter--;
+                            });
+                          },
+                          child: Icon(Icons.remove)),
+                    ),
                     Text(
                       "$itemcounter".toString(),
                       style: TextStyle(fontSize: 30),
                     ),
-                    InkWell(
-                        onTap: () {
-                          setState(() {
-                            itemcounter++;
-                          });
-                        },
-                        child: Icon(Icons.add)),
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Constants.mainColorWhite,
+                        border:
+                            Border.all(color: Constants.bluecolor, width: 03),
+                        borderRadius: BorderRadius.circular(05),
+                      ),
+                      child: InkWell(
+                          onTap: () {
+                            setState(() {
+                              itemcounter++;
+                            });
+                          },
+                          child: Icon(Icons.add)),
+                    ),
                     GestureDetector(
                       onTap: () {
                         setState(() {
