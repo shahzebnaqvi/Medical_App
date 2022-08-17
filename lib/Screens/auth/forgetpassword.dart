@@ -18,7 +18,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
         backgroundColor: Constants.mainColorWhite,
         title: Text(
           "Forgot  Password",
-          style: TextStyle(color: Constants.blackcolor),
+          style: TextStyle(letterSpacing: 1, color: Constants.blackcolor),
         ),
         leading: IconButton(
             color: Colors.white,
@@ -41,8 +41,8 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                   ),
                   alignment: Alignment.center,
                   child: Image.asset(
-                    'assets/doctor2.jpg',
-                    width: MediaQuery.of(context).size.width * 0.35,
+                    'assets/forgot.jpg',
+                    width: MediaQuery.of(context).size.width * 0.40,
                   )),
               SizedBox(height: MediaQuery.of(context).size.height * 0.1),
               Container(
@@ -52,6 +52,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                 child: Text(
                   "Reset it",
                   style: TextStyle(
+                      letterSpacing: 1,
                       fontSize: MediaQuery.of(context).size.width * 0.1,
                       fontWeight: FontWeight.w500),
                 ),
@@ -80,6 +81,8 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                 ),
                 child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(18)),
                       primary: Constants.mainColor1,
                     ),
                     onPressed: () {
@@ -90,8 +93,10 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                     },
                     child: Text(
                       "Reset",
-                      style:
-                          TextStyle(fontWeight: FontWeight.w500, fontSize: 20),
+                      style: TextStyle(
+                          letterSpacing: 2,
+                          fontWeight: FontWeight.w500,
+                          fontSize: 20),
                     )),
               )
             ],
