@@ -185,7 +185,33 @@ Widget Medicine(context) {
 }
 
 Widget slidercontainer1(context, totaltasks, completedtasks, values) {
-  return Container(
+  return
+      // Container(
+      //   margin: EdgeInsets.only(
+      //     top: MediaQuery.of(context).size.height * 0.01,
+      //     bottom: MediaQuery.of(context).size.height * 0.03,
+      //     left: MediaQuery.of(context).size.height * 0.003,
+      //     right: MediaQuery.of(context).size.height * 0.003,
+      //   ),
+      //   padding: EdgeInsets.only(
+      //     // bottom: MediaQuery.of(context).size.height * 0.02,
+      //     top: MediaQuery.of(context).size.height * 0.01,
+      //     left: MediaQuery.of(context).size.height * 0.01,
+      //     right: MediaQuery.of(context).size.height * 0.01,
+      //   ),
+      //   decoration: BoxDecoration(
+      //     color: Colors.white,
+      //     borderRadius: BorderRadius.circular(10),
+      //     boxShadow: [
+      //       BoxShadow(
+      //         color: Colors.grey.withOpacity(0.2),
+      //         spreadRadius: 5,
+      //         blurRadius: 7,
+      //         offset: Offset(0, 3), // changes position of shadow
+      //       ),
+      //     ],
+      //   ),
+      Container(
     margin: EdgeInsets.only(
       top: MediaQuery.of(context).size.height * 0.01,
       bottom: MediaQuery.of(context).size.height * 0.03,
@@ -199,16 +225,20 @@ Widget slidercontainer1(context, totaltasks, completedtasks, values) {
       right: MediaQuery.of(context).size.height * 0.01,
     ),
     decoration: BoxDecoration(
-      color: Colors.white,
-      borderRadius: BorderRadius.circular(10),
-      boxShadow: [
-        BoxShadow(
-          color: Colors.grey.withOpacity(0.2),
-          spreadRadius: 5,
-          blurRadius: 7,
-          offset: Offset(0, 3), // changes position of shadow
-        ),
-      ],
+      gradient: LinearGradient(
+        begin: Alignment.topCenter,
+        end: Alignment.bottomCenter,
+        stops: [0.1, 0.5],
+        colors: [
+          Colors.blue.withOpacity(0.7),
+          Colors.lightBlue.withOpacity(0.3),
+        ],
+      ),
+      borderRadius: BorderRadius.only(
+          bottomLeft: Radius.circular(12.0),
+          topRight: Radius.circular(12),
+          bottomRight: Radius.circular(12.0),
+          topLeft: Radius.circular(12)),
     ),
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.end,
@@ -299,7 +329,7 @@ Widget slidercontainer1(context, totaltasks, completedtasks, values) {
                     width: MediaQuery.of(context).size.width * 0.230,
                     height: MediaQuery.of(context).size.height * 0.1115,
                     child: new CircularProgressIndicator(
-                      strokeWidth: 05,
+                      strokeWidth: 08,
                       value: values,
                       color: Constants.bluecolor,
                       backgroundColor: Colors.grey[100],
