@@ -104,34 +104,76 @@ class _LoginState extends State<Login> {
               )
             ]),
           ),
-          Container(
-            height: MediaQuery.of(context).size.height * 0.06,
-            margin: EdgeInsets.only(
-              left: MediaQuery.of(context).size.height * 0.03,
-              right: MediaQuery.of(context).size.height * 0.01,
-            ),
-            child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(18)),
-                  primary: Constants.cyan_dark,
-                  minimumSize: Size(
-                      20,
-                      MediaQuery.of(context).size.height *
-                          0.06) // put the width and height you want
-                  ),
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => Timelines()));
-              },
-              child: Text(
-                "Log In",
-                style: TextStyle(
-                  letterSpacing: 1,
-                  fontWeight: FontWeight.w500,
-                  fontSize: MediaQuery.of(context).size.width * 0.05,
-                ),
+          // Container(
+          //   height: MediaQuery.of(context).size.height * 0.06,
+          //   margin: EdgeInsets.only(
+          //     left: MediaQuery.of(context).size.height * 0.03,
+          //     right: MediaQuery.of(context).size.height * 0.01,
+          //   ),
+          //   child: ElevatedButton(
+          //     style: ElevatedButton.styleFrom(
+          //         shape: RoundedRectangleBorder(
+          //             borderRadius: BorderRadius.circular(18)),
+          //         primary: Constants.cyan_dark,
+          //         minimumSize: Size(
+          //             20,
+          //             MediaQuery.of(context).size.height *
+          //                 0.06) // put the width and height you want
+          //         ),
+          //     onPressed: () {
+          //       Navigator.push(context,
+          //           MaterialPageRoute(builder: (context) => Timelines()));
+          //     },
+          //     child: Text(
+          //       "Log In",
+          //       style: TextStyle(
+          //         letterSpacing: 1,
+          //         fontWeight: FontWeight.w500,
+          //         fontSize: MediaQuery.of(context).size.width * 0.05,
+          //       ),
+          //     ),
+          //   ),
+          // ),
+
+          InkWell(
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => Timelines()));
+            },
+            child: Container(
+              height: MediaQuery.of(context).size.height * 0.07,
+              padding: EdgeInsets.only(
+                top: MediaQuery.of(context).size.height * 0.01,
+                bottom: MediaQuery.of(context).size.height * 0.01,
+                left: MediaQuery.of(context).size.height * 0.001,
+                right: MediaQuery.of(context).size.height * 0.001,
               ),
+              margin: EdgeInsets.only(
+                top: MediaQuery.of(context).size.height * 0.001,
+                bottom: MediaQuery.of(context).size.height * 0.001,
+                left: MediaQuery.of(context).size.height * 0.02,
+                right: MediaQuery.of(context).size.height * 0.02,
+              ),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(15),
+                color: Constants.mainColor1,
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.blue.withOpacity(0.2),
+                    spreadRadius: 0.4,
+                    blurRadius: 2,
+                    offset: Offset(0, 6), // changes position of shadow
+                  ),
+                ],
+              ),
+              child: Center(
+                  child: Text("Log In",
+                      style: TextStyle(
+                        color: Constants.mainColorWhite,
+                        letterSpacing: 1,
+                        fontWeight: FontWeight.w500,
+                        fontSize: MediaQuery.of(context).size.width * 0.05,
+                      ))),
             ),
           ),
           SizedBox(
