@@ -60,11 +60,6 @@ class _SignupState extends State<Signup> {
                   ),
                 ],
               ),
-
-              // Container(
-              //   padding: EdgeInsets.only(
-              //       top: MediaQuery.of(context).size.height * 0.02),
-              //   alignment: Alignment.center,
               child: Center(
                 child: Text(
                   "Sign Up",
