@@ -81,26 +81,7 @@ class _AddPillReminderState extends State<AddPillReminder> {
                       ),
                     ],
                   ),
-                  // width: double.infinity,
-                  // margin: EdgeInsets.only(
-                  //   top: MediaQuery.of(context).size.width * 0.03,
-                  //   right: MediaQuery.of(context).size.width * 0.02,
-                  //   left: MediaQuery.of(context).size.width * 0.02,
-                  // ),
-                  // decoration: BoxDecoration(
-                  //   color: Constants.mainColorWhite,
-                  //   borderRadius: BorderRadius.all(Radius.circular(
-                  //       MediaQuery.of(context).size.width * 0.03)),
-                  //   border: Border.all(color: Constants.blackcolor),
-                  //   boxShadow: [
-                  //     BoxShadow(
-                  //       color: Colors.grey.withOpacity(0.2),
-                  //       spreadRadius: 1,
-                  //       blurRadius: 2,
-                  //       offset: Offset(0, 3), // changes position of shadow
-                  //     ),
-                  //   ],
-                  // ),
+
                   child: TextField(
                     autofocus: true,
                     style:
