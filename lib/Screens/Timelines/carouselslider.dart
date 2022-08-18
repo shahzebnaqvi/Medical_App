@@ -324,7 +324,7 @@ Widget slidercontainer1(context, totaltasks, completedtasks, values) {
             Container(
               margin: EdgeInsets.only(bottom: 0),
               child: Padding(
-                padding: const EdgeInsets.only(top: 30, left: 5),
+                padding: const EdgeInsets.only(top: 0, left: 0),
                 child: Column(
                   children: [
                     Text("  Total Tasks",
@@ -335,11 +335,11 @@ Widget slidercontainer1(context, totaltasks, completedtasks, values) {
                             letterSpacing: 1)),
                     Text(
                       "10",
-                      style: TextStyle(),
+                      style: TextStyle(fontSize: 15),
                     ),
                     Padding(
                         padding: EdgeInsets.only(
-                            top: MediaQuery.of(context).size.height * 0.001)),
+                            top: MediaQuery.of(context).size.height * 0.002)),
                     Text(
                       "   Completed",
                       style: TextStyle(
@@ -372,7 +372,7 @@ Widget slidercontainer1(context, totaltasks, completedtasks, values) {
                       width: MediaQuery.of(context).size.width * 0.230,
                       height: MediaQuery.of(context).size.height * 0.115,
                       child: new CircularPercentIndicator(
-                        backgroundColor: Colors.redAccent,
+                        backgroundColor: Colors.grey,
                         progressColor: Colors.blue,
                         radius: 43.0,
                         lineWidth: 10.0,
@@ -398,10 +398,10 @@ Widget slidercontainer1(context, totaltasks, completedtasks, values) {
         ),
         Padding(
             padding: EdgeInsets.only(
-                top: MediaQuery.of(context).size.height * 0.03)),
+                top: MediaQuery.of(context).size.height * 0.04)),
         Divider(
           color: Constants.grey,
-          thickness: 1,
+          thickness: 2,
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -415,8 +415,12 @@ Widget slidercontainer1(context, totaltasks, completedtasks, values) {
             Padding(
               padding: const EdgeInsets.only(top: 12.0, right: 12),
               child: CircleAvatar(
+                backgroundColor: Constants.mainColor1,
                 radius: 16,
-                child: Text("+"),
+                child: Text(
+                  "+",
+                  style: TextStyle(color: Constants.mainColorWhite),
+                ),
               ),
             )
           ],
