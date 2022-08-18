@@ -185,33 +185,36 @@ Widget Medicine(context) {
 }
 
 Widget slidercontainer1(context, totaltasks, completedtasks, values) {
-  return
-      // Container(
-      //   margin: EdgeInsets.only(
-      //     top: MediaQuery.of(context).size.height * 0.01,
-      //     bottom: MediaQuery.of(context).size.height * 0.03,
-      //     left: MediaQuery.of(context).size.height * 0.003,
-      //     right: MediaQuery.of(context).size.height * 0.003,
-      //   ),
-      //   padding: EdgeInsets.only(
-      //     // bottom: MediaQuery.of(context).size.height * 0.02,
-      //     top: MediaQuery.of(context).size.height * 0.01,
-      //     left: MediaQuery.of(context).size.height * 0.01,
-      //     right: MediaQuery.of(context).size.height * 0.01,
-      //   ),
-      //   decoration: BoxDecoration(
-      //     color: Colors.white,
-      //     borderRadius: BorderRadius.circular(10),
-      //     boxShadow: [
-      //       BoxShadow(
-      //         color: Colors.grey.withOpacity(0.2),
-      //         spreadRadius: 5,
-      //         blurRadius: 7,
-      //         offset: Offset(0, 3), // changes position of shadow
-      //       ),
-      //     ],
-      //   ),
-      Container(
+  //   Container(
+  // margin: EdgeInsets.only(
+  //   top: MediaQuery.of(context).size.height * 0.01,
+  //   bottom: MediaQuery.of(context).size.height * 0.03,
+  //   left: MediaQuery.of(context).size.height * 0.003,
+  //   right: MediaQuery.of(context).size.height * 0.003,
+  // ),
+  // padding: EdgeInsets.only(
+  //   // bottom: MediaQuery.of(context).size.height * 0.02,
+  //   top: MediaQuery.of(context).size.height * 0.01,
+  //   left: MediaQuery.of(context).size.height * 0.01,
+  //   right: MediaQuery.of(context).size.height * 0.01,
+  // ),
+  // decoration: BoxDecoration(
+  //   gradient: LinearGradient(
+  //     begin: Alignment.topCenter,
+  //     end: Alignment.bottomCenter,
+  //     stops: [0.1, 0.5],
+  //     colors: [
+  //       Colors.blue.withOpacity(0.7),
+  //       Colors.lightBlue.withOpacity(0.3),
+  //     ],
+  //   ),
+  //   borderRadius: BorderRadius.only(
+  //       bottomLeft: Radius.circular(12.0),
+  //       topRight: Radius.circular(12),
+  //       bottomRight: Radius.circular(12.0),
+  //       topLeft: Radius.circular(12)),
+  // ),
+  return Container(
     margin: EdgeInsets.only(
       top: MediaQuery.of(context).size.height * 0.01,
       bottom: MediaQuery.of(context).size.height * 0.03,
@@ -225,93 +228,133 @@ Widget slidercontainer1(context, totaltasks, completedtasks, values) {
       right: MediaQuery.of(context).size.height * 0.01,
     ),
     decoration: BoxDecoration(
-      gradient: LinearGradient(
-        begin: Alignment.topCenter,
-        end: Alignment.bottomCenter,
-        stops: [0.1, 0.5],
-        colors: [
-          Colors.blue.withOpacity(0.7),
-          Colors.lightBlue.withOpacity(0.3),
-        ],
-      ),
+      color: Colors.white,
       borderRadius: BorderRadius.only(
-          bottomLeft: Radius.circular(12.0),
-          topRight: Radius.circular(12),
-          bottomRight: Radius.circular(12.0),
-          topLeft: Radius.circular(12)),
+        bottomLeft: Radius.circular(12.0),
+        topLeft: Radius.circular(12),
+        bottomRight: Radius.circular(12.0),
+        topRight: Radius.circular(70.0),
+      ),
+      boxShadow: [
+        BoxShadow(
+          color: Colors.grey.withOpacity(0.2),
+          spreadRadius: 5,
+          blurRadius: 7,
+          offset: Offset(0, 3), // changes position of shadow
+        ),
+      ],
     ),
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.end,
       children: [
-        Container(
-          height: MediaQuery.of(context).size.height * 0.05,
-          decoration: BoxDecoration(
-            color: Constants.mainColorWhite,
-            border: Border.all(
-                color: Constants.mainColor1,
-                width: MediaQuery.of(context).size.width * 0.01),
-            borderRadius: BorderRadius.circular(08),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.grey.withOpacity(0.2),
-                spreadRadius: 3,
-                blurRadius: 5,
-                offset: Offset(0, 3), // changes position of shadow
-              ),
-            ],
-          ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                "TODAY'S TASK",
-                style: TextStyle(
-                    color: Constants.grey,
-                    fontSize: 18,
-                    fontWeight: FontWeight.w500),
-              ),
-            ],
-          ),
-        ),
+        // Container(
+        //   height: MediaQuery.of(context).size.height * 0.05,
+        //   decoration: BoxDecoration(
+        //     color: Constants.mainColorWhite,
+        //     border: Border.all(
+        //         color: Constants.mainColor1,
+        //         width: MediaQuery.of(context).size.width * 0.01),
+        //     borderRadius: BorderRadius.circular(08),
+        //     boxShadow: [
+        //       BoxShadow(
+        //         color: Colors.grey.withOpacity(0.2),
+        //         spreadRadius: 3,
+        //         blurRadius: 5,
+        //         offset: Offset(0, 3), // changes position of shadow
+        //       ),
+        //     ],
+        //   ),
+        //   child: Row(
+        //     mainAxisAlignment: MainAxisAlignment.center,
+        //     children: [
+        //       Text(
+        //         "TODAY'S TASK",
+        //         style: TextStyle(
+        //             color: Constants.grey,
+        //             fontSize: 18,
+        //             fontWeight: FontWeight.w500),
+        //       ),
+        //     ],
+        //   ),
+        // ),
         SizedBox(
           height: MediaQuery.of(context).size.height * 0.01,
         ),
+
         Container(
-          padding: EdgeInsets.only(
-            // bottom: MediaQuery.of(context).size.height * 0.01,
-            // top: MediaQuery.of(context).size.height * 0.01,
-            left: MediaQuery.of(context).size.height * 0.01,
-            right: MediaQuery.of(context).size.height * 0.01,
-          ),
-          decoration: BoxDecoration(
-            color: Constants.mainColorWhite,
-            border: Border.all(
-                color: Constants.mainColor1,
-                width: MediaQuery.of(context).size.width * 0.01),
-            borderRadius: BorderRadius.circular(08),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.grey.withOpacity(0.2),
-                spreadRadius: 3,
-                blurRadius: 5,
-                offset: Offset(0, 3), // changes position of shadow
-              ),
-            ],
-          ),
-          child: Text(
-            '+ Add New',
-            style: TextStyle(
-                color: Constants.mainColor1,
-                fontWeight: FontWeight.w500,
-                fontSize: 15),
-          ),
+          child: Row(children: []),
         ),
+        // Container(
+        //   padding: EdgeInsets.only(
+        //     // bottom: MediaQuery.of(context).size.height * 0.01,
+        //     // top: MediaQuery.of(context).size.height * 0.01,
+        //     left: MediaQuery.of(context).size.height * 0.01,
+        //     right: MediaQuery.of(context).size.height * 0.01,
+        //   ),
+        //   decoration: BoxDecoration(
+        //     color: Constants.mainColorWhite,
+        //     border: Border.all(
+        //         color: Constants.mainColor1,
+        //         width: MediaQuery.of(context).size.width * 0.01),
+        //     borderRadius: BorderRadius.circular(08),
+        //     boxShadow: [
+        //       BoxShadow(
+        //         color: Colors.grey.withOpacity(0.2),
+        //         spreadRadius: 3,
+        //         blurRadius: 5,
+        //         offset: Offset(0, 3), // changes position of shadow
+        //       ),
+        //     ],
+        //   ),
+        //   child: Text(
+        //     '+ Add New',
+        //     style: TextStyle(
+        //         color: Constants.mainColor1,
+        //         fontWeight: FontWeight.w500,
+        //         fontSize: 15),
+        //   ),
+        // ),
         SizedBox(
           height: MediaQuery.of(context).size.height * 0.01,
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
+            Container(
+              margin: EdgeInsets.only(bottom: 0),
+              child: Padding(
+                padding: const EdgeInsets.only(top: 30, left: 5),
+                child: Column(
+                  children: [
+                    Text("  Total Tasks",
+                        style: TextStyle(
+                            fontSize: 13,
+                            fontWeight: FontWeight.w500,
+                            color: Constants.grey,
+                            letterSpacing: 1)),
+                    Text(
+                      "10",
+                      style: TextStyle(),
+                    ),
+                    Padding(
+                        padding: EdgeInsets.only(
+                            top: MediaQuery.of(context).size.height * 0.001)),
+                    Text(
+                      "   Completed",
+                      style: TextStyle(
+                          fontSize: 13,
+                          fontWeight: FontWeight.w500,
+                          color: Constants.grey,
+                          letterSpacing: 1),
+                    ),
+                    Text(
+                      "05",
+                      style: TextStyle(fontSize: 15),
+                    )
+                  ],
+                ),
+              ),
+            ),
             Container(
               margin: EdgeInsets.only(
                 left: MediaQuery.of(context).size.height * 0.002,
@@ -323,11 +366,10 @@ Widget slidercontainer1(context, totaltasks, completedtasks, values) {
                   Container(
                     margin: EdgeInsets.only(
                       left: MediaQuery.of(context).size.height * 0.001,
-                      top: MediaQuery.of(context).size.height * 0.03,
                       // bottom: MediaQuery.of(context).size.height * 0.04
                     ),
                     width: MediaQuery.of(context).size.width * 0.230,
-                    height: MediaQuery.of(context).size.height * 0.1115,
+                    height: MediaQuery.of(context).size.height * 0.115,
                     child: new CircularProgressIndicator(
                       strokeWidth: 08,
                       value: values,
@@ -336,7 +378,7 @@ Widget slidercontainer1(context, totaltasks, completedtasks, values) {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(top: 12.0),
+                    padding: const EdgeInsets.only(top: 0),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [Text("70%"), Text("Completed")],
@@ -345,38 +387,36 @@ Widget slidercontainer1(context, totaltasks, completedtasks, values) {
                 ],
               ),
             ),
-            Container(
-              margin: EdgeInsets.only(bottom: 0),
-              child: Padding(
-                padding: const EdgeInsets.only(top: 30, left: 5),
-                child: Column(
-                  children: [
-                    Text("  Total Tasks: 10",
-                        style: TextStyle(
-                            fontSize: 14,
-                            fontWeight: FontWeight.w500,
-                            color: Constants.mainColor1,
-                            letterSpacing: 1)),
-                    Text(
-                      "   Completed: 05 ",
-                      style: TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.w500,
-                          color: Constants.mainColor1,
-                          letterSpacing: 1),
-                    ),
-                  ],
-                ),
-              ),
-            ),
           ],
         ),
+        Padding(
+            padding: EdgeInsets.only(
+                top: MediaQuery.of(context).size.height * 0.03)),
+        Divider(
+          color: Constants.grey,
+          thickness: 1,
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            CircleAvatar(
+              child: Image.asset('assets/trophy.jpg'),
+            ),
+            CircleAvatar(
+              child: Image.asset('assets/trophy.jpg'),
+            ),
+            CircleAvatar(
+              radius: 15,
+              child: Text("+"),
+            )
+          ],
+        )
       ],
     ),
   );
 }
 
-//
+
 
 // Container(
 //   margin: EdgeInsets.only(
