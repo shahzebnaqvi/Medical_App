@@ -22,7 +22,7 @@ class _AddPillReminderState extends State<AddPillReminder> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Constants.mainColorWhite,
+        backgroundColor: Color.fromARGB(255, 233, 233, 233),
         appBar: AppBar(
             backgroundColor: Constants.mainColor1,
             title: Text(
@@ -59,13 +59,14 @@ class _AddPillReminderState extends State<AddPillReminder> {
             child: Column(
               children: [
                 Container(
+                  width: double.infinity,
                   margin: EdgeInsets.only(
                     top: MediaQuery.of(context).size.width * 0.03,
                     right: MediaQuery.of(context).size.width * 0.02,
                     left: MediaQuery.of(context).size.width * 0.02,
                   ),
                   decoration: BoxDecoration(
-                    color: Constants.lightColor,
+                    color: Constants.mainColorWhite,
                     borderRadius: BorderRadius.all(Radius.circular(
                         MediaQuery.of(context).size.width * 0.03)),
                     border: Border.all(color: Constants.blackcolor),
@@ -79,7 +80,7 @@ class _AddPillReminderState extends State<AddPillReminder> {
                     ],
                   ),
                   child: TextField(
-                    autofocus: false,
+                    autofocus: true,
                     style:
                         TextStyle(fontSize: 15.0, color: Constants.blackcolor),
                     decoration: InputDecoration(
@@ -91,7 +92,7 @@ class _AddPillReminderState extends State<AddPillReminder> {
                           left: 14.0, bottom: 12.0, top: 12.0),
                       focusedBorder: OutlineInputBorder(
                         borderSide: BorderSide(color: Colors.black),
-                        borderRadius: BorderRadius.circular(10),
+                        borderRadius: BorderRadius.circular(20),
                       ),
                       enabledBorder: UnderlineInputBorder(
                         borderSide: BorderSide(color: Colors.black),
