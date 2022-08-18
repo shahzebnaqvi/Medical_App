@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-
+import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:percent_indicator/percent_indicator.dart';
 import '../../Constants/constants.dart';
 
 class crauselSilder1 extends StatefulWidget {
@@ -217,7 +218,7 @@ Widget slidercontainer1(context, totaltasks, completedtasks, values) {
   return Container(
     margin: EdgeInsets.only(
       top: MediaQuery.of(context).size.height * 0.01,
-      bottom: MediaQuery.of(context).size.height * 0.03,
+      bottom: MediaQuery.of(context).size.height * 0.02,
       left: MediaQuery.of(context).size.height * 0.003,
       right: MediaQuery.of(context).size.height * 0.003,
     ),
@@ -237,7 +238,7 @@ Widget slidercontainer1(context, totaltasks, completedtasks, values) {
       ),
       boxShadow: [
         BoxShadow(
-          color: Colors.grey.withOpacity(0.2),
+          color: Colors.blue.withOpacity(0.2),
           spreadRadius: 5,
           blurRadius: 7,
           offset: Offset(0, 3), // changes position of shadow
@@ -364,26 +365,32 @@ Widget slidercontainer1(context, totaltasks, completedtasks, values) {
                 alignment: Alignment.center,
                 children: <Widget>[
                   Container(
-                    margin: EdgeInsets.only(
-                      left: MediaQuery.of(context).size.height * 0.001,
-                      // bottom: MediaQuery.of(context).size.height * 0.04
-                    ),
-                    width: MediaQuery.of(context).size.width * 0.230,
-                    height: MediaQuery.of(context).size.height * 0.115,
-                    child: new CircularProgressIndicator(
-                      strokeWidth: 08,
-                      value: values,
-                      color: Constants.bluecolor,
-                      backgroundColor: Colors.grey[100],
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 0),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [Text("70%"), Text("Completed")],
-                    ),
-                  ),
+                      margin: EdgeInsets.only(
+                        right: MediaQuery.of(context).size.height * 0.03,
+                        // left: MediaQuery.of(context).size.height * 0.001,
+                      ),
+                      width: MediaQuery.of(context).size.width * 0.230,
+                      height: MediaQuery.of(context).size.height * 0.115,
+                      child: new CircularPercentIndicator(
+                        backgroundColor: Colors.redAccent,
+                        progressColor: Colors.blue,
+                        radius: 43.0,
+                        lineWidth: 10.0,
+                        animation: true,
+                        percent: 0.7,
+                        center: new Text(
+                          "70.0%",
+                          style: new TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 20.0),
+                        ),
+                      )),
+                  // Padding(
+                  //   padding: const EdgeInsets.only(top: 0),
+                  //   child: Column(
+                  //     mainAxisAlignment: MainAxisAlignment.end,
+                  //     children: [Text("70%"), Text("Completed")],
+                  //   ),
+                  // ),
                 ],
               ),
             ),
@@ -405,10 +412,41 @@ Widget slidercontainer1(context, totaltasks, completedtasks, values) {
             CircleAvatar(
               child: Image.asset('assets/trophy.jpg'),
             ),
-            CircleAvatar(
-              radius: 15,
-              child: Text("+"),
+            Padding(
+              padding: const EdgeInsets.only(top: 12.0, right: 12),
+              child: CircleAvatar(
+                radius: 16,
+                child: Text("+"),
+              ),
             )
+          ],
+        ),
+        Row(
+          // mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            LinearPercentIndicator(
+              animation: true,
+              animationDuration: 200,
+              width: 80.0,
+              lineHeight: 8.0,
+              percent: 0.5,
+              barRadius: const Radius.circular(16),
+              backgroundColor: Colors.grey,
+              progressColor: Colors.orange,
+            ),
+            Padding(
+                padding: EdgeInsets.only(
+                    left: MediaQuery.of(context).size.height * 0.04)),
+            LinearPercentIndicator(
+              animation: true,
+              animationDuration: 200,
+              width: 80.0,
+              lineHeight: 8.0,
+              percent: 0.5,
+              barRadius: const Radius.circular(16),
+              backgroundColor: Colors.grey,
+              progressColor: Colors.blue,
+            ),
           ],
         )
       ],
