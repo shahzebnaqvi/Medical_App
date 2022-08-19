@@ -337,7 +337,12 @@ class _AddPillReminderState extends State<AddPillReminder> {
                     ),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(07),
-                      color: Constants.mainColorWhite,
+                      gradient: LinearGradient(colors: [
+                        Colors.orangeAccent,
+                        Colors.limeAccent,
+                        Colors.orangeAccent,
+                      ]),
+                      // color: Constants.mainColorWhite,
                       boxShadow: [
                         BoxShadow(
                           color: Colors.blue.withOpacity(0.2),
@@ -434,7 +439,12 @@ class _AddPillReminderState extends State<AddPillReminder> {
                     ),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(07),
-                      color: Constants.mainColorWhite,
+                      gradient: LinearGradient(colors: [
+                        Colors.limeAccent,
+                        Colors.orangeAccent,
+                        Colors.orangeAccent,
+                      ]),
+                      //color: Constants.mainColorWhite,
                       boxShadow: [
                         BoxShadow(
                           color: Colors.blue.withOpacity(0.2),

@@ -252,11 +252,8 @@ Widget slidercontainer1(context, totaltasks, completedtasks, values) {
       ],
     ),
     child: Column(
-      crossAxisAlignment: CrossAxisAlignment.end,
+      // crossAxisAlignment: CrossAxisAlignment.end,
       children: [
-        // SizedBox(
-        //   height: MediaQuery.of(context).size.height * 0.01,
-        // ),
         SizedBox(
           height: MediaQuery.of(context).size.height * 0.01,
         ),
@@ -317,7 +314,7 @@ Widget slidercontainer1(context, totaltasks, completedtasks, values) {
                         backgroundColor: Colors.orange,
                         progressColor: Colors.blue,
                         fillColor: Colors.transparent,
-                        radius: 43.0,
+                        radius: 42.0,
                         lineWidth: 10.0,
                         animation: true,
                         percent: 0.7,
