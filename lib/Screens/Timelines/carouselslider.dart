@@ -372,7 +372,7 @@ Widget slidercontainer1(context, totaltasks, completedtasks, values) {
                       width: MediaQuery.of(context).size.width * 0.230,
                       height: MediaQuery.of(context).size.height * 0.115,
                       child: new CircularPercentIndicator(
-                        backgroundColor: Colors.grey,
+                        backgroundColor: Colors.orange,
                         progressColor: Colors.blue,
                         radius: 43.0,
                         lineWidth: 10.0,

@@ -35,42 +35,40 @@ class _HospitalState extends State<Hospital> {
         body: ListView(
           children: [
             Container(
+              margin: EdgeInsets.only(
+                top: MediaQuery.of(context).size.height * 0.02,
+                bottom: MediaQuery.of(context).size.height * 0.01,
+                left: MediaQuery.of(context).size.height * 0.02,
+                right: MediaQuery.of(context).size.height * 0.02,
+              ),
+              // padding: EdgeInsets.only(
+              //   top: MediaQuery.of(context).size.height * 0.0002,
+              //   bottom: MediaQuery.of(context).size.height * 0.0002,
+              // ),
               decoration: BoxDecoration(
-                color: Constants.lightColor,
-                borderRadius: BorderRadius.all(
-                    Radius.circular(MediaQuery.of(context).size.width * 0.010)),
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(25),
                 boxShadow: [
                   BoxShadow(
                     color: Colors.grey.withOpacity(0.2),
-                    spreadRadius: 1,
-                    blurRadius: 2,
+                    spreadRadius: 5,
+                    blurRadius: 7,
                     offset: Offset(0, 3), // changes position of shadow
                   ),
                 ],
               ),
-              margin: EdgeInsets.only(
-                top: MediaQuery.of(context).size.width * 0.06,
-                left: MediaQuery.of(context).size.width * 0.02,
-                right: MediaQuery.of(context).size.width * 0.02,
-              ),
+
               child: TextField(
-                autofocus: false,
-                style: TextStyle(fontSize: 15.0, color: Color(0xFFbdc6cf)),
+                autofocus: true,
+                style: TextStyle(fontSize: 15.0, color: Constants.blackcolor),
                 decoration: InputDecoration(
-                  filled: true,
-                  suffixIcon: Icon(Icons.search),
-                  fillColor: Colors.white,
+                  filled: false,
+                  suffixIcon: Icon(Icons.search_rounded),
+                  fillColor: Constants.mainColorWhite,
                   hintText: 'Search Location',
                   contentPadding: const EdgeInsets.only(
                       left: 14.0, bottom: 12.0, top: 12.0),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.white),
-                    borderRadius: BorderRadius.circular(29),
-                  ),
-                  enabledBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: Colors.white),
-                    borderRadius: BorderRadius.circular(25.7),
-                  ),
+                  border: InputBorder.none,
                 ),
               ),
             ),

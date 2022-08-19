@@ -44,9 +44,15 @@ class _AddPillReminderState extends State<AddPillReminder> {
               right: MediaQuery.of(context).size.height * 0.01,
             ),
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(05),
-              border: Border.all(color: Constants.blackcolor, width: 02),
-              color: Constants.mainColorWhite,
+              borderRadius: BorderRadius.circular(10),
+              // border: Border.all(color: Constants.blackcolor, width: 02),
+              gradient: LinearGradient(colors: [
+                Colors.lightBlueAccent,
+                Colors.blue,
+                Colors.lightBlueAccent,
+                Colors.lightBlueAccent
+              ]),
+              //color: Constants.green,
               boxShadow: [
                 BoxShadow(
                   color: Colors.grey.withOpacity(0.2),
@@ -232,146 +238,84 @@ class _AddPillReminderState extends State<AddPillReminder> {
                             "Times A Day",
                             style: TextStyle(
                               fontSize: 20,
-                              letterSpacing: 0.1,
-                              wordSpacing: 0.1,
+                              letterSpacing: 1,
+                              // wordSpacing: 0.1,
                               fontWeight: FontWeight.w500,
                             ),
                           ),
                           SizedBox(
                             height: MediaQuery.of(context).size.height * 0.01,
                           ),
-                          SingleChildScrollView(
-                            scrollDirection: Axis.horizontal,
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                InkWell(
-                                    onTap: () {
-                                      setState(() {
-                                        print(graphbut);
-                                        graphbut = 1;
-                                        selectedtype = 0;
-                                      });
-                                    },
-                                    child: graphbut == 1
-                                        ? TimesDay("1D", graphbut,
-                                            Color.fromARGB(255, 2, 107, 6))
-                                        : TimesDay(
-                                            "1D", graphbut, Colors.blue)),
-                                SizedBox(
-                                  width:
-                                      MediaQuery.of(context).size.width * 0.06,
-                                ),
-                                InkWell(
-                                    onTap: () {
-                                      setState(() {
-                                        print(graphbut);
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              SizedBox(
+                                width: MediaQuery.of(context).size.width * 0.10,
+                              ),
+                              InkWell(
+                                  onTap: () {
+                                    setState(() {
+                                      print(graphbut);
+                                      graphbut = 1;
+                                      selectedtype = 0;
+                                    });
+                                  },
+                                  child: graphbut == 1
+                                      ? TimesDay("1", graphbut,
+                                          Color.fromARGB(255, 2, 107, 6))
+                                      : TimesDay("1", graphbut, Colors.blue)),
+                              SizedBox(
+                                width: MediaQuery.of(context).size.width * 0.10,
+                              ),
+                              InkWell(
+                                  onTap: () {
+                                    setState(() {
+                                      print(graphbut);
 
-                                        graphbut = 2;
-                                        selectedtype = 1;
-                                      });
-                                    },
-                                    child: graphbut == 2
-                                        ? TimesDay("2D", graphbut,
-                                            Color.fromARGB(255, 2, 107, 6))
-                                        : TimesDay(
-                                            "2D", graphbut, Colors.blue)),
-                                SizedBox(
-                                  width:
-                                      MediaQuery.of(context).size.width * 0.06,
-                                ),
-                                InkWell(
-                                    onTap: () {
-                                      setState(() {
-                                        print(graphbut);
+                                      graphbut = 2;
+                                      selectedtype = 1;
+                                    });
+                                  },
+                                  child: graphbut == 2
+                                      ? TimesDay("2", graphbut,
+                                          Color.fromARGB(255, 2, 107, 6))
+                                      : TimesDay("2", graphbut, Colors.blue)),
+                              SizedBox(
+                                width: MediaQuery.of(context).size.width * 0.10,
+                              ),
+                              InkWell(
+                                  onTap: () {
+                                    setState(() {
+                                      print(graphbut);
 
-                                        graphbut = 3;
-                                        selectedtype = 2;
-                                      });
-                                    },
-                                    child: graphbut == 3
-                                        ? TimesDay("3D", graphbut,
-                                            Color.fromARGB(255, 2, 107, 6))
-                                        : TimesDay(
-                                            "3D", graphbut, Colors.blue)),
-                                SizedBox(
-                                  width:
-                                      MediaQuery.of(context).size.width * 0.06,
-                                ),
-                                InkWell(
-                                    onTap: () {
-                                      setState(() {
-                                        print(graphbut);
+                                      graphbut = 3;
+                                      selectedtype = 2;
+                                    });
+                                  },
+                                  child: graphbut == 3
+                                      ? TimesDay("3", graphbut,
+                                          Color.fromARGB(255, 2, 107, 6))
+                                      : TimesDay("3", graphbut, Colors.blue)),
+                              SizedBox(
+                                width: MediaQuery.of(context).size.width * 0.10,
+                              ),
+                              InkWell(
+                                  onTap: () {
+                                    setState(() {
+                                      print(graphbut);
 
-                                        graphbut = 4;
-                                        selectedtype = 3;
-                                      });
-                                    },
-                                    child: graphbut == 4
-                                        ? TimesDay("4D", graphbut,
-                                            Color.fromARGB(255, 2, 107, 6))
-                                        : TimesDay(
-                                            "4D", graphbut, Colors.blue)),
-                                SizedBox(
-                                  width:
-                                      MediaQuery.of(context).size.width * 0.06,
-                                ),
-                                InkWell(
-                                    onTap: () {
-                                      setState(() {
-                                        print(graphbut);
-
-                                        graphbut = 5;
-                                        selectedtype = 4;
-                                      });
-                                    },
-                                    child: graphbut == 5
-                                        ? TimesDay("5D", graphbut,
-                                            Color.fromARGB(255, 2, 107, 6))
-                                        : TimesDay(
-                                            "5D", graphbut, Colors.blue)),
-                                SizedBox(
-                                  width:
-                                      MediaQuery.of(context).size.width * 0.06,
-                                ),
-                                InkWell(
-                                    onTap: () {
-                                      setState(() {
-                                        print(graphbut);
-
-                                        graphbut = 6;
-                                        selectedtype = 5;
-                                      });
-                                    },
-                                    child: graphbut == 6
-                                        ? TimesDay("6D", graphbut,
-                                            Color.fromARGB(255, 2, 107, 6))
-                                        : TimesDay(
-                                            "6D", graphbut, Colors.blue)),
-                                SizedBox(
-                                  width:
-                                      MediaQuery.of(context).size.width * 0.06,
-                                ),
-                                InkWell(
-                                    onTap: () {
-                                      setState(() {
-                                        print(graphbut);
-
-                                        graphbut = 7;
-                                        selectedtype = 6;
-                                      });
-                                    },
-                                    child: graphbut == 7
-                                        ? TimesDay("7D", graphbut,
-                                            Color.fromARGB(255, 2, 107, 6))
-                                        : TimesDay(
-                                            "7D", graphbut, Colors.blue)),
-                                SizedBox(
-                                  width:
-                                      MediaQuery.of(context).size.width * 0.06,
-                                ),
-                              ],
-                            ),
+                                      graphbut = 4;
+                                      selectedtype = 3;
+                                    });
+                                  },
+                                  child: graphbut == 4
+                                      ? TimesDay("4", graphbut,
+                                          Color.fromARGB(255, 2, 107, 6))
+                                      : TimesDay("4", graphbut, Colors.blue)),
+                              SizedBox(
+                                width: MediaQuery.of(context).size.width * 0.10,
+                              ),
+                            ],
                           )
                         ],
                       )),
