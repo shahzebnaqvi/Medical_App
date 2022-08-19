@@ -229,7 +229,9 @@ Widget slidercontainer1(context, totaltasks, completedtasks, values) {
       right: MediaQuery.of(context).size.height * 0.01,
     ),
     decoration: BoxDecoration(
-      color: Colors.white,
+      //color: Colors.white,
+      gradient: LinearGradient(
+          colors: [Colors.white, Colors.lightBlue, Colors.white]),
       borderRadius: BorderRadius.only(
         bottomLeft: Radius.circular(12.0),
         topLeft: Radius.circular(12),
@@ -310,6 +312,7 @@ Widget slidercontainer1(context, totaltasks, completedtasks, values) {
                       child: new CircularPercentIndicator(
                         backgroundColor: Colors.orange,
                         progressColor: Colors.blue,
+                        fillColor: Colors.transparent,
                         radius: 43.0,
                         lineWidth: 10.0,
                         animation: true,
@@ -335,9 +338,7 @@ Widget slidercontainer1(context, totaltasks, completedtasks, values) {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            CircleAvatar(
-              child: Image.asset('assets/trophy.jpg'),
-            ),
+            Image.asset('assets/trophy.png'),
             CircleAvatar(
               child: Image.asset('assets/trophy.jpg'),
             ),
