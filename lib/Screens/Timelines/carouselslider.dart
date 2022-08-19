@@ -338,9 +338,17 @@ Widget slidercontainer1(context, totaltasks, completedtasks, values) {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Image.asset('assets/trophy.png'),
             CircleAvatar(
-              child: Image.asset('assets/trophy.jpg'),
+              backgroundColor: Colors.white,
+              child: Image.asset(
+                'assets/trophy.png',
+              ),
+            ),
+            CircleAvatar(
+              backgroundColor: Colors.white,
+              child: Image.asset(
+                'assets/badge.png',
+              ),
             ),
             Padding(
               padding: const EdgeInsets.only(top: 12.0, right: 12),
