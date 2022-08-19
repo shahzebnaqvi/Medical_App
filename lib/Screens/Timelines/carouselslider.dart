@@ -230,8 +230,12 @@ Widget slidercontainer1(context, totaltasks, completedtasks, values) {
     ),
     decoration: BoxDecoration(
       //color: Colors.white,
-      gradient: LinearGradient(
-          colors: [Colors.white, Colors.lightBlue, Colors.white]),
+      gradient: LinearGradient(colors: [
+        Colors.lightBlue,
+        Colors.white,
+        Colors.lightBlue,
+        Colors.white
+      ]),
       borderRadius: BorderRadius.only(
         bottomLeft: Radius.circular(12.0),
         topLeft: Radius.circular(12),
@@ -273,7 +277,7 @@ Widget slidercontainer1(context, totaltasks, completedtasks, values) {
                             letterSpacing: 1)),
                     Text(
                       "10",
-                      style: TextStyle(fontSize: 15),
+                      style: TextStyle(fontSize: 15, letterSpacing: 2),
                     ),
                     Padding(
                         padding: EdgeInsets.only(
@@ -288,7 +292,7 @@ Widget slidercontainer1(context, totaltasks, completedtasks, values) {
                     ),
                     Text(
                       "05",
-                      style: TextStyle(fontSize: 15),
+                      style: TextStyle(fontSize: 15, letterSpacing: 2),
                     )
                   ],
                 ),
@@ -297,7 +301,7 @@ Widget slidercontainer1(context, totaltasks, completedtasks, values) {
             Container(
               margin: EdgeInsets.only(
                 left: MediaQuery.of(context).size.height * 0.002,
-                top: MediaQuery.of(context).size.height * 0.001,
+                // top: MediaQuery.of(context).size.height * 0.001,
               ),
               child: Stack(
                 alignment: Alignment.center,
@@ -338,33 +342,36 @@ Widget slidercontainer1(context, totaltasks, completedtasks, values) {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            CircleAvatar(
-              backgroundColor: Colors.white,
+            Padding(
+              padding: const EdgeInsets.only(left: 8.0),
               child: Image.asset(
                 'assets/trophy.png',
-              ),
-            ),
-            CircleAvatar(
-              backgroundColor: Colors.white,
-              child: Image.asset(
-                'assets/badge.png',
+                width: 50,
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 12.0, right: 12),
+              padding: const EdgeInsets.only(left: 8.0),
+              child: Image.asset(
+                'assets/badge.png',
+                width: 60,
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 15.0, right: 12),
               child: CircleAvatar(
                 backgroundColor: Constants.mainColor1,
                 radius: 16,
                 child: Text(
                   "+",
-                  style: TextStyle(color: Constants.mainColorWhite),
+                  style: TextStyle(
+                      color: Constants.mainColorWhite,
+                      fontWeight: FontWeight.w500),
                 ),
               ),
             )
           ],
         ),
         Row(
-          // mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             LinearPercentIndicator(
               animation: true,
@@ -387,7 +394,7 @@ Widget slidercontainer1(context, totaltasks, completedtasks, values) {
               percent: 0.5,
               barRadius: const Radius.circular(16),
               backgroundColor: Colors.grey,
-              progressColor: Colors.blue,
+              progressColor: Colors.green,
             ),
           ],
         )

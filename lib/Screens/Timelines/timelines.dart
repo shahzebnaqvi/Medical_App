@@ -95,7 +95,7 @@ class _TimelinesState extends State<Timelines> {
                   borderRadius: BorderRadius.circular(05),
                   gradient: LinearGradient(colors: [
                     Colors.blue,
-                    Colors.lightBlue,
+                    Color.fromARGB(255, 129, 193, 223),
                     Colors.lightBlueAccent
                   ]),
                   //    color: Constants.bannercolor,
