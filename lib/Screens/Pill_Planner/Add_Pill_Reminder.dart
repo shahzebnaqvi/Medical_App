@@ -15,6 +15,7 @@ class AddPillReminder extends StatefulWidget {
 class _AddPillReminderState extends State<AddPillReminder> {
   int itemcounter = 0;
   var graphbut = 1;
+  var graphbut1 = 1;
   var selectedtype = 0;
   var a = 0;
   TimeOfDay initialTime = TimeOfDay.now();
@@ -371,49 +372,50 @@ class _AddPillReminderState extends State<AddPillReminder> {
                             InkWell(
                                 onTap: () {
                                   setState(() {
-                                    print(graphbut);
+                                    print(graphbut1);
 
-                                    graphbut = 8;
-                                    selectedtype = 7;
+                                    graphbut1 = 1;
+                                    selectedtype = 0;
                                   });
                                 },
-                                child: graphbut == 8
+                                child: graphbut1 == 1
                                     ? TimesDay("Before ", graphbut,
                                         Color.fromARGB(255, 2, 107, 6))
                                     : TimesDay(
-                                        "Before", graphbut, Colors.blue)),
+                                        "Before", graphbut1, Colors.blue)),
                             SizedBox(
                               width: MediaQuery.of(context).size.width * 0.06,
                             ),
                             InkWell(
                                 onTap: () {
                                   setState(() {
-                                    print(graphbut);
+                                    print(graphbut1);
 
-                                    graphbut = 9;
-                                    selectedtype = 8;
+                                    graphbut1 = 2;
+                                    selectedtype = 1;
                                   });
                                 },
-                                child: graphbut == 9
+                                child: graphbut1 == 2
                                     ? TimesDay("After ", graphbut,
                                         Color.fromARGB(255, 2, 107, 6))
-                                    : TimesDay("After", graphbut, Colors.blue)),
+                                    : TimesDay(
+                                        "After", graphbut1, Colors.blue)),
                             SizedBox(
                               width: MediaQuery.of(context).size.width * 0.06,
                             ),
                             InkWell(
                                 onTap: () {
                                   setState(() {
-                                    print(graphbut);
+                                    print(graphbut1);
 
-                                    graphbut = 10;
-                                    selectedtype = 9;
+                                    graphbut1 = 3;
+                                    selectedtype = 2;
                                   });
                                 },
-                                child: graphbut == 10
+                                child: graphbut1 == 3
                                     ? TimesDay("With", graphbut,
                                         Color.fromARGB(255, 2, 107, 6))
-                                    : TimesDay("With", graphbut, Colors.blue)),
+                                    : TimesDay("With", graphbut1, Colors.blue)),
                           ]),
                       SizedBox(
                         width: MediaQuery.of(context).size.width * 0.06,
