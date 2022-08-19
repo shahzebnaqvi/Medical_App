@@ -93,7 +93,12 @@ class _TimelinesState extends State<Timelines> {
                 ),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(05),
-                  color: Constants.bannercolor,
+                  gradient: LinearGradient(colors: [
+                    Colors.blue,
+                    Colors.lightBlue,
+                    Colors.lightBlueAccent
+                  ]),
+                  //    color: Constants.bannercolor,
                   boxShadow: [
                     BoxShadow(
                       color: Colors.blue.withOpacity(0.2),
