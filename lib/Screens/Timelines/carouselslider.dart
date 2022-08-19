@@ -350,7 +350,7 @@ Widget slidercontainer1(context, totaltasks, completedtasks, values) {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 8.0),
+              padding: const EdgeInsets.only(left: 8.0, top: 10),
               child: Image.asset(
                 'assets/badge.png',
                 width: 60,
@@ -359,15 +359,19 @@ Widget slidercontainer1(context, totaltasks, completedtasks, values) {
             Padding(
               padding: const EdgeInsets.only(top: 15.0, right: 12),
               child: CircleAvatar(
-                backgroundColor: Constants.mainColor1,
-                radius: 16,
-                child: Text(
-                  "+",
-                  style: TextStyle(
-                      color: Constants.mainColorWhite,
-                      fontWeight: FontWeight.w500),
-                ),
-              ),
+                  backgroundColor: Constants.mainColor1,
+                  radius: 16,
+                  child: Icon(
+                    Icons.add,
+                    color: Colors.white,
+                  )
+                  // Text(
+                  //   "+",
+                  //   style: TextStyle(
+                  //       color: Constants.mainColorWhite,
+                  //       fontWeight: FontWeight.w500),
+                  // ),
+                  ),
             )
           ],
         ),
