@@ -41,13 +41,21 @@ class _BottombarState extends State<Bottombar> {
           color: Colors.white,
         ),
         buttonColor: Colors.white,
-        backgroundColor: Color.fromARGB(255, 6, 129, 23),
+        backgroundColor: Colors.blue,
+        // backgroundColor: Color.fromARGB(255, 6, 129, 23),
         buttonSelectedColor: Colors.white,
         fabColors: [
-          Color.fromARGB(255, 6, 129, 23),
-          Color.fromARGB(255, 9, 110, 23),
-          Color.fromARGB(255, 18, 129, 23),
-          Color.fromARGB(255, 13, 87, 12),
+          Colors.blue,
+
+          Colors.blue,
+
+          Colors.blue,
+
+          Colors.blue,
+          // Color.fromARGB(255, 6, 129, 23),
+          // Color.fromARGB(255, 9, 110, 23),
+          // Color.fromARGB(255, 18, 129, 23),
+          // Color.fromARGB(255, 13, 87, 12),
         ],
         buttonData: [
           PandaBarButtonData(id: 0, icon: Icons.home, title: 'Home'),
