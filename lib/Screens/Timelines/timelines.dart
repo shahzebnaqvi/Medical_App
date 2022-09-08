@@ -272,7 +272,7 @@ class _TimelinesState extends State<Timelines> {
           ),
           title: Text(
             'Hello Joseph Allison,',
-            style: TextStyle(color: Constants.mainColorWhite),
+            style: TextStyle(color: Color.fromARGB(255, 191, 129, 129)),
             textScaleFactor: 1,
           ),
           subtitle: Text(
