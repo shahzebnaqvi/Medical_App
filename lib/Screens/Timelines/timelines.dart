@@ -62,8 +62,8 @@ class _TimelinesState extends State<Timelines> {
 
     return Scaffold(
       body: Container(
-        padding:
-            EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.02),
+        // padding:
+        //     EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.01),
         decoration: BoxDecoration(
             image: DecorationImage(
                 image: AssetImage("assets/curve.jpg"), fit: BoxFit.cover)),
@@ -285,9 +285,12 @@ class _TimelinesState extends State<Timelines> {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => test_indicators()));
             },
-            child: Icon(
-              Icons.notification_add_rounded,
-              color: Constants.mainColorWhite,
+            child: Padding(
+              padding: const EdgeInsets.only(right: 19.0),
+              child: Icon(
+                Icons.notification_add_rounded,
+                color: Constants.mainColorWhite,
+              ),
             ),
           ),
         )),
