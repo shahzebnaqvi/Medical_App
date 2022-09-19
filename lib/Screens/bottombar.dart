@@ -1,7 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:medical_app/Screens/Book_Doctors_Appoinment/Doctors.dart';
-import 'package:medical_app/Screens/maintools/appointments.dart';
 
 import 'package:pandabar/pandabar.dart';
 

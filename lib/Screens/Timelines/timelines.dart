@@ -1,17 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:get/get.dart';
 import 'package:medical_app/Screens/Book_Doctors_Appoinment/Hospital.dart';
 import 'package:medical_app/Screens/Health%20&%20Fitness%20Goal/test_indicators.dart';
 import 'package:medical_app/Screens/Pill_Planner/Add_Pill_Reminder.dart';
 import 'package:medical_app/Screens/Pill_Planner/Pill_Reminder.dart';
 import 'package:medical_app/Screens/auth/recipes.dart';
-import 'package:medical_app/Screens/auth/signup.dart';
 import 'package:medical_app/Screens/bottombar.dart';
 import '../../Constants/constants.dart';
-import 'package:medical_app/Screens/bottombar.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import '../../Constants/constants.dart';
 import 'carouselslider.dart';
 
 class Timelines extends StatefulWidget {
