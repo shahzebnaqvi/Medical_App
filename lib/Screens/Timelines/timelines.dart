@@ -59,7 +59,10 @@ class _TimelinesState extends State<Timelines> {
       'Emergency',
       'Invite Friend'
     ];
-
+    List images = [
+      // 'assets/Goal.png',
+      // 'assets/Getfit.png',
+    ];
     return Scaffold(
       body: Container(
         // padding:
@@ -190,11 +193,17 @@ class _TimelinesState extends State<Timelines> {
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Icon(
-                              Icons.medical_services_sharp,
-                              color: Constants.mainColor1,
-                              size: 25,
+                            Image.asset(
+                              // images[index],
+                              'assets/Goal.png',
+                              // height: 20,
+                              width: MediaQuery.of(context).size.width * 0.10,
                             ),
+                            // Icon(
+                            //   Icons.medical_services_sharp,
+                            //   color: Constants.mainColor1,
+                            //   size: 25,
+                            // ),
                             Spacer(),
                             Text(
                               title[index],
@@ -208,7 +217,19 @@ class _TimelinesState extends State<Timelines> {
                 }),
 
             // Shop Crausel slider
-
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: EdgeInsets.only(
+                      left: MediaQuery.of(context).size.width * 0.07),
+                  child: Text(
+                    "Shop",
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+                  ),
+                ),
+              ],
+            ),
             shopcrausel(),
           ]),
         ]),

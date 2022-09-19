@@ -231,9 +231,9 @@ Widget slidercontainer1(context, totaltasks, completedtasks, values) {
     decoration: BoxDecoration(
       //color: Colors.white,
       gradient: LinearGradient(colors: [
-        Colors.lightBlue,
+        Color.fromARGB(255, 68, 184, 238),
         Colors.white,
-        Colors.lightBlue,
+        Color.fromARGB(255, 68, 184, 238),
         Colors.white
       ]),
       borderRadius: BorderRadius.only(
