@@ -45,15 +45,15 @@ class _AddPillReminderState extends State<AddPillReminder> {
               right: MediaQuery.of(context).size.height * 0.01,
             ),
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
+              borderRadius: BorderRadius.circular(25),
               // border: Border.all(color: Constants.blackcolor, width: 02),
-              gradient: LinearGradient(colors: [
-                Colors.lightBlueAccent,
-                Colors.blue,
-                Colors.lightBlueAccent,
-                Colors.lightBlueAccent
-              ]),
-              //color: Constants.green,
+              // gradient: LinearGradient(colors: [
+              //   Colors.lightBlueAccent,
+              //   Colors.blue,
+              //   Colors.lightBlueAccent,
+              //   Colors.lightBlueAccent
+              // ]),
+              color: Constants.green,
               boxShadow: [
                 BoxShadow(
                   color: Colors.grey.withOpacity(0.2),
@@ -124,8 +124,8 @@ class _AddPillReminderState extends State<AddPillReminder> {
                     Container(
                       decoration: BoxDecoration(
                         color: Constants.mainColorWhite,
-                        border:
-                            Border.all(color: Constants.bluecolor, width: 03),
+                        // border:
+                        //     Border.all(color: Constants.bluecolor, width: 03),
                         borderRadius: BorderRadius.circular(05),
                       ),
                       child: InkWell(
@@ -143,8 +143,8 @@ class _AddPillReminderState extends State<AddPillReminder> {
                     Container(
                       decoration: BoxDecoration(
                         color: Constants.mainColorWhite,
-                        border:
-                            Border.all(color: Constants.bluecolor, width: 03),
+                        // border:
+                        //     Border.all(color: Constants.bluecolor, width: 03),
                         borderRadius: BorderRadius.circular(05),
                       ),
                       child: InkWell(
@@ -178,8 +178,8 @@ class _AddPillReminderState extends State<AddPillReminder> {
                         ),
                         decoration: BoxDecoration(
                           color: Constants.mainColorWhite,
-                          border:
-                              Border.all(color: Constants.bluecolor, width: 03),
+                          // border:
+                          //     Border.all(color: Constants.bluecolor, width: 03),
                           borderRadius: BorderRadius.circular(05),
                           // boxShadow: [
                           //   BoxShadow(
@@ -191,9 +191,9 @@ class _AddPillReminderState extends State<AddPillReminder> {
                           // ],
                         ),
                         child: Text(
-                          "More...",
+                          "More..",
                           style: TextStyle(
-                              fontWeight: FontWeight.w500, fontSize: 20),
+                              fontWeight: FontWeight.w400, fontSize: 15),
                         ),
                       ),
                     )
@@ -222,7 +222,7 @@ class _AddPillReminderState extends State<AddPillReminder> {
                         right: MediaQuery.of(context).size.height * 0.02,
                       ),
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(07),
+                        borderRadius: BorderRadius.circular(10),
                         color: Constants.mainColorWhite,
                         boxShadow: [
                           BoxShadow(
@@ -236,12 +236,12 @@ class _AddPillReminderState extends State<AddPillReminder> {
                       child: Column(
                         children: [
                           Text(
-                            "Times A Day",
+                            "Times a day",
                             style: TextStyle(
-                              fontSize: 20,
-                              letterSpacing: 1,
+                              fontSize: 17,
+                              // letterSpacing: 1,
                               // wordSpacing: 0.1,
-                              fontWeight: FontWeight.w500,
+                              fontWeight: FontWeight.w400,
                             ),
                           ),
                           SizedBox(
@@ -337,13 +337,13 @@ class _AddPillReminderState extends State<AddPillReminder> {
                       right: MediaQuery.of(context).size.height * 0.02,
                     ),
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(07),
-                      gradient: LinearGradient(colors: [
-                        Colors.orangeAccent,
-                        Colors.limeAccent,
-                        Colors.orangeAccent,
-                      ]),
-                      // color: Constants.mainColorWhite,
+                      borderRadius: BorderRadius.circular(10),
+                      // gradient: LinearGradient(colors: [
+                      //   Colors.orangeAccent,
+                      //   Colors.limeAccent,
+                      //   Colors.orangeAccent,
+                      // ]),
+                      color: Constants.mainColorWhite,
                       boxShadow: [
                         BoxShadow(
                           color: Colors.blue.withOpacity(0.2),
@@ -357,10 +357,10 @@ class _AddPillReminderState extends State<AddPillReminder> {
                       Text(
                         "Meal",
                         style: TextStyle(
-                          fontWeight: FontWeight.w500,
-                          fontSize: 20,
-                          letterSpacing: 0.1,
-                          wordSpacing: 0.1,
+                          fontWeight: FontWeight.w400,
+                          fontSize: 17,
+                          // letterSpacing: 0.1,
+                          // wordSpacing: 0.1,
                         ),
                       ),
                       SizedBox(
@@ -440,13 +440,13 @@ class _AddPillReminderState extends State<AddPillReminder> {
                       right: MediaQuery.of(context).size.height * 0.02,
                     ),
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(07),
-                      gradient: LinearGradient(colors: [
-                        Colors.limeAccent,
-                        Colors.orangeAccent,
-                        Colors.orangeAccent,
-                      ]),
-                      //color: Constants.mainColorWhite,
+                      borderRadius: BorderRadius.circular(10),
+                      // gradient: LinearGradient(colors: [
+                      //   Colors.limeAccent,
+                      //   Colors.orangeAccent,
+                      //   Colors.orangeAccent,
+                      // ]),
+                      color: Constants.mainColorWhite,
                       boxShadow: [
                         BoxShadow(
                           color: Colors.blue.withOpacity(0.2),
@@ -461,8 +461,9 @@ class _AddPillReminderState extends State<AddPillReminder> {
                       "Take this Med for 5 Days ",
                       style: TextStyle(
                           fontSize: 20,
-                          fontWeight: FontWeight.w500,
-                          letterSpacing: 0.1),
+                          fontWeight: FontWeight.w400,
+                          // letterSpacing: 0.1),
+                      ),
                     )),
                   ),
                 ]),
@@ -479,39 +480,41 @@ class _AddPillReminderState extends State<AddPillReminder> {
             height: MediaQuery.of(context).size.height * 0.03,
           ),
           Container(
-            height: MediaQuery.of(context).size.height * 0.07,
-            padding: EdgeInsets.only(
-              top: MediaQuery.of(context).size.height * 0.01,
-              bottom: MediaQuery.of(context).size.height * 0.01,
-              left: MediaQuery.of(context).size.height * 0.001,
-              right: MediaQuery.of(context).size.height * 0.001,
-            ),
+            height: MediaQuery.of(context).size.height * 0.06,
+            // padding: EdgeInsets.only(
+            //   top: MediaQuery.of(context).size.height * 0.01,
+            //   bottom: MediaQuery.of(context).size.height * 0.01,
+            //   left: MediaQuery.of(context).size.height * 0.001,
+            //   right: MediaQuery.of(context).size.height * 0.001,
+            // ),
             margin: EdgeInsets.only(
               top: MediaQuery.of(context).size.height * 0.001,
               bottom: MediaQuery.of(context).size.height * 0.001,
               left: MediaQuery.of(context).size.height * 0.02,
               right: MediaQuery.of(context).size.height * 0.02,
             ),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(07),
-              color: Constants.bannercolor,
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.blue.withOpacity(0.2),
-                  spreadRadius: 0.1,
-                  blurRadius: 2,
-                  offset: Offset(0, 3), // changes position of shadow
-                ),
-              ],
-            ),
-            child: Center(
-                child: Text(
-              "+ Add Another Pill",
-              style: TextStyle(
-                fontSize: 25,
-                fontWeight: FontWeight.w500,
-              ),
-            )),
+            // decoration: BoxDecoration(
+            //   borderRadius: BorderRadius.circular(07),
+            //   color: Constants.bannercolor,
+            //   boxShadow: [
+            //     BoxShadow(
+            //       color: Colors.blue.withOpacity(0.2),
+            //       spreadRadius: 0.1,
+            //       blurRadius: 2,
+            //       offset: Offset(0, 3), // changes position of shadow
+            //     ),
+            //   ],
+            // ),
+            child: ElevatedButton(
+            
+              style: ElevatedButton.styleFrom(
+       
+                shape: StadiumBorder(),backgroundColor: Constants.green),
+              onPressed: (){}, child: 
+            Text("+ Add Another Pill",style: TextStyle(fontSize: 15,fontWeight: FontWeight.w400),),
+            )
+          
+
           ),
           SizedBox(
             height: MediaQuery.of(context).size.height * 0.02,
@@ -522,22 +525,23 @@ class _AddPillReminderState extends State<AddPillReminder> {
                   MaterialPageRoute(builder: (context) => PillRemainder()));
             },
             child: Container(
-              padding: EdgeInsets.only(
-                top: MediaQuery.of(context).size.height * 0.01,
-                bottom: MediaQuery.of(context).size.height * 0.01,
-                left: MediaQuery.of(context).size.height * 0.001,
-                right: MediaQuery.of(context).size.height * 0.001,
-              ),
+                height: MediaQuery.of(context).size.height * 0.06,
+              // padding: EdgeInsets.only(
+              //   top: MediaQuery.of(context).size.height * 0.01,
+              //   bottom: MediaQuery.of(context).size.height * 0.01,
+              //   left: MediaQuery.of(context).size.height * 0.001,
+              //   right: MediaQuery.of(context).size.height * 0.001,
+              // ),
               margin: EdgeInsets.only(
                 top: MediaQuery.of(context).size.height * 0.001,
                 bottom: MediaQuery.of(context).size.height * 0.001,
                 left: MediaQuery.of(context).size.height * 0.02,
                 right: MediaQuery.of(context).size.height * 0.02,
               ),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                border: Border.all(color: Constants.bluecolor, width: 05),
-                color: Constants.mainColorWhite,
+              // decoration: BoxDecoration(
+              //   borderRadius: BorderRadius.circular(10),
+              //   border: Border.all(color: Constants.bluecolor, width: 05),
+              //   color: Constants.mainColorWhite,
                 // // boxShadow: [
                 // //   BoxShadow(
                 // //     // color: Colors.blue.withOpacity(0.2),
@@ -546,15 +550,16 @@ class _AddPillReminderState extends State<AddPillReminder> {
                 // //     offset: Offset(0, 3), // changes position of shadow
                 // //   ),
                 // ],
-              ),
-              child: Center(
-                  child: Text(
-                "Back To  Pill Reminder",
-                style: TextStyle(
-                    fontSize: 25,
-                    fontWeight: FontWeight.w400,
-                    color: Constants.blackcolor),
-              )),
+              // ),
+                child: ElevatedButton(
+            
+              style: ElevatedButton.styleFrom(
+       
+                shape: StadiumBorder(),backgroundColor: Constants.green),
+              onPressed: (){}, child: 
+            Text("Back To  Pill Reminder",style: TextStyle(fontSize: 15,fontWeight: FontWeight.w400),),
+            )
+            
             ),
           ),
           SizedBox(
@@ -566,39 +571,48 @@ class _AddPillReminderState extends State<AddPillReminder> {
                   MaterialPageRoute(builder: (context) => Timelines()));
             },
             child: Container(
-              padding: EdgeInsets.only(
-                top: MediaQuery.of(context).size.height * 0.01,
-                bottom: MediaQuery.of(context).size.height * 0.01,
-                left: MediaQuery.of(context).size.height * 0.001,
-                right: MediaQuery.of(context).size.height * 0.001,
-              ),
+                height: MediaQuery.of(context).size.height * 0.06,
+              // padding: EdgeInsets.only(
+              //   top: MediaQuery.of(context).size.height * 0.01,
+              //   bottom: MediaQuery.of(context).size.height * 0.01,
+              //   left: MediaQuery.of(context).size.height * 0.001,
+              //   right: MediaQuery.of(context).size.height * 0.001,
+              // ),
               margin: EdgeInsets.only(
                 top: MediaQuery.of(context).size.height * 0.001,
                 bottom: MediaQuery.of(context).size.height * 0.001,
                 left: MediaQuery.of(context).size.height * 0.02,
                 right: MediaQuery.of(context).size.height * 0.02,
               ),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                border: Border.all(color: Constants.bluecolor, width: 05),
-                color: Constants.mainColorWhite,
-                // boxShadow: [
-                //   BoxShadow(
-                //     color: Colors.blue.withOpacity(0.2),
-                //     spreadRadius: 0.1,
-                //     blurRadius: 2,
-                //     offset: Offset(0, 3), // changes position of shadow
-                //   ),
-                // ],
-              ),
-              child: Center(
-                  child: Text(
-                "Back To Home ",
-                style: TextStyle(
-                    fontSize: 25,
-                    fontWeight: FontWeight.w400,
-                    color: Constants.blackcolor),
-              )),
+              // decoration: BoxDecoration(
+              //   borderRadius: BorderRadius.circular(10),
+              //   border: Border.all(color: Constants.bluecolor, width: 05),
+              //   color: Constants.mainColorWhite,
+              //   // boxShadow: [
+              //   //   BoxShadow(
+              //   //     color: Colors.blue.withOpacity(0.2),
+              //   //     spreadRadius: 0.1,
+              //   //     blurRadius: 2,
+              //   //     offset: Offset(0, 3), // changes position of shadow
+              //   //   ),
+              //   // ],
+              // ),
+              child: ElevatedButton(
+            
+              style: ElevatedButton.styleFrom(
+       
+                shape: StadiumBorder(),backgroundColor: Constants.green),
+              onPressed: (){}, child: 
+            Text("Back To Home ",style: TextStyle(fontSize: 15,fontWeight: FontWeight.w400),),
+            )
+              // child: Center(
+              //     child: Text(
+              //   "Back To Home ",
+              //   style: TextStyle(
+              //       fontSize: 25,
+              //       fontWeight: FontWeight.w400,
+              //       color: Constants.blackcolor),
+              // )),
             ),
           )
         ]));
