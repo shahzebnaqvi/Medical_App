@@ -1,5 +1,9 @@
+import 'dart:html';
+import 'dart:io';
+
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 import 'package:percent_indicator/percent_indicator.dart';
 import '../../Constants/constants.dart';
@@ -22,14 +26,11 @@ Widget crauselSilder2(context, days) {
   return Container(
     child: CarouselSlider(
       items: [
-        slidercontainer1(context, '10', '07', 0.60),
-        slidercontainer1(context, '600', '300', 0.50),
-        slidercontainer1(context, '700', '400', 0.70),
-        slidercontainer1(context, '800', '500', 0.80),
-        slidercontainer1(context, '900', '600', 0.85),
-        slidercontainer1(context, '1000', '700', 0.90),
-        slidercontainer1(context, '1100', '800', 0.95),
-        slidercontainer1(context, '1200', '900', 0.55),
+        // slidercontainer1(context, '10', '07', 0.60),
+        // slidercontainer1(context, '600', '300', 0.50),
+        // slidercontainer1(context, '700', '400', 0.70),
+        // slidercontainer1(context, '800', '500', 0.80),
+        // slidercontainer1(context, '1200', '900', 0.55),
         Medicine(context),
       ],
       options: CarouselOptions(
@@ -77,13 +78,13 @@ Widget Medicine(context) {
           height: MediaQuery.of(context).size.height * 0.05,
           decoration: BoxDecoration(
             color: Constants.mainColorWhite,
-            border: Border.all(
-                color: Constants.mainColor1,
-                width: MediaQuery.of(context).size.width * 0.01),
+            // border: Border.all(
+            //     color: Constants.mainColor1,
+            //     width: MediaQuery.of(context).size.width * 0.01),
             borderRadius: BorderRadius.circular(08),
             boxShadow: [
               BoxShadow(
-                color: Colors.grey.withOpacity(0.2),
+                color: Color.fromARGB(255, 123, 121, 121).withOpacity(0.2),
                 spreadRadius: 3,
                 blurRadius: 5,
                 offset: Offset(0, 3), // changes position of shadow
@@ -94,11 +95,11 @@ Widget Medicine(context) {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                "TODAY'S TASK",
+                "Today's Tasks",
                 style: TextStyle(
-                    color: Constants.grey,
-                    fontSize: 18,
-                    fontWeight: FontWeight.w500),
+                    color: Constants.blackcolor,
+                    fontSize: 15,
+                    fontWeight: FontWeight.w400),
               ),
             ],
           ),
@@ -113,28 +114,38 @@ Widget Medicine(context) {
             left: MediaQuery.of(context).size.height * 0.01,
             right: MediaQuery.of(context).size.height * 0.01,
           ),
-          decoration: BoxDecoration(
-            color: Constants.mainColorWhite,
-            border: Border.all(
-                color: Constants.mainColor1,
-                width: MediaQuery.of(context).size.width * 0.01),
-            borderRadius: BorderRadius.circular(8),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.grey.withOpacity(0.2),
-                spreadRadius: 3,
-                blurRadius: 5,
-                offset: Offset(0, 3), // changes position of shadow
-              ),
-            ],
-          ),
-          child: Text(
-            'Done',
-            style: TextStyle(
-                color: Constants.mainColor1,
-                fontWeight: FontWeight.w500,
-                fontSize: 15),
-          ),
+          // decoration: BoxDecoration(
+          //   color: Constants.mainColorWhite,
+          //   border: Border.all(
+              
+          //       color: Constants.mainColor1,
+          //       width: MediaQuery.of(context).size.width * 0.001),
+          //   borderRadius: BorderRadius.circular(8),
+          //   boxShadow: [
+          //     BoxShadow(
+          //       color: Colors.grey.withOpacity(0.2),
+          //       spreadRadius: 3,
+          //       blurRadius: 5,
+          //       offset: Offset(0, 3), // changes position of shadow
+          //     ),
+          //   ],
+          // ),
+          child:ElevatedButton(
+            
+            style: ElevatedButton.styleFrom(
+              shape: StadiumBorder(),
+               
+              backgroundColor: Constants.mainColor1),
+            onPressed: (){
+
+          }, child: Text("Done",style: TextStyle(color: Constants.mainColorWhite),))
+          //  Text(
+          //   'Done',
+          //   style: TextStyle(
+          //       color: Constants.mainColor1,
+          //       fontWeight: FontWeight.w400,
+          //       fontSize: 15),
+          // ),
         ),
         SizedBox(
           height: MediaQuery.of(context).size.height * 0.01,
@@ -229,13 +240,13 @@ Widget slidercontainer1(context, totaltasks, completedtasks, values) {
       right: MediaQuery.of(context).size.height * 0.01,
     ),
     decoration: BoxDecoration(
-      //color: Colors.white,
-      gradient: LinearGradient(colors: [
-        Color.fromARGB(255, 68, 184, 238),
-        Colors.white,
-        Color.fromARGB(255, 68, 184, 238),
-        Colors.white
-      ]),
+      color: Colors.white,
+      // gradient: LinearGradient(colors: [
+      //   Color.fromARGB(255, 68, 184, 238),
+      //   Colors.white,
+      //   Color.fromARGB(255, 68, 184, 238),
+      //   Colors.white
+      // ]),
       borderRadius: BorderRadius.only(
         bottomLeft: Radius.circular(12.0),
         topLeft: Radius.circular(12),
@@ -270,7 +281,7 @@ Widget slidercontainer1(context, totaltasks, completedtasks, values) {
                         style: TextStyle(
                             fontSize: 13,
                             fontWeight: FontWeight.w500,
-                            color: Constants.grey,
+                            color: Constants.blackcolor,
                             letterSpacing: 1)),
                     Text(
                       "10",
@@ -284,7 +295,7 @@ Widget slidercontainer1(context, totaltasks, completedtasks, values) {
                       style: TextStyle(
                           fontSize: 13,
                           fontWeight: FontWeight.w500,
-                          color: Constants.grey,
+                          color: Constants.blackcolor,
                           letterSpacing: 1),
                     ),
                     Text(

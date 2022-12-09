@@ -149,22 +149,22 @@ class _LoginState extends State<Login> {
                 right: MediaQuery.of(context).size.height * 0.001,
               ),
               margin: EdgeInsets.only(
-                top: MediaQuery.of(context).size.height * 0.001,
+                top: MediaQuery.of(context).size.height * 0.01,
                 bottom: MediaQuery.of(context).size.height * 0.001,
                 left: MediaQuery.of(context).size.height * 0.02,
                 right: MediaQuery.of(context).size.height * 0.02,
               ),
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15),
+                borderRadius: BorderRadius.circular(30),
                 color: Constants.mainColor1,
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.blue.withOpacity(0.2),
-                    spreadRadius: 0.4,
-                    blurRadius: 2,
-                    offset: Offset(0, 6), // changes position of shadow
-                  ),
-                ],
+                // boxShadow: [
+                //   BoxShadow(
+                //     color: Colors.blue.withOpacity(0.2),
+                //     spreadRadius: 0.4,
+                //     blurRadius: 2,
+                //     offset: Offset(0, 6), // changes position of shadow
+                //   ),
+                // ],
               ),
               child: Center(
                   child: Text("Log In",
@@ -219,7 +219,7 @@ class _LoginState extends State<Login> {
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(13)),
+                            borderRadius: BorderRadius.circular(30)),
                         primary: Constants.mainColor1,
                         minimumSize: Size(
                             MediaQuery.of(context).size.height * 0.07,
@@ -249,7 +249,7 @@ class _LoginState extends State<Login> {
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(13)),
+                          borderRadius: BorderRadius.circular(30)),
                       primary: Constants.cyan_light,
                       minimumSize: Size(
                           MediaQuery.of(context).size.height * 0.07,
