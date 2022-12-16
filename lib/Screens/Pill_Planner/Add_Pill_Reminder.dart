@@ -510,7 +510,9 @@ class _AddPillReminderState extends State<AddPillReminder> {
               style: ElevatedButton.styleFrom(
        
                 shape: StadiumBorder(),backgroundColor: Constants.green),
-              onPressed: (){}, child: 
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>Timelines()));
+              }, child: 
             Text("+ Add Another Pill",style: TextStyle(fontSize: 15,fontWeight: FontWeight.w400),),
             )
           
@@ -556,7 +558,9 @@ class _AddPillReminderState extends State<AddPillReminder> {
               style: ElevatedButton.styleFrom(
        
                 shape: StadiumBorder(),backgroundColor: Constants.green),
-              onPressed: (){}, child: 
+              onPressed: (){
+                   Navigator.push(context, MaterialPageRoute(builder: (context)=>PillRemainder()));
+              }, child: 
             Text("Back To  Pill Reminder",style: TextStyle(fontSize: 15,fontWeight: FontWeight.w400),),
             )
             
@@ -567,8 +571,7 @@ class _AddPillReminderState extends State<AddPillReminder> {
           ),
           InkWell(
             onTap: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => Timelines()));
+          
             },
             child: Container(
                 height: MediaQuery.of(context).size.height * 0.06,
@@ -602,7 +605,9 @@ class _AddPillReminderState extends State<AddPillReminder> {
               style: ElevatedButton.styleFrom(
        
                 shape: StadiumBorder(),backgroundColor: Constants.green),
-              onPressed: (){}, child: 
+              onPressed: (){
+                   Navigator.push(context, MaterialPageRoute(builder: (context)=>Timelines()));
+              }, child: 
             Text("Back To Home ",style: TextStyle(fontSize: 15,fontWeight: FontWeight.w400),),
             )
               // child: Center(
