@@ -5,9 +5,10 @@ Create a login and signup page and Multipage UI in flutter.
 This amazing app is provided in open source. So, helpful contributions are highly appreciated.
 
 ## ScreenShots
-
-
-<img src="/shahzebnaqvi/Medical_App/raw/master/screenshots/M2.jpg" style="max-width: 100%;" width="300">
+<!-- 
+<img src="screenshots/m1.jpg"  Height="300"/> | <img src="screenshots/M2.jpg" width="300"/>  || <img src="screenshots/M3.jpg"  width="300"/> | 
+<img src="screenshots/M4.jpg" width="300"/>  | <img src="screenshots/M5.jpg"  width="300"/> 
+ -->
 
 ### :heart: Found this project useful?
 
