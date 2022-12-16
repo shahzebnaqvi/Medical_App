@@ -6,7 +6,7 @@ This amazing app is provided in open source. So, helpful contributions are highl
 
 ## ScreenShots
 
-<img src="screenshots/m1.jpg"  width="300"/> | <img src="screenshots/M2.jpg" width="300"/>  || <img src="screenshots/M3.jpg"  width="300"/> | 
+<img src="screenshots/m1.jpg"  Height="300"/> | <img src="screenshots/M2.jpg" width="300"/>  || <img src="screenshots/M3.jpg"  width="300"/> | 
 <img src="screenshots/M4.jpg" width="300"/>  | <img src="screenshots/M5.jpg"  width="300"/> 
 
 
