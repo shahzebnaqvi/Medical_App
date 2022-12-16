@@ -42,7 +42,7 @@ class _PillRemainderState extends State<PillRemainder> {
                     MaterialPageRoute(builder: (context) => AddPillReminder()));
               },
               child: CircleAvatar(
-                backgroundColor: Color.fromARGB(255, 141, 176, 204),
+         backgroundColor: Colors.brown,
                 radius: 80,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -51,9 +51,11 @@ class _PillRemainderState extends State<PillRemainder> {
                       '+',
                       style: TextStyle(fontSize: 30, color: Colors.black),
                     ),
-                    Text("Add Reminder",
-                        style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.w500)),
+                    Center(
+                      child: Text("Add Reminder",
+                          style: TextStyle(
+                              fontSize: 15, fontWeight: FontWeight.w500,color: Constants.blackcolor)),
+                    ),
                   ],
                 ),
               ),
@@ -78,9 +80,9 @@ class _PillRemainderState extends State<PillRemainder> {
               right: MediaQuery.of(context).size.height * 0.02,
             ),
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(05),
-              border: Border.all(color: Constants.cyan_dark),
-              color: Constants.mainColorWhite,
+              borderRadius: BorderRadius.circular(25),
+              // border: Border.all(color: Constants.cyan_dark),
+              color: Color.fromARGB(255, 189, 197, 241),
               boxShadow: [
                 BoxShadow(
                   color: Colors.blue.withOpacity(0.2),
@@ -140,14 +142,34 @@ class _PillRemainderState extends State<PillRemainder> {
         Container(
           padding: EdgeInsets.only(
             top: MediaQuery.of(context).size.height * 0.015,
-            left: MediaQuery.of(context).size.height * 0.04,
+            left: MediaQuery.of(context).size.height * 0.02,
+            // right: MediaQuery.of(context).size.height * 0.04,
+            bottom: MediaQuery.of(context).size.height * 0.01,
+          ),
+          margin: EdgeInsets.only(
+   top: MediaQuery.of(context).size.height * 0.015,
+            left: MediaQuery.of(context).size.height * 0.02,
             right: MediaQuery.of(context).size.height * 0.02,
             bottom: MediaQuery.of(context).size.height * 0.01,
+          ),
+          decoration: BoxDecoration(
+            color: Color.fromARGB(255, 207, 238, 208),
+            borderRadius: BorderRadius.circular(10),
+            boxShadow: [
+              BoxShadow(
+                 color: Colors.blue.withOpacity(0.2),
+                  spreadRadius: 0.1,
+                  blurRadius: 2,
+                  offset: Offset(0, 3), // changes position of shadow
+                ),
+            
+            ]
+            
           ),
           child: Row(children: [
             Text(
               "My Mart",
-              style: TextStyle(fontWeight: FontWeight.w600, fontSize: 25),
+              style: TextStyle(fontWeight: FontWeight.w600, fontSize: 20),
             )
           ]),
         ),
@@ -158,7 +180,7 @@ class _PillRemainderState extends State<PillRemainder> {
           margin: EdgeInsets.only(
             left: MediaQuery.of(context).size.height * 0.02,
             right: MediaQuery.of(context).size.height * 0.02,
-            top: MediaQuery.of(context).size.height * 0.01,
+            top: MediaQuery.of(context).size.height * 0.04,
             bottom: MediaQuery.of(context).size.height * 0.008,
           ),
           padding: EdgeInsets.only(
@@ -167,7 +189,7 @@ class _PillRemainderState extends State<PillRemainder> {
           ),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
-            color: Constants.bannercolor,
+            color:Colors.brown,
             boxShadow: [
               BoxShadow(
                 color: Colors.blue.withOpacity(0.2),
