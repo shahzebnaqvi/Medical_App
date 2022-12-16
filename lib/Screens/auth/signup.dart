@@ -44,19 +44,19 @@ class _SignupState extends State<Signup> {
         body: ListView(
           children: [
             Container(
-              height: 120.0,
+              height: 165.0,
               decoration: new BoxDecoration(
-                color: Constants.mainColor1,
+                color: Color.fromARGB(255, 22, 113, 155),
                 borderRadius: BorderRadius.vertical(
                     bottom: Radius.elliptical(
                         MediaQuery.of(context).size.width, 100.0)),
                 boxShadow: [
                   BoxShadow(
-                    color: Constants.bluecolor.withOpacity(0.4),
+                    //color: Constants.bluecolor.withOpacity(0.4),
                     // color: Color.fromARGB(255, 207, 205, 205).withOpacity(0.2),
-                    spreadRadius: 5,
-                    blurRadius: 7,
-                    offset: Offset(0, 3),
+                    // spreadRadius: 5,
+                    // blurRadius: 7,
+                    // offset: Offset(0, 3),
                   ),
                 ],
               ),
@@ -64,10 +64,10 @@ class _SignupState extends State<Signup> {
                 child: Text(
                   "Sign Up",
                   style: TextStyle(
-                      letterSpacing: 2,
+                      // letterSpacing: 2,
                       color: Constants.mainColorWhite,
-                      fontWeight: FontWeight.w500,
-                      fontSize: 28),
+                      fontWeight: FontWeight.w400,
+                      fontSize: 25),
                 ),
               ),
             ),
@@ -203,12 +203,12 @@ class _SignupState extends State<Signup> {
                         borderRadius: BorderRadius.circular(25),
                         color: Constants.mainColor1,
                         boxShadow: [
-                          BoxShadow(
-                            color: Colors.blue.withOpacity(0.2),
-                            spreadRadius: 0.4,
-                            blurRadius: 2,
-                            offset: Offset(0, 6), // changes position of shadow
-                          ),
+                          // BoxShadow(
+                          //   color: Colors.blue.withOpacity(0.2),
+                          //   spreadRadius: 0.4,
+                          //   blurRadius: 2,
+                          //   offset: Offset(0, 6), // changes position of shadow
+                          // ),
                         ],
                       ),
                       child: Center(
@@ -216,7 +216,7 @@ class _SignupState extends State<Signup> {
                         "Sign Up",
                         style: TextStyle(
                             fontSize: 18,
-                            letterSpacing: 1,
+                            //letterSpacing: 1,
                             color: Constants.mainColorWhite,
                             fontWeight: FontWeight.w600),
                       )),

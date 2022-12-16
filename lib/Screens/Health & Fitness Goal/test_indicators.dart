@@ -45,7 +45,7 @@ class _test_indicatorsState extends State<test_indicators> {
             //   bottom: MediaQuery.of(context).size.height * 0.0002,
             // ),
             decoration: BoxDecoration(
-              color: Colors.white,
+              color: Colors.brown,
               borderRadius: BorderRadius.circular(25),
               boxShadow: [
                 BoxShadow(
@@ -69,7 +69,7 @@ class _test_indicatorsState extends State<test_indicators> {
                   ),
                   decoration: BoxDecoration(
                     color: Constants.mainColor1,
-                    borderRadius: BorderRadius.circular(20),
+                    borderRadius: BorderRadius.circular(25),
                     boxShadow: [
                       BoxShadow(
                         color: Colors.grey.withOpacity(0.2),
@@ -100,7 +100,7 @@ class _test_indicatorsState extends State<test_indicators> {
                   ),
                   decoration: BoxDecoration(
                     color: Constants.mainColor1,
-                    borderRadius: BorderRadius.circular(20),
+                    borderRadius: BorderRadius.circular(25),
                     boxShadow: [
                       BoxShadow(
                         color: Colors.grey.withOpacity(0.2),
