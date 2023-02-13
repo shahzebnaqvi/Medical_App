@@ -37,7 +37,10 @@ class _MyAppState extends State<Maps> {
           snippet: '5 Star Rating',
         ),
         icon: BitmapDescriptor.defaultMarker,
-      ));
+      ),
+     
+      
+      );
     });
   }
 
