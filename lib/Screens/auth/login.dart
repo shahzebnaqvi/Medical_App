@@ -37,6 +37,7 @@ class _LoginState extends State<Login> {
             child: Text(
               'Welcome back! ',
               style: TextStyle(
+                  letterSpacing: 1,
                   fontSize: MediaQuery.of(context).size.height * 0.02,
                   fontWeight: FontWeight.w500),
             ),
@@ -103,38 +104,82 @@ class _LoginState extends State<Login> {
               )
             ]),
           ),
-          Container(
-            height: MediaQuery.of(context).size.height * 0.06,
-            margin: EdgeInsets.only(
-              left: MediaQuery.of(context).size.height * 0.03,
-              right: MediaQuery.of(context).size.height * 0.01,
-            ),
-            child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10)),
-                  primary: Constants.cyan_dark,
-                  minimumSize: Size(
-                      20,
-                      MediaQuery.of(context).size.height *
-                          0.06) // put the width and height you want
-                  ),
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => Timelines()));
-              },
-              child: Text(
-                "Log In",
-                style: TextStyle(
-                  fontWeight: FontWeight.w500,
-                  fontSize: MediaQuery.of(context).size.width * 0.04,
-                ),
+          // Container(
+          //   height: MediaQuery.of(context).size.height * 0.06,
+          //   margin: EdgeInsets.only(
+          //     left: MediaQuery.of(context).size.height * 0.03,
+          //     right: MediaQuery.of(context).size.height * 0.01,
+          //   ),
+          //   child: ElevatedButton(
+          //     style: ElevatedButton.styleFrom(
+          //         shape: RoundedRectangleBorder(
+          //             borderRadius: BorderRadius.circular(18)),
+          //         primary: Constants.cyan_dark,
+          //         minimumSize: Size(
+          //             20,
+          //             MediaQuery.of(context).size.height *
+          //                 0.06) // put the width and height you want
+          //         ),
+          //     onPressed: () {
+          //       Navigator.push(context,
+          //           MaterialPageRoute(builder: (context) => Timelines()));
+          //     },
+          //     child: Text(
+          //       "Log In",
+          //       style: TextStyle(
+          //         letterSpacing: 1,
+          //         fontWeight: FontWeight.w500,
+          //         fontSize: MediaQuery.of(context).size.width * 0.05,
+          //       ),
+          //     ),
+          //   ),
+          // ),
+
+          InkWell(
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => Timelines()));
+            },
+            child: Container(
+              height: MediaQuery.of(context).size.height * 0.07,
+              padding: EdgeInsets.only(
+                top: MediaQuery.of(context).size.height * 0.01,
+                bottom: MediaQuery.of(context).size.height * 0.01,
+                left: MediaQuery.of(context).size.height * 0.001,
+                right: MediaQuery.of(context).size.height * 0.001,
               ),
+              margin: EdgeInsets.only(
+                top: MediaQuery.of(context).size.height * 0.01,
+                bottom: MediaQuery.of(context).size.height * 0.001,
+                left: MediaQuery.of(context).size.height * 0.02,
+                right: MediaQuery.of(context).size.height * 0.02,
+              ),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(30),
+                color: Constants.mainColor1,
+                // boxShadow: [
+                //   BoxShadow(
+                //     color: Colors.blue.withOpacity(0.2),
+                //     spreadRadius: 0.4,
+                //     blurRadius: 2,
+                //     offset: Offset(0, 6), // changes position of shadow
+                //   ),
+                // ],
+              ),
+              child: Center(
+                  child: Text("Log In",
+                      style: TextStyle(
+                        color: Constants.mainColorWhite,
+                        letterSpacing: 1,
+                        fontWeight: FontWeight.w500,
+                        fontSize: MediaQuery.of(context).size.width * 0.05,
+                      ))),
             ),
           ),
           SizedBox(
             height: MediaQuery.of(context).size.height * 0.03,
           ),
+         
           Container(
               child: Column(
             children: [
@@ -147,15 +192,17 @@ class _LoginState extends State<Login> {
                   },
                   child: Text(
                     "Forgot Password?",
-                    style: TextStyle(color: Constants.mainColor),
+                    style:
+                        TextStyle(color: Constants.mainColor, letterSpacing: 1),
                   )),
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.02,
               ),
               Text(
-                "Login with social account",
+                "Login with social account?",
                 style: TextStyle(
-                    decoration: TextDecoration.underline,
+                    letterSpacing: 1,
+                    // decoration: TextDecoration.underline,
                     fontWeight: FontWeight.w500),
               )
             ],
@@ -172,7 +219,7 @@ class _LoginState extends State<Login> {
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10)),
+                            borderRadius: BorderRadius.circular(30)),
                         primary: Constants.mainColor1,
                         minimumSize: Size(
                             MediaQuery.of(context).size.height * 0.07,
@@ -186,21 +233,13 @@ class _LoginState extends State<Login> {
                             color: Colors.white,
                             size: 30.0,
                           ),
-                          // CircleAvatar(
-                          //     radius: 15,
-                          //     child: ClipOval(
-                          //       child:
-
-                          //       Image.asset(
-                          //         'assets/facebook1.jpg',
-                          //       ),
-                          //     )),
                           SizedBox(
                             width: 05,
                           ),
                           Text(
                             "Facebook",
-                            style: TextStyle(fontWeight: FontWeight.w500),
+                            style: TextStyle(
+                                fontWeight: FontWeight.w500, letterSpacing: 1),
                           )
                         ],
                       ),
@@ -210,7 +249,7 @@ class _LoginState extends State<Login> {
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10)),
+                          borderRadius: BorderRadius.circular(30)),
                       primary: Constants.cyan_light,
                       minimumSize: Size(
                           MediaQuery.of(context).size.height * 0.07,
@@ -233,7 +272,9 @@ class _LoginState extends State<Login> {
                         Text(
                           "Twitter",
                           style: TextStyle(
-                              fontWeight: FontWeight.w500, fontSize: 15),
+                              letterSpacing: 2,
+                              fontWeight: FontWeight.w500,
+                              fontSize: 15),
                         )
                       ],
                     ),
@@ -249,7 +290,10 @@ class _LoginState extends State<Login> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("Don't have an account ?"),
+                Text(
+                  "Don't have an account ?",
+                  style: TextStyle(letterSpacing: 1),
+                ),
                 GestureDetector(
                     onTap: () {
                       Navigator.push(context,
@@ -258,6 +302,7 @@ class _LoginState extends State<Login> {
                     child: Text(
                       "Sign up",
                       style: TextStyle(
+                          letterSpacing: 1,
                           color: Constants.mainColor,
                           fontWeight: FontWeight.w500),
                     )),

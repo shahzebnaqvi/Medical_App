@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Constants {
-  //Colors
-  // color: #2962ff;
-
   static const Color ubl = Color.fromARGB(198, 41, 98, 255);
-
   static const Color mainColor = Color.fromARGB(255, 6, 78, 187);
   static const Color mainColor1 = Color.fromARGB(255, 97, 153, 251);
   static const Color mainColorlight = Color.fromARGB(255, 241, 144, 160);
@@ -16,18 +12,17 @@ class Constants {
   static const Color mainColorWhite = Color.fromARGB(255, 253, 253, 253);
   static const Color bluecolor = Color.fromARGB(255, 108, 176, 232);
   static const Color redcolor = Colors.red;
+  static const Color green = Colors.green;
   static const Color blackcolor = Colors.black;
   static const Color cyan_dark = Color.fromARGB(255, 24, 208, 184);
   static const Color cyan_light = Color.fromARGB(255, 111, 198, 238);
-  static const Color grey = Colors.grey;
+  static const Color grey = Color.fromARGB(255, 170, 160, 160);
   static const Color bannercolor = Color.fromARGB(255, 137, 204, 236);
-
-  Color primarycolor = Colors.black;
-  Color secondarycolor = Colors.black12;
-  Color secondarycolor1 = Colors.black45;
-
-  Color secondarycolor2 = Colors.blueGrey;
-  Color secondarycolor3 = Colors.yellow;
-  Color secondarycolor4 = Colors.grey;
-  Color secondarycolor5 = Colors.white;
+  static const Color primarycolor = Colors.black;
+  static const Color secondarycolor = Colors.black12;
+  static const Color secondarycolor1 = Colors.black45;
+  static const Color secondarycolor2 = Colors.blueGrey;
+  static const Color secondarycolor3 = Colors.yellow;
+  static const Color secondarycolor4 = Colors.grey;
+  static const Color secondarycolor5 = Colors.white;
 }
